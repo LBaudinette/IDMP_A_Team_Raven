@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 movementDir;
     public float moveSpeed;
     public float MOVEMENT_BASE_SPEED = 1.0f;
+    public float DEFAULT_DRAG = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +22,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-    }
-
-    void FixedUpdate()
-    {
-        rb2d.AddForce(movementDir * moveSpeed * MOVEMENT_BASE_SPEED);
-        
+        this.rb2d.AddForce(movementDir * moveSpeed * MOVEMENT_BASE_SPEED * Time.deltaTime);
     }
 
     void ProcessInputs()
     {
+        // get movement inputs
         movementDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveSpeed = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
         movementDir.Normalize();
+        
     }
 
 }
