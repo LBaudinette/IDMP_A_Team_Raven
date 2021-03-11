@@ -6,10 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb2d;
 
+    private bool inputDash;
+
     public Vector2 movementDir;
     public float moveMagnitude;
     public float moveSpeed;
-    public float velLerp;
+    public float velocityLerp;
+    public float dashSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
+        if (inputDash)
+        {
+            Dash();
+            inputDash = false;
+        } else
+        {
+            Walk();
+        }
     }
 
     private void ProcessInputs()
@@ -37,11 +48,24 @@ public class PlayerMovement : MonoBehaviour
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
         moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
         movementDir.Normalize();
+
+        // if dash input hasn't been read since last FixedUpdate, check for dash input
+        if (!inputDash)
+        {
+            inputDash = Input.GetButtonDown("Dash");
+        }
     }
 
-    private void Move()
+    private void Walk()
     {
         // Lerp current velocity to new velocity
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velLerp * Time.deltaTime);
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+    }
+
+    private void Dash()
+    {
+        // set current velocity to zero, then dash in movement direction
+        rb2d.velocity = Vector2.zero;
+        rb2d.velocity += movementDir * dashSpeed;
     }
 }

@@ -220,7 +220,8 @@ MonoBehaviour:
   movementDir: {x: 0, y: 0}
   moveMagnitude: 0
   moveSpeed: 5
-  velLerp: 10
+  velocityLerp: 10
+  dashSpeed: 30
 --- !u!50 &417350921
 Rigidbody2D:
   serializedVersion: 4
