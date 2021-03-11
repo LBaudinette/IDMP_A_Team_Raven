@@ -218,13 +218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementDir: {x: 0, y: 0}
-  moveSpeed: 0
-  MOVEMENT_BASE_SPEED: 3000
-  DEFAULT_DRAG: 10
-  DASH_RECOVERY_TIME: 20
-  DASH_LENGTH_TIME: 20
-  DASH_SPEED: 20
-  DASH_DRAG: 2000
+  moveMagnitude: 0
+  moveSpeed: 5
+  velLerp: 10
 --- !u!50 &417350921
 Rigidbody2D:
   serializedVersion: 4
@@ -238,7 +234,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
