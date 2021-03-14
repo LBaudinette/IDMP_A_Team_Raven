@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1828376255
+    locked: 0
+  - name: TallDecoration
+    uniqueID: 2041014773
     locked: 0
