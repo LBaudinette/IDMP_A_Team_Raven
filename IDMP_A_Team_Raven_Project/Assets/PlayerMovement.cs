@@ -4,34 +4,68 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float moveHorizontal, moveVertical;
     private Rigidbody2D rb2d;
 
+    private bool inputDash;
+
     public Vector2 movementDir;
+    public float moveMagnitude;
     public float moveSpeed;
-    public float MOVEMENT_BASE_SPEED = 1.0f;
-    public float DEFAULT_DRAG = 10.0f;
+    public float velocityLerp;
+    public float dashSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.rb2d = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         ProcessInputs();
-        this.rb2d.AddForce(movementDir * moveSpeed * MOVEMENT_BASE_SPEED * Time.deltaTime);
     }
 
-    void ProcessInputs()
+    private void FixedUpdate()
+    {
+        // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
+        if (inputDash)
+        {
+            Dash();
+            inputDash = false;
+        } else
+        {
+            Walk();
+        }
+    }
+
+    private void ProcessInputs()
     {
         // get movement inputs
-        movementDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        moveSpeed = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
+        movementDir.x = Input.GetAxisRaw("Horizontal");
+        movementDir.y = Input.GetAxisRaw("Vertical");
+
+        // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
+        moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
         movementDir.Normalize();
-        
+
+        // if dash input hasn't been read since last FixedUpdate, check for dash input
+        if (!inputDash)
+        {
+            inputDash = Input.GetButtonDown("Dash");
+        }
     }
 
+    private void Walk()
+    {
+        // Lerp current velocity to new velocity
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+    }
+
+    private void Dash()
+    {
+        // set current velocity to zero, then dash in movement direction
+        rb2d.velocity = Vector2.zero;
+        rb2d.velocity += movementDir * dashSpeed;
+    }
 }
