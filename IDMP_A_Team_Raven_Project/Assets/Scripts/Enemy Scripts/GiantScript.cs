@@ -23,7 +23,7 @@ public class GiantScript : MonoBehaviour
     void Update()
     {
         //check for the distance between the enemy and the player
-        float distance = Vector2.Distance(transform.position, 
+        float distance = Vector2.Distance(gameObject.transform.position, 
             player.transform.position);
         if (distance <= attackDistance)
             //if the enemy is close enough to the player, attack
