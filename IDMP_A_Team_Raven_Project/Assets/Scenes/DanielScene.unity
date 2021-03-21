@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &843613948
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &843613950
 MonoBehaviour:
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 1043710276}
   m_Layer: 0
   m_Name: Frost Area
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   maxScaleSize: 5
   maxScaleTime: 5
   maxLingerTime: 5
-  playerDrag: 20
+  playerDrag: 50
 --- !u!58 &1043710277
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -374,8 +374,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8093167069646439012, guid: 06501a09be3ed8642830f455e59be554,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 110cce6810c687e41af79d7d834f7a62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -398,7 +397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191615494
 GameObject:
@@ -531,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1238151095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}

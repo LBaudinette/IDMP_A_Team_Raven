@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class FrostAreaScript : MonoBehaviour
@@ -13,7 +14,7 @@ public class FrostAreaScript : MonoBehaviour
     private bool isLingering = false;
     private float lingerTime = 0f;
 
-    public float playerDrag = 20f;              //The factor to increase the players drag
+    public float playerDrag = 50f;              //The factor to increase the players drag
     // Start is called before the first frame update
     void Start()
     {
@@ -51,15 +52,20 @@ public class FrostAreaScript : MonoBehaviour
         isLingering = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Player") {
+    private void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.gameObject.tag == "Player") {
             GameObject player = collision.gameObject;
             player.GetComponent<Rigidbody2D>().drag = playerDrag;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision) {
-        
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            GameObject player = collision.gameObject;
+            player.GetComponent<Rigidbody2D>().drag = 0f;
+        }
     }
+
 
 }
