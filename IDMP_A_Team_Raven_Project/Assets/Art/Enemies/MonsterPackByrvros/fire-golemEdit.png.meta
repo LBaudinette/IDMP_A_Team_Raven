@@ -1,0 +1,1820 @@
+fileFormatVersion: 2
+guid: f8b49e104fba50f4c8f5ea4442cf3744
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8641531085341533600
+    second: fire-golemEdit_0
+  - first:
+      213: -635899778819288788
+    second: fire-golemEdit_1
+  - first:
+      213: -6990550377455884383
+    second: fire-golemEdit_2
+  - first:
+      213: -8776634061713323022
+    second: fire-golemEdit_3
+  - first:
+      213: -6022986729225439498
+    second: fire-golemEdit_4
+  - first:
+      213: -1695611215617527858
+    second: fire-golemEdit_5
+  - first:
+      213: 2737639773082171431
+    second: fire-golemEdit_6
+  - first:
+      213: 4112790144666715189
+    second: fire-golemEdit_7
+  - first:
+      213: 7814196483621420207
+    second: fire-golemEdit_8
+  - first:
+      213: 711232562785995745
+    second: fire-golemEdit_9
+  - first:
+      213: -385398951196995115
+    second: fire-golemEdit_10
+  - first:
+      213: 807190755972330018
+    second: fire-golemEdit_11
+  - first:
+      213: 959683146372161273
+    second: fire-golemEdit_12
+  - first:
+      213: -7879078082404697704
+    second: fire-golemEdit_13
+  - first:
+      213: 2564745981856170657
+    second: fire-golemEdit_14
+  - first:
+      213: -6339704304254884419
+    second: fire-golemEdit_15
+  - first:
+      213: -5154257688187608199
+    second: fire-golemEdit_16
+  - first:
+      213: -2427012212225089334
+    second: fire-golemEdit_17
+  - first:
+      213: -2397124699924940989
+    second: fire-golemEdit_18
+  - first:
+      213: 8772934870827449331
+    second: fire-golemEdit_19
+  - first:
+      213: -7248680693703957360
+    second: fire-golemEdit_20
+  - first:
+      213: -7820263394010125026
+    second: fire-golemEdit_21
+  - first:
+      213: -4148122106234642783
+    second: fire-golemEdit_22
+  - first:
+      213: -5729551498221348225
+    second: fire-golemEdit_23
+  - first:
+      213: 3167756473145015800
+    second: fire-golemEdit_24
+  - first:
+      213: 863808159003145103
+    second: fire-golemEdit_25
+  - first:
+      213: 4488576369452168011
+    second: fire-golemEdit_26
+  - first:
+      213: -4937902904250666504
+    second: fire-golemEdit_27
+  - first:
+      213: 6275875006755794696
+    second: fire-golemEdit_28
+  - first:
+      213: -655513180380139510
+    second: fire-golemEdit_29
+  - first:
+      213: 5068001702125539574
+    second: fire-golemEdit_30
+  - first:
+      213: -4771750755619066059
+    second: fire-golemEdit_31
+  - first:
+      213: -7315412429741716507
+    second: fire-golemEdit_32
+  - first:
+      213: 5413738761600458087
+    second: fire-golemEdit_33
+  - first:
+      213: -1083444613449026225
+    second: fire-golemEdit_34
+  - first:
+      213: 3398248157551392249
+    second: fire-golemEdit_35
+  - first:
+      213: -4876931597907538745
+    second: fire-golemEdit_36
+  - first:
+      213: 1059421979011106244
+    second: fire-golemEdit_37
+  - first:
+      213: 7907985148079537874
+    second: fire-golemEdit_38
+  - first:
+      213: -1573858445908030160
+    second: fire-golemEdit_39
+  - first:
+      213: 4116875689335210844
+    second: fire-golemEdit_40
+  - first:
+      213: -8920106313807231854
+    second: fire-golemEdit_41
+  - first:
+      213: 655620900185984548
+    second: fire-golemEdit_42
+  - first:
+      213: 1535503419147155299
+    second: fire-golemEdit_43
+  - first:
+      213: 8960054095601874642
+    second: fire-golemEdit_44
+  - first:
+      213: 4998625898849872687
+    second: fire-golemEdit_45
+  - first:
+      213: -6204930955943016616
+    second: fire-golemEdit_46
+  - first:
+      213: -2911935045084702398
+    second: fire-golemEdit_47
+  - first:
+      213: 2806224613146468245
+    second: fire-golemEdit_48
+  - first:
+      213: 6107913661109676315
+    second: fire-golemEdit_49
+  - first:
+      213: -306349698641076588
+    second: fire-golemEdit_50
+  - first:
+      213: 8705244985598855183
+    second: fire-golemEdit_51
+  - first:
+      213: 4083992670448805601
+    second: fire-golemEdit_52
+  - first:
+      213: -6130538622668557940
+    second: fire-golemEdit_53
+  - first:
+      213: -1382519852252418200
+    second: fire-golemEdit_54
+  - first:
+      213: -6450915419987770778
+    second: fire-golemEdit_55
+  - first:
+      213: 878627084446245239
+    second: fire-golemEdit_56
+  - first:
+      213: 1820810766847205877
+    second: fire-golemEdit_57
+  - first:
+      213: 8076577437845697864
+    second: fire-golemEdit_58
+  - first:
+      213: 2671569737411098514
+    second: fire-golemEdit_59
+  - first:
+      213: -8345164824964773135
+    second: fire-golemEdit_60
+  - first:
+      213: 6260238572424260111
+    second: fire-golemEdit_61
+  - first:
+      213: -8744599659889977275
+    second: fire-golemEdit_62
+  - first:
+      213: -4524507020774491999
+    second: fire-golemEdit_63
+  - first:
+      213: -2219870677200549493
+    second: fire-golemEdit_64
+  - first:
+      213: 8952277173784040884
+    second: fire-golemEdit_65
+  - first:
+      213: -443209229552652125
+    second: fire-golemEdit_66
+  - first:
+      213: -7967183832464864927
+    second: fire-golemEdit_67
+  - first:
+      213: -2563421112530118716
+    second: fire-golemEdit_68
+  - first:
+      213: 2316113976416619669
+    second: fire-golemEdit_69
+  - first:
+      213: -3521428977750350940
+    second: fire-golemEdit_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire-golemEdit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ad8be334d131880800000000000000
+      internalID: -8641531085341533600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c211ab23584dc27f0800000000000000
+      internalID: -635899778819288788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7e44f18739cfe90800000000000000
+      internalID: -6990550377455884383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbcbfb42d1233680800000000000000
+      internalID: -8776634061713323022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f630ad1b7d0a6ca0800000000000000
+      internalID: -6022986729225439498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe2f7459af778e0800000000000000
+      internalID: -1695611215617527858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7283b857edc0ef520800000000000000
+      internalID: 2737639773082171431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_7
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 456
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534469898d0931930800000000000000
+      internalID: 4112790144666715189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac7c5bec4a917c60800000000000000
+      internalID: 7814196483621420207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebcc816f3eced900800000000000000
+      internalID: 711232562785995745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1581122b9c6aaf0800000000000000
+      internalID: -385398951196995115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_11
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222b5b347b7b33b00800000000000000
+      internalID: 807190755972330018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe117cacba715d00800000000000000
+      internalID: 959683146372161273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_13
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899b3bcaa34e7a290800000000000000
+      internalID: -7879078082404697704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_14
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2c5a3c1eec79320800000000000000
+      internalID: 2564745981856170657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 399
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db56fd34688d408a0800000000000000
+      internalID: -6339704304254884419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97360c6e0f56878b0800000000000000
+      internalID: -5154257688187608199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0e9c87045815ed0800000000000000
+      internalID: -2427012212225089334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347b8a239c3bbbed0800000000000000
+      internalID: -2397124699924940989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbbe45b8c9bfb970800000000000000
+      internalID: 8772934870827449331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0942b817053876b90800000000000000
+      internalID: -7248680693703957360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d290e60e7d87390800000000000000
+      internalID: -7820263394010125026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_22
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae50fc0ce8ee66c0800000000000000
+      internalID: -4148122106234642783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_23
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 342
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a9532d44b8c70b0800000000000000
+      internalID: -5729551498221348225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdb0c49ab126fb20800000000000000
+      internalID: 3167756473145015800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_25
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f837777a1fcdcfb00800000000000000
+      internalID: 863808159003145103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_26
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43b8603d60aa4e30800000000000000
+      internalID: 4488576369452168011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1f4c0887b097bb0800000000000000
+      internalID: -4937902904250666504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f6e605113681750800000000000000
+      internalID: 6275875006755794696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_29
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00fad94c3627e6f0800000000000000
+      internalID: -655513180380139510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_30
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0944852b8255640800000000000000
+      internalID: 5068001702125539574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_31
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 285
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53faf9638f557cdb0800000000000000
+      internalID: -4771750755619066059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb84c3672f6a7a90800000000000000
+      internalID: -7315412429741716507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d55ff68b6712b40800000000000000
+      internalID: 5413738761600458087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f457f894dd4d6f0f0800000000000000
+      internalID: -1083444613449026225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_35
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5f971d1b0092f20800000000000000
+      internalID: 3398248157551392249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_36
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccc7d00d88a15cb0800000000000000
+      internalID: -4876931597907538745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5c2364da2d3be00800000000000000
+      internalID: 1059421979011106244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_38
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de7858089ecebd60800000000000000
+      internalID: 7907985148079537874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_39
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 228
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d47e40518882ae0800000000000000
+      internalID: -1573858445908030160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53444790a4122930800000000000000
+      internalID: 4116875689335210844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_41
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2940dce719a653480800000000000000
+      internalID: -8920106313807231854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_42
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e48ee2cbb391900800000000000000
+      internalID: 655620900185984548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_43
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367f9a969343f4510800000000000000
+      internalID: 1535503419147155299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_44
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d632a04ab1885c70800000000000000
+      internalID: 8960054095601874642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_45
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ba30a65cfae5540800000000000000
+      internalID: 4998625898849872687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_46
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8570133bb28a3e9a0800000000000000
+      internalID: -6204930955943016616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_47
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 171
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24917bc218ab697d0800000000000000
+      internalID: -2911935045084702398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f9d8aea66b1f620800000000000000
+      internalID: 2806224613146468245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_49
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19a2391d1ba3c450800000000000000
+      internalID: 6107913661109676315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e537b7290afbbf0800000000000000
+      internalID: -306349698641076588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_51
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ce59213e3fc870800000000000000
+      internalID: 8705244985598855183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6666322b14da830800000000000000
+      internalID: 4083992670448805601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_53
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81370a8a93fbeaa0800000000000000
+      internalID: -6130538622668557940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_54
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fa19fe48d40dce0800000000000000
+      internalID: -1382519852252418200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_55
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 114
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6620a8b9a9eb976a0800000000000000
+      internalID: -6450915419987770778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771a47a9da2813c00800000000000000
+      internalID: 878627084446245239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_57
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f16221deb1d44910800000000000000
+      internalID: 1820810766847205877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_58
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8453abf5364c51070800000000000000
+      internalID: 8076577437845697864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_59
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29772178582531520800000000000000
+      internalID: 2671569737411098514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fac3e76ec4003c80800000000000000
+      internalID: -8345164824964773135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_61
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aeb8e30d5d0e650800000000000000
+      internalID: 6260238572424260111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_62
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5489141b0f0f4a680800000000000000
+      internalID: -8744599659889977275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_63
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 57
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8b9f226d8b531c0800000000000000
+      internalID: -4524507020774491999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89c726616f6131e0800000000000000
+      internalID: -2219870677200549493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_65
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b55c3a88a0ec3c70800000000000000
+      internalID: 8952277173784040884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_66
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0f65fcd8769d9f0800000000000000
+      internalID: -443209229552652125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_67
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16942bd2480ee6190800000000000000
+      internalID: -7967183832464864927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_68
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7d7e96416ec6cd0800000000000000
+      internalID: -2563421112530118716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_69
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c41a7e36d742020800000000000000
+      internalID: 2316113976416619669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-golemEdit_70
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a36c67800f512fc0800000000000000
+      internalID: -3521428977750350940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

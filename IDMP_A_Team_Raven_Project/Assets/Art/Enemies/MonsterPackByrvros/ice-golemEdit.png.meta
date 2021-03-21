@@ -1,0 +1,1820 @@
+fileFormatVersion: 2
+guid: a7c1013a46ef2314dba7532809aacb3a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7047541504600259409
+    second: ice-golemEdit_0
+  - first:
+      213: -7801872550267353649
+    second: ice-golemEdit_1
+  - first:
+      213: -1484882263040568571
+    second: ice-golemEdit_2
+  - first:
+      213: -430972987954984430
+    second: ice-golemEdit_3
+  - first:
+      213: -8917858752213749346
+    second: ice-golemEdit_4
+  - first:
+      213: -4826921396424870884
+    second: ice-golemEdit_5
+  - first:
+      213: -5048592703461956984
+    second: ice-golemEdit_6
+  - first:
+      213: -9196811469846708689
+    second: ice-golemEdit_7
+  - first:
+      213: 6299615449818500779
+    second: ice-golemEdit_8
+  - first:
+      213: 214504384937829314
+    second: ice-golemEdit_9
+  - first:
+      213: 5361444516563384852
+    second: ice-golemEdit_10
+  - first:
+      213: -7257268511517083708
+    second: ice-golemEdit_11
+  - first:
+      213: -3835926927580811268
+    second: ice-golemEdit_12
+  - first:
+      213: 3598222022909829969
+    second: ice-golemEdit_13
+  - first:
+      213: -597149109986622788
+    second: ice-golemEdit_14
+  - first:
+      213: 2891616143173350852
+    second: ice-golemEdit_15
+  - first:
+      213: 1701983108463649031
+    second: ice-golemEdit_16
+  - first:
+      213: -7508211774538208063
+    second: ice-golemEdit_17
+  - first:
+      213: 8850111274864158171
+    second: ice-golemEdit_18
+  - first:
+      213: 585785432997892713
+    second: ice-golemEdit_19
+  - first:
+      213: -408096469057527679
+    second: ice-golemEdit_20
+  - first:
+      213: -6572319216932389729
+    second: ice-golemEdit_21
+  - first:
+      213: -2394322065922460678
+    second: ice-golemEdit_22
+  - first:
+      213: -2339390314461788123
+    second: ice-golemEdit_23
+  - first:
+      213: 7721822200881928150
+    second: ice-golemEdit_24
+  - first:
+      213: -6778019698017515353
+    second: ice-golemEdit_25
+  - first:
+      213: 6615505828062180153
+    second: ice-golemEdit_26
+  - first:
+      213: 5131553986262413139
+    second: ice-golemEdit_27
+  - first:
+      213: -6997843495859300848
+    second: ice-golemEdit_28
+  - first:
+      213: -4383057825816129383
+    second: ice-golemEdit_29
+  - first:
+      213: -707984581279170744
+    second: ice-golemEdit_30
+  - first:
+      213: 8277260824661785682
+    second: ice-golemEdit_31
+  - first:
+      213: 7865393487651061954
+    second: ice-golemEdit_32
+  - first:
+      213: 8084821579388948307
+    second: ice-golemEdit_33
+  - first:
+      213: -5774548555362484325
+    second: ice-golemEdit_34
+  - first:
+      213: -7738838290461881367
+    second: ice-golemEdit_35
+  - first:
+      213: 4736854505782170780
+    second: ice-golemEdit_36
+  - first:
+      213: 5543225138818281602
+    second: ice-golemEdit_37
+  - first:
+      213: 5343110550581904628
+    second: ice-golemEdit_38
+  - first:
+      213: 9054493791952458292
+    second: ice-golemEdit_39
+  - first:
+      213: 7102614970108733621
+    second: ice-golemEdit_40
+  - first:
+      213: -5737866471432544360
+    second: ice-golemEdit_41
+  - first:
+      213: 1435095872816938699
+    second: ice-golemEdit_42
+  - first:
+      213: -6658708131927646501
+    second: ice-golemEdit_43
+  - first:
+      213: 7767902177663601063
+    second: ice-golemEdit_44
+  - first:
+      213: -8449680871065782772
+    second: ice-golemEdit_45
+  - first:
+      213: 9061047490802957417
+    second: ice-golemEdit_46
+  - first:
+      213: 4441683946817810623
+    second: ice-golemEdit_47
+  - first:
+      213: 2425770831716440231
+    second: ice-golemEdit_48
+  - first:
+      213: 2342616394389583791
+    second: ice-golemEdit_49
+  - first:
+      213: -7301793513112460242
+    second: ice-golemEdit_50
+  - first:
+      213: 7351184563997663748
+    second: ice-golemEdit_51
+  - first:
+      213: -4301689625897392497
+    second: ice-golemEdit_52
+  - first:
+      213: 5860948569056705543
+    second: ice-golemEdit_53
+  - first:
+      213: -6140232027315767726
+    second: ice-golemEdit_54
+  - first:
+      213: 6314865017445391573
+    second: ice-golemEdit_55
+  - first:
+      213: 5733972670532678423
+    second: ice-golemEdit_56
+  - first:
+      213: 7079354703692628495
+    second: ice-golemEdit_57
+  - first:
+      213: -5806929989301216924
+    second: ice-golemEdit_58
+  - first:
+      213: -7556988327397460630
+    second: ice-golemEdit_59
+  - first:
+      213: 2374545121594491189
+    second: ice-golemEdit_60
+  - first:
+      213: -4158136032143701239
+    second: ice-golemEdit_61
+  - first:
+      213: 5847003535379944434
+    second: ice-golemEdit_62
+  - first:
+      213: -600642012166422984
+    second: ice-golemEdit_63
+  - first:
+      213: -8296726113961497635
+    second: ice-golemEdit_64
+  - first:
+      213: 7878177273323363651
+    second: ice-golemEdit_65
+  - first:
+      213: 2171711434570181753
+    second: ice-golemEdit_66
+  - first:
+      213: -8557803871311701669
+    second: ice-golemEdit_67
+  - first:
+      213: 2140320585186305366
+    second: ice-golemEdit_68
+  - first:
+      213: -4598286185746945195
+    second: ice-golemEdit_69
+  - first:
+      213: -8242209767979806499
+    second: ice-golemEdit_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ice-golemEdit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4ca7e475a123e90800000000000000
+      internalID: -7047541504600259409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5817a604e2ab390800000000000000
+      internalID: -7801872550267353649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5035032f273a46be0800000000000000
+      internalID: -1484882263040568571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a8721d950e40af0800000000000000
+      internalID: -430972987954984430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91f035b6b66d3480800000000000000
+      internalID: -8917858752213749346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_5
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14fc576094530db0800000000000000
+      internalID: -4826921396424870884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_6
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882658e4fabcfe9b0800000000000000
+      internalID: -5048592703461956984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_7
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 456
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e7c89e1bc5e5080800000000000000
+      internalID: -9196811469846708689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae8ef3ffdabc6750800000000000000
+      internalID: 6299615449818500779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3abf20a921af200800000000000000
+      internalID: 214504384937829314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_10
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41af9b4b16da76a40800000000000000
+      internalID: 5361444516563384852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_11
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7756b4db0094b90800000000000000
+      internalID: -7257268511517083708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_12
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffa03178cc04cac0800000000000000
+      internalID: -3835926927580811268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153278a9dd37fe130800000000000000
+      internalID: 3598222022909829969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_14
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb28e4d5c0086b7f0800000000000000
+      internalID: -597149109986622788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_15
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 399
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5f1a0df85112820800000000000000
+      internalID: 2891616143173350852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701e0b1ae98ae9710800000000000000
+      internalID: 1701983108463649031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccae38db297dc790800000000000000
+      internalID: -7508211774538208063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd525f88059e1da70800000000000000
+      internalID: 8850111274864158171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_19
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96210786fb0212800800000000000000
+      internalID: 585785432997892713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1802cbf6c66265af0800000000000000
+      internalID: -408096469057527679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_21
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c754c6e7e6ac4a0800000000000000
+      internalID: -6572319216932389729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_22
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3ffc644c8a5ced0800000000000000
+      internalID: -2394322065922460678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_23
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 342
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528048357e0d88fd0800000000000000
+      internalID: -2339390314461788123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7da46316c692b60800000000000000
+      internalID: 7721822200881928150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8c0130ff2afe1a0800000000000000
+      internalID: -6778019698017515353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_26
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9333c2b008ffecb50800000000000000
+      internalID: 6615505828062180153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_27
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f29e09921f63740800000000000000
+      internalID: 5131553986262413139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_28
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016578baa6aa2ee90800000000000000
+      internalID: -6997843495859300848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_29
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990db3e31204c23c0800000000000000
+      internalID: -4383057825816129383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_30
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fb66e36cbbc26f0800000000000000
+      internalID: -707984581279170744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_31
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 285
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cf83f7ddcbed270800000000000000
+      internalID: 8277260824661785682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0cc1254bd772d60800000000000000
+      internalID: 7865393487651061954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_33
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f04e7246e033070800000000000000
+      internalID: 8084821579388948307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_34
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fbf5b0faeacdfa0800000000000000
+      internalID: -5774548555362484325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_35
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb04d2b39f1a9490800000000000000
+      internalID: -7738838290461881367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_36
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94dad97310bcb140800000000000000
+      internalID: 4736854505782170780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_37
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280774df4ed7dec40800000000000000
+      internalID: 5543225138818281602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_38
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4831b9cba862a40800000000000000
+      internalID: 5343110550581904628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_39
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 228
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4325e4a812608ad70800000000000000
+      internalID: 9054493791952458292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8e3bd1fae819260800000000000000
+      internalID: 7102614970108733621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_41
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f93a148d00f50b0800000000000000
+      internalID: -5737866471432544360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_42
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcef1e5c71c7ae310800000000000000
+      internalID: 1435095872816938699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_43
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde927dbb348793a0800000000000000
+      internalID: -6658708131927646501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_44
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a94f9ddfd12dcb60800000000000000
+      internalID: 7767902177663601063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_45
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06f5be1404bcba80800000000000000
+      internalID: -8449680871065782772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_46
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c31467fae4fbd70800000000000000
+      internalID: 9061047490802957417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_47
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 171
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb071ae340804ad30800000000000000
+      internalID: 4441683946817810623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a856fa18b11aa120800000000000000
+      internalID: 2425770831716440231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7f890f235a28020800000000000000
+      internalID: 2342616394389583791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_50
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e242ea38c71daaa90800000000000000
+      internalID: -7301793513112460242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_51
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4026a67a967a40660800000000000000
+      internalID: 7351184563997663748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_52
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86276a93145d44c0800000000000000
+      internalID: -4301689625897392497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_53
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c7571cba5465150800000000000000
+      internalID: 5860948569056705543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_54
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256fd55e08389caa0800000000000000
+      internalID: -6140232027315767726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_55
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 114
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc9f599648e2a750800000000000000
+      internalID: 6314865017445391573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713f5e293c9239f40800000000000000
+      internalID: 5733972670532678423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_57
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f020790589bee3260800000000000000
+      internalID: 7079354703692628495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_58
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4695320f0f3a96fa0800000000000000
+      internalID: -5806929989301216924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_59
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6573b5a72f202790800000000000000
+      internalID: -7556988327397460630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_60
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531c6cb053414f020800000000000000
+      internalID: 2374545121594491189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_61
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b825c3f455b46c0800000000000000
+      internalID: -4158136032143701239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_62
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f356c69cbab42150800000000000000
+      internalID: 5847003535379944434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_63
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 57
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ef4a3b5471aa7f0800000000000000
+      internalID: -600642012166422984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb2e9aae8b1cdc80800000000000000
+      internalID: -8296726113961497635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_65
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d9efd5d78e45d60800000000000000
+      internalID: 7878177273323363651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_66
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ca5342b08732e10800000000000000
+      internalID: 2171711434570181753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_67
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59d00168b29c3980800000000000000
+      internalID: -8557803871311701669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_68
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6556c797b32f3bd10800000000000000
+      internalID: 2140320585186305366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_69
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ba7faa31b9f20c0800000000000000
+      internalID: -4598286185746945195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ice-golemEdit_70
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 0
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd01f4792e9cd9d80800000000000000
+      internalID: -8242209767979806499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
