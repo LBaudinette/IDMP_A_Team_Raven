@@ -23,13 +23,15 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         // disable line renderer and weapon sprite when RMB is released
-        if (Input.GetMouseButtonUp(1))
+        //if (Input.GetMouseButtonUp(1))
+        if (Input.GetButtonUp("CTRLAim"))
         {
             weaponSprite.enabled = false;
             lr.enabled = false;
         }
 
-        if (Input.GetMouseButton(1))
+        //if (Input.GetMouseButton(1))
+        if (Input.GetButton("CTRLAim"))
         {
             // get mouse position and angle relative to player
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -53,7 +55,8 @@ public class PlayerShoot : MonoBehaviour
 
             DrawLine();
 
-            if (Input.GetMouseButtonDown(0))
+            // (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("CTRLFire"))
             {
                 GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
                 firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);

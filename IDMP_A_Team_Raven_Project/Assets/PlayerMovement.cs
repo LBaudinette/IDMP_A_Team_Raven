@@ -42,8 +42,10 @@ public class PlayerMovement : MonoBehaviour
     private void ProcessInputs()
     {
         // get movement inputs
-        movementDir.x = Input.GetAxisRaw("Horizontal");
-        movementDir.y = Input.GetAxisRaw("Vertical");
+        // movementDir.x = Input.GetAxisRaw("Horizontal");
+        // movementDir.y = Input.GetAxisRaw("Vertical");
+        movementDir.x = Input.GetAxisRaw("CTRLHorizontal");
+        movementDir.y = Input.GetAxisRaw("CTRLVertical");
 
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
         moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         // if dash input hasn't been read since last FixedUpdate, check for dash input
         if (!inputDash)
         {
-            inputDash = Input.GetButtonDown("Dash");
+            inputDash = Input.GetButtonDown("CTRLDash");
         }
     }
 
