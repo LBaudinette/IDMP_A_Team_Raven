@@ -66,7 +66,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void DrawLine()
     {
-        lr.SetPosition(0, weapon.transform.position);
+        lr.SetPosition(0, firePoint.position);
         lr.SetPosition(1, mousePos);
     }
 
