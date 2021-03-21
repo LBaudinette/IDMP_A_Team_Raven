@@ -8,6 +8,9 @@ public class PlayerShoot : MonoBehaviour
     public GameObject weapon;
     public SpriteRenderer weaponSprite;
     public LineRenderer lr;
+    public GameObject arrowPrefab;
+    public Transform firePoint;
+    public float arrowForce;
 
     Vector2 mousePos;
     void Start()
@@ -49,6 +52,12 @@ public class PlayerShoot : MonoBehaviour
             }
 
             DrawLine();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
+                firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -56,6 +65,6 @@ public class PlayerShoot : MonoBehaviour
     {
         lr.SetPosition(0, weapon.transform.position);
         lr.SetPosition(1, mousePos);
-
     }
+
 }
