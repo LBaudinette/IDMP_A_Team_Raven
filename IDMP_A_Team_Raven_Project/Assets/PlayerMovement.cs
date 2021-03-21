@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+    private Animator playerAnimator;
 
     private bool inputDash;
 
@@ -18,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
+        playerAnimator.SetFloat("MoveX", 0);
+        playerAnimator.SetFloat("MoveY", -1);
     }
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        UpdateAnimation();
         // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
         if (inputDash)
         {
@@ -67,5 +72,19 @@ public class PlayerMovement : MonoBehaviour
         // set current velocity to zero, then dash in movement direction
         rb2d.velocity = Vector2.zero;
         rb2d.velocity += movementDir * dashSpeed;
+    }
+
+    private void UpdateAnimation()
+    {
+        if (movementDir != Vector2.zero)
+        {
+            playerAnimator.SetFloat("MoveX", movementDir.x);
+            playerAnimator.SetFloat("MoveY", movementDir.y);
+            playerAnimator.SetBool("Moving", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Moving", false);
+        }
     }
 }

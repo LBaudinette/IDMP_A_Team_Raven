@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2ec993999ed4484e903bc429a53a97e, type: 3}
-  m_Name: PlayerHealth
+  m_Script: {fileID: 11500000, guid: 55de4bc6359731e46b36a114eaeab218, type: 3}
+  m_Name: AddPlayerHealthSignal
   m_EditorClassIdentifier: 
-  initialValue: 100
-  runTimeValue: 100
+  listeners: []

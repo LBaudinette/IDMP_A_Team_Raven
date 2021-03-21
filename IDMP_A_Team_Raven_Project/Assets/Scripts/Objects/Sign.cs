@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Terminal : Interactable
+public class Sign: Interactable
 {
     public GameObject dialogueBox;
     public Text dialogueText;
