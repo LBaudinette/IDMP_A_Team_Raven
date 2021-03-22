@@ -365,6 +365,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9167f4242a4b4e042987eb45e1f6254e, type: 3}
+--- !u!114 &1825520764 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2531658333841840176, guid: 22d7b47dab12f5a438529731900e8b16,
+    type: 3}
+  m_PrefabInstance: {fileID: 2501820542798104133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7927b024b57e1b04d8ea96e111355e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2501820542798104133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +484,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: shootScript
+      value: 
+      objectReference: {fileID: 1825520764}
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: velocityLerp

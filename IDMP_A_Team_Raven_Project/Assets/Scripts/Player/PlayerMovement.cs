@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private bool inputDash;
 
     public Vector2 movementDir;
+    public PlayerShoot shootScript;
     public float moveMagnitude;
     public float moveSpeed;
     public float velocityLerp;
@@ -61,6 +62,11 @@ public class PlayerMovement : MonoBehaviour
         {
             //inputDash = Input.GetButtonDown("CTRLDash");
             inputDash = Input.GetButtonDown("Dash");
+        }
+
+        if (Input.GetMouseButtonDown(0) && !shootScript.isAiming())
+        {
+            // attack
         }
     }
 
