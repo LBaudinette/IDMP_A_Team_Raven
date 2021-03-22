@@ -47,6 +47,5 @@ public class RangedEnemy : MonoBehaviour
         //Create projectile
         GameObject proj = Instantiate(fireball, firePoint.position, rotationPoint.rotation);
         proj.GetComponent<Rigidbody2D>().AddForce(firePoint.right * projForce, ForceMode2D.Impulse);
-        Debug.Log("fired projectile");
     }
 }
