@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
 
     private bool inputDash;
+    private bool takingHit;
 
     public Vector2 movementDir;
     public float moveMagnitude;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("MoveX", 0);
         playerAnimator.SetFloat("MoveY", -1);
+        takingHit = false;
     }
 
     // Update is called once per frame
@@ -90,4 +92,5 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("Moving", false);
         }
     }
+    
 }

@@ -6,6 +6,8 @@ public class Arrow : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     public float maxAliveTime;
+    public float knockbackMult;
+    public float damage;
 
     private float aliveTime;
 
@@ -27,6 +29,21 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // on enemy collision, damage them and potentially apply knockback based on current rb2d force
+        if (collision.gameObject.tag == "Collisions")
+        {
+            // freese arrow if it collides with wall
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb2d.freezeRotation = true;
+        } else if (collision.gameObject.tag == "Enemy")
+        {
+            // on enemy collision, damage them and potentially apply knockback based on current rb2d force
+            TakeHitScript player = collision.gameObject.GetComponent<TakeHitScript>();
+            player.TakeHit(rb2d.velocity * knockbackMult, damage);
+
+        } else if (collision.gameObject.tag == "Projectiles")
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
