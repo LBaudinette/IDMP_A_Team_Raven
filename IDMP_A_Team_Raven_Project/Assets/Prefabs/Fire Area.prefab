@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7371940933594791568}
   - component: {fileID: 6302395972298766086}
   m_Layer: 0
-  m_Name: 'Poision Area '
+  m_Name: Fire Area
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,4 +114,5 @@ MonoBehaviour:
   maxScaleSize: 3
   maxScaleTime: 5
   maxLingerTime: 5
+  diminishTime: 5
   playerDamage: 0
