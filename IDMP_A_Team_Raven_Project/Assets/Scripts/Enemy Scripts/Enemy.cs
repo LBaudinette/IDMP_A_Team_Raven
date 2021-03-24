@@ -33,10 +33,14 @@ public class Enemy : MonoBehaviour
         if (path == null)
             return;
 
-        if(currentWaypoint >= path.vectorPath.Count) {
+        if (currentWaypoint >= path.vectorPath.Count) {
             isEndOfPath = true;
             return;
         }
+        else
+            isEndOfPath = false;
+
+       
     }
 
     protected void OnPathComplete(Path p) {
