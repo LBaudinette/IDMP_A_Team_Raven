@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
+    public Rigidbody2D rb2d;
+    public float damage;
+    public float knockbackMult;
 
-    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +17,19 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move object forward
-        transform.position += transform.right * speed * Time.deltaTime;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         Destroy(gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            TakeHitScript player = collision.gameObject.GetComponent<TakeHitScript>();
+            player.TakeHit(rb2d.velocity * knockbackMult, damage);
+        } else if (collision.gameObject.tag == "Collisions" || collision.gameObject.tag == "Projectiles")
+        {
+            Destroy(gameObject);
+        }
         //TODO: Deal damage to player
     }
 

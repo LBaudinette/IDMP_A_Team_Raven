@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Collisions
+  - Projectiles
+  - Enemy
+  - Hitbox
   layers:
   - Default
   - TransparentFX
@@ -49,4 +53,7 @@ TagManager:
     locked: 0
   - name: TallDecoration
     uniqueID: 2041014773
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1614656415
     locked: 0

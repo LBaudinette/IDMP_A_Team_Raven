@@ -12,11 +12,14 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;
     public float arrowForce;
 
+    private bool aiming;
+
     Vector2 mousePos;
     void Start()
     {
         weaponSprite.enabled = false;
         lr.enabled = false;
+        aiming = false;
     }
 
     // Update is called once per frame
@@ -24,15 +27,15 @@ public class PlayerShoot : MonoBehaviour
     {
         // disable line renderer and weapon sprite when RMB is released
         if (Input.GetMouseButtonUp(1))
-        // if (Input.GetButtonUp("CTRLAim"))
         {
             weaponSprite.enabled = false;
             lr.enabled = false;
+            aiming = false;
         }
 
         if (Input.GetMouseButton(1))
-        // if (Input.GetButton("CTRLAim"))
         {
+            aiming = true;
             // get mouse position and angle relative to player
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             Vector2 lookDir = (Vector3)mousePos - weapon.transform.position;
@@ -56,7 +59,6 @@ public class PlayerShoot : MonoBehaviour
             DrawLine();
 
             if (Input.GetMouseButtonDown(0))
-            //if (Input.GetButtonDown("CTRLFire"))
             {
                 GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
                 firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
@@ -68,6 +70,11 @@ public class PlayerShoot : MonoBehaviour
     {
         lr.SetPosition(0, firePoint.position);
         lr.SetPosition(1, mousePos);
+    }
+
+    public bool isAiming()
+    {
+        return aiming;
     }
 
 }

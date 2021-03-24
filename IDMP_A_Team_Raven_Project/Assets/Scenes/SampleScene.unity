@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 174612732}
   m_Layer: 0
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Collisions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43299,7 +43299,7 @@ GameObject:
   - component: {fileID: 1114058041}
   m_Layer: 0
   m_Name: CollisionDecoration
-  m_TagString: Untagged
+  m_TagString: Collisions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45299,6 +45299,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: velocityLerp
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2501820543073573408, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
