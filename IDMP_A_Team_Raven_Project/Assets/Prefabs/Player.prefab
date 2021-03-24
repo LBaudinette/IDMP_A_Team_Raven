@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4483610534200910487}
   m_Layer: 8
   m_Name: RightHitBox (2)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 30
-  parentPosition: {fileID: 0}
+  knockback: 600
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820541976755899
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 3793510803764667726}
   m_Layer: 8
   m_Name: LeftHitBox (2)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 30
-  parentPosition: {fileID: 0}
+  knockback: 600
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542121246067
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 6865334641331739565}
   m_Layer: 8
   m_Name: LeftHitBox (1)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542387473981
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 8907736445000618678}
   m_Layer: 8
   m_Name: RightHitBox (1)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,8 +416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542694009922
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 2205445843258604034}
   m_Layer: 8
   m_Name: UpHitBox (1)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,8 +497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542704333843
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 6568319070676947765}
   m_Layer: 8
   m_Name: DownHitBox (1)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,8 +580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542873434521
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 6392613671479509990}
   m_Layer: 8
   m_Name: UpHitBox (2)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,8 +662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 30
-  parentPosition: {fileID: 0}
+  knockback: 600
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542938628928
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 4924981687549750311}
   m_Layer: 8
   m_Name: RightHitBox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -957,8 +957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543139957656
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 6807379368169702129}
   m_Layer: 8
   m_Name: LeftHitBox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1036,8 +1036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543190912998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 1615663263798738418}
   m_Layer: 8
   m_Name: DownHitBox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,8 +1114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543194420985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 5662752060054333527}
   m_Layer: 8
   m_Name: DownHitBox (2)
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1195,8 +1195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 30
-  parentPosition: {fileID: 0}
+  knockback: 600
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543235414140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ GameObject:
   - component: {fileID: 1959116593153478878}
   m_Layer: 8
   m_Name: UpHitBox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1308,8 +1308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 10
-  parentPosition: {fileID: 0}
+  knockback: 300
+  parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543369949141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,8 +1369,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2531658332624012181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1500001, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2531658333841840178}
   m_RootOrder: 0
@@ -1411,8 +1411,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9c9d9da02187a734e8ee30e3e7d415cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1449,7 +1449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2531658332866205322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4499998, y: 0, z: 0}
+  m_LocalPosition: {x: 1.3, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2531658333841840178}
@@ -1481,7 +1481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2531658333841840179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01999998, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2531658332624012180}
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 4999221651312847933, guid: 8a585a16285fb7541ab0c18188297f6f,
     type: 3}
   firePoint: {fileID: 2531658332866205321}
-  arrowForce: 10
+  arrowForce: 15
 --- !u!120 &2531658333841840177
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1559,7 +1559,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.01
+        value: 0.025
         inSlope: 0
         outSlope: 0
         tangentMode: 0

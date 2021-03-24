@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 3936315395154757800}
   - component: {fileID: 580767570109967239}
   - component: {fileID: 1259805935220213484}
+  - component: {fileID: 6117675282433694802}
+  - component: {fileID: 800230115922374432}
   m_Layer: 0
   m_Name: Ranged Enemy
   m_TagString: Untagged
@@ -159,6 +161,40 @@ MonoBehaviour:
   projForce: 10
   firePoint: {fileID: 3699563415543611715}
   rotationPoint: {fileID: 6926065724271940513}
+--- !u!50 &6117675282433694802
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026857293838660687}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &800230115922374432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026857293838660687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb639a64b74d78488ed7db6787a2729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 6117675282433694802}
 --- !u!1 &6213497226685784988
 GameObject:
   m_ObjectHideFlags: 0
