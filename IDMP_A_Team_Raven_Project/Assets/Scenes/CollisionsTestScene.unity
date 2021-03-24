@@ -278,6 +278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3240437041918447322, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3240437041918447323, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
         type: 3}
       propertyPath: m_RootOrder
@@ -402,6 +407,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3936315395154757800, guid: 9167f4242a4b4e042987eb45e1f6254e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6026857293838660687, guid: 9167f4242a4b4e042987eb45e1f6254e,
         type: 3}
       propertyPath: m_Name
@@ -420,6 +430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Swarm Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545894050325807882, guid: ed16f9111d4456c48868132f97ff67bb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
@@ -538,6 +553,11 @@ PrefabInstance:
     - target: {fileID: 4192657543923078184, guid: 34ad5016cc549464693858a7db51cf82,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192657543923078185, guid: 34ad5016cc549464693858a7db51cf82,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4192657543923078188, guid: 34ad5016cc549464693858a7db51cf82,

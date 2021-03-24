@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 180559313}
   - component: {fileID: 654447143135705424}
   - component: {fileID: 3341240555215466603}
-  m_Layer: 0
+  - component: {fileID: 620707626}
+  m_Layer: 9
   m_Name: Swarm Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 9136247391582079064, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
     type: 3}
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.06111157}
+  m_Offset: {x: 0, y: -0.29766583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9401779, y: 1.0017135}
+  m_Size: {x: 1.9401779, y: 0.528605}
   m_EdgeRadius: 0
 --- !u!114 &4545894050325807880
 MonoBehaviour:
@@ -246,3 +247,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 654447143135705424}
+--- !u!61 &620707626
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545894050325807877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.4375, y: 1.25}
+    newSize: {x: 1, y: 0.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0102472, y: 1.25}
+  m_EdgeRadius: 0

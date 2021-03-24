@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 3240437041510081786}
   - component: {fileID: 683281851365372963}
   - component: {fileID: 8738119172180315268}
-  m_Layer: 0
+  - component: {fileID: 3870131042078496059}
+  m_Layer: 9
   m_Name: Fire Giant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8641531085341533600, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
@@ -103,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026486218, y: -0.24627447}
+  m_Offset: {x: 0.076254845, y: -1.3916531}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2066674, y: 2.9438133}
+  m_Size: {x: 2.0247154, y: 0.8086748}
   m_EdgeRadius: 0
 --- !u!114 &3240437041918447320
 MonoBehaviour:
@@ -264,3 +265,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 683281851365372963}
+--- !u!61 &3870131042078496059
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240437041918447327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05719161, y: -0.39080667}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.5, y: 3.5625}
+    newSize: {x: 3.12, y: 2.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0511565, y: 2.7808867}
+  m_EdgeRadius: 0
