@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1259805935220213484}
   - component: {fileID: 6117675282433694802}
   - component: {fileID: 800230115922374432}
+  - component: {fileID: 8320569428322814186}
   m_Layer: 0
   m_Name: Ranged Enemy
   m_TagString: Untagged
@@ -106,7 +107,7 @@ SpriteRenderer:
   m_SortingLayerID: 1828376255
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1557350617413356883, guid: 6071ac08dd0a59343aa55a1d9b683de8,
+  m_Sprite: {fileID: -5077389074728326815, guid: 81508eba907fe634a8cc964eb18b2b32,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,18 +132,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.12770987, y: -0.5321257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.52}
+    oldSize: {x: 5, y: 3.125}
     newSize: {x: 0.44, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44, y: 0.52}
+  m_Size: {x: 1.5893908, y: 1.9035273}
   m_EdgeRadius: 0
 --- !u!114 &1259805935220213484
 MonoBehaviour:
@@ -195,6 +196,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 6117675282433694802}
+--- !u!95 &8320569428322814186
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026857293838660687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fe99eed747604244a08205a25e5af70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6213497226685784988
 GameObject:
   m_ObjectHideFlags: 0
