@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 600
+  knockback: 70
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820541976755899
 GameObject:
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 600
+  knockback: 70
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542121246067
 GameObject:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542387473981
 GameObject:
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542694009922
 GameObject:
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542704333843
 GameObject:
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542873434521
 GameObject:
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 600
+  knockback: 70
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820542938628928
 GameObject:
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543139957656
 GameObject:
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543190912998
 GameObject:
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543194420985
 GameObject:
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 600
+  knockback: 70
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543235414140
 GameObject:
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 300
+  knockback: 400
   parentPosition: {fileID: 5427938626457899651}
 --- !u!1 &2501820543369949141
 GameObject:
