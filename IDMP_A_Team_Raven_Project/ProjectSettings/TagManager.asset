@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Collisions
   - Projectiles
+  - Enemy
+  - Hitbox
   layers:
   - Default
   - TransparentFX

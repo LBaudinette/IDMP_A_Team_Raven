@@ -18,4 +18,15 @@ public class TakeHitScript : MonoBehaviour
         //take damage
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Hitbox")
+        {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            Vector2 knockbackDir = rb2d.position - (Vector2) hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+    }
+
 }

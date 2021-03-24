@@ -7,35 +7,21 @@ public class DealHitMelee : MonoBehaviour
 
     public float damage;
     public float knockback;
-    public GameObject parentObject;
+    public GameObject parentPosition;
 
-    // Start is called before the first frame update
-    void Start()
+    public float getDamage()
     {
-        
+        return damage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public float getKnockback()
     {
-        
+        return knockback;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public GameObject getParentPos()
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            // on enemy collision, damage them and potentially apply knockback
-            Vector2 diff = parentObject.transform.position - collision.gameObject.transform.position;
-            float angleFloat = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            Quaternion angleQuat = Quaternion.Euler(0f, 0f, angleFloat);
-            TakeHitScript enemy = collision.gameObject.GetComponent<TakeHitScript>();
-            enemy.TakeHit(angleQuat * collision.gameObject.transform.right * knockback, damage);
-
-        }
-        else if (collision.gameObject.tag == "Projectiles")
-        {
-            Destroy(collision.gameObject);
-        }
+        return parentPosition;
     }
+
 }

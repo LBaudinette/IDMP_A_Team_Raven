@@ -8,6 +8,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
 
     private bool inputDash;
+    private bool isAttacking;
+    private bool isAttacking1;
+    private bool isAttacking2;
+    private Coroutine attackCoroutine;
 
     public Vector2 movementDir;
     public PlayerShoot shootScript;
@@ -15,10 +19,13 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float velocityLerp;
     public float dashSpeed;
+    public float attackMoveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
+        isAttacking = false;
+        isAttacking2 = false;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("MoveX", 0);
@@ -41,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             inputDash = false;
         } else
         {
-            Walk();
+            Move();
         }
     }
 
@@ -50,8 +57,6 @@ public class PlayerMovement : MonoBehaviour
         // get movement inputs
         movementDir.x = Input.GetAxisRaw("Horizontal");
         movementDir.y = Input.GetAxisRaw("Vertical");
-        // movementDir.x = Input.GetAxisRaw("CTRLHorizontal");
-        // movementDir.y = Input.GetAxisRaw("CTRLVertical");
 
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
         moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
@@ -60,20 +65,45 @@ public class PlayerMovement : MonoBehaviour
         // if dash input hasn't been read since last FixedUpdate, check for dash input
         if (!inputDash)
         {
-            //inputDash = Input.GetButtonDown("CTRLDash");
             inputDash = Input.GetButtonDown("Dash");
         }
 
         if (Input.GetMouseButtonDown(0) && !shootScript.isAiming())
         {
             // attack
+            isAttacking = true;
+            if (!isAttacking1 && !isAttacking2)
+            {
+                isAttacking1 = true;
+                attackCoroutine = StartCoroutine(AttackTimer(1));
+            } else if (isAttacking1)
+            {
+                isAttacking1 = false;
+                isAttacking2 = true;
+                StopCoroutine(attackCoroutine);
+                attackCoroutine = StartCoroutine(AttackTimer(2));
+            } else if (isAttacking2)
+            {
+                isAttacking2 = false;
+                StopCoroutine(attackCoroutine);
+                attackCoroutine = StartCoroutine(AttackTimer(3));
+            }
+
         }
     }
 
-    private void Walk()
+    private void Move()
     {
         // Lerp current velocity to new velocity
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+        Vector2 movement = new Vector2();
+        if (isAttacking)
+        {
+            movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * attackMoveSpeed, velocityLerp * Time.deltaTime);
+        } else
+        {
+            movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+        }
+        rb2d.velocity = movement;
     }
 
     private void Dash()
@@ -95,6 +125,52 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("Moving", false);
         }
+    }
+
+    IEnumerator AttackTimer(int attackNum)
+    {
+        rb2d.velocity /= 2;
+        float elapsed = 0f;
+        float max = 0f;
+
+        if (attackNum == 1)
+        {
+            playerAnimator.SetBool("Attacking", true);
+            max = 0.5f;
+            while (elapsed < max)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+            playerAnimator.SetBool("Attacking", false);
+        } else if (attackNum == 2)
+        {
+            playerAnimator.SetBool("Attacking", false);
+            playerAnimator.SetBool("Attacking2", true);
+            max = 0.6f;
+            while (elapsed < max)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+            playerAnimator.SetBool("Attacking2", false);
+        } else if (attackNum == 3)
+        {
+            playerAnimator.SetBool("Attacking2", false);
+            playerAnimator.SetBool("Attacking3", true);
+            max = 0.6f;
+            while (elapsed < max)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+            playerAnimator.SetBool("Attacking3", false);
+        }
+
+        isAttacking = false;
+        isAttacking1 = false;
+        isAttacking2 = false;
+
     }
     
 }
