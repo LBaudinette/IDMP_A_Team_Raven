@@ -325,11 +325,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swarm Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4545894050325807878, guid: ed16f9111d4456c48868132f97ff67bb,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 417350919}
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_RootOrder

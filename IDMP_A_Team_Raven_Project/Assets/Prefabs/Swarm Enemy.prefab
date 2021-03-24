@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 180559313}
   - component: {fileID: 1201723355}
   - component: {fileID: 1201723356}
+  - component: {fileID: 1819975671}
   m_Layer: 0
   m_Name: Swarm Enemy
   m_TagString: Untagged
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 9136247391582079064, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
     type: 3}
@@ -180,7 +181,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1201723356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85724f24cc2f9442b11994d9fd92eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPlayer: {fileID: 0}
-  rightPlayer: {fileID: 0}
   nextWaypointDistance: 3
+  speed: 200
+--- !u!114 &1819975671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545894050325807877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb639a64b74d78488ed7db6787a2729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 1201723355}
