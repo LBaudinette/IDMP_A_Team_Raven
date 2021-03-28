@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 8725452237808492721}
   m_Layer: 0
   m_Name: Fire Giant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,8 +105,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8641531085341533600, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
