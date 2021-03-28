@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &1037322 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8883158623247194480, guid: 22d7b47dab12f5a438529731900e8b16,
-    type: 3}
-  m_PrefabInstance: {fileID: 1609837076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35656617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4192657543923078188, guid: 34ad5016cc549464693858a7db51cf82,
@@ -369,43 +363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1201723355, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201723355, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_LinearDrag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201723355, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201723356, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: speed
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201723356, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: leftPlayer
-      value: 
-      objectReference: {fileID: 1037322}
-    - target: {fileID: 1201723356, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: attackDelay
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1201723356, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: rightPlayer
-      value: 
-      objectReference: {fileID: 1846988956}
     - target: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_Name
       value: Swarm Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
@@ -533,12 +494,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d7b47dab12f5a438529731900e8b16, type: 3}
---- !u!4 &1846988956 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8646159315737645478, guid: 22d7b47dab12f5a438529731900e8b16,
-    type: 3}
-  m_PrefabInstance: {fileID: 1609837076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1914380772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6857345177015572147, guid: 34ad5016cc549464693858a7db51cf82,
@@ -788,7 +743,7 @@ PrefabInstance:
     - target: {fileID: 4192657543923078188, guid: 34ad5016cc549464693858a7db51cf82,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ad5016cc549464693858a7db51cf82, type: 3}
@@ -877,7 +832,7 @@ PrefabInstance:
     - target: {fileID: 3240437041918447327, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7add4de246b64bb4b864f5fa2fd6c0dc, type: 3}
