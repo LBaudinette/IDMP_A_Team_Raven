@@ -52,7 +52,7 @@ public class GiantScript : Enemy
         updatePath();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(!isAttacking)
+        if(!isAttacking && collision.transform.gameObject.tag == "Player")
             startAreaAttack();
     }
 
@@ -82,8 +82,6 @@ public class GiantScript : Enemy
 
 
 
-    public void takeDamage(float damage, float force, Vector2 angle) {
-
-    }
+    
 
 }
