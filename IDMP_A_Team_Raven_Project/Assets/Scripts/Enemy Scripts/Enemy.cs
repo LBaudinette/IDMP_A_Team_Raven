@@ -2,50 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEditor.Experimental.GraphView;
 
 public class Enemy : MonoBehaviour
 {
     protected Animator animator;
-    protected bool canAttack;
     protected Rigidbody2D rb;
+    protected GameObject player;            
+    private Transform leftPlayerTarget, rightPlayerTarget;
+    protected Path path;
+    private Seeker seeker;
 
-    private Transform leftPlayer, rightPlayer;
-    public float nextWaypointDistance = 3f;
+    public float attackDelay = 1f;
+    private float attackTimer = 0;
+    protected bool canAttack = true;
 
-    Path path;
-    Seeker seeker;
-    int currentWaypoint = 0;
+    public float nextWaypointDistance = 2f;
+    protected float health = 100f;
+    
+    private int currentWaypoint = 0;
     public float speed = 200f;
     bool isEndOfPath = false;
+    protected int directionFaced = (int)facingDirection.left;             
+    protected bool isAttacking = false;
+    private Vector2 target;
 
-    Vector2 target;
+    private float pathTimer = 0;
+    private float pathTimerMax = 0.5f;
+
+    protected enum facingDirection {
+        left,
+        right
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        leftPlayer = GameObject.FindWithTag("Player").transform.Find("Left Seek Point");
-        rightPlayer = GameObject.FindWithTag("Player").transform.Find("Right Seek Point");
+        player = GameObject.FindWithTag("Player");
+        leftPlayerTarget = player.transform.Find("Left Seek Point");
+        rightPlayerTarget = player.transform.Find("Right Seek Point");
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
-
-        InvokeRepeating("updatePath", 0f, 0.5f);
-
     }
 
-    void updatePath() {
+    
 
-        //if the path is finished calculating, calculate the new one
-        if(seeker.IsDone())
-            seeker.StartPath(rb.position, target, OnPathComplete);
+    protected virtual void Update() {
+        
+        updateTimers();
+        
     }
 
     //Use Fixed Update due to physics being used
     void FixedUpdate()
     {
+        //return if there is no path
         if (path == null)
             return;
 
+        //Cancel any pathfinding if attacking
+        if (isAttacking)
+            return;
+
+        //Check if we have reached the end of the path
         if (currentWaypoint >= path.vectorPath.Count) {
             isEndOfPath = true;
             return;
@@ -57,11 +77,18 @@ public class Enemy : MonoBehaviour
 
         //Get a vector between the next node in the path and the current position
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        if(direction.x != 0 && direction.y != 0) {
+            Vector2 force = direction * speed * Time.deltaTime;
+            //Debug.Log("Force: " + force);
+            rb.AddForce(force);
+            //transform.Translate(force);
+            //Debug.Log("Direction: " + direction);
 
-        rb.AddForce(force);
-        Debug.Log("Direction: " + direction);
-        updateAnimator(force);
+            updateAnimator(force);
+        }
+
+
+        
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
@@ -75,39 +102,107 @@ public class Enemy : MonoBehaviour
 
     protected void OnPathComplete(Path p) {
 
-        //if there is no error in the calculated path, make a new path
+        //if there is no error in the calculated path, make the enemy follow the path
         if (!p.error) {
             path = p;
             currentWaypoint = 0;
         }
     }
 
-    protected virtual void startAttack() {
+    protected void startMeleeAttack() {
 
+        if (canAttack) {
+            //Stop moving and then play the animation
+            isAttacking = true;
+            path = null;
+            //Set the isAttacking boolean in the animator
+            animator.SetBool("isAttacking", isAttacking);
+            animator.SetBool("isMoving", false);
+
+            canAttack = false;
+        }
+    }
+
+    public void finishAttack() {
+        Debug.Log("End Attack");
+        isAttacking = false;
+        canAttack = true;
+
+        animator.SetBool("isAttacking", isAttacking);
+        animator.SetBool("isMoving", false);
+        updatePath();
     }
 
     private void updateAnimator(Vector2 force) {
 
-        //Check if the enemy is moving right
-        if (force.x != 0f) {
-            //Debug.Log("velocity: " + rb.velocity.x);
-            animator.SetFloat("moveX", force.x);
+        //Check if the enemy is not stationary
+        if (force.x < 0f) {
+            directionFaced = (int)facingDirection.left;
+            animator.SetFloat("moveX", -1);
 
-            animator.SetBool("isMoving", true);
         }
+        else if (force.x > 0) {
+            directionFaced = (int)facingDirection.right;
+            animator.SetFloat("moveX", 1);
+
+        }
+
         //Enemy is not moving
-        else {
-            animator.SetBool("isMoving", false);
-        }
+        //else {
+        //    animator.SetBool("isMoving", false);
+        //}
+       // animator.SetFloat("moveX", force.x);
+
+        animator.SetBool("isMoving", true);
+
     }
 
     private void updateTarget() {
-        float distanceToLeft = Vector2.Distance(transform.position, leftPlayer.position);
-        float distanceToRight = Vector2.Distance(transform.position, rightPlayer.position);
+        float distanceToLeft = Vector2.Distance(transform.position, leftPlayerTarget.position);
+        float distanceToRight = Vector2.Distance(transform.position, rightPlayerTarget.position);
 
         if (distanceToLeft < distanceToRight)
-            target = leftPlayer.position;
+            target = leftPlayerTarget.position;
         else
-            target = rightPlayer.position;
+            target = rightPlayerTarget.position;
+    }
+    protected void updatePath() { 
+        //if the path is finished , calculate the new one
+        if (seeker.IsDone()) 
+            seeker.StartPath(rb.position, target, OnPathComplete);
+    }
+
+    protected void updateTimers() {
+        //Update the pathfinding for the enemy at regular intervals
+        if (pathTimer < pathTimerMax) {
+            pathTimer += Time.deltaTime;
+        }
+        else {
+            pathTimer = 0;
+            updatePath();
+        }
+
+        //if not attacking, start the timer
+        if (!isAttacking) {
+            //Update the attack timer
+            if (attackTimer < attackDelay) {
+                attackTimer += Time.deltaTime;
+            }
+            else {
+                attackTimer = 0;
+                canAttack = true;
+            }
+        }
+    }
+
+    public void takeDamage(float damage, float force, Vector2 angle) {
+
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.transform.gameObject.tag == "Player") {
+            startMeleeAttack();
+        }
     }
 }
