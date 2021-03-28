@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     protected bool canAttack = true;
 
     public float nextWaypointDistance = 2f;
-
+    protected float health = 100f;
     
     private int currentWaypoint = 0;
     public float speed = 200f;
@@ -77,12 +77,18 @@ public class Enemy : MonoBehaviour
 
         //Get a vector between the next node in the path and the current position
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        if(direction.x != 0 && direction.y != 0) {
+            Vector2 force = direction * speed * Time.deltaTime;
+            //Debug.Log("Force: " + force);
+            rb.AddForce(force);
+            //transform.Translate(force);
+            //Debug.Log("Direction: " + direction);
 
-        rb.AddForce(force);
-        //Debug.Log("Direction: " + direction);
+            updateAnimator(force);
+        }
 
-        updateAnimator(force);
+
+        
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
@@ -130,17 +136,23 @@ public class Enemy : MonoBehaviour
     private void updateAnimator(Vector2 force) {
 
         //Check if the enemy is not stationary
-        if (force.x < 0f) 
-            directionFaced = (int)facingDirection.left;  
-         else if (force.x > 0) 
+        if (force.x < 0f) {
+            directionFaced = (int)facingDirection.left;
+            animator.SetFloat("moveX", -1);
+
+        }
+        else if (force.x > 0) {
             directionFaced = (int)facingDirection.right;
+            animator.SetFloat("moveX", 1);
+
+        }
 
         //Enemy is not moving
         //else {
         //    animator.SetBool("isMoving", false);
         //}
+       // animator.SetFloat("moveX", force.x);
 
-        animator.SetFloat("moveX", force.x);
         animator.SetBool("isMoving", true);
 
     }
@@ -156,7 +168,7 @@ public class Enemy : MonoBehaviour
     }
     protected void updatePath() { 
         //if the path is finished , calculate the new one
-        if (seeker.IsDone())
+        if (seeker.IsDone()) 
             seeker.StartPath(rb.position, target, OnPathComplete);
     }
 
@@ -183,7 +195,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void takeDamage(float damage, float force, Vector2 angle) {
+
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision) {
-        startMeleeAttack();
+        if(collision.transform.gameObject.tag == "Player") {
+            startMeleeAttack();
+        }
     }
 }
