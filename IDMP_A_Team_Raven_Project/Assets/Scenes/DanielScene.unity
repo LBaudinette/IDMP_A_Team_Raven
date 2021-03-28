@@ -149,38 +149,6 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
---- !u!1 &1063338494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1063338494, guid: ed16f9111d4456c48868132f97ff67bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1302142833}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1063338495
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063338494}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.3699439, y: -0.0264467}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9259486, y: 0.43932843}
-  m_EdgeRadius: 0
 --- !u!1 &1191615494
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,18 +363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 836671163, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 836671165, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063338494, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_Name
@@ -772,7 +728,7 @@ PrefabInstance:
     - target: {fileID: 4192657543923078187, guid: 34ad5016cc549464693858a7db51cf82,
         type: 3}
       propertyPath: speed
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4192657543923078187, guid: 34ad5016cc549464693858a7db51cf82,
         type: 3}

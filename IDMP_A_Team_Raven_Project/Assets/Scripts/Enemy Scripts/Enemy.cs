@@ -73,6 +73,8 @@ public class Enemy : MonoBehaviour
         else
             isEndOfPath = false;
 
+        
+
         updateTarget();
 
         //Get a vector between the next node in the path and the current position
@@ -87,17 +89,13 @@ public class Enemy : MonoBehaviour
             updateAnimator(force);
         }
 
-
-        
-
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
         //If the enemy is within distance to pick another node to move to, pick the next node
-        if(distance < nextWaypointDistance) {
+        if (distance < nextWaypointDistance) {
             currentWaypoint++;
         }
 
-        
+
     }
 
     protected void OnPathComplete(Path p) {
