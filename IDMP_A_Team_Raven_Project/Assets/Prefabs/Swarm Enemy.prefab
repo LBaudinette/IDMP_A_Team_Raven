@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1819975671}
   m_Layer: 0
   m_Name: Swarm Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85724f24cc2f9442b11994d9fd92eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDelay: 1
   nextWaypointDistance: 3
   speed: 200
 --- !u!114 &1819975671
