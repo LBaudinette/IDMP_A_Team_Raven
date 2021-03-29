@@ -21,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     public float attackMoveSpeed;
 
+    [Header("Health Variables")]
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private SignalSender addPlayerHealthSignal;
+    [SerializeField] private InventoryItem healthpotion;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             inputDash = Input.GetButtonDown("Dash");
         }
 
-        if (Input.GetMouseButtonDown(0) && !shootScript.isAiming())
+        if (Input.GetMouseButtonDown(0) && !shootScript.IsAiming())
         {
             // attack
             isAttacking = true;
@@ -89,6 +95,15 @@ public class PlayerMovement : MonoBehaviour
                 attackCoroutine = StartCoroutine(AttackTimer(3));
             }
 
+        }
+
+        if (Input.GetButtonDown("Heal"))
+        {
+            if (playerInventory.playerInventory.Contains(healthpotion))
+            {
+                healthpotion.Use();
+                addPlayerHealthSignal.Raise();
+            }
         }
     }
 

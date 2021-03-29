@@ -12,6 +12,12 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;
     public float arrowForce;
 
+    [Header("Inventory Variables")]
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private InventoryItem boltInventoryItem;
+    [SerializeField] private SignalSender boltFiredSignal;
+    [SerializeField] private int boltFiredCost;
+
     private bool aiming;
 
     Vector2 mousePos;
@@ -60,8 +66,13 @@ public class PlayerShoot : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
-                firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
+                if (boltInventoryItem.numberHeld > 0)
+                {
+                    GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
+                    firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
+                    boltInventoryItem.DeacreaseAmount(boltFiredCost);
+                    boltFiredSignal.Raise();
+                }
             }
         }
     }
@@ -72,7 +83,7 @@ public class PlayerShoot : MonoBehaviour
         lr.SetPosition(1, mousePos);
     }
 
-    public bool isAiming()
+    public bool IsAiming()
     {
         return aiming;
     }
