@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,14 +14,31 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image itemSprite;
+    [SerializeField] private Image itemSpriteContainer;
     public InventoryItem currentItem;
 
-    public void SetTextAndImage(string description, Image itemSprite)
+    //public void SetDescriptionTextAndImage(string description, Image itemSprite)
+    //{
+    //    descriptionText.text = description;
+    //    Color containerAlpha = itemSpriteContainer.color;
+    //    Color itemAlpha = this.itemSprite.color;
+    //    containerAlpha.a = 1f;
+    //    itemAlpha.a = 1f;
+    //    itemSpriteContainer.color = containerAlpha;
+    //    this.itemSprite.color = itemAlpha;
+    //    this.itemSprite.sprite = itemSprite.sprite;
+
+    //}
+    private void SetDescriptionTextAndSprite(string description)
     {
         descriptionText.text = description;
-        this.itemSprite.sprite = itemSprite.sprite;
+        Color containerAlpha = itemSpriteContainer.color;
+        Color itemAlpha = itemSprite.color;
+        containerAlpha.a = 0f;
+        itemAlpha.a = 0f;
+        itemSpriteContainer.color = containerAlpha;
+        this.itemSprite.color = itemAlpha;
     }
-
     void MakeInventorySlots()
     {
         if (playerInventory)
@@ -45,13 +63,20 @@ public class InventoryManager : MonoBehaviour
     {
         ClearInventorySlots();
         MakeInventorySlots();
-        SetTextAndImage("", null);
+        SetDescriptionTextAndSprite("");
     }
 
-    public void SetupDescriptionAndButton(string newDescriptionString, InventoryItem newItem)
+    public void SetupDescriptionAndSprite(string newDescriptionString, Image itemSprite, InventoryItem newItem)
     {
         currentItem = newItem;
         descriptionText.text = newDescriptionString;
+        Color containerAlpha = itemSpriteContainer.color;
+        Color itemAlpha = this.itemSprite.color;
+        containerAlpha.a = 1f;
+        itemAlpha.a = 1f;
+        itemSpriteContainer.color = containerAlpha;
+        this.itemSprite.color = itemAlpha;
+        this.itemSprite.sprite = itemSprite.sprite;
     }
 
     private void ClearInventorySlots()

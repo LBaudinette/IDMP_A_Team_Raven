@@ -10,6 +10,7 @@ public class PauseManager : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject journalPanel;
     public bool usingPausePanel;
+    public string mainMenuString;
 
     // TODO: Quit To main menu
     //public string mainMenu;
@@ -68,6 +69,12 @@ public class PauseManager : MonoBehaviour
             panelToSwitchTo.SetActive(true);
             pausePanel.SetActive(false);
         }
+    }
+
+    public void QuitToMain()
+    {
+        SceneManager.LoadScene(mainMenuString);
+        Time.timeScale = 1f;
     }
 
 }

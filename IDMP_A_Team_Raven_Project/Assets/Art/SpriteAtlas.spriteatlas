@@ -262,8 +262,10 @@ SpriteAtlas:
   - {fileID: 7786913176811858748, guid: 4001dd505969319468539cdc9c716997, type: 3}
   - {fileID: 6248855598320388396, guid: 4001dd505969319468539cdc9c716997, type: 3}
   - {fileID: 21300000, guid: 9c9d9da02187a734e8ee30e3e7d415cd, type: 3}
+  - {fileID: 21300000, guid: 2a7dd2d0172abc5429115548fdd10edf, type: 3}
   - {fileID: 21300000, guid: 550d1c017e99267448e1ce06800aaacf, type: 3}
   - {fileID: 21300000, guid: dafc43a1178df824eb6344f2d0ee8dfb, type: 3}
+  - {fileID: 5833425859398786297, guid: 1b58e2221cb157e418f72d33c0bc7c82, type: 3}
   - {fileID: 21300000, guid: e5fc2a9233b8a1441b93aab2bfa90d8d, type: 3}
   - {fileID: -2177652739878518501, guid: 75a0cdd26bf01d04280d63f50e565ebe, type: 3}
   - {fileID: 1156227020933263, guid: 75a0cdd26bf01d04280d63f50e565ebe, type: 3}
@@ -393,6 +395,7 @@ SpriteAtlas:
   - {fileID: 6587000250297795346, guid: 75a0cdd26bf01d04280d63f50e565ebe, type: 3}
   - {fileID: -9116099907043030162, guid: 75a0cdd26bf01d04280d63f50e565ebe, type: 3}
   - {fileID: 21300000, guid: d07b6873d763e8f45a1c03dc66bbf589, type: 3}
+  - {fileID: -8358113870863188520, guid: 6bec3fc3bc5bfe14d8e4e927c9b6898a, type: 3}
   - {fileID: 5647298101280714740, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
   - {fileID: 2051569051857174917, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
   - {fileID: -881493912342181359, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
@@ -2769,6 +2772,10 @@ SpriteAtlas:
   - {fileID: 9155680412716956147, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
   - {fileID: -7076879786298766738, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
   - {fileID: 1198002374904393516, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
+  - {fileID: 1248200260599106479, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
+  - {fileID: 4923043979058936698, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
+  - {fileID: -3116766352357796022, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
+  - {fileID: 7252000388597571950, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
   - {fileID: -6195544015770601331, guid: 31ec3e7619e74604a961cba4561746ec, type: 3}
   - {fileID: 4505268440216447297, guid: b57810e68fcc8d249ae1af7f3fa1ef88, type: 3}
   - {fileID: 336297932506186654, guid: b57810e68fcc8d249ae1af7f3fa1ef88, type: 3}
@@ -3500,8 +3507,10 @@ SpriteAtlas:
   - decorative_props_51
   - decorative_props_105
   - AdventurerCrossbow
+  - mouse_pointer
   - arrow
   - healthPotionWithoutBackground
+  - ConfirmBGCustom_0
   - HealthBarFill
   - AdventurerCustomSpriteSheet_10
   - AdventurerCustomSpriteSheet_11
@@ -3631,6 +3640,7 @@ SpriteAtlas:
   - AdventurerCustomSpriteSheet_84
   - AdventurerCustomSpriteSheet_53
   - UISliderMiddle 1
+  - slot_0
   - mainlevbuild_2143
   - mainlevbuild_1756
   - mainlevbuild_1720
@@ -6007,6 +6017,10 @@ SpriteAtlas:
   - shade-projectileEdit_6
   - shade-projectileEdit_5
   - shade-projectileEdit_4
+  - arrowsdown_0
+  - arrowsdown_1
+  - arrowsdown_2
+  - arrowsdown_3
   - buttonDefaultCustom_0
   - GhoulEdit_41
   - GhoulEdit_40

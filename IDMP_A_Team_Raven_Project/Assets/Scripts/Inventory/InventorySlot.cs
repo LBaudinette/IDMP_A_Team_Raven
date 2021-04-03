@@ -6,6 +6,7 @@ public class InventorySlot : MonoBehaviour
 {
     [Header("UI variables to change")]
     [SerializeField] private TextMeshProUGUI itemNumberText;
+    [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private Image itemImage;
 
     [Header("Variables from the item")]
@@ -19,7 +20,8 @@ public class InventorySlot : MonoBehaviour
         if (currentItem)
         {
             itemImage.sprite = currentItem.itemImage;
-            itemNumberText.text = currentItem.numberHeld.ToString();
+            itemName.text = currentItem.name;
+            itemNumberText.text = "Held:" + currentItem.numberHeld.ToString();
         }
     }
 
@@ -27,7 +29,7 @@ public class InventorySlot : MonoBehaviour
     {
         if (currentItem)
         {
-            inventoryManager.SetupDescriptionAndButton(currentItem.itemDescription, currentItem);
+            inventoryManager.SetupDescriptionAndSprite(currentItem.itemDescription, itemImage, currentItem);
         }
     }
 }

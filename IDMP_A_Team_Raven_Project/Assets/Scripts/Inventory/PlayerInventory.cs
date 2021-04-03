@@ -14,7 +14,6 @@ public class PlayerInventory : ScriptableObject
     // TODO DEBUG should decide how number of health potions is kept persistent between areas/ playthroughs
     public void OnEnable()
     {
-
         for (int i = 0; i < initialHealthPotion; i++)
         {
             if (healthPotion.numberHeld < 10)
@@ -26,7 +25,6 @@ public class PlayerInventory : ScriptableObject
                 AddItem(bolt);
             }
         }
-
     }
 
     public void AddItem(InventoryItem itemToAdd)
