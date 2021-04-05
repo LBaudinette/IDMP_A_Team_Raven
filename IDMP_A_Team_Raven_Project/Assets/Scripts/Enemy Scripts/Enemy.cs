@@ -107,6 +107,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
     protected void startMeleeAttack() {
 
         if (canAttack) {
@@ -129,6 +130,12 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("isMoving", false);
         updatePath();
+=======
+    protected virtual void startAttack() {
+        //Stop pathfinding
+        //play animation
+        //start pathfinding again
+>>>>>>> Stashed changes
     }
 
     private void updateAnimator(Vector2 force) {
@@ -139,10 +146,16 @@ public class Enemy : MonoBehaviour
             animator.SetFloat("moveX", -1);
 
         }
+<<<<<<< Updated upstream
         else if (force.x > 0) {
             directionFaced = (int)facingDirection.right;
             animator.SetFloat("moveX", 1);
 
+=======
+        //Enemy is not moving
+        else {
+            //animator.SetBool("isMoving", false);
+>>>>>>> Stashed changes
         }
 
         //Enemy is not moving
