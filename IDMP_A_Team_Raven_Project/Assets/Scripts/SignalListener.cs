@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class SignalListener : MonoBehaviour
 {
-    public SignalSender signal;
+   [SerializeField] private SignalSender signal;
     public UnityEvent signalEvent;
 
     public void OnsignalRaised()
@@ -23,3 +21,4 @@ public class SignalListener : MonoBehaviour
         signal.DeRegisterListener(this);
     }
 }
+
