@@ -12,12 +12,6 @@ public class RangedEnemy : MonoBehaviour
     public float projForce;
     public Transform firePoint;
     public Transform rotationPoint;
-    public float teleDistance;          //How close the player must be to start teleporting
-
-    private float teleportTimer;
-    public float teleportDelay;
-
-    private Coroutine coroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +24,7 @@ public class RangedEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Update the player position every frame
         playerPos = GameObject.FindWithTag("Player").transform.position;
-
         //Check to see if the Enemy can fire a projectile
         if (timer <= 0) {
             fireProjectile();
@@ -40,8 +32,6 @@ public class RangedEnemy : MonoBehaviour
         }
         else
             timer -= Time.deltaTime;
-
-        checkforPlayer();
     }
 
     void fireProjectile() {
@@ -57,16 +47,5 @@ public class RangedEnemy : MonoBehaviour
         //Create projectile
         GameObject proj = Instantiate(fireball, firePoint.position, rotationPoint.rotation);
         proj.GetComponent<Rigidbody2D>().AddForce(firePoint.right * projForce, ForceMode2D.Impulse);
-    }
-
-    //Checks to see if the player is within distance to start teleporting
-    void checkforPlayer() {
-        if (Vector2.Distance(transform.position, playerPos) < teleDistance)
-            coroutine = StartCoroutine(startTeleport());
-        
-    }
-
-    IEnumerator startTeleport() {
-
     }
 }
