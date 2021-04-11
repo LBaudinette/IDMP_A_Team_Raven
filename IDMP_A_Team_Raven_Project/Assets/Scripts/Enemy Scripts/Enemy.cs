@@ -18,7 +18,8 @@ public class Enemy : MonoBehaviour
     protected bool canAttack = true;
 
     public float nextWaypointDistance = 2f;
-    protected float health = 100f;
+    public float health = 100f;
+    public float damage = 10f;
     
     private int currentWaypoint = 0;
     public float speed = 200f;
@@ -61,8 +62,8 @@ public class Enemy : MonoBehaviour
         if (path == null)
             return;
 
-        //Cancel any pathfinding if attacking
-        if (isAttacking)
+        //Cancel any pathfinding if attacking or dead
+        if (isAttacking && health != 0)
             return;
 
         //Check if we have reached the end of the path
@@ -197,6 +198,9 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public virtual void onDeath() {
+        Destroy(gameObject);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.transform.gameObject.tag == "Player") {
