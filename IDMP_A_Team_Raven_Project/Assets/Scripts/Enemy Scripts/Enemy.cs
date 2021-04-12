@@ -13,9 +13,10 @@ public class Enemy : MonoBehaviour
     protected Path path;
     private Seeker seeker;
 
-    public float attackDelay = 1f;
+    public float attackDelay = 0.5f;
     private float attackTimer = 0;
     protected bool canAttack = true;
+    protected bool isCooldown = true;
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
@@ -26,10 +27,14 @@ public class Enemy : MonoBehaviour
     bool isEndOfPath = false;
     protected int directionFaced = (int)facingDirection.left;             
     protected bool isAttacking = false;
+    protected bool isMoving = false;
     private Vector2 target;
 
     private float pathTimer = 0;
     private float pathTimerMax = 0.5f;
+
+    public Transform leftRaycastPoint;
+    public Transform rightRaycastPoint;
 
     protected enum facingDirection {
         left,
@@ -50,7 +55,7 @@ public class Enemy : MonoBehaviour
     
 
     protected virtual void Update() {
-        
+
         updateTimers();
         
     }
@@ -74,14 +79,26 @@ public class Enemy : MonoBehaviour
         else
             isEndOfPath = false;
 
+            //Debug.Log("Cooldown: " + isCooldown);
+            //Debug.Log("Can Attack: " + canAttack);
+
+        checkAttackRange();
+        if (canAttack && !isCooldown)
+            startMeleeAttack();
+        else
+            Move();
         
 
         updateTarget();
 
-        //Get a vector between the next node in the path and the current position
+    }
+
+    protected void Move() {
+        // Get a vector between the next node in the path and the current position
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        if(direction.x != 0 && direction.y != 0) {
+        if (direction.x != 0 && direction.y != 0) {
             Vector2 force = direction * speed * Time.deltaTime;
+            isMoving = true;
             //Debug.Log("Force: " + force);
             rb.AddForce(force);
             //transform.Translate(force);
@@ -90,13 +107,14 @@ public class Enemy : MonoBehaviour
             updateAnimator(force);
         }
 
+
+
+
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         //If the enemy is within distance to pick another node to move to, pick the next node
         if (distance < nextWaypointDistance) {
             currentWaypoint++;
         }
-
-
     }
 
     protected void OnPathComplete(Path p) {
@@ -110,22 +128,28 @@ public class Enemy : MonoBehaviour
 
     protected void startMeleeAttack() {
 
-        if (canAttack) {
             //Stop moving and then play the animation
             isAttacking = true;
+            isMoving = false;
             path = null;
+
+            //Stop the enemy from moving
+            rb.velocity = new Vector2(0, 0);
+
             //Set the isAttacking boolean in the animator
             animator.SetBool("isAttacking", isAttacking);
-            animator.SetBool("isMoving", false);
+            animator.SetBool("isMoving", isMoving);
 
+        Debug.Log("Starting Attack");
             canAttack = false;
-        }
+
     }
 
     public void finishAttack() {
         Debug.Log("End Attack");
         isAttacking = false;
-        canAttack = true;
+        isMoving = true;
+        isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("isMoving", false);
@@ -181,16 +205,45 @@ public class Enemy : MonoBehaviour
             updatePath();
         }
 
-        //if not attacking, start the timer
-        if (!isAttacking) {
+        //if on cooldown, start the timer
+        if (isCooldown) {
             //Update the attack timer
             if (attackTimer < attackDelay) {
                 attackTimer += Time.deltaTime;
             }
             else {
                 attackTimer = 0;
-                canAttack = true;
+                isCooldown = false;
             }
+        }
+    }
+
+    protected void checkAttackRange() {
+
+        RaycastHit2D hit;
+
+
+        //if the enemy is facing left, fire raycast to the left
+        if (directionFaced == (int)facingDirection.left) {
+            Debug.DrawRay(leftRaycastPoint.position, Vector2.left * 1f, Color.green);
+            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, 1f);
+            if(hit.collider != null) {
+                if (hit.collider.tag == "Player") 
+                    canAttack = true;
+
+                
+            }
+            
+        }
+        //if the enemy is facing right, fire raycast to the right
+        else {
+            Debug.DrawRay(rightRaycastPoint.position, Vector2.right * 10f, Color.green);
+            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, 1f);
+            if (hit.collider != null) {
+                if (hit.collider.tag == "Player")
+                    canAttack = true;
+            }
+
         }
     }
 
@@ -202,9 +255,4 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.transform.gameObject.tag == "Player") {
-            startMeleeAttack();
-        }
-    }
 }
