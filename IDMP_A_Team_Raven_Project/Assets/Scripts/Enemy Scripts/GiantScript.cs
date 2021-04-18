@@ -13,48 +13,50 @@ public class GiantScript : Enemy
     private Coroutine coroutine;
 
    // Update is called once per frame
-   protected override void Update() {
+   //protected override void Update() {
 
 
-        //check for the distance between the enemy and the player
-        float distance = Vector2.Distance(gameObject.transform.position,
-            player.transform.position);
-        if (distance <= attackDistance)
-            //if the enemy is close enough to the player, attack
-            startAreaAttack();
-        updateTimers();
-    }
+   //     //check for the distance between the enemy and the player
+   //     float distance = Vector2.Distance(gameObject.transform.position,
+   //         player.transform.position);
+   //     if (distance <= attackDistance)
+   //         //if the enemy is close enough to the player, attack
+   //         startAreaAttack();
+   //     updateTimers();
+   // }
 
-    private void startAreaAttack() {
-        //create a special area if enough time has passed between attacks
-        if (canAttack) {
-            Debug.Log("ATTACK");
-            isAttacking = true;
-            path = null;
+    //private void startAreaAttack() {
+    //    //create a special area if enough time has passed between attacks
+    //    if (canAttack) {
+    //        Debug.Log("ATTACK");
+    //        isAttacking = true;
+    //        path = null;
 
-            //Set the isAttacking boolean in the animator
-            animator.SetBool("isAttacking", true);
-            //animator.SetBool("isMoving", false);
+    //        //Set the isAttacking boolean in the animator
+    //        animator.SetBool("isAttacking", true);
+    //        //animator.SetBool("isMoving", false);
 
-            canAttack = false;
+    //        canAttack = false;
 
-        }
-    }
+    //    }
+    //}
 
     void finishAreaAttack() {
-        //TODO: Spawn area on correct side
         Transform spawnPos = directionFaced == (int)facingDirection.left ? leftAttackPoint : rightAttackPoint; 
         Instantiate(areaAttack, spawnPos.position, transform.rotation);
+
         isAttacking = false;
+        isMoving = true;
+        isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("isMoving", true);
         updatePath();
     }
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(!isAttacking && collision.transform.gameObject.tag == "Player")
-            startAreaAttack();
-    }
+    //private void OnCollisionEnter2D(Collision2D collision) {
+    //    if(!isAttacking && collision.transform.gameObject.tag == "Player")
+    //        startAreaAttack();
+    //}
 
     //private void endAttack() {
     //    Debug.Log("Finished Attack");

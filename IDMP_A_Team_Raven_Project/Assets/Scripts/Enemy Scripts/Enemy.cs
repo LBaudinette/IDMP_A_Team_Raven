@@ -15,8 +15,9 @@ public class Enemy : MonoBehaviour
 
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
-    protected bool canAttack = true;
-    protected bool isCooldown = true;
+    protected bool canAttack = false;       //flags whether the player is in range for an attack
+    protected bool isCooldown = false;
+    protected float meleeRangeCheck = 1f;
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
@@ -90,6 +91,8 @@ public class Enemy : MonoBehaviour
         
 
         updateTarget();
+        Debug.Log("Can Attack: " + canAttack);
+        Debug.Log("Is Cooldown: " + isCooldown);
 
     }
 
@@ -225,8 +228,8 @@ public class Enemy : MonoBehaviour
 
         //if the enemy is facing left, fire raycast to the left
         if (directionFaced == (int)facingDirection.left) {
-            Debug.DrawRay(leftRaycastPoint.position, Vector2.left * 1f, Color.green);
-            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, 1f);
+            Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
+            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck);
             if(hit.collider != null) {
                 if (hit.collider.tag == "Player") 
                     canAttack = true;
@@ -237,14 +240,15 @@ public class Enemy : MonoBehaviour
         }
         //if the enemy is facing right, fire raycast to the right
         else {
-            Debug.DrawRay(rightRaycastPoint.position, Vector2.right * 10f, Color.green);
-            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, 1f);
+            Debug.DrawRay(rightRaycastPoint.position, Vector2.right * meleeRangeCheck, Color.green);
+            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck);
             if (hit.collider != null) {
                 if (hit.collider.tag == "Player")
                     canAttack = true;
             }
 
         }
+        
     }
 
     public void takeDamage(float damage, float force, Vector2 angle) {
