@@ -11,15 +11,16 @@ public class PhantomKnightScript : Enemy
 
     protected override void Update() {
         if (Input.GetKeyDown("j"))
-            split();
+            onDeath();
 
         updateTimers();
     }
     //split into multiple lesser enemies
-    void split() {
+
+    protected override void onDeath() {
         gameObject.SetActive(false);
-        for(int i = 0; i < numEnemySpawned; i++) {
-            GameObject enemy = 
+        for (int i = 0; i < numEnemySpawned; i++) {
+            GameObject enemy =
                 Instantiate(lesserEnemy, transform.position, transform.rotation);
             //Push new enemies away from where phantom knight dies
             //Vector2 pushVector = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)) * 500f;
@@ -27,5 +28,6 @@ public class PhantomKnightScript : Enemy
         }
         Destroy(gameObject);
     }
+
 
 }

@@ -497,16 +497,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.0324938
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.21624696
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d7b47dab12f5a438529731900e8b16, type: 3}
 --- !u!4 &1914380772 stripped
@@ -577,15 +567,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1259805935220213484, guid: 9167f4242a4b4e042987eb45e1f6254e,
+        type: 3}
+      propertyPath: teleportDelay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6026857293838660687, guid: 9167f4242a4b4e042987eb45e1f6254e,
         type: 3}
       propertyPath: m_Name
       value: Ranged Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6026857293838660687, guid: 9167f4242a4b4e042987eb45e1f6254e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9167f4242a4b4e042987eb45e1f6254e, type: 3}
@@ -832,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 4192657543923078188, guid: 34ad5016cc549464693858a7db51cf82,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ad5016cc549464693858a7db51cf82, type: 3}

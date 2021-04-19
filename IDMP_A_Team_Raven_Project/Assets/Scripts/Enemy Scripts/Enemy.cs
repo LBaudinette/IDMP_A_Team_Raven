@@ -251,11 +251,11 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void takeDamage(float damage, float force, Vector2 angle) {
+    protected void takeDamage(float damage, float force, Vector2 angle) {
 
     }
 
-    public virtual void onDeath() {
+    protected virtual void onDeath() {
         Destroy(gameObject);
     }
 
