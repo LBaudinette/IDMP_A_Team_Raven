@@ -21,6 +21,23 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     public float attackMoveSpeed;
 
+    private PlayerControls playerControls;
+
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,8 +72,7 @@ public class PlayerMovement : MonoBehaviour
     private void ProcessInputs()
     {
         // get movement inputs
-        movementDir.x = Input.GetAxisRaw("Horizontal");
-        movementDir.y = Input.GetAxisRaw("Vertical");
+        movementDir = playerControls.Player.Move.ReadValue<Vector2>();
 
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
         moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
@@ -65,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         // if dash input hasn't been read since last FixedUpdate, check for dash input
         if (!inputDash)
         {
-            inputDash = Input.GetButtonDown("Dash");
+            playerControls.Player.Dash.performed += _ => inputDash = true;
         }
 
         if (Input.GetMouseButtonDown(0) && !shootScript.isAiming())
