@@ -350,12 +350,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1295390018 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
-    type: 3}
-  m_PrefabInstance: {fileID: 1609837076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1302142833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,12 +514,12 @@ PrefabInstance:
     - target: {fileID: 334116438675235232, guid: 9167f4242a4b4e042987eb45e1f6254e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.038377
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 334116438675235232, guid: 9167f4242a4b4e042987eb45e1f6254e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2502954
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 334116438675235232, guid: 9167f4242a4b4e042987eb45e1f6254e,
         type: 3}
@@ -576,6 +570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ranged Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026857293838660687, guid: 9167f4242a4b4e042987eb45e1f6254e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9167f4242a4b4e042987eb45e1f6254e, type: 3}
@@ -833,21 +832,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2929856420408083028, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240437041918447300, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1295390018}
-    - target: {fileID: 3240437041918447320, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
-        type: 3}
-      propertyPath: speed
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3240437041918447323, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
         type: 3}
       propertyPath: m_RootOrder
@@ -907,11 +891,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire Giant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240437041918447327, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7add4de246b64bb4b864f5fa2fd6c0dc, type: 3}
