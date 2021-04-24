@@ -91,8 +91,8 @@ public class Enemy : MonoBehaviour
         
 
         updateTarget();
-        Debug.Log("Can Attack: " + canAttack);
-        Debug.Log("Is Cooldown: " + isCooldown);
+        //Debug.Log("Can Attack: " + canAttack);
+        //Debug.Log("Is Cooldown: " + isCooldown);
 
     }
 

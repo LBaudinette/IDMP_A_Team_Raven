@@ -42,6 +42,16 @@ void Start() {
 
     // Update is called once per frame
     void Update() {
+        Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
+        Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
+        Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
+        Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
+
+        Debug.DrawRay(leftRay.origin, leftRay.direction * teleTriggerDistance, Color.green);
+        Debug.DrawRay(topRay.origin, topRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(rightRay.origin, rightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
+
         //Update the player position every frame
         playerPos = GameObject.FindWithTag("Player").transform.position;
 
@@ -111,17 +121,20 @@ void Start() {
         Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
         Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
 
-     
 
         leftHit = Physics2D.Raycast(leftRay.origin, leftRay.direction, teleTriggerDistance, layerDetection);
         topHit = Physics2D.Raycast(topRay.origin, topRay.direction, teleportDistance, layerDetection);
         rightHit = Physics2D.Raycast(rightRay.origin, rightRay.direction, teleportDistance, layerDetection);
         botHit = Physics2D.Raycast(botRay.origin, botRay.direction, teleportDistance, layerDetection);
 
+       
+
         Raycast leftRaycast = new Raycast(leftRay, leftHit);
         Raycast topRaycast = new Raycast(topRay, topHit);
         Raycast rightRaycast = new Raycast(rightRay, rightHit);
         Raycast botRaycast = new Raycast(botRay, botHit);
+
+
 
         rays.Add(leftRaycast);
         rays.Add(topRaycast);
@@ -139,23 +152,26 @@ void Start() {
                 emptyRaycasts.Add(raycast);
 
         }
-
+        Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
+        Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
         Raycast longestRaycast;
         //if no walls were hit, then teleport into an open space
-        if (hitRaycasts.Count == 0) {
+        if (emptyRaycasts.Count != 0) {
             //assign the first element as the longest
             longestRaycast = emptyRaycasts[0];
 
             foreach(Raycast raycast in emptyRaycasts) {
+                Debug.Log(raycast.ray.direction);
                 if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
                     longestRaycast = raycast;
             }
 
             //pick a random direction
-            int randomIndex = Random.Range(0, emptyRaycasts.Count - 1);
+            int randomIndex = Random.Range(0, emptyRaycasts.Count);
 
             //Teleport to the open space
             //transform.Translate(longestRaycast.ray.direction * teleportDistance);
+            Debug.Log("TELEPORT INTO OPEN SPACE");
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
         }
         //if there are no empty spaces, teleport next to a wall
@@ -166,6 +182,8 @@ void Start() {
                 if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
                     longestRaycast = raycast;
             }
+
+            Debug.Log("TELEPORT NEAR WALL");
 
             //Teleport to the walls position
             transform.Translate(longestRaycast.ray.direction * teleportDistance);

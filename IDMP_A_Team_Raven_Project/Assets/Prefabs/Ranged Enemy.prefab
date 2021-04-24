@@ -319,7 +319,7 @@ MonoBehaviour:
   firePoint: {fileID: 3699563415543611715}
   rotationPoint: {fileID: 6926065724271940513}
   teleTriggerDistance: 3
-  teleportDelay: 5
+  teleportDelay: 2
   teleportDistance: 3
   leftRaycastPoint: {fileID: 7055182499569942125}
   topRaycastPoint: {fileID: 9071310211698459370}
@@ -327,7 +327,7 @@ MonoBehaviour:
   botRaycastPoint: {fileID: 7741450939510758442}
   layerDetection:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!50 &6117675282433694802
 Rigidbody2D:
   serializedVersion: 4
