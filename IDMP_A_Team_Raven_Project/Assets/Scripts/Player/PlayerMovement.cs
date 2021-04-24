@@ -84,21 +84,32 @@ public class PlayerMovement : MonoBehaviour
             playerControls.Player.Dash.performed += _ => inputDash = true;
         }
 
-        if (Input.GetMouseButtonDown(0) && !shootScript.isAiming())
+        // check for attack input
+        playerControls.Player.Attack.performed += _ => inputAttack();
+
+        
+    }
+
+    private void inputAttack()
+    {
+        if (!shootScript.isAiming())
         {
+            Debug.Log("input attack");
             // attack
             isAttacking = true;
             if (!isAttacking1 && !isAttacking2)
             {
                 isAttacking1 = true;
                 attackCoroutine = StartCoroutine(AttackTimer(1));
-            } else if (isAttacking1)
+            }
+            else if (isAttacking1)
             {
                 isAttacking1 = false;
                 isAttacking2 = true;
                 StopCoroutine(attackCoroutine);
                 attackCoroutine = StartCoroutine(AttackTimer(2));
-            } else if (isAttacking2)
+            }
+            else if (isAttacking2)
             {
                 isAttacking2 = false;
                 StopCoroutine(attackCoroutine);
@@ -111,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         // Lerp current velocity to new velocity
-        Vector2 movement = new Vector2();
+        Vector2 movement;
         if (isAttacking)
         {
             movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * attackMoveSpeed, velocityLerp * Time.deltaTime);
@@ -159,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking", false);
-        } else if (attackNum == 2)
+        }/* else if (attackNum == 2)
         {
             playerAnimator.SetBool("Attacking", false);
             playerAnimator.SetBool("Attacking2", true);
@@ -181,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking3", false);
-        }
+        }*/
 
         isAttacking = false;
         isAttacking1 = false;

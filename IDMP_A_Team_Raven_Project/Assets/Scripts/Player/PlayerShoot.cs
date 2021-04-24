@@ -15,6 +15,23 @@ public class PlayerShoot : MonoBehaviour
     private bool aiming;
 
     Vector2 mousePos;
+    private PlayerControls playerControls;
+
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
+
     void Start()
     {
         weaponSprite.enabled = false;
@@ -25,6 +42,8 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       /* processInputs();
+
         // disable line renderer and weapon sprite when RMB is released
         if (Input.GetMouseButtonUp(1))
         {
@@ -33,7 +52,7 @@ public class PlayerShoot : MonoBehaviour
             aiming = false;
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             aiming = true;
             // get mouse position and angle relative to player
@@ -63,7 +82,12 @@ public class PlayerShoot : MonoBehaviour
                 GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
                 firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
             }
-        }
+        }*/
+    }
+
+    private void processInputs()
+    {
+
     }
 
     private void DrawLine()
