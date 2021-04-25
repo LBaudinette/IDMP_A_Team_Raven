@@ -325,6 +325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swarm Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4545894050325807883, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -396,7 +401,7 @@ GameObject:
   - component: {fileID: 174612734}
   - component: {fileID: 174612733}
   - component: {fileID: 174612732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Collisions
   m_Icon: {fileID: 0}
@@ -43366,7 +43371,7 @@ GameObject:
   - component: {fileID: 1114058043}
   - component: {fileID: 1114058042}
   - component: {fileID: 1114058041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollisionDecoration
   m_TagString: Collisions
   m_Icon: {fileID: 0}
@@ -44187,7 +44192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1210186196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45384,6 +45389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrostGiant
       objectReference: {fileID: 0}
+    - target: {fileID: 4192657543923078188, guid: 34ad5016cc549464693858a7db51cf82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ad5016cc549464693858a7db51cf82, type: 3}
 --- !u!1001 &1896465951
@@ -45453,6 +45463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Giant
       objectReference: {fileID: 0}
+    - target: {fileID: 3240437041918447327, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7add4de246b64bb4b864f5fa2fd6c0dc, type: 3}
 --- !u!1001 &2007431926
@@ -45521,6 +45536,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ranged Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026857293838660687, guid: 9167f4242a4b4e042987eb45e1f6254e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9167f4242a4b4e042987eb45e1f6254e, type: 3}
@@ -45647,6 +45667,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2531658333841840177, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531658333841840177, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1828376255
+      objectReference: {fileID: 0}
     - target: {fileID: 3793510803764667726, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: knockback

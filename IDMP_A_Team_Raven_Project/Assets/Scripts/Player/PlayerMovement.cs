@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerControls();
+        shootScript.setControls(playerControls);
     }
 
     private void OnEnable()
@@ -81,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
         // if dash input hasn't been read since last FixedUpdate, check for dash input
         if (!inputDash)
         {
-            playerControls.Player.Dash.performed += _ => inputDash = true;
+            playerControls.Player.Dash.started += _ => inputDash = true;
         }
 
         // check for attack input
-        playerControls.Player.Attack.performed += _ => inputAttack();
+        //playerControls.Player.Attack.started += _ => inputAttack();
 
         
     }
