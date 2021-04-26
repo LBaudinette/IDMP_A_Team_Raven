@@ -85,7 +85,23 @@ public class GridAreaScript : MonoBehaviour
     }
 
     void playRandomPattern() {
-        int randomNumber;
+        //Generate number between 0 and the number of patterns 
+        int randomNumber = Random.Range(0,3);
+
+        switch (randomNumber) {
+            case 0:
+                coroutine = StartCoroutine(alternateRowPattern());
+                break;
+            case 1:
+                coroutine = StartCoroutine(alternateColPattern());
+                break;
+            case 2:
+                coroutine = StartCoroutine(alternateCheckerPattern());
+                break;
+            case 3:
+                checkerFlash();
+                break;
+        }
 
     }
 
