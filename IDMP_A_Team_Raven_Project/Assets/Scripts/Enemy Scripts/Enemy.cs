@@ -4,11 +4,10 @@ using UnityEngine;
 using Pathfinding;
 // using UnityEditor.Experimental.GraphView;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
     protected Animator animator;
     protected Rigidbody2D rb;
-    protected GameObject player;            
+    protected GameObject player;
     private Transform leftPlayerTarget, rightPlayerTarget;
     protected Path path;
     private Seeker seeker;
@@ -22,11 +21,11 @@ public class Enemy : MonoBehaviour
     public float nextWaypointDistance = 2f;
     public float health = 100f;
     public float damage = 10f;
-    
+
     private int currentWaypoint = 0;
     public float speed = 200f;
     bool isEndOfPath = false;
-    protected int directionFaced = (int)facingDirection.left;             
+    protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
     protected bool isMoving = false;
     private Vector2 target;
@@ -43,8 +42,7 @@ public class Enemy : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         player = GameObject.FindWithTag("Player");
         leftPlayerTarget = player.transform.Find("Left Seek Point");
         rightPlayerTarget = player.transform.Find("Right Seek Point");
@@ -53,17 +51,16 @@ public class Enemy : MonoBehaviour
         seeker = GetComponent<Seeker>();
     }
 
-    
+
 
     protected virtual void Update() {
 
         updateTimers();
-        
+
     }
 
     //Use Fixed Update due to physics being used
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         //return if there is no path
         if (path == null)
             return;
@@ -80,15 +77,15 @@ public class Enemy : MonoBehaviour
         else
             isEndOfPath = false;
 
-            //Debug.Log("Cooldown: " + isCooldown);
-            //Debug.Log("Can Attack: " + canAttack);
+        //Debug.Log("Cooldown: " + isCooldown);
+        //Debug.Log("Can Attack: " + canAttack);
 
         checkAttackRange();
         if (canAttack && !isCooldown)
             startMeleeAttack();
         else
             Move();
-        
+
 
         updateTarget();
         //Debug.Log("Can Attack: " + canAttack);
@@ -131,20 +128,20 @@ public class Enemy : MonoBehaviour
 
     protected void startMeleeAttack() {
 
-            //Stop moving and then play the animation
-            isAttacking = true;
-            isMoving = false;
-            path = null;
+        //Stop moving and then play the animation
+        isAttacking = true;
+        isMoving = false;
+        path = null;
 
-            //Stop the enemy from moving
-            rb.velocity = new Vector2(0, 0);
+        //Stop the enemy from moving
+        rb.velocity = new Vector2(0, 0);
 
-            //Set the isAttacking boolean in the animator
-            animator.SetBool("isAttacking", isAttacking);
-            animator.SetBool("isMoving", isMoving);
+        //Set the isAttacking boolean in the animator
+        animator.SetBool("isAttacking", isAttacking);
+        animator.SetBool("isMoving", isMoving);
 
         Debug.Log("Starting Attack");
-            canAttack = false;
+        canAttack = false;
 
     }
 
@@ -177,7 +174,7 @@ public class Enemy : MonoBehaviour
         //else {
         //    animator.SetBool("isMoving", false);
         //}
-       // animator.SetFloat("moveX", force.x);
+        // animator.SetFloat("moveX", force.x);
 
         animator.SetBool("isMoving", true);
 
@@ -192,9 +189,9 @@ public class Enemy : MonoBehaviour
         else
             target = rightPlayerTarget.position;
     }
-    protected void updatePath() { 
+    protected void updatePath() {
         //if the path is finished , calculate the new one
-        if (seeker.IsDone()) 
+        if (seeker.IsDone())
             seeker.StartPath(rb.position, target, OnPathComplete);
     }
 
@@ -230,13 +227,13 @@ public class Enemy : MonoBehaviour
         if (directionFaced == (int)facingDirection.left) {
             Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
             hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck);
-            if(hit.collider != null) {
-                if (hit.collider.tag == "Player") 
+            if (hit.collider != null) {
+                if (hit.collider.tag == "Player")
                     canAttack = true;
 
-                
+
             }
-            
+
         }
         //if the enemy is facing right, fire raycast to the right
         else {
@@ -248,14 +245,16 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        
+
     }
 
     protected void takeDamage(float damage, float force, Vector2 angle) {
-
+        if (health <= 0)
+            onDeath();
     }
 
     protected virtual void onDeath() {
+        animator.SetBool("isDead", true);
         Destroy(gameObject);
     }
 
