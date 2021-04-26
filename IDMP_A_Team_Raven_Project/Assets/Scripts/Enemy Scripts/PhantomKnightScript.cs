@@ -15,9 +15,14 @@ public class PhantomKnightScript : Enemy
 
         updateTimers();
     }
-    //split into multiple lesser enemies
 
+    //split into multiple lesser enemies
     protected override void onDeath() {
+        Debug.Log("DEAD");
+        animator.SetBool("isDead", true);
+    }
+
+    private void split() {
         gameObject.SetActive(false);
         for (int i = 0; i < numEnemySpawned; i++) {
             GameObject enemy =

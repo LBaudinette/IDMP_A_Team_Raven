@@ -189,13 +189,12 @@ void Start() {
             transform.Translate(longestRaycast.ray.direction * teleportDistance);
 
         }
-
-        
-
-        
-
         isTeleporting = false;
         //Reset teleport timer
         teleportTimer = 0;
+    }
+
+    protected void onDeath() {
+        Destroy(gameObject);
     }
 }

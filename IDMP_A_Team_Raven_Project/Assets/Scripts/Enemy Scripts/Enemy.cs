@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
     private float attackTimer = 0;
     protected bool canAttack = false;       //flags whether the player is in range for an attack
     protected bool isCooldown = false;
-    protected float meleeRangeCheck = 1f;
+    protected float meleeRangeCheck = 1.5f;
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
@@ -248,14 +248,24 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    protected void takeDamage(float damage, float force, Vector2 angle) {
+    public void TakeHit(Vector2 velocity, float damage) {
+        rb.AddForce(velocity * 5);
         if (health <= 0)
-            onDeath();
+            animator.SetBool("isDead", true);
+        health -= damage;
     }
 
     protected virtual void onDeath() {
-        animator.SetBool("isDead", true);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Hitbox") {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
     }
 
 }
