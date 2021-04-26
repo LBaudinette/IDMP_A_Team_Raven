@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
 
     private bool inputDash;
+    private bool inputAttack;
     private bool isAttacking;
     private bool isAttacking1;
     private bool isAttacking2;
@@ -64,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Dash();
             inputDash = false;
+        } else if (inputAttack)
+        {
+            Attack();
+            inputAttack = false;
         } else
         {
             Move();
@@ -86,12 +91,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // check for attack input
-        //playerControls.Player.Attack.started += _ => inputAttack();
+        playerControls.Player.Attack.started += _ => inputAttack = true;
 
         
     }
 
-    private void inputAttack()
+    private void Attack()
     {
         if (!shootScript.isAiming())
         {
@@ -171,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking", false);
-        }/* else if (attackNum == 2)
+        } else if (attackNum == 2)
         {
             playerAnimator.SetBool("Attacking", false);
             playerAnimator.SetBool("Attacking2", true);
@@ -193,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking3", false);
-        }*/
+        }
 
         isAttacking = false;
         isAttacking1 = false;
