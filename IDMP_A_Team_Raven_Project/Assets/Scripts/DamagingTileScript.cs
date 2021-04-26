@@ -23,16 +23,22 @@ public class DamagingTileScript : MonoBehaviour
 
     public void activateTile() {
         gameObject.SetActive(true);
-        //coroutine = StartCoroutine(deactivateTile());
-        //Maybe play some animation
+        coroutine = StartCoroutine(deactivateTile());
+        //Maybe play some animation before activating
     }
+
     //TODO: replace timer with animation flag to deactivate tile
     IEnumerator deactivateTile() {
         while(timer < deactivationDelay) {
             timer += Time.deltaTime;
             yield return null;
         }
+        timer = 0;
 
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        
     }
 }
