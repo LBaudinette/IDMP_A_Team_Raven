@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using TMPro;
 
 public class Sign: Interactable
 {
     public GameObject dialogueBox;
-    public Text dialogueText;
+    public TextMeshProUGUI dialogueText;
     public string dialogue;
 
     // Update is called once per frame
     public virtual void Update()
     {
-        if (Input.GetButtonDown("interact") && playerInRange)
+        if (Input.GetButtonDown("Interact") && playerInRange)
         {
             if (dialogueBox.activeInHierarchy)
             {
