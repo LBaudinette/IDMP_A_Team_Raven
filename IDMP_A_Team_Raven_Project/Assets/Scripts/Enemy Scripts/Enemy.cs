@@ -228,8 +228,12 @@ public class Enemy : MonoBehaviour {
             Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
             hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck);
             if (hit.collider != null) {
-                if (hit.collider.tag == "Player")
+                
+                if (hit.collider.tag == "Player") {
+                    Debug.Log("HIT");
                     canAttack = true;
+
+                }
 
 
             }
@@ -240,8 +244,11 @@ public class Enemy : MonoBehaviour {
             Debug.DrawRay(rightRaycastPoint.position, Vector2.right * meleeRangeCheck, Color.green);
             hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck);
             if (hit.collider != null) {
-                if (hit.collider.tag == "Player")
+                if (hit.collider.tag == "Player") {
+                    Debug.Log("HIT");
                     canAttack = true;
+
+                }
             }
 
         }
