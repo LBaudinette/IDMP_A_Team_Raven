@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     public PlayerInventory playerInventory;
 
     [SerializeField] private GameObject blankInventorySlot;
-    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inventoryContentPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image itemSprite;
     [SerializeField] private Image itemSpriteContainer;
@@ -47,7 +47,7 @@ public class InventoryManager : MonoBehaviour
             {
                 if (playerInventory.playerInventory[i].numberHeld > 0)
                 {
-                    GameObject temporaryInventorySlot = Instantiate(blankInventorySlot, inventoryPanel.transform.position, Quaternion.identity, inventoryPanel.transform);
+                    GameObject temporaryInventorySlot = Instantiate(blankInventorySlot, inventoryContentPanel.transform.position, Quaternion.identity, inventoryContentPanel.transform);
                     InventorySlot newSlot = temporaryInventorySlot.GetComponent<InventorySlot>();
                     if (newSlot)
                     {
@@ -81,9 +81,9 @@ public class InventoryManager : MonoBehaviour
 
     private void ClearInventorySlots()
     {
-        for (int i = 0; i < inventoryPanel.transform.childCount; i++)
+        for (int i = 0; i < inventoryContentPanel.transform.childCount; i++)
         {
-            Destroy(inventoryPanel.transform.GetChild(i).gameObject);
+            Destroy(inventoryContentPanel.transform.GetChild(i).gameObject);
         }
     }
 }

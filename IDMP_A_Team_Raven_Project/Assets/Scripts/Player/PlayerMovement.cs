@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     public float attackMoveSpeed;
 
+    public GameObject rayOrigin;
+    private string directionAmender = "normal";
+
     [Header("Health Variables")]
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private SignalSender addPlayerHealthSignal;
@@ -47,15 +50,32 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateAnimation();
+
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin.transform.position, Vector2.zero);
+
+        if (hit && hit.collider.tag == "StairsDownRight")
+        {
+            directionAmender = "stairsDownRight";
+        } else if (hit && hit.collider.tag == "StairsDownLeft")
+        {
+            directionAmender = "stairsDownLeft";
+        }
+        else 
+        {
+            directionAmender = "normal";
+        }
+
         // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
         if (inputDash)
         {
             Dash();
             inputDash = false;
-        } else
+        }
+        else
         {
             Move();
         }
+        
     }
 
     private void ProcessInputs()
@@ -82,13 +102,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 isAttacking1 = true;
                 attackCoroutine = StartCoroutine(AttackTimer(1));
-            } else if (isAttacking1)
+            }
+            else if (isAttacking1)
             {
                 isAttacking1 = false;
                 isAttacking2 = true;
                 StopCoroutine(attackCoroutine);
                 attackCoroutine = StartCoroutine(AttackTimer(2));
-            } else if (isAttacking2)
+            }
+            else if (isAttacking2)
             {
                 isAttacking2 = false;
                 StopCoroutine(attackCoroutine);
@@ -114,10 +136,22 @@ public class PlayerMovement : MonoBehaviour
         if (isAttacking)
         {
             movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * attackMoveSpeed, velocityLerp * Time.deltaTime);
-        } else
-        {
-            movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
         }
+        else
+        {
+            if (directionAmender == "normal")
+            {
+                movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+            }
+            if (directionAmender == "stairsDownRight")
+            {
+                movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, -movementDir.x + movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+            }
+            if (directionAmender == "stairsDownLeft")
+            {
+                movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.x + movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+            }
+            }
         rb2d.velocity = movement;
     }
 
@@ -158,7 +192,8 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking", false);
-        } else if (attackNum == 2)
+        }
+        else if (attackNum == 2)
         {
             playerAnimator.SetBool("Attacking", false);
             playerAnimator.SetBool("Attacking2", true);
@@ -169,7 +204,8 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             playerAnimator.SetBool("Attacking2", false);
-        } else if (attackNum == 3)
+        }
+        else if (attackNum == 3)
         {
             playerAnimator.SetBool("Attacking2", false);
             playerAnimator.SetBool("Attacking3", true);
@@ -187,5 +223,4 @@ public class PlayerMovement : MonoBehaviour
         isAttacking2 = false;
 
     }
-    
 }

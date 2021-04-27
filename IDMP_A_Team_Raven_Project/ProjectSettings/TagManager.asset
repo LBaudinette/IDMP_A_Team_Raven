@@ -8,6 +8,8 @@ TagManager:
   - Projectiles
   - Enemy
   - Hitbox
+  - StairsDownRight
+  - StairsDownLeft
   layers:
   - Default
   - TransparentFX
