@@ -10,6 +10,7 @@ TagManager:
   - Hitbox
   - StairsDownRight
   - StairsDownLeft
+  - GridArea
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,8 @@ public class RangedEnemy : MonoBehaviour {
     public Transform rotationPoint;
     public float teleTriggerDistance = 1;          //How close the player must be to start teleporting
 
+    public float health = 100f;
+
     private float teleportTimer = 0;
     public float teleportDelay = 3;     //How long it takes to teleport
     public float teleportDistance = 3f;
@@ -22,7 +24,10 @@ public class RangedEnemy : MonoBehaviour {
         rightRaycastPoint, botRaycastPoint;
     public LayerMask layerDetection;
 
-    private Coroutine coroutine;
+
+    protected Animator animator;
+    protected Rigidbody2D rb;
+    protected Coroutine coroutine;
 
     private struct Raycast{
 
@@ -38,6 +43,8 @@ public class RangedEnemy : MonoBehaviour {
 // Start is called before the first frame update
 void Start() {
         playerPos = GameObject.FindWithTag("Player").transform.position;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -84,7 +91,7 @@ void Start() {
     }
 
 
-    private IEnumerator startTeleport() {
+    protected IEnumerator startTeleport() {
 
         isTeleporting = true;
         Debug.Log("Starting Teleport");
@@ -197,4 +204,22 @@ void Start() {
     protected void onDeath() {
         Destroy(gameObject);
     }
+
+    public void TakeHit(Vector2 velocity, float damage) {
+        rb.AddForce(velocity * 5);
+        if (health <= 0)
+            animator.SetBool("isDead", true);
+        health -= damage;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Hitbox") {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+    }
+
+
 }
