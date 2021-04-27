@@ -278,6 +278,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: healTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: velocityLerp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: healMoveSpeedFactor
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2531658332624012171, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_SortingLayer

@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public enum State
+    {
+        Moving,
+        Aiming,
+        Attacking,
+        Healing,
+        Dashing
+    }
+
+    public State state;
+
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
+    private SpriteRenderer sr;
 
+    public bool inputHeal;
     private bool inputDash;
     private bool inputAttack;
     private bool isAttacking;
@@ -21,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     public float velocityLerp;
     public float dashSpeed;
     public float attackMoveSpeed;
+    public float healTime;
+    public float healMoveSpeedFactor;
 
     private PlayerControls playerControls;
 
@@ -49,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("MoveX", 0);
         playerAnimator.SetFloat("MoveY", -1);
+        sr = GetComponent<SpriteRenderer>();
+        state = State.Moving;
     }
 
     // Update is called once per frame
@@ -61,17 +79,37 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateAnimation();
         // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
-        if (inputDash)
+        switch (state)
         {
-            Dash();
-            inputDash = false;
-        } else if (inputAttack)
-        {
-            Attack();
-            inputAttack = false;
-        } else
-        {
-            Move();
+            case State.Moving:
+                if (inputDash)
+                {
+                    Dash();
+                    inputDash = false;
+                }
+                else if (inputAttack)
+                {
+                    Attack();
+                    inputAttack = false;
+                } else if (inputHeal)
+                {
+                    StartCoroutine(Heal());
+                    state = State.Healing;
+                }
+                else
+                {
+                    Movement();
+                }
+                break;
+            case State.Attacking:
+                break;
+            case State.Aiming:
+                break;
+            case State.Healing:
+                HealingMovement();
+                break;
+            case State.Dashing:
+                break;
         }
     }
 
@@ -92,6 +130,8 @@ public class PlayerMovement : MonoBehaviour
 
         // check for attack input
         playerControls.Player.Attack.started += _ => inputAttack = true;
+
+        playerControls.Player.Heal.started += _ => inputHeal = true;
 
         
     }
@@ -125,18 +165,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Movement()
     {
         // Lerp current velocity to new velocity
-        Vector2 movement;
-        if (isAttacking)
-        {
-            movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * attackMoveSpeed, velocityLerp * Time.deltaTime);
-        } else
-        {
-            movement = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
-        }
-        rb2d.velocity = movement;
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+    }
+
+    private void HealingMovement()
+    {
+        // decay current velocity to 0 (no moving when healing)
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed * healMoveSpeedFactor, velocityLerp * Time.deltaTime);
     }
 
     private void Dash()
@@ -204,6 +242,24 @@ public class PlayerMovement : MonoBehaviour
         isAttacking1 = false;
         isAttacking2 = false;
 
+    }
+
+    IEnumerator Heal()
+    {
+        state = State.Healing;
+        float elapsed = 0f;
+        while (elapsed < healTime)
+        {
+            sr.color = new Color(1f - (elapsed / healTime), 1f, 1f - (elapsed / healTime), 1f);
+            elapsed += Time.deltaTime;
+            Debug.Log("elapsed = " + elapsed);
+            yield return null;
+        }
+        Debug.Log("left heal loop");
+        sr.color = new Color(1f, 1f, 1f, 1f);
+        inputHeal = false;
+        state = State.Moving;
+        //playerHealth.AddHealth();
     }
     
 }

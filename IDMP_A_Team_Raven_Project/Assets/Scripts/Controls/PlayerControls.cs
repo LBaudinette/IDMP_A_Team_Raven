@@ -57,6 +57,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""fde4cfdc-ca72-4591-8c27-c87417c23e11"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -268,6 +276,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Aim Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3fd1664b-b2bc-4707-a0d4-f294d130aef8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KB+M"",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2e25a43-9faa-4add-9b18-5b7de46ed382"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -309,6 +339,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
         m_Player_AimDirection = m_Player.FindAction("Aim Direction", throwIfNotFound: true);
+        m_Player_Heal = m_Player.FindAction("Heal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -363,6 +394,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Aim;
     private readonly InputAction m_Player_AimDirection;
+    private readonly InputAction m_Player_Heal;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -372,6 +404,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
         public InputAction @AimDirection => m_Wrapper.m_Player_AimDirection;
+        public InputAction @Heal => m_Wrapper.m_Player_Heal;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -396,6 +429,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @AimDirection.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAimDirection;
                 @AimDirection.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAimDirection;
                 @AimDirection.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAimDirection;
+                @Heal.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
+                @Heal.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
+                @Heal.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -415,6 +451,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @AimDirection.started += instance.OnAimDirection;
                 @AimDirection.performed += instance.OnAimDirection;
                 @AimDirection.canceled += instance.OnAimDirection;
+                @Heal.started += instance.OnHeal;
+                @Heal.performed += instance.OnHeal;
+                @Heal.canceled += instance.OnHeal;
             }
         }
     }
@@ -444,5 +483,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnAimDirection(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
     }
 }
