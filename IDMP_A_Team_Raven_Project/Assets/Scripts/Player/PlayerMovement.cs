@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    // player FSM
     public enum State
     {
         Moving,
@@ -13,31 +13,57 @@ public class PlayerMovement : MonoBehaviour
         Healing,
         Dashing
     }
-
     public State state;
 
+    // attached components and scripts
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
     private SpriteRenderer sr;
+    public PlayerShoot shootScript;
 
+    // vars for tracking player inputs
     public bool inputHeal;
     private bool inputDash;
     private bool inputAttack;
-    private bool isAttacking;
-    private bool isAttacking1;
-    private bool isAttacking2;
-    private Coroutine attackCoroutine;
 
-    public Vector2 movementDir;
-    public PlayerShoot shootScript;
-    public float moveMagnitude;
+    // attack states
+    private enum AttackState
+    {
+        Idle,
+        One,
+        Two,
+        Three
+    }
+    private AttackState attackState;
+
+    // vars for tracking player attack states
+    private Coroutine attackCoroutine;
+    public string attack1name;
+    public string attack2name;
+    public string attack3name;
+
+    // attack timing
+    private float attackTimeElapsed;
+    public float attack1ComboAfter;
+    public float attack1Max;
+    public float attack2ComboAfter;
+    public float attack2Max;
+    public float attack3ComboAfter;
+    public float attack3Max;
+
+    // movement-related vars
+    private Vector2 movementDir;
+    private float moveMagnitude;
     public float moveSpeed;
     public float velocityLerp;
     public float dashSpeed;
     public float attackMoveSpeed;
-    public float healTime;
     public float healMoveSpeedFactor;
 
+    public float dashTime;
+    public float healTime;
+
+    // control scheme using new input system
     private PlayerControls playerControls;
 
     private void Awake()
@@ -59,14 +85,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isAttacking = false;
-        isAttacking2 = false;
+        attackState = AttackState.Idle;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("MoveX", 0);
         playerAnimator.SetFloat("MoveY", -1);
         sr = GetComponent<SpriteRenderer>();
         state = State.Moving;
+
+        attackTimeElapsed = 0f;
     }
 
     // Update is called once per frame
@@ -85,16 +112,19 @@ public class PlayerMovement : MonoBehaviour
                 if (inputDash)
                 {
                     Dash();
+                    state = State.Dashing;
                     inputDash = false;
                 }
-                else if (inputAttack)
+                else if (inputAttack && !shootScript.isAiming())
                 {
+                    state = State.Attacking;
                     Attack();
                     inputAttack = false;
                 } else if (inputHeal)
                 {
                     StartCoroutine(Heal());
                     state = State.Healing;
+                    inputHeal = false;
                 }
                 else
                 {
@@ -102,13 +132,18 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
             case State.Attacking:
-                break;
-            case State.Aiming:
+                if (inputAttack)
+                {
+                    Attack();
+                    inputAttack = false;
+                }
                 break;
             case State.Healing:
                 HealingMovement();
+                // exits state upon completion of Heal() coroutine
                 break;
             case State.Dashing:
+                // exits state upon completion of DashCoroutine()
                 break;
         }
     }
@@ -117,51 +152,46 @@ public class PlayerMovement : MonoBehaviour
     {
         // get movement inputs
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
-
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
         moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
         movementDir.Normalize();
 
-        // if dash input hasn't been read since last FixedUpdate, check for dash input
-        if (!inputDash)
-        {
-            playerControls.Player.Dash.started += _ => inputDash = true;
-        }
+        // check for dash input
+        playerControls.Player.Dash.started += _ => inputDash = true;
 
         // check for attack input
         playerControls.Player.Attack.started += _ => inputAttack = true;
 
+        // check for heal input
         playerControls.Player.Heal.started += _ => inputHeal = true;
 
-        
     }
 
     private void Attack()
     {
-        if (!shootScript.isAiming())
+        switch (attackState)
         {
-            Debug.Log("input attack");
-            // attack
-            isAttacking = true;
-            if (!isAttacking1 && !isAttacking2)
-            {
-                isAttacking1 = true;
-                attackCoroutine = StartCoroutine(AttackTimer(1));
-            }
-            else if (isAttacking1)
-            {
-                isAttacking1 = false;
-                isAttacking2 = true;
-                StopCoroutine(attackCoroutine);
-                attackCoroutine = StartCoroutine(AttackTimer(2));
-            }
-            else if (isAttacking2)
-            {
-                isAttacking2 = false;
-                StopCoroutine(attackCoroutine);
-                attackCoroutine = StartCoroutine(AttackTimer(3));
-            }
-
+            case AttackState.Idle:
+                attackCoroutine = StartCoroutine(AttackCoroutine(attack1Max, "Attacking"));
+                attackState = AttackState.One;
+                break;
+            /*case AttackState.One:
+                if (attackTimeElapsed >= attack1ComboAfter && attackTimeElapsed < attack1Max)
+                {
+                    StopCoroutine(attackCoroutine);
+                    //attackCoroutine = StartCoroutine(AttackCoroutine(attack2Max, "Attacking2"));
+                    attackState = AttackState.Two;
+                }
+                break;
+            case AttackState.Two:
+                if (attackTimeElapsed >= attack2ComboAfter && attackTimeElapsed < attack2Max)
+                {
+                    StopCoroutine(attackCoroutine);
+                    //attackCoroutine = StartCoroutine(AttackCoroutine(attack3Max, "Attacking3"));
+                    attackState = AttackState.Three;
+                }
+                
+                break;*/
         }
     }
 
@@ -180,8 +210,7 @@ public class PlayerMovement : MonoBehaviour
     private void Dash()
     {
         // set current velocity to zero, then dash in movement direction
-        rb2d.velocity = Vector2.zero;
-        rb2d.velocity += movementDir * dashSpeed;
+        StartCoroutine(DashCoroutine());
     }
 
     private void UpdateAnimation()
@@ -198,50 +227,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator AttackTimer(int attackNum)
+    IEnumerator DashCoroutine()
     {
-        rb2d.velocity /= 2;
         float elapsed = 0f;
-        float max = 0f;
-
-        if (attackNum == 1)
+        while (elapsed < dashTime)
         {
-            playerAnimator.SetBool("Attacking", true);
-            max = 0.5f;
-            while (elapsed < max)
-            {
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-            playerAnimator.SetBool("Attacking", false);
-        } else if (attackNum == 2)
-        {
-            playerAnimator.SetBool("Attacking", false);
-            playerAnimator.SetBool("Attacking2", true);
-            max = 0.6f;
-            while (elapsed < max)
-            {
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-            playerAnimator.SetBool("Attacking2", false);
-        } else if (attackNum == 3)
-        {
-            playerAnimator.SetBool("Attacking2", false);
-            playerAnimator.SetBool("Attacking3", true);
-            max = 0.6f;
-            while (elapsed < max)
-            {
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-            playerAnimator.SetBool("Attacking3", false);
+            rb2d.velocity = movementDir * dashSpeed;
+            elapsed += Time.deltaTime;
+            yield return null;
         }
+        state = State.Moving;
+    }
 
-        isAttacking = false;
-        isAttacking1 = false;
-        isAttacking2 = false;
+    IEnumerator AttackCoroutine(float attackMaxTime, string attackName)
+    {
+        attackTimeElapsed = 0f;
+        playerAnimator.SetBool(attackName, true);
 
+        while (attackTimeElapsed < attackMaxTime)
+        {
+            attackTimeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        playerAnimator.SetBool(attackName, false);
+        attackState = AttackState.Idle;
+        state = State.Moving;
     }
 
     IEnumerator Heal()
@@ -257,7 +267,6 @@ public class PlayerMovement : MonoBehaviour
         }
         Debug.Log("left heal loop");
         sr.color = new Color(1f, 1f, 1f, 1f);
-        inputHeal = false;
         state = State.Moving;
         //playerHealth.AddHealth();
     }

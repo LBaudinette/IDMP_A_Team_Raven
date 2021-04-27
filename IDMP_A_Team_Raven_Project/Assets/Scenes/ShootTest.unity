@@ -280,8 +280,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
+      propertyPath: dashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
       propertyPath: healTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack1Max
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack2Max
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack3Max
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack1name
+      value: Attacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack2name
+      value: Attacking2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack3name
+      value: Attacking3
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
@@ -292,6 +327,21 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityLerp
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack1ComboAfter
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack2ComboAfter
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
+        type: 3}
+      propertyPath: attack3ComboAfter
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
