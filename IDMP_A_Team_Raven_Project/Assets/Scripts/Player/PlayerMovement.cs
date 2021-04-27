@@ -236,14 +236,13 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         // Lerp current velocity to new velocity
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
     }
 
     private void HealingMovement()
     {
         // decay current velocity to 0 (no moving when healing)
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed * healMoveSpeedFactor, velocityLerp * Time.deltaTime);
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * moveMagnitude * moveSpeed * healMoveSpeedFactor, velocityLerp * Time.deltaTime);
     }
 
     private void Dash()
