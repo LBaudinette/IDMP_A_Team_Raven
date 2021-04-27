@@ -4,31 +4,37 @@ using UnityEngine;
 using Pathfinding;
 // using UnityEditor.Experimental.GraphView;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
     protected Animator animator;
     protected Rigidbody2D rb;
-    protected GameObject player;            
+    protected GameObject player;
     private Transform leftPlayerTarget, rightPlayerTarget;
     protected Path path;
     private Seeker seeker;
 
-    public float attackDelay = 1f;
+    public float attackDelay = 0.5f;
     private float attackTimer = 0;
-    protected bool canAttack = true;
+    protected bool canAttack = false;       //flags whether the player is in range for an attack
+    protected bool isCooldown = false;
+    protected float meleeRangeCheck = 1.5f;
 
     public float nextWaypointDistance = 2f;
-    protected float health = 100f;
-    
+    public float health = 100f;
+    public float damage = 10f;
+
     private int currentWaypoint = 0;
     public float speed = 200f;
     bool isEndOfPath = false;
-    protected int directionFaced = (int)facingDirection.left;             
+    protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
+    protected bool isMoving = false;
     private Vector2 target;
 
     private float pathTimer = 0;
     private float pathTimerMax = 0.5f;
+
+    public Transform leftRaycastPoint;
+    public Transform rightRaycastPoint;
 
     protected enum facingDirection {
         left,
@@ -36,8 +42,7 @@ public class Enemy : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         player = GameObject.FindWithTag("Player");
         leftPlayerTarget = player.transform.Find("Left Seek Point");
         rightPlayerTarget = player.transform.Find("Right Seek Point");
@@ -46,23 +51,22 @@ public class Enemy : MonoBehaviour
         seeker = GetComponent<Seeker>();
     }
 
-    
+
 
     protected virtual void Update() {
-        
+
         updateTimers();
-        
+
     }
 
     //Use Fixed Update due to physics being used
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         //return if there is no path
         if (path == null)
             return;
 
-        //Cancel any pathfinding if attacking
-        if (isAttacking)
+        //Cancel any pathfinding if attacking or dead
+        if (isAttacking && health != 0)
             return;
 
         //Check if we have reached the end of the path
@@ -73,12 +77,28 @@ public class Enemy : MonoBehaviour
         else
             isEndOfPath = false;
 
-        updateTarget();
+        //Debug.Log("Cooldown: " + isCooldown);
+        //Debug.Log("Can Attack: " + canAttack);
 
-        //Get a vector between the next node in the path and the current position
+        checkAttackRange();
+        if (canAttack && !isCooldown)
+            startMeleeAttack();
+        else
+            Move();
+
+
+        updateTarget();
+        //Debug.Log("Can Attack: " + canAttack);
+        //Debug.Log("Is Cooldown: " + isCooldown);
+
+    }
+
+    protected void Move() {
+        // Get a vector between the next node in the path and the current position
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        if(direction.x != 0 && direction.y != 0) {
+        if (direction.x != 0 && direction.y != 0) {
             Vector2 force = direction * speed * Time.deltaTime;
+            isMoving = true;
             //Debug.Log("Force: " + force);
             rb.AddForce(force);
             //transform.Translate(force);
@@ -88,16 +108,13 @@ public class Enemy : MonoBehaviour
         }
 
 
-        
+
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
         //If the enemy is within distance to pick another node to move to, pick the next node
-        if(distance < nextWaypointDistance) {
+        if (distance < nextWaypointDistance) {
             currentWaypoint++;
         }
-
-        
     }
 
     protected void OnPathComplete(Path p) {
@@ -111,22 +128,28 @@ public class Enemy : MonoBehaviour
 
     protected void startMeleeAttack() {
 
-        if (canAttack) {
-            //Stop moving and then play the animation
-            isAttacking = true;
-            path = null;
-            //Set the isAttacking boolean in the animator
-            animator.SetBool("isAttacking", isAttacking);
-            animator.SetBool("isMoving", false);
+        //Stop moving and then play the animation
+        isAttacking = true;
+        isMoving = false;
+        path = null;
 
-            canAttack = false;
-        }
+        //Stop the enemy from moving
+        rb.velocity = new Vector2(0, 0);
+
+        //Set the isAttacking boolean in the animator
+        animator.SetBool("isAttacking", isAttacking);
+        animator.SetBool("isMoving", isMoving);
+
+        Debug.Log("Starting Attack");
+        canAttack = false;
+
     }
 
     public void finishAttack() {
         Debug.Log("End Attack");
         isAttacking = false;
-        canAttack = true;
+        isMoving = true;
+        isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("isMoving", false);
@@ -151,7 +174,7 @@ public class Enemy : MonoBehaviour
         //else {
         //    animator.SetBool("isMoving", false);
         //}
-       // animator.SetFloat("moveX", force.x);
+        // animator.SetFloat("moveX", force.x);
 
         animator.SetBool("isMoving", true);
 
@@ -166,9 +189,9 @@ public class Enemy : MonoBehaviour
         else
             target = rightPlayerTarget.position;
     }
-    protected void updatePath() { 
+    protected void updatePath() {
         //if the path is finished , calculate the new one
-        if (seeker.IsDone()) 
+        if (seeker.IsDone())
             seeker.StartPath(rb.position, target, OnPathComplete);
     }
 
@@ -182,27 +205,74 @@ public class Enemy : MonoBehaviour
             updatePath();
         }
 
-        //if not attacking, start the timer
-        if (!isAttacking) {
+        //if on cooldown, start the timer
+        if (isCooldown) {
             //Update the attack timer
             if (attackTimer < attackDelay) {
                 attackTimer += Time.deltaTime;
             }
             else {
                 attackTimer = 0;
-                canAttack = true;
+                isCooldown = false;
             }
         }
     }
 
-    public void takeDamage(float damage, float force, Vector2 angle) {
+    protected void checkAttackRange() {
+
+        RaycastHit2D hit;
+
+
+        //if the enemy is facing left, fire raycast to the left
+        if (directionFaced == (int)facingDirection.left) {
+            Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
+            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck);
+            if (hit.collider != null) {
+                
+                if (hit.collider.tag == "Player") {
+                    Debug.Log("HIT");
+                    canAttack = true;
+
+                }
+
+
+            }
+
+        }
+        //if the enemy is facing right, fire raycast to the right
+        else {
+            Debug.DrawRay(rightRaycastPoint.position, Vector2.right * meleeRangeCheck, Color.green);
+            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck);
+            if (hit.collider != null) {
+                if (hit.collider.tag == "Player") {
+                    Debug.Log("HIT");
+                    canAttack = true;
+
+                }
+            }
+
+        }
 
     }
 
+    public void TakeHit(Vector2 velocity, float damage) {
+        rb.AddForce(velocity * 5);
+        if (health <= 0)
+            animator.SetBool("isDead", true);
+        health -= damage;
+    }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.transform.gameObject.tag == "Player") {
-            startMeleeAttack();
+    protected virtual void onDeath() {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Hitbox") {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
         }
     }
+
 }

@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Collisions
-  - Projectiles
-  - Enemy
-  - Hitbox
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Enemy
-  - Collisions
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -44,16 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Floor
-    uniqueID: 3442792535
-    locked: 0
-  - name: Player
-    uniqueID: 1828376255
-    locked: 0
-  - name: TallDecoration
-    uniqueID: 2041014773
-    locked: 0
-  - name: Projectiles
-    uniqueID: 1614656415
     locked: 0

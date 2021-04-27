@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float healTime;
 
+    private float stairsVelOffset = 0f;
+
     // control scheme using new input system
     private PlayerControls playerControls;
 
@@ -81,6 +83,15 @@ public class PlayerMovement : MonoBehaviour
     {
         playerControls.Disable();
     }
+
+    public GameObject rayOrigin;
+    private string directionAmender = "normal";
+
+    [Header("Health Variables")]
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private SignalSender addPlayerHealthSignal;
+    [SerializeField] private InventoryItem healthpotion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +116,24 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateAnimation();
+
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin.transform.position, Vector2.zero);
+
+        if (hit && hit.collider.tag == "StairsDownRight")
+        {
+            directionAmender = "stairsDownRight";
+            stairsVelOffset = -movementDir.x;
+        } else if (hit && hit.collider.tag == "StairsDownLeft")
+        {
+            directionAmender = "stairsDownLeft";
+            stairsVelOffset = movementDir.x;
+        }
+        else 
+        {
+            directionAmender = "normal";
+            stairsVelOffset = 0f;
+        }
+
         // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
         switch (state)
         {
@@ -115,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
                     state = State.Dashing;
                     inputDash = false;
                 }
-                else if (inputAttack && !shootScript.isAiming())
+                else if (inputAttack && !shootScript.IsAiming())
                 {
                     state = State.Attacking;
                     Attack();
@@ -146,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
                 // exits state upon completion of DashCoroutine()
                 break;
         }
+        
     }
 
     private void ProcessInputs()
@@ -165,6 +195,14 @@ public class PlayerMovement : MonoBehaviour
         // check for heal input
         playerControls.Player.Heal.started += _ => inputHeal = true;
 
+        if (Input.GetButtonDown("Heal"))
+        {
+            if (playerInventory.playerInventory.Contains(healthpotion))
+            {
+                healthpotion.Use();
+                addPlayerHealthSignal.Raise();
+            }
+        }
     }
 
     private void Attack()
@@ -198,6 +236,7 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         // Lerp current velocity to new velocity
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
         rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
     }
 
@@ -270,5 +309,4 @@ public class PlayerMovement : MonoBehaviour
         state = State.Moving;
         //playerHealth.AddHealth();
     }
-    
 }

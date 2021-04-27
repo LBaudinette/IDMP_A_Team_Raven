@@ -15,6 +15,12 @@ public class PlayerShoot : MonoBehaviour
     public float arrowForce;
     public float defaultAimLineLength = 10f;
 
+    [Header("Inventory Variables")]
+    [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private InventoryItem boltInventoryItem;
+    [SerializeField] private SignalSender boltFiredSignal;
+    [SerializeField] private int boltFiredCost;
+
     private bool aiming;
     private bool shoot;
     private PlayerControls playerControls;
@@ -101,7 +107,6 @@ public class PlayerShoot : MonoBehaviour
             endPoint = (Vector2) firePoint.position + lookDir.normalized * defaultAimLineLength;
         }
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
         // rotate weapon to face mouse direction
         weapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
@@ -114,7 +119,6 @@ public class PlayerShoot : MonoBehaviour
         {
             weaponSprite.flipY = false;
         }
-
         DrawLine(endPoint);
     }
 
@@ -122,6 +126,8 @@ public class PlayerShoot : MonoBehaviour
     {
         GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
         firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
+        boltInventoryItem.DeacreaseAmount(boltFiredCost);
+        boltFiredSignal.Raise();
         shoot = false;
     }
 
@@ -131,7 +137,7 @@ public class PlayerShoot : MonoBehaviour
         lr.SetPosition(1, endPoint);
     }
 
-    public bool isAiming()
+    public bool IsAiming()
     {
         return aiming;
     }

@@ -29,7 +29,7 @@ public class FrostAreaScript : SpecialArea
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             GameObject player = collision.gameObject;
-            player.GetComponent<Rigidbody2D>().drag += playerDrag;
+            player.GetComponent<Rigidbody2D>().drag = playerDrag;
         }
     }
 
@@ -37,7 +37,7 @@ public class FrostAreaScript : SpecialArea
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             GameObject player = collision.gameObject;
-            player.GetComponent<Rigidbody2D>().drag -= playerDrag;
+            player.GetComponent<Rigidbody2D>().drag = 0f;
         }
     }
 }

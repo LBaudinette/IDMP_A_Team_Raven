@@ -1,0 +1,1268 @@
+fileFormatVersion: 2
+guid: f36343f3c7d1b3741b6489e1301b79bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5286322490418974263
+    second: phantomknighCustomSpriteSheet_0
+  - first:
+      213: -5661223810350065980
+    second: phantomknighCustomSpriteSheet_1
+  - first:
+      213: 17656482126870336
+    second: phantomknighCustomSpriteSheet_2
+  - first:
+      213: 5395496264094533200
+    second: phantomknighCustomSpriteSheet_3
+  - first:
+      213: -5294658533522844034
+    second: phantomknighCustomSpriteSheet_4
+  - first:
+      213: 5658888031853970773
+    second: phantomknighCustomSpriteSheet_5
+  - first:
+      213: 6620569735223896851
+    second: phantomknighCustomSpriteSheet_6
+  - first:
+      213: 5941118007702030914
+    second: phantomknighCustomSpriteSheet_7
+  - first:
+      213: -7554266590356571622
+    second: phantomknighCustomSpriteSheet_8
+  - first:
+      213: -4793989323889303282
+    second: phantomknighCustomSpriteSheet_9
+  - first:
+      213: -6894711555707365945
+    second: phantomknighCustomSpriteSheet_10
+  - first:
+      213: -4912001915328612543
+    second: phantomknighCustomSpriteSheet_11
+  - first:
+      213: -7635405612553143773
+    second: phantomknighCustomSpriteSheet_12
+  - first:
+      213: -6237412198016350446
+    second: phantomknighCustomSpriteSheet_13
+  - first:
+      213: 3014929004265961568
+    second: phantomknighCustomSpriteSheet_14
+  - first:
+      213: 2640123688583611372
+    second: phantomknighCustomSpriteSheet_15
+  - first:
+      213: -1282764836523278563
+    second: phantomknighCustomSpriteSheet_16
+  - first:
+      213: 888025209306046710
+    second: phantomknighCustomSpriteSheet_17
+  - first:
+      213: -5827665849545254273
+    second: phantomknighCustomSpriteSheet_18
+  - first:
+      213: -8521561851797200998
+    second: phantomknighCustomSpriteSheet_19
+  - first:
+      213: -8289471056645413905
+    second: phantomknighCustomSpriteSheet_20
+  - first:
+      213: 7474846440696338645
+    second: phantomknighCustomSpriteSheet_21
+  - first:
+      213: 2775534064990660265
+    second: phantomknighCustomSpriteSheet_22
+  - first:
+      213: -2570590566551085843
+    second: phantomknighCustomSpriteSheet_23
+  - first:
+      213: -7326952472152903265
+    second: phantomknighCustomSpriteSheet_24
+  - first:
+      213: 41835329904700586
+    second: phantomknighCustomSpriteSheet_25
+  - first:
+      213: -5854321398103153983
+    second: phantomknighCustomSpriteSheet_26
+  - first:
+      213: 384456468428648224
+    second: phantomknighCustomSpriteSheet_27
+  - first:
+      213: 327577442214783831
+    second: phantomknighCustomSpriteSheet_28
+  - first:
+      213: 8566116115550403982
+    second: phantomknighCustomSpriteSheet_29
+  - first:
+      213: -1962569795595510902
+    second: phantomknighCustomSpriteSheet_30
+  - first:
+      213: 4070962405892875146
+    second: phantomknighCustomSpriteSheet_31
+  - first:
+      213: -8401796038417095125
+    second: phantomknighCustomSpriteSheet_32
+  - first:
+      213: 4849298783897844148
+    second: phantomknighCustomSpriteSheet_33
+  - first:
+      213: -9083640247455569905
+    second: phantomknighCustomSpriteSheet_34
+  - first:
+      213: 4433247618011436994
+    second: phantomknighCustomSpriteSheet_35
+  - first:
+      213: -7170087925639848924
+    second: phantomknighCustomSpriteSheet_36
+  - first:
+      213: -187268331753294631
+    second: phantomknighCustomSpriteSheet_37
+  - first:
+      213: 4756412713558689333
+    second: phantomknighCustomSpriteSheet_38
+  - first:
+      213: -8934428407909747656
+    second: phantomknighCustomSpriteSheet_39
+  - first:
+      213: 8541523248335691143
+    second: phantomknighCustomSpriteSheet_40
+  - first:
+      213: 1422322137236389813
+    second: phantomknighCustomSpriteSheet_41
+  - first:
+      213: 8641046174866204975
+    second: phantomknighCustomSpriteSheet_42
+  - first:
+      213: 6869098753131905153
+    second: phantomknighCustomSpriteSheet_43
+  - first:
+      213: -5635257511481537642
+    second: phantomknighCustomSpriteSheet_44
+  - first:
+      213: 533573624916295130
+    second: phantomknighCustomSpriteSheet_45
+  - first:
+      213: 8312174104976288271
+    second: phantomknighCustomSpriteSheet_46
+  - first:
+      213: 8482681067903036391
+    second: phantomknighCustomSpriteSheet_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 561
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ec4910c4acc5940800000000000000
+      internalID: 5286322490418974263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 561
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6d91e50fa4f61b0800000000000000
+      internalID: -5661223810350065980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 561
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b7291a7abe3000800000000000000
+      internalID: 17656482126870336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 561
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0564d400447a0ea40800000000000000
+      internalID: 5395496264094533200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e765166bd189586b0800000000000000
+      internalID: -5294658533522844034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 510
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5558d52dea8688e40800000000000000
+      internalID: 5658888031853970773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 510
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31be8bec81df0eb50800000000000000
+      internalID: 6620569735223896851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 510
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a81c1c957137250800000000000000
+      internalID: 5941118007702030914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 459
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1af13f6f8ad92790800000000000000
+      internalID: -7554266590356571622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 459
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01209c0c14587db0800000000000000
+      internalID: -4793989323889303282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 459
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5184dae501150a0800000000000000
+      internalID: -6894711555707365945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 459
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147bccc684015dbb0800000000000000
+      internalID: -4912001915328612543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32afebbac07990690800000000000000
+      internalID: -7635405612553143773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 408
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2170c8337a24079a0800000000000000
+      internalID: -6237412198016350446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 408
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0687b42a4fd27d920800000000000000
+      internalID: 3014929004265961568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 408
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3ce1db18a93a420800000000000000
+      internalID: 2640123688583611372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ffaa47d24b23ee0800000000000000
+      internalID: -1282764836523278563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 357
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f067401936e25c00800000000000000
+      internalID: 888025209306046710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 357
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a1e2049c8ff1fa0800000000000000
+      internalID: -5827665849545254273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 357
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f9b1c15a45db980800000000000000
+      internalID: -8521561851797200998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3a4c45ef1e5fc80800000000000000
+      internalID: -8289471056645413905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 306
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d85c400c3dfbb760800000000000000
+      internalID: 7474846440696338645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 306
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6a3c5d68da48620800000000000000
+      internalID: 2775534064990660265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 306
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec90c1df7d635cd0800000000000000
+      internalID: -2570590566551085843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91f723eb8f615a90800000000000000
+      internalID: -7326952472152903265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 255
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aace70ac201a49000800000000000000
+      internalID: 41835329904700586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 255
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2e719b4b541cea0800000000000000
+      internalID: -5854321398103153983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 255
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f6a400f1dd55500800000000000000
+      internalID: 384456468428648224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba4a7b2f9cb8400800000000000000
+      internalID: 327577442214783831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 204
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d712cc835f0e670800000000000000
+      internalID: 8566116115550403982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 204
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b5e964b2d83c4e0800000000000000
+      internalID: -1962569795595510902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 204
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83e6314db6fe7830800000000000000
+      internalID: 4070962405892875146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 153
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b266dd68403d66b80800000000000000
+      internalID: -8401796038417095125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 153
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9f6ff1d8b2c4340800000000000000
+      internalID: 4849298783897844148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 153
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0828f6725d60f180800000000000000
+      internalID: -9083640247455569905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 153
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c71be0683f068d30800000000000000
+      internalID: 4433247618011436994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c5be7350bbe7c90800000000000000
+      internalID: -7170087925639848924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 102
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d43a28c170b66df0800000000000000
+      internalID: -187268331753294631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 102
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53641d4992c220240800000000000000
+      internalID: 4756412713558689333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 102
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834716b13b8820480800000000000000
+      internalID: -8934428407909747656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d1ac1b326998670800000000000000
+      internalID: 8541523248335691143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 51
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf3622b27a1db310800000000000000
+      internalID: 1422322137236389813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 51
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29e5acb6b92be770800000000000000
+      internalID: 8641046174866204975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 51
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18081830ce0f35f50800000000000000
+      internalID: 6869098753131905153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b8a42762b8bc1b0800000000000000
+      internalID: -5635257511481537642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add37a68262a76700800000000000000
+      internalID: 533573624916295130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aef460f46ca5370800000000000000
+      internalID: 8312174104976288271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantomknighCustomSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebaa43fc7988b570800000000000000
+      internalID: 8482681067903036391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
