@@ -816,13 +816,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02370eaafe1aa2458dfa20d913add4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementDir: {x: 0, y: 0}
+  state: 0
   shootScript: {fileID: 2531658333841840176}
-  moveMagnitude: 0
+  inputHeal: 0
+  attack1name: Attacking
+  attack2name: Attacking2
+  attack3name: Attacking3
+  attack1ComboAfter: 0.2
+  attack1Max: 0.3
+  attack2ComboAfter: 0.25
+  attack2Max: 0.35
+  attack3ComboAfter: 0.25
+  attack3Max: 0.35
   moveSpeed: 6
-  velocityLerp: 10
+  velocityLerp: 50
   dashSpeed: 30
   attackMoveSpeed: 2
+  healMoveSpeedFactor: 0.25
+  dashTime: 0.1
+  healTime: 2
 --- !u!61 &2501820542938628942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1509,6 +1521,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 2531658332866205321}
   arrowForce: 15
+  defaultAimLineLength: 10
 --- !u!120 &2531658333841840177
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1545,8 +1558,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -852174761
-  m_SortingLayer: 1
+  m_SortingLayerID: 1828376255
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
