@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     public float attackMoveSpeed;
 
-    private bool goingUpStairs;
-    private bool goingDownStairs;
     public GameObject rayOrigin;
     private string directionAmender = "normal";
 
@@ -225,20 +223,4 @@ public class PlayerMovement : MonoBehaviour
         isAttacking2 = false;
 
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Stairs"))
-    //    {
-    //        if (movementDir.x > 0)
-    //        {
-    //            //rb2d.velocity += Vector2.Lerp(rb2d.velocity, new Vector2(-movementDir.x, 0) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
-    //            goingDownStairs
-    //        }
-    //        if (movementDir.x < 0)
-    //        {
-    //           // rb2d.velocity += Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, 0) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
-    //        }
-    //    }
-    //}
 }
