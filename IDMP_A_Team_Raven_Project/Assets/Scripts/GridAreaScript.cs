@@ -191,6 +191,7 @@ public class GridAreaScript : MonoBehaviour
 
         foreach(GameObject tile in tiles) 
             tile.GetComponent<DamagingTileScript>().activateTile();
+
         isCasting = false;
 
     }

@@ -242,9 +242,9 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   rotationPoint: {fileID: 0}
   teleTriggerDistance: 1
-  health: 100
+  health: 200
   teleportDelay: 3
-  teleportDistance: 3
+  teleportDistance: 6
   leftRaycastPoint: {fileID: 2603918223474079689}
   topRaycastPoint: {fileID: 3930992609588060436}
   rightRaycastPoint: {fileID: 7403221085427314072}

@@ -34,7 +34,7 @@ public class NecromancerScript : RangedEnemy
 
 
         //Play a random pattern
-        if (attackTimer < attackDelay && !gridScript.isCasting)
+        if (attackTimer < attackDelay && !gridScript.isCasting && !isTeleporting)
             attackTimer += Time.deltaTime;
         else {
             if (!gridScript.isCasting) {
@@ -45,9 +45,11 @@ public class NecromancerScript : RangedEnemy
         }
 
         //Teleport when the player is too close
-        //if (Vector2.Distance(playerObject.transform.position, transform.position) < 2f) {
-        //    coroutine = StartCoroutine(startTeleport());
-        //}
+        if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
+            !isTeleporting) {
+            Debug.Log("IS TELEPORTING: " + isTeleporting);
+            coroutine = StartCoroutine(startTeleport());
+        }
     }
 
     void stopCasting() {
@@ -60,7 +62,7 @@ public class NecromancerScript : RangedEnemy
         health -= damage;
     }
 
-    protected virtual void onDeath() {
+    protected override void onDeath() {
         //rb.bodyType = RigidbodyType2D.Static;
         Destroy(gameObject);
     }

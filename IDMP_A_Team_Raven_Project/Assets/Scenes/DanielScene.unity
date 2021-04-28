@@ -1551,20 +1551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Necromancer Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 8320919226418475384, guid: 621a59d83335898459e5e8d8bde3e4b3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475389, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
-      propertyPath: health
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320919226418475389, guid: 621a59d83335898459e5e8d8bde3e4b3,
-        type: 3}
-      propertyPath: teleportDistance
-      value: 6
+      propertyPath: teleTriggerDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
@@ -1574,12 +1564,12 @@ PrefabInstance:
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.86
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}

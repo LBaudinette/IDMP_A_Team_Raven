@@ -36,7 +36,7 @@ public class DamagingTileScript : MonoBehaviour
     IEnumerator startActivation() {
         //Start delay before it damages player
         while(activationTimer < activationDelay) {
-            Debug.Log(activationTimer);
+            //Debug.Log(activationTimer);
             activationTimer += Time.deltaTime;
             yield return null;
         }
