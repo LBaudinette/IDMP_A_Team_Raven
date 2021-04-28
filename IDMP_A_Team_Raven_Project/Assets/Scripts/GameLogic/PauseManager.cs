@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private bool isPaused;
+    private bool inputPause;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
     public GameObject journalPanel;
     public bool usingPausePanel;
     public string mainMenuString;
+
+    private PlayerControls playerControls;
 
     // TODO: Quit To main menu
     //public string mainMenu;
@@ -22,6 +25,7 @@ public class PauseManager : MonoBehaviour
     void Start()
     {
         isPaused = false;
+        inputPause = false;
         pausePanel.SetActive(false);
         inventoryPanel.SetActive(false);
         journalPanel.SetActive(false);
@@ -31,9 +35,11 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))
+        playerControls.Player.Pause.started += _ => inputPause = true;
+        if (inputPause)
         {
             ChangePause();
+            inputPause = false;
         }
     }
 
@@ -77,4 +83,8 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void setControls(PlayerControls controls)
+    {
+        this.playerControls = controls;
+    }
 }

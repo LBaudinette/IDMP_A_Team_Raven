@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private SpriteRenderer sr;
     public PlayerShoot shootScript;
+    public GameObject PauseCanvas;
+    private PauseManager pauseScript;
 
     // vars for tracking player inputs
     public bool inputHeal;
@@ -72,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
     {
         playerControls = new PlayerControls();
         shootScript.setControls(playerControls);
+        pauseScript = PauseCanvas.GetComponent<PauseManager>();
+        pauseScript.setControls(playerControls);
     }
 
     private void OnEnable()
@@ -103,7 +107,6 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetFloat("MoveY", -1);
         sr = GetComponent<SpriteRenderer>();
         state = State.Moving;
-
         attackTimeElapsed = 0f;
     }
 
@@ -151,9 +154,12 @@ public class PlayerMovement : MonoBehaviour
                     inputAttack = false;
                 } else if (inputHeal)
                 {
-                    StartCoroutine(Heal());
-                    state = State.Healing;
-                    inputHeal = false;
+                    if (playerInventory.playerInventory.Contains(healthpotion))
+                    {
+                        StartCoroutine(Heal());
+                        state = State.Healing;
+                        inputHeal = false;
+                    }
                 }
                 else
                 {
@@ -194,15 +200,6 @@ public class PlayerMovement : MonoBehaviour
 
         // check for heal input
         playerControls.Player.Heal.started += _ => inputHeal = true;
-
-        if (Input.GetButtonDown("Heal"))
-        {
-            if (playerInventory.playerInventory.Contains(healthpotion))
-            {
-                healthpotion.Use();
-                addPlayerHealthSignal.Raise();
-            }
-        }
     }
 
     private void Attack()
@@ -306,6 +303,12 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("left heal loop");
         sr.color = new Color(1f, 1f, 1f, 1f);
         state = State.Moving;
-        //playerHealth.AddHealth();
+        healthpotion.Use();
+        addPlayerHealthSignal.Raise();
+    }
+
+    public PlayerControls getControls()
+    {
+        return playerControls;
     }
 }
