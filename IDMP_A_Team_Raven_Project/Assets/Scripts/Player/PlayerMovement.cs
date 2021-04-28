@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     public float healTime;
 
     private float stairsVelOffset = 0f;
+    private bool vulnerable;
 
     // control scheme using new input system
     private PlayerControls playerControls;
@@ -89,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public GameObject rayOrigin;
-    private string directionAmender = "normal";
 
     [Header("Health Variables")]
     [SerializeField] private PlayerInventory playerInventory;
@@ -108,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         state = State.Moving;
         attackTimeElapsed = 0f;
+        vulnerable = false;
     }
 
     // Update is called once per frame
@@ -124,16 +125,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit && hit.collider.tag == "StairsDownRight")
         {
-            directionAmender = "stairsDownRight";
             stairsVelOffset = -movementDir.x;
         } else if (hit && hit.collider.tag == "StairsDownLeft")
         {
-            directionAmender = "stairsDownLeft";
             stairsVelOffset = movementDir.x;
         }
         else 
         {
-            directionAmender = "normal";
             stairsVelOffset = 0f;
         }
 
@@ -310,5 +308,10 @@ public class PlayerMovement : MonoBehaviour
     public PlayerControls getControls()
     {
         return playerControls;
+    }
+
+    public bool isVulnerable()
+    {
+        return this.vulnerable;
     }
 }
