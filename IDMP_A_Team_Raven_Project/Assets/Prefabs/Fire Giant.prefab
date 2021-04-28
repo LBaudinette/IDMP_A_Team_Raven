@@ -225,6 +225,9 @@ MonoBehaviour:
   nextWaypointDistance: 2
   health: 100
   damage: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 200
   leftRaycastPoint: {fileID: 3888447221562023051}
   rightRaycastPoint: {fileID: 4945334292186921997}

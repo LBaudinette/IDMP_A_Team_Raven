@@ -44,6 +44,7 @@ public class GridAreaScript : MonoBehaviour
     void Update()
     {
         var input = Input.inputString;
+        
         switch (input) {
             case "z":
                 coroutine = StartCoroutine(alternateRowPattern());

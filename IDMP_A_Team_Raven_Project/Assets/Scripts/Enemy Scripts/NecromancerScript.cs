@@ -8,7 +8,6 @@ public class NecromancerScript : RangedEnemy
 
     public float castingDelay;              //The delay between casting the attack and strating it
     public float attackDelay;               //The delay between casting attacks
-
     private float castingTimer = 0f; 
     private float attackTimer = 0f;
     private GameObject playerObject;
@@ -35,7 +34,7 @@ public class NecromancerScript : RangedEnemy
 
 
         //Play a random pattern
-        if (attackTimer < attackDelay)
+        if (attackTimer < attackDelay && !gridScript.isCasting)
             attackTimer += Time.deltaTime;
         else {
             if (!gridScript.isCasting) {
@@ -46,14 +45,31 @@ public class NecromancerScript : RangedEnemy
         }
 
         //Teleport when the player is too close
-        if(Vector2.Distance(playerObject.transform.position, transform.position) < 2f) {
-            coroutine = StartCoroutine(startTeleport());
-        }
+        //if (Vector2.Distance(playerObject.transform.position, transform.position) < 2f) {
+        //    coroutine = StartCoroutine(startTeleport());
+        //}
     }
 
     void stopCasting() {
         animator.SetBool("isAttacking", false);
     }
 
+    public void TakeHit(float damage) {
+        if (health <= 0)
+            animator.SetBool("isDead", true);
+        health -= damage;
+    }
+
+    protected virtual void onDeath() {
+        //rb.bodyType = RigidbodyType2D.Static;
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Hitbox") {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            TakeHit(hitbox.getDamage());
+        }
+    }
 
 }
