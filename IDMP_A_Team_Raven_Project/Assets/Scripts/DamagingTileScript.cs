@@ -8,16 +8,11 @@ public class DamagingTileScript : MonoBehaviour
 
     private Coroutine coroutine;
     private float timer = 0;
-    private float activationTimer = 0;
-    public float deactivationDelay = 0.3f;
-    public float activationDelay = 2f;
-    private Color originalColour;
-
-    public SpriteRenderer sr;
+    private float deactivationDelay = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
-        originalColour = sr.color;
+        
     }
 
     // Update is called once per frame
@@ -27,23 +22,9 @@ public class DamagingTileScript : MonoBehaviour
     }
 
     public void activateTile() {
-        sr.color = new Color(1f, 0.5f, 0.5f, 0.4f);
         gameObject.SetActive(true);
-        coroutine = StartCoroutine(startActivation());
-        
-    }
-
-    IEnumerator startActivation() {
-        //Start delay before it damages player
-        while(activationTimer < activationDelay) {
-            //Debug.Log(activationTimer);
-            activationTimer += Time.deltaTime;
-            yield return null;
-        }
-        activationTimer = 0;
-        sr.color = new Color(1f,1f,1f,1f);
-
         coroutine = StartCoroutine(deactivateTile());
+        //Maybe play some animation before activating
     }
 
     //TODO: replace timer with animation flag to deactivate tile
@@ -57,4 +38,7 @@ public class DamagingTileScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision) {
+        
+    }
 }

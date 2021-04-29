@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 35656619}
   - component: {fileID: 873705347}
   - component: {fileID: 949207774882454682}
-  - component: {fileID: 35656620}
   m_Layer: 0
   m_Name: FrostGiant
   m_TagString: Enemy
@@ -227,10 +226,7 @@ MonoBehaviour:
   nextWaypointDistance: 2
   health: 100
   damage: 10
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  speed: 500
+  speed: 200
   leftRaycastPoint: {fileID: 174245606399627386}
   rightRaycastPoint: {fileID: 5357468086805895526}
   areaAttack: {fileID: 3546864559526311943, guid: 6e249d7fd676d65459aa53ff3d49b177,
@@ -345,28 +341,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9385834, y: 0.9313946}
   m_EdgeRadius: 0
---- !u!114 &35656620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4192657543923078188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6a34d769a1e4ac7b0b30e433aa443c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  smoothType: 0
-  subdivisions: 2
-  iterations: 2
-  strength: 0.5
-  uniformLength: 1
-  maxSegmentLength: 2
-  bezierTangentLength: 0.4
-  offset: 0.2
-  factor: 0.1
 --- !u!1 &6976413735415369329
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ TagManager:
   - StairsDownRight
   - Collisions
   - StairsDownLeft
-  - GridArea
   layers:
   - Default
   - TransparentFX

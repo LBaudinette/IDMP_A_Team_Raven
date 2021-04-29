@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour {
     public float nextWaypointDistance = 2f;
     public float health = 100f;
     public float damage = 10f;
-    public LayerMask playerLayer;
 
     private int currentWaypoint = 0;
     public float speed = 200f;
@@ -33,7 +32,6 @@ public class Enemy : MonoBehaviour {
 
     private float pathTimer = 0;
     private float pathTimerMax = 0.5f;
-
 
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
@@ -97,12 +95,9 @@ public class Enemy : MonoBehaviour {
 
     protected void Move() {
         // Get a vector between the next node in the path and the current position
-        Vector2 direction = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-       
-
+        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         if (direction.x != 0 && direction.y != 0) {
-            //Debug.Log(direction);
-            Vector2 force = direction * speed * Time.fixedDeltaTime;
+            Vector2 force = direction * speed * Time.deltaTime;
             isMoving = true;
             //Debug.Log("Force: " + force);
             rb.AddForce(force);
@@ -162,20 +157,25 @@ public class Enemy : MonoBehaviour {
     }
 
     private void updateAnimator(Vector2 force) {
-        //Update Direction
-        float direction = GameObject.FindWithTag("Player").transform.position.x - transform.position.x;
+
         //Check if the enemy is not stationary
-        if (direction < 0) {
+        if (force.x < 0f) {
             directionFaced = (int)facingDirection.left;
             animator.SetFloat("moveX", -1);
 
         }
-        else if (direction > 0) {
-            //else if (force.x > 0) {
+        else if (force.x > 0) {
             directionFaced = (int)facingDirection.right;
             animator.SetFloat("moveX", 1);
 
         }
+
+        //Enemy is not moving
+        //else {
+        //    animator.SetBool("isMoving", false);
+        //}
+        // animator.SetFloat("moveX", force.x);
+
         animator.SetBool("isMoving", true);
 
     }
@@ -226,9 +226,9 @@ public class Enemy : MonoBehaviour {
         //if the enemy is facing left, fire raycast to the left
         if (directionFaced == (int)facingDirection.left) {
             Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
-            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck, playerLayer);
+            hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck);
             if (hit.collider != null) {
-                Debug.Log("TAG: " + hit.collider.tag);
+                
                 if (hit.collider.tag == "Player") {
                     Debug.Log("HIT");
                     canAttack = true;
@@ -242,10 +242,8 @@ public class Enemy : MonoBehaviour {
         //if the enemy is facing right, fire raycast to the right
         else {
             Debug.DrawRay(rightRaycastPoint.position, Vector2.right * meleeRangeCheck, Color.green);
-            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck, playerLayer);
+            hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck);
             if (hit.collider != null) {
-                Debug.Log("TAG: " + hit.collider.tag);
-
                 if (hit.collider.tag == "Player") {
                     Debug.Log("HIT");
                     canAttack = true;
@@ -265,7 +263,6 @@ public class Enemy : MonoBehaviour {
     }
 
     protected virtual void onDeath() {
-        //rb.bodyType = RigidbodyType2D.Static;
         Destroy(gameObject);
     }
 
