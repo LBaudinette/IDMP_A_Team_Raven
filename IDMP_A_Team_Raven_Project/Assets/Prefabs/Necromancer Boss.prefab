@@ -241,7 +241,7 @@ MonoBehaviour:
   projForce: 0
   firePoint: {fileID: 0}
   rotationPoint: {fileID: 0}
-  teleTriggerDistance: 1
+  teleTriggerDistance: 4
   health: 200
   teleportDelay: 3
   teleportDistance: 6

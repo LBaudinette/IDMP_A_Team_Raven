@@ -88,7 +88,7 @@ public class GridAreaScript : MonoBehaviour
 
    public void playRandomPattern() {
         //Generate number between 0 and the number of patterns 
-        int randomNumber = Random.Range(0,3);
+        int randomNumber = Random.Range(0,4);
         isCasting = true;
         switch (randomNumber) {
             case 0:
@@ -101,7 +101,7 @@ public class GridAreaScript : MonoBehaviour
                 coroutine = StartCoroutine(alternateCheckerPattern());
                 break;
             case 3:
-                checkerFlash();
+                coroutine = StartCoroutine(checkerFlash());
                 break;
         }
 
@@ -169,7 +169,7 @@ public class GridAreaScript : MonoBehaviour
     }
 
     //Flash multiple tiles at once though a checker pattern
-    void checkerFlash() {
+    IEnumerator checkerFlash() {
         //store all tiles to activate in "tiles"
         var tiles = new List<GameObject>();
 
@@ -194,6 +194,7 @@ public class GridAreaScript : MonoBehaviour
 
         isCasting = false;
 
+        return null;
     }
 
     void crossFlash(Vector2 origin) {

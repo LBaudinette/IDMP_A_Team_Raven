@@ -149,39 +149,6 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
---- !u!1 &128749020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7538752571113199074, guid: b694b5c6fc495dc4ba2aa97af81e8682,
-    type: 3}
-  m_PrefabInstance: {fileID: 7538752570507374692}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &216868905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8589726785080498775, guid: 342193d365df5034a973ff555ee2bd90,
-    type: 3}
-  m_PrefabInstance: {fileID: 2015371574308293882}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &507749940 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6043761001739472105, guid: 342193d365df5034a973ff555ee2bd90,
-    type: 3}
-  m_PrefabInstance: {fileID: 2015371574308293882}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &507749942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507749940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
-  knockback: 10
-  parentPosition: {fileID: 0}
 --- !u!1 &515930046
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,27 +465,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d7b47dab12f5a438529731900e8b16, type: 3}
---- !u!1 &1146531452 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7538752569888627243, guid: b694b5c6fc495dc4ba2aa97af81e8682,
-    type: 3}
-  m_PrefabInstance: {fileID: 7538752570507374692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1146531454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146531452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  knockback: 10
-  parentPosition: {fileID: 128749020}
 --- !u!1 &1155003613 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2501820542938628928, guid: 22d7b47dab12f5a438529731900e8b16,
@@ -703,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1238151095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,27 +802,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
---- !u!1 &1781721191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2133137024721703323, guid: 342193d365df5034a973ff555ee2bd90,
-    type: 3}
-  m_PrefabInstance: {fileID: 2015371574308293882}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1781721193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781721191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
-  knockback: 15
-  parentPosition: {fileID: 216868905}
 --- !u!1 &1849604891
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,27 +890,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4192657544600976903}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2031352237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7538752569806793017, guid: b694b5c6fc495dc4ba2aa97af81e8682,
-    type: 3}
-  m_PrefabInstance: {fileID: 7538752570507374692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2031352239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031352237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  knockback: 10
-  parentPosition: {fileID: 128749020}
 --- !u!1001 &2033145580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1077,11 +981,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phantom Knight
       objectReference: {fileID: 0}
-    - target: {fileID: 8589726785080498775, guid: 342193d365df5034a973ff555ee2bd90,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9116192442242146744, guid: 342193d365df5034a973ff555ee2bd90,
         type: 3}
       propertyPath: m_RootOrder
@@ -1090,12 +989,12 @@ PrefabInstance:
     - target: {fileID: 9116192442242146744, guid: 342193d365df5034a973ff555ee2bd90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 9116192442242146744, guid: 342193d365df5034a973ff555ee2bd90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 9116192442242146744, guid: 342193d365df5034a973ff555ee2bd90,
         type: 3}
@@ -1382,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 3240437041918447327, guid: 7add4de246b64bb4b864f5fa2fd6c0dc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7add4de246b64bb4b864f5fa2fd6c0dc, type: 3}
@@ -1477,11 +1376,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Knight
       objectReference: {fileID: 0}
-    - target: {fileID: 7538752571113199074, guid: b694b5c6fc495dc4ba2aa97af81e8682,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7538752571113199081, guid: b694b5c6fc495dc4ba2aa97af81e8682,
         type: 3}
       propertyPath: m_RootOrder
@@ -1490,12 +1384,12 @@ PrefabInstance:
     - target: {fileID: 7538752571113199081, guid: b694b5c6fc495dc4ba2aa97af81e8682,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.55
+      value: 3.76
       objectReference: {fileID: 0}
     - target: {fileID: 7538752571113199081, guid: b694b5c6fc495dc4ba2aa97af81e8682,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7538752571113199081, guid: b694b5c6fc495dc4ba2aa97af81e8682,
         type: 3}
@@ -1551,6 +1445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Necromancer Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 8320919226418475384, guid: 621a59d83335898459e5e8d8bde3e4b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475389, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: teleTriggerDistance
@@ -1564,12 +1463,12 @@ PrefabInstance:
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.95
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
