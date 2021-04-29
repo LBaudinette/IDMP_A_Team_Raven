@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6854141898448388286}
   - component: {fileID: 2815134271805954372}
+  - component: {fileID: 1781721193}
   m_Layer: 0
   m_Name: Left Attack Hitbox
   m_TagString: Untagged
@@ -89,6 +90,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0398552, y: 1.8170619}
   m_EdgeRadius: 0
+--- !u!114 &1781721193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133137024721703323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  knockback: 15
+  parentPosition: {fileID: 8589726785080498775}
 --- !u!1 &3474171828923441525
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962443904899231479}
   - component: {fileID: 8517659515920562456}
+  - component: {fileID: 507749942}
   m_Layer: 0
   m_Name: Right Attack Hitbox
   m_TagString: Untagged
@@ -206,6 +223,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.039855, y: 1.817062}
   m_EdgeRadius: 0
+--- !u!114 &507749942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043761001739472105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  knockback: 10
+  parentPosition: {fileID: 0}
 --- !u!1 &8385593818764444657
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9116192442242146744
 Transform:
   m_ObjectHideFlags: 0
@@ -390,7 +422,10 @@ MonoBehaviour:
   attackDelay: 1
   nextWaypointDistance: 2
   health: 30
-  damage: 10
+  damage: 25
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 300
   leftRaycastPoint: {fileID: 6283312968586114611}
   rightRaycastPoint: {fileID: 2880414137368083463}

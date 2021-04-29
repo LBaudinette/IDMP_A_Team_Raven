@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7538752569806793018}
   - component: {fileID: 7538752569806793019}
+  - component: {fileID: 2031352239}
   m_Layer: 0
   m_Name: Right Attack Hitbox
   m_TagString: Untagged
@@ -149,6 +150,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0175419, y: 1.5788865}
   m_EdgeRadius: 0
+--- !u!114 &2031352239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538752569806793017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  knockback: 10
+  parentPosition: {fileID: 7538752571113199074}
 --- !u!1 &7538752569888627243
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7538752569888627252}
   - component: {fileID: 7538752569888627253}
+  - component: {fileID: 1146531454}
   m_Layer: 0
   m_Name: Left Attack Hitbox
   m_TagString: Untagged
@@ -206,6 +223,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.4911757}
   m_EdgeRadius: 0
+--- !u!114 &1146531454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538752569888627243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  knockback: 10
+  parentPosition: {fileID: 7538752571113199074}
 --- !u!1 &7538752570328176336
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +450,10 @@ MonoBehaviour:
   attackDelay: 1
   nextWaypointDistance: 2
   health: 50
-  damage: 5
+  damage: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 200
   leftRaycastPoint: {fileID: 7145271007836998003}
   rightRaycastPoint: {fileID: 298355061448746942}

@@ -13,31 +13,38 @@ public class RangedEnemy : MonoBehaviour {
     public Transform rotationPoint;
     public float teleTriggerDistance = 1;          //How close the player must be to start teleporting
 
+    public float health = 100f;
+
     private float teleportTimer = 0;
     public float teleportDelay = 3;     //How long it takes to teleport
     public float teleportDistance = 3f;
-    private bool isTeleporting = false;
+    protected bool isTeleporting = false;
 
     public Transform leftRaycastPoint, topRaycastPoint,
         rightRaycastPoint, botRaycastPoint;
     public LayerMask layerDetection;
 
-    private Coroutine coroutine;
 
-    private struct Raycast{
+    protected Animator animator;
+    protected Rigidbody2D rb;
+    protected Coroutine coroutine;
+
+    private struct Raycast {
 
         public Ray2D ray;
         public RaycastHit2D raycastHit;
 
-        public Raycast( Ray2D Ray, RaycastHit2D RaycastHit2D) {
+        public Raycast(Ray2D Ray, RaycastHit2D RaycastHit2D) {
             ray = Ray;
             raycastHit = RaycastHit2D;
         }
     }
 
-// Start is called before the first frame update
-void Start() {
+    // Start is called before the first frame update
+    void Start() {
         playerPos = GameObject.FindWithTag("Player").transform.position;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -84,33 +91,32 @@ void Start() {
     }
 
 
-    private IEnumerator startTeleport() {
+    protected IEnumerator startTeleport() {
 
         isTeleporting = true;
+        animator.SetBool("isTeleporting", true);
         Debug.Log("Starting Teleport");
 
         //Start the teleport timer
         while (teleportTimer < teleportDelay) {
-            Debug.Log("Timer: " + teleportTimer);
             teleportTimer += Time.deltaTime;
 
             yield return null;
         }
 
 
-
         teleport();
     }
 
     void teleport() {
-        
+
         var hitRaycasts = new List<Raycast>();
         var emptyRaycasts = new List<Raycast>();
         var rays = new List<Raycast>();
 
         //Teleport
         //Fire 4 raycasts to check for available teleports
-        
+
         RaycastHit2D leftHit;
         RaycastHit2D topHit;
         RaycastHit2D rightHit;
@@ -127,7 +133,7 @@ void Start() {
         rightHit = Physics2D.Raycast(rightRay.origin, rightRay.direction, teleportDistance, layerDetection);
         botHit = Physics2D.Raycast(botRay.origin, botRay.direction, teleportDistance, layerDetection);
 
-       
+
 
         Raycast leftRaycast = new Raycast(leftRay, leftHit);
         Raycast topRaycast = new Raycast(topRay, topHit);
@@ -145,23 +151,23 @@ void Start() {
         RaycastHit2D longestHit = leftHit;
 
         //Check if each one hit something
-        foreach(Raycast raycast in rays) {
+        foreach (Raycast raycast in rays) {
             if (raycast.raycastHit.collider != null)
                 hitRaycasts.Add(raycast);
             else
                 emptyRaycasts.Add(raycast);
 
         }
-        Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
-        Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
+        //Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
+        //Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
         Raycast longestRaycast;
         //if no walls were hit, then teleport into an open space
         if (emptyRaycasts.Count != 0) {
             //assign the first element as the longest
             longestRaycast = emptyRaycasts[0];
 
-            foreach(Raycast raycast in emptyRaycasts) {
-                Debug.Log(raycast.ray.direction);
+            foreach (Raycast raycast in emptyRaycasts) {
+                //Debug.Log(raycast.ray.direction);
                 if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
                     longestRaycast = raycast;
             }
@@ -190,11 +196,32 @@ void Start() {
 
         }
         isTeleporting = false;
-        //Reset teleport timer
+        Debug.Log("isTeleportin: " + isTeleporting);
+
+        animator.SetBool("isTeleporting", false);
+
         teleportTimer = 0;
     }
 
-    protected void onDeath() {
+    protected virtual void onDeath() {
         Destroy(gameObject);
     }
+
+    protected virtual void TakeHit(Vector2 velocity, float damage) {
+        rb.AddForce(velocity * 5);
+        if (health <= 0)
+            animator.SetBool("isDead", true);
+        health -= damage;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Hitbox") {
+            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+    }
+
+
 }
