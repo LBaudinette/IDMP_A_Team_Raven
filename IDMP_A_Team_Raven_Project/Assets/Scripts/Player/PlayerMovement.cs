@@ -206,7 +206,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // check for attack input
-        playerControls.Player.Attack.started += _ => inputAttack = true;
+        if (!shootScript.IsAiming())
+        {
+            playerControls.Player.Attack.started += _ => inputAttack = true;
+        }
 
         // check for heal input
         playerControls.Player.Heal.started += _ => inputHeal = true;
@@ -290,6 +293,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator DashCoroutine()
     {
         vulnerable = false;
+        ableToDash = false;
         float elapsed = 0f;
         while (elapsed < dashTime)
         {

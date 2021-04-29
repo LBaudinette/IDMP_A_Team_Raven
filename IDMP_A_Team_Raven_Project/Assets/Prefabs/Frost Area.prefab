@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3546864559526311938}
   - component: {fileID: 3546864559526311937}
   - component: {fileID: 3546864559526311936}
+  - component: {fileID: -657647885215038139}
   m_Layer: 0
   m_Name: Frost Area
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -852174761
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f55890591c572794488b65c6284e6478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -116,3 +117,16 @@ MonoBehaviour:
   maxLingerTime: 5
   diminishTime: 5
   playerDrag: 50
+--- !u!114 &-657647885215038139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546864559526311943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour {
     private Transform leftPlayerTarget, rightPlayerTarget;
     protected Path path;
     private Seeker seeker;
+    private HitStop hitStopScript;
 
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
+        hitStopScript = GetComponent<HitStop>();
     }
 
 
@@ -270,7 +272,8 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Hitbox") {
+        if (collision.gameObject.CompareTag("Hitbox") || collision.gameObject.CompareTag("Projectiles")) {
+            hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
             Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();

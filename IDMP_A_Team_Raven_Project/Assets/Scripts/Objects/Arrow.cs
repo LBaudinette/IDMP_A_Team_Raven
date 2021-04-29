@@ -37,8 +37,8 @@ public class Arrow : MonoBehaviour
         } else if (collision.gameObject.tag == "Enemy")
         {
             // on enemy collision, damage them and potentially apply knockback based on current rb2d force
-            TakeHitScript player = collision.gameObject.GetComponent<TakeHitScript>();
-            player.TakeHit(rb2d.velocity * knockbackMult, damage);
+            TakeHitScript enemy = collision.gameObject.GetComponent<TakeHitScript>();
+            enemy.TakeHit(rb2d.velocity * knockbackMult, damage);
             Destroy(gameObject);
 
         } else if (collision.gameObject.tag == "Projectiles")

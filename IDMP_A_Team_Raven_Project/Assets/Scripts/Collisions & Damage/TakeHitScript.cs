@@ -6,6 +6,12 @@ public class TakeHitScript : MonoBehaviour
 {
 
     public Rigidbody2D rb2d;
+    private HitStop hitStopScript;
+
+    void Start()
+    {
+        hitStopScript = GetComponent<HitStop>();
+    }
 
     public void TakeHit(float damage)
     {
@@ -20,8 +26,9 @@ public class TakeHitScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Hitbox")
+        if (collision.gameObject.CompareTag("Hitbox") || collision.gameObject.CompareTag("Projectiles"))
         {
+            hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
             Vector2 knockbackDir = rb2d.position - (Vector2) hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4999221651312847935}
   - component: {fileID: 4999221651312847934}
   - component: {fileID: 4999221651312847930}
+  - component: {fileID: -1481409994110939514}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Projectiles
@@ -147,3 +148,16 @@ MonoBehaviour:
   maxAliveTime: 3
   knockbackMult: 10
   damage: 10
+--- !u!114 &-1481409994110939514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999221651312847933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1

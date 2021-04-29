@@ -53,7 +53,6 @@ public class PlayerShoot : MonoBehaviour
         if (aiming)
         {
             playerControls.Player.Attack.started += _ => shoot = true;
-            Debug.Log("aiming and input shoot");
         } else
         {
             shoot = false;
