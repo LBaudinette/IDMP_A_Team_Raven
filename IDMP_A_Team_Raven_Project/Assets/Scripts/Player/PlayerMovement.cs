@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     // movement-related vars
     private Vector2 movementDir;
+    private Vector2 atkMoveDir;
     private float moveMagnitude;
     public float moveSpeed;
     public float velocityLerp;
@@ -154,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
                 else if (inputAttack && !shootScript.IsAiming())
                 {
                     state = State.Attacking;
+                    atkMoveDir = movementDir;
                     Attack();
                     inputAttack = false;
                 } else if (inputHeal)
@@ -176,6 +178,7 @@ public class PlayerMovement : MonoBehaviour
                     Attack();
                     inputAttack = false;
                 }
+                AttackMovement();
                 break;
             case State.Healing:
                 HealingMovement();
@@ -197,7 +200,10 @@ public class PlayerMovement : MonoBehaviour
         movementDir.Normalize();
 
         // check for dash input
-        playerControls.Player.Dash.started += _ => inputDash = true;
+        if (ableToDash)
+        {
+            playerControls.Player.Dash.started += _ => inputDash = true;
+        }
 
         // check for attack input
         playerControls.Player.Attack.started += _ => inputAttack = true;
@@ -248,6 +254,11 @@ public class PlayerMovement : MonoBehaviour
         rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * moveMagnitude * moveSpeed * healMoveSpeedFactor, velocityLerp * Time.deltaTime);
     }
 
+    private void AttackMovement()
+    {
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(atkMoveDir.x, stairsVelOffset + atkMoveDir.y) * moveMagnitude * moveSpeed * 0.4f, velocityLerp * Time.deltaTime);
+    }
+
     private void Dash()
     {
         // set current velocity to zero, then dash in movement direction
@@ -258,9 +269,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (movementDir != Vector2.zero)
         {
-            playerAnimator.SetFloat("MoveX", movementDir.x);
-            playerAnimator.SetFloat("MoveY", movementDir.y);
-            playerAnimator.SetBool("Moving", true);
+            if (state == State.Attacking)
+            {
+                playerAnimator.SetFloat("MoveX", atkMoveDir.x);
+                playerAnimator.SetFloat("MoveY", atkMoveDir.y);
+                playerAnimator.SetBool("Moving", false);
+            } else
+            {
+                playerAnimator.SetFloat("MoveX", movementDir.x);
+                playerAnimator.SetFloat("MoveY", movementDir.y);
+                playerAnimator.SetBool("Moving", true);
+            }
         }
         else
         {
