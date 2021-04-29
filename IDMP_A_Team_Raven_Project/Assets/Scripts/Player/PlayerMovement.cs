@@ -47,11 +47,14 @@ public class PlayerMovement : MonoBehaviour
     // attack timing
     private float attackTimeElapsed;
     public float attack1ComboAfter;
-    public float attack1Max;
+    public float attack1AnimEnd;
+    public float attack1ComboBefore;
     public float attack2ComboAfter;
-    public float attack2Max;
+    public float attack2AnimEnd;
+    public float attack2ComboBefore;
     public float attack3ComboAfter;
-    public float attack3Max;
+    public float attack3AnimEnd;
+    public float attack3ComboBefore;
 
     // movement-related vars
     private Vector2 movementDir;
@@ -59,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float velocityLerp;
     public float dashSpeed;
+    public float dashCooldown;
+    private bool ableToDash;
     public float attackMoveSpeed;
     public float healMoveSpeedFactor;
 
@@ -108,7 +113,8 @@ public class PlayerMovement : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         state = State.Moving;
         attackTimeElapsed = 0f;
-        vulnerable = false;
+        vulnerable = true;
+        ableToDash = true;
     }
 
     // Update is called once per frame
@@ -139,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case State.Moving:
-                if (inputDash)
+                if (inputDash && ableToDash)
                 {
                     Dash();
                     state = State.Dashing;
@@ -205,26 +211,28 @@ public class PlayerMovement : MonoBehaviour
         switch (attackState)
         {
             case AttackState.Idle:
-                attackCoroutine = StartCoroutine(AttackCoroutine(attack1Max, "Attacking"));
+                attackCoroutine = StartCoroutine(AttackCoroutine(attack1ComboBefore, attack1AnimEnd, "Attacking"));
                 attackState = AttackState.One;
                 break;
-            /*case AttackState.One:
-                if (attackTimeElapsed >= attack1ComboAfter && attackTimeElapsed < attack1Max)
+            case AttackState.One:
+                if (attackTimeElapsed >= attack1ComboAfter && attackTimeElapsed < attack1ComboBefore)
                 {
                     StopCoroutine(attackCoroutine);
-                    //attackCoroutine = StartCoroutine(AttackCoroutine(attack2Max, "Attacking2"));
+                    playerAnimator.SetBool(attack1name, false);
+                    attackCoroutine = StartCoroutine(AttackCoroutine(attack2ComboBefore, attack2AnimEnd, "Attacking2"));
                     attackState = AttackState.Two;
                 }
                 break;
             case AttackState.Two:
-                if (attackTimeElapsed >= attack2ComboAfter && attackTimeElapsed < attack2Max)
+                if (attackTimeElapsed >= attack2ComboAfter && attackTimeElapsed < attack2ComboBefore)
                 {
                     StopCoroutine(attackCoroutine);
-                    //attackCoroutine = StartCoroutine(AttackCoroutine(attack3Max, "Attacking3"));
+                    playerAnimator.SetBool(attack2name, false);
+                    attackCoroutine = StartCoroutine(AttackCoroutine(attack3ComboBefore, attack3AnimEnd, "Attacking3"));
                     attackState = AttackState.Three;
                 }
                 
-                break;*/
+                break;
         }
     }
 
@@ -262,6 +270,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator DashCoroutine()
     {
+        vulnerable = false;
         float elapsed = 0f;
         while (elapsed < dashTime)
         {
@@ -269,20 +278,40 @@ public class PlayerMovement : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+        vulnerable = true;
         state = State.Moving;
+        StartCoroutine(DashCooldown());
     }
 
-    IEnumerator AttackCoroutine(float attackMaxTime, string attackName)
+    IEnumerator DashCooldown()
+    {
+        ableToDash = false;
+        float elapsed = 0f;
+        while (elapsed < dashCooldown)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        ableToDash = true;
+    }
+
+    IEnumerator AttackCoroutine(float attackComboBefore, float attackAnimEnd, string attackName)
     {
         attackTimeElapsed = 0f;
         playerAnimator.SetBool(attackName, true);
-
-        while (attackTimeElapsed < attackMaxTime)
+        while (attackTimeElapsed < attackAnimEnd)
         {
             attackTimeElapsed += Time.deltaTime;
             yield return null;
         }
         playerAnimator.SetBool(attackName, false);
+
+        while (attackTimeElapsed < attackComboBefore)
+        {
+            attackTimeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        
         attackState = AttackState.Idle;
         state = State.Moving;
     }
