@@ -42,9 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 836671164}
   - component: {fileID: 836671165}
+  - component: {fileID: 154613301}
   m_Layer: 0
   m_Name: Left Attack Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +90,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9471061, y: 0.46048522}
   m_EdgeRadius: 0
+--- !u!114 &154613301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836671163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  knockback: 100
+  parentPosition: {fileID: 4545894050325807877}
 --- !u!1 &1063338494
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +115,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1063338495}
   - component: {fileID: 1267154624077748601}
+  - component: {fileID: 1943210531}
   m_Layer: 0
   m_Name: Right Attack Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +163,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9259486, y: 0.43932843}
   m_EdgeRadius: 0
+--- !u!114 &1943210531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063338494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  knockback: 10
+  parentPosition: {fileID: 4545894050325807877}
 --- !u!1 &4019210549529206865
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +408,9 @@ MonoBehaviour:
   nextWaypointDistance: 3
   health: 100
   damage: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
   speed: 600
   leftRaycastPoint: {fileID: 603725352836621786}
   rightRaycastPoint: {fileID: 4732704983220013121}
@@ -386,7 +421,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4545894050325807877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb6a34d769a1e4ac7b0b30e433aa443c, type: 3}
   m_Name: 

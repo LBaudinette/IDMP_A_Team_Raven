@@ -9,6 +9,7 @@ public class GridAreaScript : MonoBehaviour
     private int rows, columns;
     private float tileSize, pixelsToUnits, gridPixelsX, gridPixelsY, 
         activationTimer = 0;
+    public bool isCasting = false;
     public GameObject damagingTile;
 
     private GameObject[,] grid;
@@ -43,6 +44,7 @@ public class GridAreaScript : MonoBehaviour
     void Update()
     {
         var input = Input.inputString;
+        
         switch (input) {
             case "z":
                 coroutine = StartCoroutine(alternateRowPattern());
@@ -84,10 +86,10 @@ public class GridAreaScript : MonoBehaviour
         }
     }
 
-    void playRandomPattern() {
+   public void playRandomPattern() {
         //Generate number between 0 and the number of patterns 
-        int randomNumber = Random.Range(0,3);
-
+        int randomNumber = Random.Range(0,4);
+        isCasting = true;
         switch (randomNumber) {
             case 0:
                 coroutine = StartCoroutine(alternateRowPattern());
@@ -99,7 +101,7 @@ public class GridAreaScript : MonoBehaviour
                 coroutine = StartCoroutine(alternateCheckerPattern());
                 break;
             case 3:
-                checkerFlash();
+                coroutine = StartCoroutine(checkerFlash());
                 break;
         }
 
@@ -118,6 +120,8 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
             
         }
+        isCasting = false;
+
     }
 
     IEnumerator alternateColPattern() {
@@ -132,6 +136,7 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
 
         }
+        isCasting = false;
 
     }
 
@@ -159,10 +164,12 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
 
         }
+        isCasting = false;
+
     }
 
     //Flash multiple tiles at once though a checker pattern
-    void checkerFlash() {
+    IEnumerator checkerFlash() {
         //store all tiles to activate in "tiles"
         var tiles = new List<GameObject>();
 
@@ -184,7 +191,10 @@ public class GridAreaScript : MonoBehaviour
 
         foreach(GameObject tile in tiles) 
             tile.GetComponent<DamagingTileScript>().activateTile();
-        
+
+        isCasting = false;
+
+        return null;
     }
 
     void crossFlash(Vector2 origin) {
@@ -216,6 +226,7 @@ public class GridAreaScript : MonoBehaviour
         }
         catch{
         }
+        isCasting = false;
     }
 
     //Flash all cells in a 3x3 area around the origin
@@ -231,6 +242,8 @@ public class GridAreaScript : MonoBehaviour
                 }
             }
         }
+        isCasting = false;
+
     }
 
 
@@ -253,4 +266,5 @@ public class GridAreaScript : MonoBehaviour
         }
         return new Vector2(closestRow, closestCol);
     }
+
 }
