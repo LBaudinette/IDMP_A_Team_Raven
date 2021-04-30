@@ -40,7 +40,6 @@ public class NecromancerScript : RangedEnemy
             if (!gridScript.isCasting) {
                 attackTimer = 0;
                 animator.SetBool("isAttacking", true);
-                gridScript.playRandomPattern();
             }
         }
 
@@ -52,9 +51,6 @@ public class NecromancerScript : RangedEnemy
         }
     }
 
-    void stopCasting() {
-        animator.SetBool("isAttacking", false);
-    }
 
     public void TakeHit(float damage) {
         if (health <= 0)
@@ -74,4 +70,9 @@ public class NecromancerScript : RangedEnemy
         }
     }
 
+    void playAttack() {
+        gridScript.playRandomPattern();
+        animator.SetBool("isAttacking", false);
+
+    }
 }

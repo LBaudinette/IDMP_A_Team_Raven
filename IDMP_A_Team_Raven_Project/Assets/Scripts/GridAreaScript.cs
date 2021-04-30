@@ -77,10 +77,10 @@ public class GridAreaScript : MonoBehaviour
                 float yPos = (float)((gridPixelsY * 0.5f) - (tileSize * row) - (tileSize * 0.5f)) / pixelsToUnits;
 
 
-                currentTile.transform.position = transform.InverseTransformPoint(xPos, yPos,0f);
-                //currentTile.transform.position = new Vector2(xPos, yPos);
+                //currentTile.transform.position = transform.InverseTransformPoint(xPos, yPos,0f);
+                currentTile.transform.localPosition = new Vector2(xPos, yPos);
                 //deactivate the tile at first
-                //currentTile.SetActive(false);
+                currentTile.SetActive(false);
                 grid[row, col] = currentTile;
             }
         }
