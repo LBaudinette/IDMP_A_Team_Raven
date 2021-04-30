@@ -43,28 +43,28 @@ public class GridAreaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var input = Input.inputString;
+        //var input = Input.inputString;
         
-        switch (input) {
-            case "z":
-                coroutine = StartCoroutine(alternateRowPattern());
-                break;
-            case "x":
-                coroutine = StartCoroutine(alternateColPattern());
-                break;
-            case "c":
-                coroutine = StartCoroutine(alternateCheckerPattern());
-                break;
-            case "v":
-                checkerFlash();
-                break;
-            case "b":
-                crossFlash(GameObject.FindWithTag("Player").transform.position);
-                break;
-            case "n":
-                flashClosestCells(GameObject.FindWithTag("Player").transform.position);
-                break;
-        }
+        //switch (input) {
+        //    case "z":
+        //        coroutine = StartCoroutine(alternateRowPattern());
+        //        break;
+        //    case "x":
+        //        coroutine = StartCoroutine(alternateColPattern());
+        //        break;
+        //    case "c":
+        //        coroutine = StartCoroutine(alternateCheckerPattern());
+        //        break;
+        //    case "v":
+        //        checkerFlash();
+        //        break;
+        //    case "b":
+        //        crossFlash(GameObject.FindWithTag("Player").transform.position);
+        //        break;
+        //    case "n":
+        //        flashClosestCells(GameObject.FindWithTag("Player").transform.position);
+        //        break;
+        //}
     }
 
     void generateGrid() {
@@ -77,10 +77,10 @@ public class GridAreaScript : MonoBehaviour
                 float yPos = (float)((gridPixelsY * 0.5f) - (tileSize * row) - (tileSize * 0.5f)) / pixelsToUnits;
 
 
-                currentTile.transform.position = new Vector2(xPos, yPos);
-
+                currentTile.transform.position = transform.InverseTransformPoint(xPos, yPos,0f);
+                //currentTile.transform.position = new Vector2(xPos, yPos);
                 //deactivate the tile at first
-                currentTile.SetActive(false);
+                //currentTile.SetActive(false);
                 grid[row, col] = currentTile;
             }
         }
