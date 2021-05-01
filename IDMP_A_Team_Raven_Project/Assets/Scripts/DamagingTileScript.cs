@@ -5,12 +5,14 @@ using UnityEngine;
 public class DamagingTileScript : MonoBehaviour
 {
     public int damage = 10;
+    GridAreaScript gridScript;
 
     private Coroutine coroutine;
     private float timer = 0;
     private float activationTimer = 0;
     public float deactivationDelay = 0.3f;
     public float activationDelay = 2f;
+    private bool isFinalTile = false;
     private Color originalColour;
 
     public SpriteRenderer sr;
@@ -18,6 +20,9 @@ public class DamagingTileScript : MonoBehaviour
     void Start()
     {
         originalColour = sr.color;
+        gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
+
+
     }
 
     // Update is called once per frame
@@ -55,6 +60,18 @@ public class DamagingTileScript : MonoBehaviour
         timer = 0;
 
         gameObject.SetActive(false);
+
+        //Send signal to script that the final tile has activated
+        if (isFinalTile) {
+            Debug.Log("FINAL TILE");
+            isFinalTile = false;
+            gridScript.isCasting = false;
+
+        }
+    }
+
+    public void setFinalTile() {
+        isFinalTile = true;
     }
 
 }

@@ -5,12 +5,9 @@ using UnityEngine;
 public class NecromancerScript : RangedEnemy
 {
     GridAreaScript gridScript;
-
-    public float castingDelay;              //The delay between casting the attack and strating it
-    public float attackDelay;               //The delay between casting attacks
-    private float castingTimer = 0f; 
-    private float attackTimer = 0f;
     private GameObject playerObject;
+    private bool canAttack = true;
+
 
     //private Animator animator;
     // Start is called before the first frame update
@@ -32,21 +29,29 @@ public class NecromancerScript : RangedEnemy
         else if (direction > 0)
             animator.SetFloat("playerDirection", 1);
 
-
-        //Play a random pattern
-        if (attackTimer < attackDelay && !gridScript.isCasting && !isTeleporting)
-            attackTimer += Time.deltaTime;
+        if (teleportCDTimer < teleportCooldown)
+            teleportCDTimer += Time.deltaTime;
         else {
-            if (!gridScript.isCasting) {
-                attackTimer = 0;
-                animator.SetBool("isAttacking", true);
-            }
+            canTeleport = true;
+            teleportCDTimer = 0f;
         }
+            
+
+        if (attackTimer < attackDelay)
+            attackTimer += Time.deltaTime;
+        else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
+            canAttack = true;
+
+        if (canAttack) {
+            attackTimer = 0f;
+            animator.SetBool("isAttacking", true);
+            canAttack = false;
+        }
+
 
         //Teleport when the player is too close
         if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
-            !isTeleporting) {
-            Debug.Log("IS TELEPORTING: " + isTeleporting);
+            canTeleport) {
             coroutine = StartCoroutine(startTeleport());
         }
     }
@@ -58,10 +63,10 @@ public class NecromancerScript : RangedEnemy
         health -= damage;
     }
 
-    protected override void onDeath() {
-        //rb.bodyType = RigidbodyType2D.Static;
-        Destroy(gameObject);
-    }
+    //protected override void onDeath() {
+    //    //rb.bodyType = RigidbodyType2D.Static;
+    //    Destroy(gameObject);
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Hitbox") {

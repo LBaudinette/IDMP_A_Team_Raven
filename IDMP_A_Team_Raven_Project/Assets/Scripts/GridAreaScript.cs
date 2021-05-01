@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GridAreaScript : MonoBehaviour
 {
-    public float activationDelay;
+    public float activationDelay;               //The delay between activating groups of tiles
     private int rows, columns;
     private float tileSize, pixelsToUnits, gridPixelsX, gridPixelsY, 
         activationTimer = 0;
@@ -46,24 +46,24 @@ public class GridAreaScript : MonoBehaviour
         //var input = Input.inputString;
         
         //switch (input) {
-        //    case "z":
-        //        coroutine = StartCoroutine(alternateRowPattern());
-        //        break;
-        //    case "x":
-        //        coroutine = StartCoroutine(alternateColPattern());
-        //        break;
-        //    case "c":
-        //        coroutine = StartCoroutine(alternateCheckerPattern());
-        //        break;
-        //    case "v":
-        //        checkerFlash();
-        //        break;
-        //    case "b":
-        //        crossFlash(GameObject.FindWithTag("Player").transform.position);
-        //        break;
-        //    case "n":
-        //        flashClosestCells(GameObject.FindWithTag("Player").transform.position);
-        //        break;
+        ////    case "z":
+        ////        coroutine = StartCoroutine(alternateRowPattern());
+        ////        break;
+        ////    case "x":
+        ////        coroutine = StartCoroutine(alternateColPattern());
+        ////        break;
+        ////    case "c":
+        ////        coroutine = StartCoroutine(alternateCheckerPattern());
+        ////        break;
+        ////    case "v":
+        ////        checkerFlash();
+        ////        break;
+        ////    case "b":
+        ////        crossFlash(GameObject.FindWithTag("Player").transform.position);
+        ////        break;
+        ////    case "n":
+        ////        flashClosestCells(GameObject.FindWithTag("Player").transform.position);
+        ////        break;
         //}
     }
 
@@ -88,8 +88,9 @@ public class GridAreaScript : MonoBehaviour
 
    public void playRandomPattern() {
         //Generate number between 0 and the number of patterns 
-        int randomNumber = Random.Range(0,4);
+        int randomNumber = Random.Range(0,3);
         isCasting = true;
+        
         switch (randomNumber) {
             case 0:
                 coroutine = StartCoroutine(alternateRowPattern());
@@ -101,7 +102,7 @@ public class GridAreaScript : MonoBehaviour
                 coroutine = StartCoroutine(alternateCheckerPattern());
                 break;
             case 3:
-                coroutine = StartCoroutine(checkerFlash());
+                //coroutine = StartCoroutine(checkerFlash());
                 break;
         }
 
@@ -112,6 +113,18 @@ public class GridAreaScript : MonoBehaviour
         for(int row = 0; row < rows; row += 2) {
             for(int col = 0; col < columns; col++) {
                 grid[row, col].GetComponent<DamagingTileScript>().activateTile();
+
+                //Debug.Log("Col?: " + (col == 0));
+                //Debug.Log("ROW?: " + (row == rows));
+
+                Debug.Log("COL: " + col + " ROW: " + row);
+
+                //flag the final tile so that boss knows when the grid has finished casting
+                if (col == 0 && (row == rows - 1 || row == rows - 2)) {
+                    
+                    grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
+
+                }
             }
             while(activationTimer < activationDelay) {
                 activationTimer += Time.deltaTime;
@@ -120,14 +133,17 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
             
         }
-        isCasting = false;
-
     }
 
     IEnumerator alternateColPattern() {
         for (int col = 0; col < columns; col += 2) {
             for (int row = 0; row < rows; row++) {
                 grid[row, col].GetComponent<DamagingTileScript>().activateTile();
+
+                //flag the final tile so that boss knows when the grid has finished casting
+                if ((col == columns - 1 || col == columns - 2)  && row == 0)
+                    grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
+
             }
             while (activationTimer < activationDelay) {
                 activationTimer += Time.deltaTime;
@@ -136,7 +152,6 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
 
         }
-        isCasting = false;
 
     }
 
@@ -145,18 +160,30 @@ public class GridAreaScript : MonoBehaviour
         for (int row = 0; row < rows; row++) {
             //for every odd row, do every second column
             if (row % 2 == 1) {
+
+                //flag the final tile in the last row, first column
+                if (row == rows - 1)
+                    grid[row, 1].GetComponent<DamagingTileScript>().setFinalTile();
                 for (int col = 1; col < columns; col += 2) {
 
                     grid[row, col].GetComponent<DamagingTileScript>().activateTile();
+
+                    
                 }
             }
             else {
+                //flag the final tile in the last row, first column
+                if (row == rows - 1)
+                    grid[row, 0].GetComponent<DamagingTileScript>().setFinalTile();
                 for (int col = 0; col < columns; col += 2) {
 
                     grid[row, col].GetComponent<DamagingTileScript>().activateTile();
+
+                    
                 }
             }
-             
+
+
             while (activationTimer < activationDelay) {
                 activationTimer += Time.deltaTime;
                 yield return null;
@@ -164,8 +191,6 @@ public class GridAreaScript : MonoBehaviour
             activationTimer = 0f;
 
         }
-        isCasting = false;
-
     }
 
     //Flash multiple tiles at once though a checker pattern
@@ -192,7 +217,8 @@ public class GridAreaScript : MonoBehaviour
         foreach(GameObject tile in tiles) 
             tile.GetComponent<DamagingTileScript>().activateTile();
 
-        isCasting = false;
+        //Set any tile in the list as the "last tile" as they all disappear at the same time
+        tiles[0].GetComponent<DamagingTileScript>().setFinalTile();
 
         return null;
     }
@@ -223,10 +249,13 @@ public class GridAreaScript : MonoBehaviour
         try {
             grid[(int)closestCellPos.x, (int)closestCellPos.y - 1].GetComponent<DamagingTileScript>().activateTile();
 
+
         }
-        catch{
+        catch {
         }
-        isCasting = false;
+        //Set a tile as the final tile for isCasting purposes
+        grid[(int)closestCellPos.x, (int)closestCellPos.y - 1].GetComponent<DamagingTileScript>().setFinalTile();
+
     }
 
     //Flash all cells in a 3x3 area around the origin
@@ -240,9 +269,10 @@ public class GridAreaScript : MonoBehaviour
                 catch {
 
                 }
+                if (row == closestCellPos.x + 1 && col == closestCellPos.y + 1)
+                    grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
             }
         }
-        isCasting = false;
 
     }
 

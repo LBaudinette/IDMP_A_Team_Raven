@@ -259,14 +259,18 @@ public class Enemy : MonoBehaviour {
 
     public void TakeHit(Vector2 velocity, float damage) {
         rb.AddForce(velocity * 5);
-        if (health <= 0)
+        if (health <= 0) {
+            rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
+        }
         health -= damage;
     }
 
     protected virtual void onDeath() {
-        //rb.bodyType = RigidbodyType2D.Static;
-        Destroy(gameObject);
+        animator.speed = 0f;
+        rb.bodyType = RigidbodyType2D.Static;
+        Destroy(this);
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
