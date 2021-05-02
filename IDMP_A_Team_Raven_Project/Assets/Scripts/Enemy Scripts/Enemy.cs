@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour {
 
     private int currentWaypoint = 0;
     public float speed = 200f;
-    bool isEndOfPath = false;
     protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
     protected bool isMoving = false;
@@ -76,14 +75,6 @@ public class Enemy : MonoBehaviour {
         //Cancel any pathfinding if attacking or dead
         if (isAttacking && health != 0)
             return;
-
-        //Check if we have reached the end of the path
-        if (currentWaypoint >= path.vectorPath.Count) {
-            isEndOfPath = true;
-            return;
-        }
-        else
-            isEndOfPath = false;
 
         //Debug.Log("Cooldown: " + isCooldown);
         //Debug.Log("Can Attack: " + canAttack);
@@ -293,10 +284,10 @@ public class Enemy : MonoBehaviour {
 
     protected virtual void onDeath() {
         //StopCoroutine(coroutine);
-        animator.speed = 0f;
+        //animator.speed = 0f;
         rb.bodyType = RigidbodyType2D.Static;
-        Destroy(this);
-        //Destroy(gameObject);
+        //Destroy(this);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
