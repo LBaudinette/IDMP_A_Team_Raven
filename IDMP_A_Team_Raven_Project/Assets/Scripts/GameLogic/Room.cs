@@ -19,7 +19,10 @@ public class Room : MonoBehaviour
                 //Instantiate(enemies[i], transform);
                 if(!enemies[i].GetComponent<Enemy>().isDead)
                     enemies[i].SetActive(true);
-
+                else if (!enemies[i].GetComponent<RangedEnemy>().isDead)
+                    enemies[i].SetActive(true);
+                else if(!!enemies[i].GetComponent<NecromancerScript>().isDead)
+                    enemies[i].SetActive(true);
 
             }
             virtualCamera.SetActive(true);
