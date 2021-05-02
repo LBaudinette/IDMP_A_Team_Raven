@@ -8,6 +8,8 @@ public class TakeHitScript : MonoBehaviour
     public Rigidbody2D rb2d;
     private HitStop hitStopScript;
 
+    [SerializeField] private SignalSender reducePlayerHealthSignal;
+
     void Start()
     {
         hitStopScript = GetComponent<HitStop>();
@@ -21,6 +23,7 @@ public class TakeHitScript : MonoBehaviour
     public void TakeHit(Vector2 velocity, float damage)
     {
         rb2d.AddForce(velocity);
+        reducePlayerHealthSignal.Raise();
         //take damage
     }
 

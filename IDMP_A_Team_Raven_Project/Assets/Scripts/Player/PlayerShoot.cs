@@ -123,11 +123,14 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
-        firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
-        boltInventoryItem.DeacreaseAmount(boltFiredCost);
-        boltFiredSignal.Raise();
-        shoot = false;
+        if (boltInventoryItem.numberHeld > 0)
+        {
+            GameObject firedArrow = Instantiate(arrowPrefab, firePoint.position, weapon.transform.rotation);
+            firedArrow.GetComponent<Rigidbody2D>().AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
+            boltInventoryItem.DeacreaseAmount(boltFiredCost);
+            boltFiredSignal.Raise();
+            shoot = false;
+        }
     }
 
     private void DrawLine(Vector3 endPoint)

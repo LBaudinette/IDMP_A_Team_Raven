@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private SignalSender addPlayerHealthSignal;
     [SerializeField] private InventoryItem healthpotion;
+    [SerializeField] private InventoryItem bolt;
 
 
     // Start is called before the first frame update
@@ -128,8 +129,8 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdateAnimation();
 
+        // check for whether player is on horizontal stairs, adjust velocity offset to compensate
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin.transform.position, Vector2.zero);
-
         if (hit && hit.collider.tag == "StairsDownRight")
         {
             stairsVelOffset = -movementDir.x;
@@ -188,6 +189,15 @@ public class PlayerMovement : MonoBehaviour
                 // exits state upon completion of DashCoroutine()
                 break;
         }
+
+        //reset input bools
+        inputHeal = false;
+        inputAttack = false;
+        inputDash = false;
+    }
+
+    private void LateUpdate()
+    {
         
     }
 
@@ -200,19 +210,22 @@ public class PlayerMovement : MonoBehaviour
         movementDir.Normalize();
 
         // check for dash input
-        if (ableToDash)
+        if (ableToDash && state == State.Moving)
         {
             playerControls.Player.Dash.started += _ => inputDash = true;
         }
 
         // check for attack input
-        if (!shootScript.IsAiming())
+        if (!shootScript.IsAiming() && state == State.Moving)
         {
             playerControls.Player.Attack.started += _ => inputAttack = true;
         }
 
         // check for heal input
-        playerControls.Player.Heal.started += _ => inputHeal = true;
+        if (state == State.Moving)
+        {
+            playerControls.Player.Heal.started += _ => inputHeal = true;
+        }
     }
 
     private void Attack()
@@ -259,7 +272,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void AttackMovement()
     {
-        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(atkMoveDir.x, stairsVelOffset + atkMoveDir.y) * moveMagnitude * moveSpeed * 0.4f, velocityLerp * Time.deltaTime);
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(atkMoveDir.x, stairsVelOffset + atkMoveDir.y) * moveMagnitude * moveSpeed * 0.3f, velocityLerp * Time.deltaTime);
     }
 
     private void Dash()
@@ -274,8 +287,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if (state == State.Attacking)
             {
-                playerAnimator.SetFloat("MoveX", atkMoveDir.x);
-                playerAnimator.SetFloat("MoveY", atkMoveDir.y);
+                Debug.Log("changing attack dir");
+                if (Mathf.Abs(atkMoveDir.x) > Mathf.Abs(atkMoveDir.y))
+                {
+                    playerAnimator.SetFloat("MoveX", atkMoveDir.x * (1 / Mathf.Abs(atkMoveDir.x)));
+                    playerAnimator.SetFloat("MoveY", 0);
+                }
+                else
+                {
+                    playerAnimator.SetFloat("MoveX", 0);
+                    playerAnimator.SetFloat("MoveY", atkMoveDir.y * (1 / Mathf.Abs(atkMoveDir.y)));
+                }
                 playerAnimator.SetBool("Moving", false);
             } else
             {
@@ -297,7 +319,7 @@ public class PlayerMovement : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < dashTime)
         {
-            rb2d.velocity = movementDir * dashSpeed;
+            rb2d.velocity = new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * dashSpeed;
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -322,6 +344,7 @@ public class PlayerMovement : MonoBehaviour
     {
         attackTimeElapsed = 0f;
         playerAnimator.SetBool(attackName, true);
+        rb2d.velocity = Vector2.zero;
         while (attackTimeElapsed < attackAnimEnd)
         {
             attackTimeElapsed += Time.deltaTime;
@@ -347,10 +370,8 @@ public class PlayerMovement : MonoBehaviour
         {
             sr.color = new Color(1f - (elapsed / healTime), 1f, 1f - (elapsed / healTime), 1f);
             elapsed += Time.deltaTime;
-            Debug.Log("elapsed = " + elapsed);
             yield return null;
         }
-        Debug.Log("left heal loop");
         sr.color = new Color(1f, 1f, 1f, 1f);
         state = State.Moving;
         healthpotion.Use();
@@ -365,5 +386,10 @@ public class PlayerMovement : MonoBehaviour
     public bool isVulnerable()
     {
         return this.vulnerable;
+    }
+
+    public void addBoltToInv()
+    {
+        playerInventory.AddItem(bolt);
     }
 }
