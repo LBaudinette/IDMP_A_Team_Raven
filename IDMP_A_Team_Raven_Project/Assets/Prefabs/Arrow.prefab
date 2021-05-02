@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 4999221651312847934}
   maxAliveTime: 3
-  knockbackMult: 10
+  knockbackMult: 1
   damage: 10
 --- !u!114 &-1481409994110939514
 MonoBehaviour:

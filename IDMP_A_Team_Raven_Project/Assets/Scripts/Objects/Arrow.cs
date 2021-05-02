@@ -34,7 +34,7 @@ public class Arrow : MonoBehaviour
             // freese arrow if it collides with wall
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             rb2d.freezeRotation = true;
-        } else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Projectiles"))
+        } else if (collision.gameObject.CompareTag("Projectiles"))
         {
             Destroy(gameObject);
         }

@@ -306,23 +306,22 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Projectiles"))
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("COLLIDE");
+        if (collision.gameObject.tag == "Player")
         {
+            //Stop the rigidbody from moving if the player is pushing against it
+            rb.bodyType = RigidbodyType2D.Static;
+        } else if (collision.gameObject.CompareTag("Projectiles"))
+        {
+            Debug.Log("Hit Arrow");
             hitStopScript.freeze();
             Arrow arrow = collision.gameObject.GetComponent<Arrow>();
             Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
+            Destroy(collision.gameObject);
         }
-    }
-
-    //Stop the rigidbody from moving if the player is pushing against it
-    private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("COLLIDE");
-        if (collision.gameObject.tag == "Player")
-            rb.bodyType = RigidbodyType2D.Static;
     }
 
     //Allow the enemy to move again when the player is no longer pushing against it

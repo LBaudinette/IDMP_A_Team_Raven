@@ -119932,7 +119932,7 @@ PrefabInstance:
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: dashCooldown
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628941, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
