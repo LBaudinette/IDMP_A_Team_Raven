@@ -16,8 +16,13 @@ public class Enemy : MonoBehaviour {
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
     protected bool canAttack = false;       //flags whether the player is in range for an attack
+    protected bool canMove = true;
+    protected bool isFlinching = false;
     protected bool isCooldown = false;
     protected float meleeRangeCheck = 1.5f;
+
+    protected float flinchDuration = 1f;
+    protected float flinchTimer = 0f;
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
@@ -26,7 +31,6 @@ public class Enemy : MonoBehaviour {
 
     private int currentWaypoint = 0;
     public float speed = 200f;
-    bool isEndOfPath = false;
     protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
     protected bool isMoving = false;
@@ -35,6 +39,7 @@ public class Enemy : MonoBehaviour {
     private float pathTimer = 0;
     private float pathTimerMax = 0.5f;
 
+    private Coroutine coroutine;
 
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
@@ -73,21 +78,13 @@ public class Enemy : MonoBehaviour {
         if (isAttacking && health != 0)
             return;
 
-        //Check if we have reached the end of the path
-        if (currentWaypoint >= path.vectorPath.Count) {
-            isEndOfPath = true;
-            return;
-        }
-        else
-            isEndOfPath = false;
-
         //Debug.Log("Cooldown: " + isCooldown);
         //Debug.Log("Can Attack: " + canAttack);
 
         checkAttackRange();
-        if (canAttack && !isCooldown)
+        if (canAttack && !isCooldown && !isFlinching)
             startMeleeAttack();
-        else
+        else if (canMove)
             Move();
 
 
@@ -100,7 +97,7 @@ public class Enemy : MonoBehaviour {
     protected void Move() {
         // Get a vector between the next node in the path and the current position
         Vector2 direction = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-       
+
 
         if (direction.x != 0 && direction.y != 0) {
             //Debug.Log(direction);
@@ -124,6 +121,22 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    protected IEnumerator flinch() {
+        isFlinching = true;
+        canMove = false;
+        isCooldown = true;
+
+        while (flinchTimer < flinchDuration) {
+            flinchTimer += Time.deltaTime;
+            yield return null;
+
+        }
+        flinchTimer = 0f;
+        canMove = true;
+        isFlinching = false;
+
+    }
+
     protected void OnPathComplete(Path p) {
 
         //if there is no error in the calculated path, make the enemy follow the path
@@ -137,6 +150,7 @@ public class Enemy : MonoBehaviour {
 
         //Stop moving and then play the animation
         isAttacking = true;
+        canMove = false;
         isMoving = false;
         path = null;
 
@@ -156,6 +170,7 @@ public class Enemy : MonoBehaviour {
         Debug.Log("End Attack");
         isAttacking = false;
         isMoving = true;
+        canMove = true;
         isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);
@@ -260,14 +275,24 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeHit(Vector2 velocity, float damage) {
-        rb.AddForce(velocity * 5);
-        if (health <= 0)
+        StartCoroutine(flinch());
+        Debug.Log("HIT TAKEN");
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        rb.AddForce(velocity, ForceMode2D.Impulse);
+
+        if (health <= 0) {
+            rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
+        }
         health -= damage;
     }
 
     protected virtual void onDeath() {
-        //rb.bodyType = RigidbodyType2D.Static;
+        //StopCoroutine(coroutine);
+        //animator.speed = 0f;
+        rb.bodyType = RigidbodyType2D.Static;
+        //Destroy(this);
         Destroy(gameObject);
     }
 
@@ -279,6 +304,19 @@ public class Enemy : MonoBehaviour {
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
         }
+    }
+
+    //Stop the rigidbody from moving if the player is pushing against it
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("COLLIDE");
+        if (collision.gameObject.tag == "Player")
+            rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    //Allow the enemy to move again when the player is no longer pushing against it
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Player")
+            rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
 }

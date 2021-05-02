@@ -47,6 +47,7 @@ public class GiantScript : Enemy
 
         isAttacking = false;
         isMoving = true;
+        canMove = true;
         isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);

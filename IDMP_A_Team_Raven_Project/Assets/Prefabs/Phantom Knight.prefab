@@ -292,7 +292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9116192442242146744
 Transform:
   m_ObjectHideFlags: 0
@@ -345,8 +345,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 976688173
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 5286322490418974263, guid: f36343f3c7d1b3741b6489e1301b79bd,
     type: 3}
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDelay: 1
   nextWaypointDistance: 2
-  health: 30
+  health: 50
   damage: 25
   playerLayer:
     serializedVersion: 2

@@ -5,12 +5,9 @@ using UnityEngine;
 public class NecromancerScript : RangedEnemy
 {
     GridAreaScript gridScript;
-
-    public float castingDelay;              //The delay between casting the attack and strating it
-    public float attackDelay;               //The delay between casting attacks
-    private float castingTimer = 0f; 
-    private float attackTimer = 0f;
     private GameObject playerObject;
+    private bool canAttack = true;
+
 
     //private Animator animator;
     // Start is called before the first frame update
@@ -24,6 +21,25 @@ public class NecromancerScript : RangedEnemy
     // Update is called once per frame
     void Update()
     {
+        Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
+        Ray2D topLeftRay = new Ray2D(topLeftRaycastPoint.position, new Vector2(-1, 1));
+        Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
+        Ray2D topRightRay = new Ray2D(topRightRaycastPoint.position, new Vector2(1, 1));
+        Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
+        Ray2D botRightRay = new Ray2D(bottomRightRaycastPoint.position, new Vector2(1, -1));
+        Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
+        Ray2D botLeftRay = new Ray2D(bottomLeftRaycastPoint.position, new Vector2(-1, -1));
+
+        Debug.DrawRay(leftRay.origin, leftRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topLeftRay.origin, topLeftRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topRay.origin, topRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topRightRay.origin, topRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(rightRay.origin, rightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRightRay.origin, botRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
+
+
 
         //Update Direction
         float direction = playerObject.transform.position.x - transform.position.x;
@@ -32,29 +48,33 @@ public class NecromancerScript : RangedEnemy
         else if (direction > 0)
             animator.SetFloat("playerDirection", 1);
 
-
-        //Play a random pattern
-        if (attackTimer < attackDelay && !gridScript.isCasting && !isTeleporting)
-            attackTimer += Time.deltaTime;
+        if (teleportCDTimer < teleportCooldown)
+            teleportCDTimer += Time.deltaTime;
         else {
-            if (!gridScript.isCasting) {
-                attackTimer = 0;
-                animator.SetBool("isAttacking", true);
-                gridScript.playRandomPattern();
-            }
+            canTeleport = true;
+            teleportCDTimer = 0f;
         }
+            
+
+        if (attackTimer < attackDelay)
+            attackTimer += Time.deltaTime;
+        else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
+            canAttack = true;
+
+        if (canAttack) {
+            attackTimer = 0f;
+            //animator.SetBool("isAttacking", true);
+            canAttack = false;
+        }
+
 
         //Teleport when the player is too close
         if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
-            !isTeleporting) {
-            Debug.Log("IS TELEPORTING: " + isTeleporting);
+            canTeleport) {
             coroutine = StartCoroutine(startTeleport());
         }
     }
 
-    void stopCasting() {
-        animator.SetBool("isAttacking", false);
-    }
 
     public void TakeHit(float damage) {
         if (health <= 0)
@@ -62,10 +82,10 @@ public class NecromancerScript : RangedEnemy
         health -= damage;
     }
 
-    protected override void onDeath() {
-        //rb.bodyType = RigidbodyType2D.Static;
-        Destroy(gameObject);
-    }
+    //protected override void onDeath() {
+    //    //rb.bodyType = RigidbodyType2D.Static;
+    //    Destroy(gameObject);
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Hitbox") {
@@ -74,4 +94,9 @@ public class NecromancerScript : RangedEnemy
         }
     }
 
+    void playAttack() {
+        gridScript.playRandomPattern();
+        animator.SetBool("isAttacking", false);
+
+    }
 }

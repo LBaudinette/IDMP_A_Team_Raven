@@ -10,9 +10,6 @@ public class PhantomKnightScript : Enemy
 
 
     protected override void Update() {
-        if (Input.GetKeyDown("j"))
-            onDeath();
-
         updateTimers();
     }
 
