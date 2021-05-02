@@ -72,10 +72,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5754456444041501208}
   - component: {fileID: 2040684851599446693}
-  - component: {fileID: 7939138075696227843}
+  - component: {fileID: 8041627724144682741}
   m_Layer: 9
   m_Name: Right Attack Container
-  m_TagString: Hitbox
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.19, y: 2.6}
   m_EdgeRadius: 0
---- !u!114 &7939138075696227843
+--- !u!114 &8041627724144682741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2441060734388656497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Script: {fileID: 11500000, guid: bf68b636bf8cb42418dc898406679523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.1
+  duration: 0.05
 --- !u!1 &4866132603941585057
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,10 +483,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3151859785714675812}
   - component: {fileID: 7055314826337050720}
-  - component: {fileID: 8401731710865093405}
+  - component: {fileID: 3439915737941699170}
   m_Layer: 9
   m_Name: Left Attack Hitbox
-  m_TagString: Hitbox
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +531,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1942062, y: 2.6702805}
   m_EdgeRadius: 0
---- !u!114 &8401731710865093405
+--- !u!114 &3439915737941699170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866132603941585057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Script: {fileID: 11500000, guid: bf68b636bf8cb42418dc898406679523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20

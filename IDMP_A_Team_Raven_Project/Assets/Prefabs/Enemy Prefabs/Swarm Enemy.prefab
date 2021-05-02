@@ -42,10 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 836671164}
   - component: {fileID: 836671165}
-  - component: {fileID: 154613301}
+  - component: {fileID: 3514933192757945050}
   m_Layer: 9
   m_Name: Left Attack Hitbox
-  m_TagString: Hitbox
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9471061, y: 0.46048522}
   m_EdgeRadius: 0
---- !u!114 &154613301
+--- !u!114 &3514933192757945050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,11 +99,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 836671163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Script: {fileID: 11500000, guid: bf68b636bf8cb42418dc898406679523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockback: 100
+  knockback: 10
   parentPosition: {fileID: 4545894050325807877}
 --- !u!1 &1063338494
 GameObject:
@@ -115,10 +115,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1063338495}
   - component: {fileID: 1267154624077748601}
-  - component: {fileID: 1943210531}
+  - component: {fileID: 1355239591512303428}
   m_Layer: 9
   m_Name: Right Attack Hitbox
-  m_TagString: Hitbox
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9259486, y: 0.43932843}
   m_EdgeRadius: 0
---- !u!114 &1943210531
+--- !u!114 &1355239591512303428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1063338494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787d531e97d5d0429523e3632235184, type: 3}
+  m_Script: {fileID: 11500000, guid: bf68b636bf8cb42418dc898406679523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.1
+  duration: 0.05
 --- !u!1 &7906047182909400604
 GameObject:
   m_ObjectHideFlags: 0
