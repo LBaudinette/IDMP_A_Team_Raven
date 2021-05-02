@@ -17,8 +17,8 @@ public class Room : MonoBehaviour
             {
                 //ChangeActivation(enemies[i], true);
                 //Instantiate(enemies[i], transform);
-
-                enemies[i].SetActive(true);
+                if(!enemies[i].GetComponent<Enemy>().isDead)
+                    enemies[i].SetActive(true);
 
 
             }
