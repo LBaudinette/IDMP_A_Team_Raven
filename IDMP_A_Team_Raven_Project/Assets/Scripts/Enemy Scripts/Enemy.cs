@@ -273,8 +273,8 @@ public class Enemy : MonoBehaviour {
 
     public void TakeHit(Vector2 velocity, float damage) {
         StartCoroutine(flinch());
-
-        rb.AddForce(velocity);
+        Debug.Log("HIT TAKEN");
+        rb.AddForce(velocity * 3);
         if (health <= 0) {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
@@ -297,6 +297,19 @@ public class Enemy : MonoBehaviour {
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
         }
+    }
+
+    //Stop the rigidbody from moving if the player is pushing against it
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("COLLIDE");
+        if (collision.gameObject.tag == "Player")
+            rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    //Allow the enemy to move again when the player is no longer pushing against it
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Player")
+            rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
 }
