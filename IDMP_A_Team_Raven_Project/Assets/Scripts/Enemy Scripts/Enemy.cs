@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour {
     protected bool isAttacking = false;
     protected bool isMoving = false;
     protected bool isEndOfPath = false;
+    public bool isDead = false;
     private Vector2 target;
 
     private float pathTimer = 0;
@@ -295,9 +296,11 @@ public class Enemy : MonoBehaviour {
     protected virtual void onDeath() {
         //StopCoroutine(coroutine);
         //animator.speed = 0f;
-        rb.bodyType = RigidbodyType2D.Static;
+        //rb.bodyType = RigidbodyType2D.Static;
         //Destroy(this);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        isDead = true;
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

@@ -22,6 +22,7 @@ public class RangedEnemy : MonoBehaviour {
     public float teleportCooldown = 4f;
     protected bool isTeleporting = false;
     protected bool canTeleport = true;
+    public bool isDead = false;
 
     public Transform leftRaycastPoint, topLeftRaycastPoint, topRaycastPoint,
         topRightRaycastPoint, rightRaycastPoint, bottomRightRaycastPoint,botRaycastPoint,
@@ -255,9 +256,11 @@ public class RangedEnemy : MonoBehaviour {
 
     protected virtual void onDeath() {
         StopCoroutine(coroutine);
-        GetComponent<BoxCollider2D>().enabled = false;
-        animator.speed = 0f;
-        Destroy(this);
+        isDead = true;
+        gameObject.SetActive(false);
+        //GetComponent<BoxCollider2D>().enabled = false;
+        //animator.speed = 0f;
+        //Destroy(this);
     }
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {
