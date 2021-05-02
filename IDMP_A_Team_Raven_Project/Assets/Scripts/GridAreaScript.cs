@@ -33,9 +33,9 @@ public class GridAreaScript : MonoBehaviour
         grid = new GameObject[rows, columns];
 
 
-        Debug.Log("TILE SIZE: " + tileSize);
-        Debug.Log("Columns: " + columns);
-        Debug.Log("ROWS: " + rows);
+        //Debug.Log("TILE SIZE: " + tileSize);
+        //Debug.Log("Columns: " + columns);
+        //Debug.Log("ROWS: " + rows);
 
         generateGrid();
     }
@@ -117,7 +117,7 @@ public class GridAreaScript : MonoBehaviour
                 //Debug.Log("Col?: " + (col == 0));
                 //Debug.Log("ROW?: " + (row == rows));
 
-                Debug.Log("COL: " + col + " ROW: " + row);
+                //Debug.Log("COL: " + col + " ROW: " + row);
 
                 //flag the final tile so that boss knows when the grid has finished casting
                 if (col == 0 && (row == rows - 1 || row == rows - 2)) {

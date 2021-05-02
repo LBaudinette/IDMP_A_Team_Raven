@@ -33,6 +33,7 @@ public class RangedEnemy : MonoBehaviour {
     protected Rigidbody2D rb;
     protected Coroutine coroutine;
 
+    //Struct that stores the ray and hit for a raycast
     private struct Raycast {
 
         public Ray2D ray;
@@ -53,6 +54,7 @@ public class RangedEnemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //Raycast debugging
         Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
         Ray2D topLeftRay = new Ray2D(topLeftRaycastPoint.position, new Vector2(-1, 1));
         Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
@@ -120,7 +122,7 @@ public class RangedEnemy : MonoBehaviour {
 
         //Start the teleport timer
         while (teleportTimer < teleportDelay) {
-            Debug.Log("TIMER: " + teleportTimer);
+            //Debug.Log("TIMER: " + teleportTimer);
             teleportTimer += Time.deltaTime;
 
             yield return null;
@@ -194,19 +196,22 @@ public class RangedEnemy : MonoBehaviour {
                 emptyRaycasts.Add(raycast);
 
         }
-        //Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
-        //Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
+
+        Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
+        Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
+
         Raycast longestRaycast;
+
         //if no walls were hit, then teleport into an open space
         if (emptyRaycasts.Count != 0) {
             //assign the first element as the longest
             longestRaycast = emptyRaycasts[0];
 
-            foreach (Raycast raycast in emptyRaycasts) {
-                //Debug.Log(raycast.ray.direction);
-                if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
-                    longestRaycast = raycast;
-            }
+            //foreach (Raycast raycast in emptyRaycasts) {
+            //    //Debug.Log(raycast.ray.direction);
+            //    if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
+            //        longestRaycast = raycast;
+            //}
 
             //pick a random direction
             int randomIndex = Random.Range(0, emptyRaycasts.Count);
@@ -228,7 +233,8 @@ public class RangedEnemy : MonoBehaviour {
             Debug.Log("TELEPORT NEAR WALL");
 
             //Teleport to the walls position
-            transform.Translate(longestRaycast.ray.direction * teleportDistance);
+            //transform.Translate(longestRaycast.ray.direction * teleportDistance);
+            rb.MovePosition((Vector2)transform.position + (longestRaycast.ray.direction * teleportDistance));
 
         }
         isTeleporting = false;
@@ -242,7 +248,6 @@ public class RangedEnemy : MonoBehaviour {
         StopCoroutine(coroutine);
         animator.speed = 0f;
         Destroy(this);
-        //Destroy(gameObject);
     }
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {

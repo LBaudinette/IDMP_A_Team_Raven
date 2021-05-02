@@ -259,7 +259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8320919226418475390
 Transform:
   m_ObjectHideFlags: 0
@@ -311,8 +311,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 976688173
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4937299445989810211, guid: 6356ee6ed2ea61f44be643dae0f07278,
     type: 3}
@@ -362,7 +362,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   rotationPoint: {fileID: 0}
   teleTriggerDistance: 4
-  health: 30
+  health: 300
   teleportDelay: 3
   teleportDistance: 6
   teleportCooldown: 4

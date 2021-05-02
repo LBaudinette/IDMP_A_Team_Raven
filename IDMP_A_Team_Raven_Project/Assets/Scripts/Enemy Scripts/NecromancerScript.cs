@@ -21,6 +21,25 @@ public class NecromancerScript : RangedEnemy
     // Update is called once per frame
     void Update()
     {
+        Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
+        Ray2D topLeftRay = new Ray2D(topLeftRaycastPoint.position, new Vector2(-1, 1));
+        Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
+        Ray2D topRightRay = new Ray2D(topRightRaycastPoint.position, new Vector2(1, 1));
+        Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
+        Ray2D botRightRay = new Ray2D(bottomRightRaycastPoint.position, new Vector2(1, -1));
+        Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
+        Ray2D botLeftRay = new Ray2D(bottomLeftRaycastPoint.position, new Vector2(-1, -1));
+
+        Debug.DrawRay(leftRay.origin, leftRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topLeftRay.origin, topLeftRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topRay.origin, topRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topRightRay.origin, topRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(rightRay.origin, rightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRightRay.origin, botRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
+
+
 
         //Update Direction
         float direction = playerObject.transform.position.x - transform.position.x;
@@ -44,7 +63,7 @@ public class NecromancerScript : RangedEnemy
 
         if (canAttack) {
             attackTimer = 0f;
-            animator.SetBool("isAttacking", true);
+            //animator.SetBool("isAttacking", true);
             canAttack = false;
         }
 

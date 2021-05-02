@@ -354,8 +354,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1828376255
-  m_SortingLayer: 0
+  m_SortingLayerID: 976688173
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5077389074728326815, guid: 81508eba907fe634a8cc964eb18b2b32,
     type: 3}
@@ -415,7 +415,7 @@ MonoBehaviour:
   teleTriggerDistance: 3
   health: 100
   teleportDelay: 2
-  teleportDistance: 3
+  teleportDistance: 5
   teleportCooldown: 4
   leftRaycastPoint: {fileID: 7055182499569942125}
   topLeftRaycastPoint: {fileID: 8218083766521400712}
@@ -436,7 +436,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6026857293838660687}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
