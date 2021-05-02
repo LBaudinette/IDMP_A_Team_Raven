@@ -855,6 +855,7 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 4c44254e839f1964a96f2fdadad0c84e, type: 2}
   addPlayerHealthSignal: {fileID: 11400000, guid: cc76cc2eb5c279a4880bf4a33afe48f4,
     type: 2}
+  addBoltFromInv: {fileID: 11400000, guid: 2e6910fd00d854343b74d62e0ab520a7, type: 2}
   healthpotion: {fileID: 11400000, guid: b2bf941ff1fb1354fbf8b1c40808523b, type: 2}
   bolt: {fileID: 11400000, guid: 55859dbfc9525dd43a582b8c294f096a, type: 2}
 --- !u!61 &2501820542938628942

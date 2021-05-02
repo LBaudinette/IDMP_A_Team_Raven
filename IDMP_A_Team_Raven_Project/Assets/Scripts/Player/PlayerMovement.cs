@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Health Variables")]
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private SignalSender addPlayerHealthSignal;
+    [SerializeField] private SignalSender addBoltFromInv;
     [SerializeField] private InventoryItem healthpotion;
     [SerializeField] private InventoryItem bolt;
 
@@ -391,5 +392,6 @@ public class PlayerMovement : MonoBehaviour
     public void addBoltToInv()
     {
         playerInventory.AddItem(bolt);
+        addBoltFromInv.Raise();
     }
 }
