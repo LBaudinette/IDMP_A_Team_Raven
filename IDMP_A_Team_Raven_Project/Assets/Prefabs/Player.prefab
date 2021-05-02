@@ -683,6 +683,9 @@ GameObject:
   - component: {fileID: 2501820542798104135}
   - component: {fileID: 2501820542798104136}
   - component: {fileID: 2501820542798104137}
+  - component: {fileID: 5844797121488747977}
+  - component: {fileID: 7390754753119754365}
+  - component: {fileID: 8624763503376173631}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -840,7 +843,7 @@ MonoBehaviour:
   moveSpeed: 6
   velocityLerp: 50
   dashSpeed: 30
-  dashCooldown: 0.25
+  dashCooldown: 0
   attackMoveSpeed: 2
   healMoveSpeedFactor: 0.25
   dashTime: 0.1
@@ -953,6 +956,60 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2501820542798104137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501820542938628928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+--- !u!114 &5844797121488747977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501820542938628928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b806464e42fd314abdbf1eeb6f2af44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextClue: {fileID: 6317819367145704799}
+  contextActive: 0
+--- !u!114 &7390754753119754365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501820542938628928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d441a30c7af2754ba5c7661a8686385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 40551a99b96086a4a8ba03437c21b024, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5844797121488747977}
+        m_MethodName: ChangeContext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8624763503376173631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -16,6 +16,11 @@ public class Sign: Interactable
         inputInteract = false;
     }
 
+    private void FixedUpdate()
+    {
+        inputInteract = false;
+    }
+
     // Update is called once per frame
     public virtual void Update()
     {
