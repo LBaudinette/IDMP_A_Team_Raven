@@ -76,11 +76,20 @@ public class RangedEnemy : MonoBehaviour {
         //Update the player position every frame
         playerPos = GameObject.FindWithTag("Player").transform.position;
 
+
+        //Update Direction
+        float direction = playerPos.x - transform.position.x;
+        if (direction < 0)
+            animator.SetFloat("playerDirection", -1);
+        else if (direction > 0)
+            animator.SetFloat("playerDirection", 1);
+
+
         //Check to see if the Enemy can fire a projectile
         if (attackTimer < attackDelay)
             attackTimer += Time.deltaTime;
         else {
-            fireProjectile();
+            animator.SetBool("isAttacking", true);
             attackTimer = 0f;
         }
 
@@ -214,7 +223,7 @@ public class RangedEnemy : MonoBehaviour {
             //}
 
             //pick a random direction
-            int randomIndex = Random.Range(0, emptyRaycasts.Count);
+            int randomIndex = Random.Range(0, emptyRaycasts.Count + 1);
 
             //Teleport to the open space
             //transform.Translate(longestRaycast.ray.direction * teleportDistance);
@@ -246,6 +255,7 @@ public class RangedEnemy : MonoBehaviour {
 
     protected virtual void onDeath() {
         StopCoroutine(coroutine);
+        GetComponent<BoxCollider2D>().enabled = false;
         animator.speed = 0f;
         Destroy(this);
     }

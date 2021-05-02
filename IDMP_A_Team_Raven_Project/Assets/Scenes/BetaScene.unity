@@ -54616,25 +54616,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1985374720}
     m_Modifications:
-    - target: {fileID: 1061357568904774959, guid: 621a59d83335898459e5e8d8bde3e4b3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475384, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_Name
       value: Necromancer Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320919226418475384, guid: 621a59d83335898459e5e8d8bde3e4b3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320919226418475389, guid: 621a59d83335898459e5e8d8bde3e4b3,
-        type: 3}
-      propertyPath: teleportDistance
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
@@ -54644,12 +54629,12 @@ PrefabInstance:
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 27.67
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 127.1
+      value: 135.89
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
@@ -54705,27 +54690,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 274460638}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &274460641
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274460640}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &302805384
 GameObject:
   m_ObjectHideFlags: 0
@@ -123327,12 +123291,12 @@ PrefabInstance:
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11
+      value: 24.1
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 132.49
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}

@@ -254,13 +254,14 @@ GameObject:
   - component: {fileID: 8320919226418475389}
   - component: {fileID: 1061357568904774959}
   - component: {fileID: 9099382698315187875}
+  - component: {fileID: 274460641}
   m_Layer: 9
   m_Name: Necromancer Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8320919226418475390
 Transform:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ MonoBehaviour:
   bottomLeftRaycastPoint: {fileID: 1979022730865032604}
   layerDetection:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 6144
 --- !u!61 &1061357568904774959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -417,6 +418,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.05
+--- !u!50 &274460641
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320919226418475384}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9078840362314276788
 GameObject:
   m_ObjectHideFlags: 0
