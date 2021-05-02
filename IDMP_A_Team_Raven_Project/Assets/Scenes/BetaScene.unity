@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -55080,7 +55080,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -55491,7 +55491,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -56009,7 +56009,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 10
@@ -56513,7 +56513,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -56773,7 +56773,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -113480,7 +113480,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -113568,7 +113568,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -117967,7 +117967,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -120445,7 +120445,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -120948,7 +120948,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2501820542798104135}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 6
@@ -121869,6 +121869,12 @@ PrefabInstance:
 --- !u!1 &2501820542798104134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2501820542938628928, guid: 22d7b47dab12f5a438529731900e8b16,
+    type: 3}
+  m_PrefabInstance: {fileID: 2501820542798104133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2501820542798104135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
     type: 3}
   m_PrefabInstance: {fileID: 2501820542798104133}
   m_PrefabAsset: {fileID: 0}
