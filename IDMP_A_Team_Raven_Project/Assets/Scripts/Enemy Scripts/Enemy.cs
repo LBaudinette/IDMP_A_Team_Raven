@@ -15,8 +15,13 @@ public class Enemy : MonoBehaviour {
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
     protected bool canAttack = false;       //flags whether the player is in range for an attack
+    protected bool canMove = true;
+    protected bool isFlinching = false;
     protected bool isCooldown = false;
     protected float meleeRangeCheck = 1.5f;
+
+    protected float flinchDuration = 1f;
+    protected float flinchTimer = 0f;
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
@@ -34,6 +39,7 @@ public class Enemy : MonoBehaviour {
     private float pathTimer = 0;
     private float pathTimerMax = 0.5f;
 
+    private Coroutine coroutine;
 
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
@@ -83,9 +89,9 @@ public class Enemy : MonoBehaviour {
         //Debug.Log("Can Attack: " + canAttack);
 
         checkAttackRange();
-        if (canAttack && !isCooldown)
+        if (canAttack && !isCooldown && !isFlinching)
             startMeleeAttack();
-        else
+        else if(canMove)
             Move();
 
 
@@ -122,6 +128,21 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    protected IEnumerator flinch() {
+        isFlinching = true;
+        canMove = false;
+
+        while(flinchTimer < flinchDuration){
+            flinchTimer += Time.deltaTime;
+            yield return null;
+
+        }
+        flinchTimer = 0f;
+        canMove = true;
+        isFlinching = false;
+
+    }
+
     protected void OnPathComplete(Path p) {
 
         //if there is no error in the calculated path, make the enemy follow the path
@@ -135,6 +156,7 @@ public class Enemy : MonoBehaviour {
 
         //Stop moving and then play the animation
         isAttacking = true;
+        canMove = false;
         isMoving = false;
         path = null;
 
@@ -154,6 +176,7 @@ public class Enemy : MonoBehaviour {
         Debug.Log("End Attack");
         isAttacking = false;
         isMoving = true;
+        canMove = true;
         isCooldown = true;
 
         animator.SetBool("isAttacking", isAttacking);
@@ -258,7 +281,9 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeHit(Vector2 velocity, float damage) {
-        rb.AddForce(velocity * 5);
+        StartCoroutine(flinch());
+
+        rb.AddForce(velocity);
         if (health <= 0) {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
@@ -267,6 +292,7 @@ public class Enemy : MonoBehaviour {
     }
 
     protected virtual void onDeath() {
+        //StopCoroutine(coroutine);
         animator.speed = 0f;
         rb.bodyType = RigidbodyType2D.Static;
         Destroy(this);
