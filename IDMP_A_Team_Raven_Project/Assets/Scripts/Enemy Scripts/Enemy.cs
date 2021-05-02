@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour {
     protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
     protected bool isMoving = false;
+    protected bool isEndOfPath = false;
     private Vector2 target;
 
     private float pathTimer = 0;
@@ -77,6 +78,14 @@ public class Enemy : MonoBehaviour {
         //Cancel any pathfinding if attacking or dead
         if (isAttacking && health != 0)
             return;
+
+        //Check if we have reached the end of the path
+        if (currentWaypoint >= path.vectorPath.Count) {
+            isEndOfPath = true;
+            return;
+        }
+        else
+            isEndOfPath = false;
 
         //Debug.Log("Cooldown: " + isCooldown);
         //Debug.Log("Can Attack: " + canAttack);
