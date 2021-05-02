@@ -281,11 +281,12 @@ public class Enemy : MonoBehaviour {
 
         rb.AddForce(velocity, ForceMode2D.Impulse);
 
+        health -= damage;
         if (health <= 0) {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
         }
-        health -= damage;
+        
     }
 
     protected virtual void onDeath() {
