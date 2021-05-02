@@ -67,6 +67,7 @@ public class PauseManager : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(null);
             inventoryPanel.SetActive(false);
+            journalPanel.SetActive(false);
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
         }
