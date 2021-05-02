@@ -9,18 +9,6 @@ public class DealHitMeleeEnemy : MonoBehaviour
     public float knockback;
     public GameObject parentPosition;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public float getDamage() {
         return damage;
     }
@@ -32,8 +20,4 @@ public class DealHitMeleeEnemy : MonoBehaviour
         return parentPosition;
     }
 
-
-
-    //Deal hit melee
-    //Make enemy hitbox tag
 }

@@ -918,6 +918,7 @@ MonoBehaviour:
   rb2d: {fileID: 2501820542938628940}
   reducePlayerHealthSignal: {fileID: 11400000, guid: 040842636221b024b94d833336956256,
     type: 2}
+  playerHealth: {fileID: 11400000, guid: 3a28fc588b73f5e438c7052fbfa5c499, type: 2}
 --- !u!114 &2501820542798104135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849b614593658354ea83673679e3008b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.1
+  duration: 0.05
 --- !u!114 &4208537117433395279
 MonoBehaviour:
   m_ObjectHideFlags: 0

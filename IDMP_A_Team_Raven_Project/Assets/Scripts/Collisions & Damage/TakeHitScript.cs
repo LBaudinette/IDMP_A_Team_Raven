@@ -9,6 +9,7 @@ public class TakeHitScript : MonoBehaviour
     private HitStop hitStopScript;
 
     [SerializeField] private SignalSender reducePlayerHealthSignal;
+    [SerializeField] private FloatValue playerHealth;
 
     void Start()
     {
@@ -23,17 +24,34 @@ public class TakeHitScript : MonoBehaviour
     public void TakeHit(Vector2 velocity, float damage)
     {
         rb2d.AddForce(velocity);
+        playerHealth.runTimeValue -= damage;
         reducePlayerHealthSignal.Raise();
-        //take damage
+        Debug.Log("player should be taking dmg");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Hitbox") || collision.gameObject.CompareTag("Projectiles"))
+        if (collision.gameObject.CompareTag("EnemyHitbox"))
         {
             hitStopScript.freeze();
-            DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
-            Vector2 knockbackDir = rb2d.position - (Vector2) hitbox.getParentPos().transform.position;
+            DealHitMeleeEnemy hitbox = collision.GetComponent<DealHitMeleeEnemy>();
+            Vector2 knockbackDir = rb2d.position - (Vector2)hitbox.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+        else if (collision.gameObject.CompareTag("Projectiles"))
+        {
+            hitStopScript.freeze();
+            ProjectileScript hitbox = collision.GetComponent<ProjectileScript>();
+            Vector2 knockbackDir = hitbox.getVel();
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+        else if (collision.gameObject.CompareTag("BossHitbox"))
+        {
+            hitStopScript.freeze();
+            BossHitbox hitbox = collision.GetComponent<BossHitbox>();
+            Vector2 knockbackDir = rb2d.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
         }

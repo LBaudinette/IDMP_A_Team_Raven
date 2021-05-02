@@ -123565,6 +123565,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6113204181760399792, guid: 650912e8c7901424a8902eedea6ea2e6,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 650912e8c7901424a8902eedea6ea2e6, type: 3}
 --- !u!1001 &6560789864440148836

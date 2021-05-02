@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 1178465028391787987}
   m_Layer: 0
   m_Name: Fire Area
-  m_TagString: Untagged
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

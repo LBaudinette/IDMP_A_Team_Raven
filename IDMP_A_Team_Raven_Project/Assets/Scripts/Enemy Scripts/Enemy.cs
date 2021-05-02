@@ -245,9 +245,7 @@ public class Enemy : MonoBehaviour {
             Debug.DrawRay(leftRaycastPoint.position, Vector2.left * meleeRangeCheck, Color.green);
             hit = Physics2D.Raycast(leftRaycastPoint.position, Vector2.left, meleeRangeCheck, playerLayer);
             if (hit.collider != null) {
-                Debug.Log("TAG: " + hit.collider.tag);
                 if (hit.collider.tag == "Player") {
-                    Debug.Log("HIT");
                     canAttack = true;
 
                 }
@@ -261,10 +259,8 @@ public class Enemy : MonoBehaviour {
             Debug.DrawRay(rightRaycastPoint.position, Vector2.right * meleeRangeCheck, Color.green);
             hit = Physics2D.Raycast(rightRaycastPoint.position, Vector2.right, meleeRangeCheck, playerLayer);
             if (hit.collider != null) {
-                Debug.Log("TAG: " + hit.collider.tag);
 
                 if (hit.collider.tag == "Player") {
-                    Debug.Log("HIT");
                     canAttack = true;
 
                 }
@@ -276,16 +272,15 @@ public class Enemy : MonoBehaviour {
 
     public void TakeHit(Vector2 velocity, float damage) {
         StartCoroutine(flinch());
-        Debug.Log("HIT TAKEN");
         rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(velocity, ForceMode2D.Impulse);
 
+        health -= damage;
         if (health <= 0) {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
         }
-        health -= damage;
     }
 
     protected virtual void onDeath() {
@@ -309,14 +304,12 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("COLLIDE");
         if (collision.gameObject.tag == "Player")
         {
             //Stop the rigidbody from moving if the player is pushing against it
             rb.bodyType = RigidbodyType2D.Static;
         } else if (collision.gameObject.CompareTag("Projectiles"))
         {
-            Debug.Log("Hit Arrow");
             hitStopScript.freeze();
             Arrow arrow = collision.gameObject.GetComponent<Arrow>();
             Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;

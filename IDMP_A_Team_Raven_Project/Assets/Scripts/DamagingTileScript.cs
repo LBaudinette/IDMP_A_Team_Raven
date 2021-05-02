@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DamagingTileScript : MonoBehaviour
 {
-    public int damage = 10;
     GridAreaScript gridScript;
+    private BoxCollider2D hitbox;
 
     private Coroutine coroutine;
     private float timer = 0;
@@ -21,7 +21,8 @@ public class DamagingTileScript : MonoBehaviour
     {
         originalColour = sr.color;
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
-
+        hitbox = GetComponentInChildren<BoxCollider2D>();
+        hitbox.enabled = false;
 
     }
 
@@ -45,6 +46,8 @@ public class DamagingTileScript : MonoBehaviour
             activationTimer += Time.deltaTime;
             yield return null;
         }
+        hitbox.enabled = true;
+        Debug.Log("test");
         activationTimer = 0;
         sr.color = new Color(1f,1f,1f,1f);
 
@@ -58,7 +61,7 @@ public class DamagingTileScript : MonoBehaviour
             yield return null;
         }
         timer = 0;
-
+        hitbox.enabled = false;
         gameObject.SetActive(false);
 
         //Send signal to script that the final tile has activated

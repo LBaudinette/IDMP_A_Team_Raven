@@ -11,6 +11,8 @@ TagManager:
   - Collisions
   - StairsDownLeft
   - GridArea
+  - EnemyHitbox
+  - BossHitbox
   layers:
   - Default
   - TransparentFX
