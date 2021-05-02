@@ -856,7 +856,7 @@ MonoBehaviour:
   addPlayerHealthSignal: {fileID: 11400000, guid: cc76cc2eb5c279a4880bf4a33afe48f4,
     type: 2}
   healthpotion: {fileID: 11400000, guid: b2bf941ff1fb1354fbf8b1c40808523b, type: 2}
-  bolt: {fileID: 0}
+  bolt: {fileID: 11400000, guid: 55859dbfc9525dd43a582b8c294f096a, type: 2}
 --- !u!61 &2501820542938628942
 BoxCollider2D:
   m_ObjectHideFlags: 0

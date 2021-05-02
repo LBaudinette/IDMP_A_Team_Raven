@@ -300,9 +300,11 @@ public class Enemy : MonoBehaviour {
         if (collision.gameObject.CompareTag("Hitbox")) {
             hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            hitbox.addBoltOnHit();
             Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+            
         }
     }
 

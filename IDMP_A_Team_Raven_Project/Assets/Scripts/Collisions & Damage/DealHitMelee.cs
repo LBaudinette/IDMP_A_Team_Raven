@@ -31,14 +31,9 @@ public class DealHitMelee : MonoBehaviour
         return parentPosition;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void addBoltOnHit()
     {
-        if (collision != null)
-        {
-            if (collision.gameObject.CompareTag("Enemy"))
-            {
-                playerScript.addBoltToInv();
-            }
-        }
+        playerScript.addBoltToInv();
     }
+
 }
