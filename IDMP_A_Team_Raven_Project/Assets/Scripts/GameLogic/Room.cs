@@ -5,28 +5,41 @@ public class Room : MonoBehaviour
     public GameObject virtualCamera;
     //public GameObject pathfindingGrid;
     public GameObject[] enemies;
+    public GameObject[] rangedEnemies;
+    public GameObject[] bosses;
 
     //Enable relevant enemies and pathfinding grid
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        //pathfindingGrid.SetActive(true);
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            //Activate all enemies
+            //Set all melee enemies active
             for (int i = 0; i < enemies.Length; i++)
             {
                 //ChangeActivation(enemies[i], true);
-                //Instantiate(enemies[i], transform);
-                if(!enemies[i].GetComponent<Enemy>().isDead)
-                    enemies[i].SetActive(true);
-                else if (!enemies[i].GetComponent<RangedEnemy>().isDead)
-                    enemies[i].SetActive(true);
-                else if(!!enemies[i].GetComponent<NecromancerScript>().isDead)
+                if (!enemies[i].GetComponent<Enemy>().isDead)
                     enemies[i].SetActive(true);
 
+
             }
+            //Set all ranged enemies active
+            for (int i = 0; i < rangedEnemies.Length; i++) {
+
+                if (!rangedEnemies[i].GetComponent<RangedEnemy>().isDead)
+                    rangedEnemies[i].SetActive(true);
+                
+
+            }
+            //Set all boss enemies active
+            for (int i = 0; i < bosses.Length; i++) {
+                if (!bosses[i].GetComponent<NecromancerScript>().isDead)
+                    bosses[i].SetActive(true);
+            }
+
+
             virtualCamera.SetActive(true);
         }
+        
     }
 
     //Disable relevant enemies and pathfinding grid
@@ -36,11 +49,27 @@ public class Room : MonoBehaviour
 
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            //Deactivate all enemires
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                //ChangeActivation(enemies[i], false);
-                enemies[i].SetActive(false);
+
+            //Deactivate all melee enemies active
+            for (int i = 0; i < enemies.Length; i++) {
+                //ChangeActivation(enemies[i], true);
+                if (!enemies[i].GetComponent<Enemy>().isDead)
+                    enemies[i].SetActive(false);
+
+
+            }
+            //Deactivate all ranged enemies active
+            for (int i = 0; i < rangedEnemies.Length; i++) {
+
+                if (!rangedEnemies[i].GetComponent<RangedEnemy>().isDead)
+                    rangedEnemies[i].SetActive(false);
+
+
+            }
+            //Deactivate all boss enemies active
+            for (int i = 0; i < bosses.Length; i++) {
+                if (!bosses[i].GetComponent<NecromancerScript>().isDead)
+                    bosses[i].SetActive(false);
             }
             virtualCamera.SetActive(false);
         }

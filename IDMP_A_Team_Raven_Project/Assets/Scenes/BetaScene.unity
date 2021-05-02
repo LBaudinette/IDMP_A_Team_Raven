@@ -54773,6 +54773,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 986638213}
   enemies:
   - {fileID: 2106848184}
+  rangedEnemies: []
+  bosses: []
 --- !u!1 &315301384
 GameObject:
   m_ObjectHideFlags: 0
@@ -54850,6 +54852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 87280850}
   enemies: []
+  rangedEnemies: []
+  bosses: []
 --- !u!1 &333974055
 GameObject:
   m_ObjectHideFlags: 0
@@ -56464,10 +56468,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 2009113225}
   enemies:
-  - {fileID: 1046099724}
-  - {fileID: 191768851}
   - {fileID: 1692486687}
   - {fileID: 1814137012}
+  rangedEnemies:
+  - {fileID: 1046099724}
+  - {fileID: 191768851}
+  bosses: []
 --- !u!1 &648664244
 GameObject:
   m_ObjectHideFlags: 0
@@ -56856,8 +56862,10 @@ MonoBehaviour:
   enemies:
   - {fileID: 1088253492}
   - {fileID: 1583765526}
+  rangedEnemies:
   - {fileID: 1456721305}
   - {fileID: 916870365}
+  bosses: []
 --- !u!1 &842302070
 GameObject:
   m_ObjectHideFlags: 0
@@ -114848,6 +114856,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 1208995419}
   enemies: []
+  rangedEnemies: []
+  bosses: []
 --- !u!1 &1082827308
 GameObject:
   m_ObjectHideFlags: 0
@@ -119887,7 +119897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 844257467}
-  enemies:
+  enemies: []
+  rangedEnemies: []
+  bosses:
   - {fileID: 274460640}
 --- !u!1 &1446966066
 GameObject:
@@ -120655,6 +120667,8 @@ MonoBehaviour:
   - {fileID: 2010006246}
   - {fileID: 1953370061}
   - {fileID: 1788258769}
+  rangedEnemies: []
+  bosses: []
 --- !u!1001 &1692486685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122126,6 +122140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 1082827308}
   enemies: []
+  rangedEnemies: []
+  bosses: []
 --- !u!1 &1985374719
 GameObject:
   m_ObjectHideFlags: 0
@@ -122238,6 +122254,8 @@ MonoBehaviour:
   - {fileID: 680548571}
   - {fileID: 379540693}
   - {fileID: 1623262318}
+  rangedEnemies: []
+  bosses: []
 --- !u!1001 &2002464806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122662,6 +122680,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 648664244}
   enemies:
   - {fileID: 561000020}
+  rangedEnemies: []
+  bosses: []
 --- !u!1 &2037694281
 GameObject:
   m_ObjectHideFlags: 3
@@ -123051,6 +123071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 877219955}
   enemies: []
+  rangedEnemies: []
+  bosses: []
 --- !u!114 &2133000042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6113204180550431920, guid: 650912e8c7901424a8902eedea6ea2e6,
@@ -123343,12 +123365,12 @@ PrefabInstance:
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.7
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628930, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
