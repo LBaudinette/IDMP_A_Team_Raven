@@ -63,7 +63,7 @@ public class NecromancerScript : RangedEnemy
 
         if (canAttack) {
             attackTimer = 0f;
-            //animator.SetBool("isAttacking", true);
+            animator.SetBool("isAttacking", true);
             canAttack = false;
         }
 

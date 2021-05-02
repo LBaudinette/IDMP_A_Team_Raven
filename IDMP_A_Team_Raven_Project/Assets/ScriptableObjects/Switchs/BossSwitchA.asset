@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossSwitchA
   m_EditorClassIdentifier: 
   initialValue: 0
-  runTimeValue: 0
+  runTimeValue: 1
