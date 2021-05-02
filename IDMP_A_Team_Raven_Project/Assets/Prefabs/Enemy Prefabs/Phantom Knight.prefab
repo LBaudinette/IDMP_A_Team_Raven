@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6760924364994103670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Origins Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6854141898448388286}
   - component: {fileID: 2815134271805954372}
   - component: {fileID: 1781721193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Attack Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6283312968586114611}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2880414137368083463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 962443904899231479}
   - component: {fileID: 8517659515920562456}
   - component: {fileID: 507749942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Attack Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6646919148173813229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HurtBox Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 2015371574308293890}
   - component: {fileID: 431855352674874295}
   - component: {fileID: -796424149871481051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Phantom Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}

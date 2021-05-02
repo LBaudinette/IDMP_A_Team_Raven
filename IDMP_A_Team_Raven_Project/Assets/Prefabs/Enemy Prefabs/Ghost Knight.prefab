@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5914825259926515359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Origins Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 298355061448746942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7145271007836998003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 7538752569806793018}
   - component: {fileID: 7538752569806793019}
   - component: {fileID: 2031352239}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Attack Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7538752569888627252}
   - component: {fileID: 7538752569888627253}
   - component: {fileID: 1146531454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Attack Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7538752570328176337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HurtBox Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,9 +287,9 @@ GameObject:
   - component: {fileID: 7538752571113199075}
   - component: {fileID: 744777102}
   - component: {fileID: 8033669809919928260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ghost Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

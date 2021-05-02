@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4130545282497061670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top Left Raycast Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2603918223474079689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Raycast Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7403221085427314072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Raycast Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7898559600114435378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Bottom Right Raycast Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3930992609588060436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top Raycast Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4181819888505211580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bottom Raycast Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6760500859097385614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Top Right Raycast Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979022730865032604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Bottom Left Raycast Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,9 +254,9 @@ GameObject:
   - component: {fileID: 8320919226418475389}
   - component: {fileID: 1061357568904774959}
   - component: {fileID: 9099382698315187875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Necromancer Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8680229794317149418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}

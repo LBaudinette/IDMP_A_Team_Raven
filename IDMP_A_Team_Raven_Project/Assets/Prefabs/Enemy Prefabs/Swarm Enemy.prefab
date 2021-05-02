@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90651348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hurtbox Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 836671164}
   - component: {fileID: 836671165}
   - component: {fileID: 154613301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Attack Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 1063338495}
   - component: {fileID: 1267154624077748601}
   - component: {fileID: 1943210531}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Attack Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603725352836621786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,9 +225,9 @@ GameObject:
   - component: {fileID: 1201723356}
   - component: {fileID: 1199883027069192790}
   - component: {fileID: 8954201083622863862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Swarm Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDelay: 0.5
   nextWaypointDistance: 3
-  health: 100
+  health: 30
   damage: 10
   playerLayer:
     serializedVersion: 2
@@ -459,7 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3738040799686958529}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Origins Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4732704983220013121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

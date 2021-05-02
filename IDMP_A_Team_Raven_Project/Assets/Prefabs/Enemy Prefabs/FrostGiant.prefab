@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6857345177015572147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184065301197870336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hurtbox Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5754456444041501208}
   - component: {fileID: 2040684851599446693}
   - component: {fileID: 7939138075696227843}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Attack Container
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4871590551492846815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Origins Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5357468086805895526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 949207774882454682}
   - component: {fileID: 35656620}
   - component: {fileID: -734986238365148861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrostGiant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 3151859785714675812}
   - component: {fileID: 7055314826337050720}
   - component: {fileID: 8401731710865093405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Attack Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4430084338550367023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174245606399627386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

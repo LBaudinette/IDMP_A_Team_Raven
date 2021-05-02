@@ -297,12 +297,24 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Hitbox") || collision.gameObject.CompareTag("Projectiles")) {
+        if (collision.gameObject.CompareTag("Hitbox")) {
             hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
             Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Projectiles"))
+        {
+            hitStopScript.freeze();
+            Arrow arrow = collision.gameObject.GetComponent<Arrow>();
+            Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
+            knockbackDir.Normalize();
+            TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
         }
     }
 

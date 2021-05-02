@@ -29,15 +29,14 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Collisions")
+        if (collision.gameObject.CompareTag ("Collisions"))
         {
             // freese arrow if it collides with wall
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             rb2d.freezeRotation = true;
-        } else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectiles")
+        } else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Projectiles"))
         {
             Destroy(gameObject);
-
         }
     }
 
