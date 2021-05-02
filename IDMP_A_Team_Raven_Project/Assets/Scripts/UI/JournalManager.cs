@@ -17,7 +17,6 @@ public class JournalManager : MonoBehaviour
     [SerializeField] private Image monsterSpriteContainer;
     [SerializeField] private Animator monsterSpriteAnimator;
     public JournalItem currentMonster;
-    //[SerializeField] private Button backButton;
 
     private void Awake()
     {
@@ -53,7 +52,6 @@ public class JournalManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //monsterSpriteAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         ClearJournalSlots();
         MakeJournalSlots();
         SetDescriptionTextAndSprite("");
