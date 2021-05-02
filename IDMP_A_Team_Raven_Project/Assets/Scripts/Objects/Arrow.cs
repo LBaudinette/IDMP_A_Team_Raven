@@ -34,17 +34,27 @@ public class Arrow : MonoBehaviour
             // freese arrow if it collides with wall
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             rb2d.freezeRotation = true;
-        } else if (collision.gameObject.tag == "Enemy")
+        } else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectiles")
         {
-            // on enemy collision, damage them and potentially apply knockback based on current rb2d force
-            TakeHitScript enemy = collision.gameObject.GetComponent<TakeHitScript>();
-            enemy.TakeHit(rb2d.velocity * knockbackMult, damage);
             Destroy(gameObject);
 
-        } else if (collision.gameObject.tag == "Projectiles")
-        {
-            Destroy(gameObject);
         }
     }
+
+    public float getDamage()
+    {
+        return damage;
+    }
+
+    public float getKnockback()
+    {
+        return knockbackMult;
+    }
+
+    public GameObject getParentPos()
+    {
+        return this.gameObject;
+    }
+
 
 }
