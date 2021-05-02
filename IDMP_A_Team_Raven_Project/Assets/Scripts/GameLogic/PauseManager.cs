@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class PauseManager : MonoBehaviour
     public GameObject journalPanel;
     public bool usingPausePanel;
     public string mainMenuString;
+    public GameObject resumeButton;
 
     private PlayerControls playerControls;
 
@@ -19,11 +22,16 @@ public class PauseManager : MonoBehaviour
     //public string mainMenu;
     //public GameSaveManager gameSaveManager;
 
-    //TODO Journal panel
+    //public void OnEnable()
+    //{
+    //    resumeButton.Select();
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
+       // EventSystem.current.SetSelectedGameObject(null);
+        //resumeButton.Select();
         isPaused = false;
         inputPause = false;
         pausePanel.SetActive(false);
@@ -51,9 +59,13 @@ public class PauseManager : MonoBehaviour
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
             usingPausePanel = true;
+            //EventSystem EVRef = EventSystem.current;
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(resumeButton);
         }
         else
         {
+            EventSystem.current.SetSelectedGameObject(null);
             inventoryPanel.SetActive(false);
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
@@ -73,8 +85,15 @@ public class PauseManager : MonoBehaviour
         else
         {
             panelToSwitchTo.SetActive(true);
+            //EventSystem.current.SetSelectedGameObject(firstSelectedButtonOfPanel);
+
             pausePanel.SetActive(false);
         }
+    }
+
+    public void FirstSelectedButtonOfPanel(GameObject firstSelectedButtonOfPanel)
+    {
+        EventSystem.current.SetSelectedGameObject(firstSelectedButtonOfPanel);
     }
 
     public void QuitToMain()

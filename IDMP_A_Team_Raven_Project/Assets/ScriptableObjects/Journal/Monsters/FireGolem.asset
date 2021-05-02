@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089928c4c93f64e49aa0badb8911c426, type: 3}
+  m_Name: FireGolem
+  m_EditorClassIdentifier: 
+  monsterName: Fire Golem
+  monsterDescription: '[In game combat tip here]
+
+
+
+    <i>It is believed that all
+    life was forged when fire, earth, iron and flesh were combined. A Necromancer
+    learned in this art can summon a Golem constructed entirely from living flame.
+    The Necromancer summons the Golem through accelerating particles of the air at
+    an ever increasing pace.</i>'
+  monsterImage: {fileID: -8641531085341533600, guid: f8b49e104fba50f4c8f5ea4442cf3744,
+    type: 3}
+  entryNumber: 4

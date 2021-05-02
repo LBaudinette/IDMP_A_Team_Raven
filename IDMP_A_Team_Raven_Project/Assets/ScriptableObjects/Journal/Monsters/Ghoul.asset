@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089928c4c93f64e49aa0badb8911c426, type: 3}
+  m_Name: Ghoul
+  m_EditorClassIdentifier: 
+  monsterName: Ghoul
+  monsterDescription: 'A weak creature. Poses little threat but can be dangerous
+    in groups.
+
+
+
+    <i>"Nestled in the fetid broth of the sewers are rotten corpses,
+    pathetic beings who pitifully grasp at some last semblance of life while slithering
+    along in the malodorous slime."</i>'
+  monsterImage: {fileID: 9136247391582079064, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
+    type: 3}
+  entryNumber: 1

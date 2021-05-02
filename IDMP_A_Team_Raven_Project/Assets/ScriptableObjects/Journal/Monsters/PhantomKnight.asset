@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089928c4c93f64e49aa0badb8911c426, type: 3}
+  m_Name: PhantomKnight
+  m_EditorClassIdentifier: 
+  monsterName: Phantom Knight
+  monsterDescription: '[In game combat tip here]
+
+
+
+    <i>"A spectral warrior of
+    sorts, tormented by bitter regret in a previous life and, as such, unable to
+    find peace. Warriors stand tall in the lower depths of dungeons, guarding riches,
+    treasure rooms and central chambers from trespassers and defilers."</i>'
+  monsterImage: {fileID: 5286322490418974263, guid: f36343f3c7d1b3741b6489e1301b79bd,
+    type: 3}
+  entryNumber: 5

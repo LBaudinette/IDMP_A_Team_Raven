@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089928c4c93f64e49aa0badb8911c426, type: 3}
+  m_Name: IceGolem
+  m_EditorClassIdentifier: 
+  monsterName: Ice Golem
+  monsterDescription: '[In game combat tip here]
+
+
+
+    <i>Ice golems are large constructs
+    made of ice, given life with arcane magic. They are often used by clerics or
+    druids serving winter deities, and most often used in lands that never truly
+    melt -- the cost and difficulty involved in crafting them would go to waste if
+    the creature just turned to slush in the morning.</i>'
+  monsterImage: {fileID: -7047541504600259409, guid: a7c1013a46ef2314dba7532809aacb3a,
+    type: 3}
+  entryNumber: 3

@@ -15,25 +15,7 @@ public class Door : Interactable
     public PlayerInventory playerInventory;
     public SpriteRenderer doorSprite;
     public BoxCollider2D physicsCollider;
-
-    private void Update()
-    {
-        ////if (Input.GetButtonDown("interact"))
-        ////{
-        ////    if (playerInRange && thisDoorType == DoorType.key)
-        //    {
-        //        ////Does the player have a key?
-        //        //if (playerInventory.numberOfKeys > 0)
-        //        //{
-        //        //    // Remove a player key
-        //        //    playerInventory.numberOfKeys--;
-        //        //    //If so, then call the open method
-        //        //    Open();
-        //        //}
-
-        //    }
-        //}
-    }
+    public BoxCollider2D triggerCollider;
 
     public void Open()
     {
@@ -43,6 +25,8 @@ public class Door : Interactable
         open = true;
         // turn off the door's box collider
         physicsCollider.enabled = false;
+        //turn off the door's trigger collider
+        triggerCollider.enabled = false;
     }
 
     public void Close()
@@ -50,5 +34,6 @@ public class Door : Interactable
         doorSprite.enabled = true;
         open = false;
         physicsCollider.enabled = true;
+        triggerCollider.enabled = true;
     }
 }

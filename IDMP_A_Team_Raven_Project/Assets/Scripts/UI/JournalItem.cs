@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class JournalItem : ScriptableObject
 {
     public string monsterName;
+
+    [TextArea(15, 20)]
     public string monsterDescription;
     public Sprite monsterImage;
     public int entryNumber;

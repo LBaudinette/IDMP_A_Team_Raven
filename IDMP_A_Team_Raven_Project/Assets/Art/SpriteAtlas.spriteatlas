@@ -38,8 +38,8 @@ SpriteAtlas:
       padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
-      enableRotation: 1
-      enableTightPacking: 1
+      enableRotation: 0
+      enableTightPacking: 0
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 0ea0417e130618c4cb9731adc2da069f, type: 3}
@@ -4347,6 +4347,32 @@ SpriteAtlas:
   - {fileID: 5847003535379944434, guid: a7c1013a46ef2314dba7532809aacb3a, type: 3}
   - {fileID: -600642012166422984, guid: a7c1013a46ef2314dba7532809aacb3a, type: 3}
   - {fileID: -8242209767979806499, guid: a7c1013a46ef2314dba7532809aacb3a, type: 3}
+  - {fileID: 945340972951266077, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 8996058897921316736, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 2057360976014940846, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -5346348748421439915, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 6534455493720673122, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -4363970332760086328, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -1055450801445142021, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -646231381818112627, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 7193850368581876905, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -2907408677630159971, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 7600945468788541725, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3084812088448400402, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -5759803099247631221, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3449156302208701713, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 6319437974159951676, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -7714940113945856032, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 2022302157175086565, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -8123217665783589150, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -517503770746659561, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: 602022683982801979, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -1992079586933130484, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3623657786123023959, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3948607654922023078, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3251614387007198522, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -8215652794435033904, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
+  - {fileID: -3360688167325453238, guid: 2ccca73aa031fa142882df8fe565e6b8, type: 3}
   - {fileID: 21300000, guid: ca81f24a54a602b4db9c76913b8bf3b5, type: 3}
   - {fileID: -1436437963177808180, guid: 474b899ab767422458ebf0f6dd27cc76, type: 3}
   - {fileID: 6757850232666064121, guid: 81508eba907fe634a8cc964eb18b2b32, type: 3}
@@ -8984,6 +9010,32 @@ SpriteAtlas:
   - ice-golemEdit_62
   - ice-golemEdit_63
   - ice-golemEdit_70
+  - MonsterJournal_18
+  - MonsterJournal_19
+  - MonsterJournal_10
+  - MonsterJournal_11
+  - MonsterJournal_12
+  - MonsterJournal_13
+  - MonsterJournal_14
+  - MonsterJournal_15
+  - MonsterJournal_16
+  - MonsterJournal_17
+  - MonsterJournal_9
+  - MonsterJournal_8
+  - MonsterJournal_1
+  - MonsterJournal_0
+  - MonsterJournal_3
+  - MonsterJournal_2
+  - MonsterJournal_5
+  - MonsterJournal_4
+  - MonsterJournal_7
+  - MonsterJournal_6
+  - MonsterJournal_21
+  - MonsterJournal_20
+  - MonsterJournal_23
+  - MonsterJournal_22
+  - MonsterJournal_25
+  - MonsterJournal_24
   - BossDoor
   - UISliderMiddle_0
   - ShadeEdit_6
