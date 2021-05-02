@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour {
         checkAttackRange();
         if (canAttack && !isCooldown && !isFlinching)
             startMeleeAttack();
-        else if(canMove)
+        else if (canMove)
             Move();
 
 
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour {
     protected void Move() {
         // Get a vector between the next node in the path and the current position
         Vector2 direction = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-       
+
 
         if (direction.x != 0 && direction.y != 0) {
             //Debug.Log(direction);
@@ -122,8 +122,9 @@ public class Enemy : MonoBehaviour {
     protected IEnumerator flinch() {
         isFlinching = true;
         canMove = false;
+        isCooldown = true;
 
-        while(flinchTimer < flinchDuration){
+        while (flinchTimer < flinchDuration) {
             flinchTimer += Time.deltaTime;
             yield return null;
 
@@ -274,7 +275,10 @@ public class Enemy : MonoBehaviour {
     public void TakeHit(Vector2 velocity, float damage) {
         StartCoroutine(flinch());
         Debug.Log("HIT TAKEN");
-        rb.AddForce(velocity * 3);
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        rb.AddForce(velocity, ForceMode2D.Impulse);
+
         if (health <= 0) {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
