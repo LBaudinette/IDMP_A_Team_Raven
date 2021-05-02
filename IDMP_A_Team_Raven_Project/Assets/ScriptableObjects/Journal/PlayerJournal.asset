@@ -15,3 +15,7 @@ MonoBehaviour:
   playerJournal:
   - {fileID: 11400000, guid: e0ed71f560655e44d95bf0d911d41315, type: 2}
   - {fileID: 11400000, guid: 714fd0ca56409c248a3cc1a4383f2417, type: 2}
+  - {fileID: 11400000, guid: 1246986ceac536a4aa1ae84adcbb2838, type: 2}
+  - {fileID: 11400000, guid: 26abb11c47e195741b9dde83ca26fa5a, type: 2}
+  - {fileID: 11400000, guid: 3c34d222261a8254bb8e61ad65e6ad03, type: 2}
+  - {fileID: 11400000, guid: a79a00c48b40fee468f6ecbd2787bab8, type: 2}

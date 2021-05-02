@@ -15,7 +15,13 @@ public class JournalManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image monsterSprite;
     [SerializeField] private Image monsterSpriteContainer;
+    [SerializeField] private Animator monsterSpriteAnimator;
     public JournalItem currentMonster;
+
+    private void Awake()
+    {
+        monsterSpriteAnimator.keepAnimatorControllerStateOnDisable = true;
+    }
 
     private void SetDescriptionTextAndSprite(string description)
     {
@@ -61,7 +67,11 @@ public class JournalManager : MonoBehaviour
         itemAlpha.a = 1f;
         monsterSpriteContainer.color = containerAlpha;
         this.monsterSprite.color = itemAlpha;
+        this.monsterSprite.sprite = null;
         this.monsterSprite.sprite = newItem.monsterImage;
+        //this.monsterSprite.SetNativeSize();
+        this.monsterSpriteAnimator.SetInteger("JournalEntry", newItem.entryNumber);
+
     }
 
     private void ClearJournalSlots()

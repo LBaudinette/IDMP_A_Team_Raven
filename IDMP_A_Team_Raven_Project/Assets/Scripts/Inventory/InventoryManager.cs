@@ -17,18 +17,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Image itemSpriteContainer;
     public InventoryItem currentItem;
 
-    //public void SetDescriptionTextAndImage(string description, Image itemSprite)
-    //{
-    //    descriptionText.text = description;
-    //    Color containerAlpha = itemSpriteContainer.color;
-    //    Color itemAlpha = this.itemSprite.color;
-    //    containerAlpha.a = 1f;
-    //    itemAlpha.a = 1f;
-    //    itemSpriteContainer.color = containerAlpha;
-    //    this.itemSprite.color = itemAlpha;
-    //    this.itemSprite.sprite = itemSprite.sprite;
-
-    //}
     private void SetDescriptionTextAndSprite(string description)
     {
         descriptionText.text = description;

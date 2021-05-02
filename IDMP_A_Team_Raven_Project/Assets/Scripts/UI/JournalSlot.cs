@@ -18,7 +18,7 @@ public class JournalSlot : MonoBehaviour
         journalManager = newMananger;
         if (currentMonster)
         {
-            itemName.text = currentMonster.name;
+            itemName.text = currentMonster.monsterName;
             //monsterImage.sprite = currentMonster.monsterImage;
         }
     }

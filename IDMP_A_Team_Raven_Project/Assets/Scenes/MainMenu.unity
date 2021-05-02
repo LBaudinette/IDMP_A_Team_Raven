@@ -292,7 +292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Project:TBA
+  m_text: Wild Glow Wanderer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7ac4611c67a85c4e9bfe48127c174db, type: 2}
   m_sharedMaterial: {fileID: 1181758606025305047, guid: e7ac4611c67a85c4e9bfe48127c174db,
@@ -362,10 +362,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 77195358}
-    characterCount: 11
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
