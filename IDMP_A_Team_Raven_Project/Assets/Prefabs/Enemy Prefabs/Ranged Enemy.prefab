@@ -302,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &334116438675235232
 Transform:
   m_ObjectHideFlags: 0
@@ -415,9 +415,10 @@ MonoBehaviour:
   rotationPoint: {fileID: 6926065724271940513}
   teleTriggerDistance: 3
   health: 100
-  teleportDelay: 2
+  teleportDelay: 3
   teleportDistance: 5
   teleportCooldown: 4
+  isDead: 0
   leftRaycastPoint: {fileID: 7055182499569942125}
   topLeftRaycastPoint: {fileID: 8218083766521400712}
   topRaycastPoint: {fileID: 9071310211698459370}
@@ -428,7 +429,7 @@ MonoBehaviour:
   bottomLeftRaycastPoint: {fileID: 3879744599034499302}
   layerDetection:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 6144
 --- !u!50 &6117675282433694802
 Rigidbody2D:
   serializedVersion: 4
@@ -464,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 6117675282433694802}
   reducePlayerHealthSignal: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!95 &8320569428322814186
 Animator:
   serializedVersion: 3

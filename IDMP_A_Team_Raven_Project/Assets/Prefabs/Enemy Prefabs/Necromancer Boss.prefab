@@ -261,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8320919226418475390
 Transform:
   m_ObjectHideFlags: 0
@@ -366,8 +366,9 @@ MonoBehaviour:
   teleTriggerDistance: 4
   health: 300
   teleportDelay: 3
-  teleportDistance: 6
+  teleportDistance: 10
   teleportCooldown: 4
+  isDead: 0
   leftRaycastPoint: {fileID: 2603918223474079689}
   topLeftRaycastPoint: {fileID: 4130545282497061670}
   topRaycastPoint: {fileID: 3930992609588060436}
@@ -379,6 +380,9 @@ MonoBehaviour:
   layerDetection:
     serializedVersion: 2
     m_Bits: 6144
+  summonDelay: 0
+  leftDeathSprite: {fileID: 0}
+  rightDeathSprite: {fileID: 0}
 --- !u!61 &1061357568904774959
 BoxCollider2D:
   m_ObjectHideFlags: 0

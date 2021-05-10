@@ -405,6 +405,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85724f24cc2f9442b11994d9fd92eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSprite: {fileID: -7823649176903932375, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
+    type: 3}
+  leftFlinchSprite: {fileID: 2920292692803412516, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
+    type: 3}
+  rightFlinchSprite: {fileID: -5252723435774115532, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
+    type: 3}
   attackDelay: 0.5
   nextWaypointDistance: 3
   health: 30
@@ -413,6 +419,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 600
+  isDead: 0
   leftRaycastPoint: {fileID: 603725352836621786}
   rightRaycastPoint: {fileID: 4732704983220013121}
 --- !u!114 &1199883027069192790
@@ -422,7 +429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4545894050325807877}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb6a34d769a1e4ac7b0b30e433aa443c, type: 3}
   m_Name: 

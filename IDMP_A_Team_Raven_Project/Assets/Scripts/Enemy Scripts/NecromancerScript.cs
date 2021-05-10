@@ -7,6 +7,14 @@ public class NecromancerScript : RangedEnemy
     GridAreaScript gridScript;
     private GameObject playerObject;
     private bool canAttack = true;
+    private bool isSecondStage = false;
+    private bool canSummon = false;
+    private GameObject[] bossGhouls;
+    private float summonTimer = 0f;
+    public float summonDelay;
+    public Sprite leftDeathSprite, rightDeathSprite;
+
+    private Coroutine timerCoroutine;
 
 
     //private Animator animator;
@@ -16,6 +24,7 @@ public class NecromancerScript : RangedEnemy
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
+        bossGhouls = GameObject.FindGameObjectsWithTag("bossGhouls");
     }
 
     // Update is called once per frame
@@ -55,11 +64,18 @@ public class NecromancerScript : RangedEnemy
             teleportCDTimer = 0f;
         }
             
-
+        //Update the attack timer
         if (attackTimer < attackDelay)
             attackTimer += Time.deltaTime;
         else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
             canAttack = true;
+        //Update the summon timer
+        if (summonTimer < summonDelay)
+            summonTimer += Time.deltaTime;
+        else {
+            summonTimer = 0;
+            canSummon = true;
+        }
 
         if (canAttack) {
             attackTimer = 0f;
@@ -77,15 +93,26 @@ public class NecromancerScript : RangedEnemy
 
 
     public void TakeHit(float damage) {
-        if (health <= 0)
-            animator.SetBool("isDead", true);
         health -= damage;
+        if (health == health / 2)
+            isSecondStage = true;
+        else if (health <= 0)
+            animator.SetBool("isDead", true);
     }
 
-    //protected override void onDeath() {
-    //    //rb.bodyType = RigidbodyType2D.Static;
-    //    Destroy(gameObject);
-    //}
+    protected override void onDeath() {
+        StopAllCoroutines();
+        isDead = true;
+        animator.SetBool("isDead", false);
+        Destroy(animator);
+        if(animator.GetFloat("playerDirection") == -1)
+            gameObject.GetComponent<SpriteRenderer>().sprite = leftDeathSprite;
+        else
+            gameObject.GetComponent<SpriteRenderer>().sprite = rightDeathSprite;
+
+
+        Destroy(this);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Hitbox") {
@@ -96,7 +123,19 @@ public class NecromancerScript : RangedEnemy
 
     void playAttack() {
         gridScript.playRandomPattern();
+        if (isSecondStage )
+            summonGhouls();
         animator.SetBool("isAttacking", false);
 
     }
+
+
+    void summonGhouls() {        
+        foreach(GameObject ghoul in bossGhouls) {
+            if (!ghoul.activeSelf)
+                ghoul.SetActive(true);
+
+        }
+    }
+
 }

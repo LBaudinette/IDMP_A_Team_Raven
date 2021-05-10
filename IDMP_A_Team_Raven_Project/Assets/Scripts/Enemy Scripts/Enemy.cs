@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour {
     protected Path path;
     private Seeker seeker;
     private HitStop hitStopScript;
+    private SpriteRenderer sr;
+
+    public Sprite deathSprite, leftFlinchSprite, rightFlinchSprite;
 
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
@@ -46,6 +49,8 @@ public class Enemy : MonoBehaviour {
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
 
+   
+
     protected enum facingDirection {
         left,
         right
@@ -60,6 +65,7 @@ public class Enemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
         hitStopScript = GetComponent<HitStop>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
 
@@ -136,11 +142,21 @@ public class Enemy : MonoBehaviour {
         canMove = false;
         isCooldown = true;
 
+        //Disable the animator so the sprite doesnt change by itself while flinching
+        animator.enabled = false;
+        if (directionFaced == (int)facingDirection.left)
+            sr.sprite = leftFlinchSprite;
+        else
+            sr.sprite = rightFlinchSprite;
+
         while (flinchTimer < flinchDuration) {
             flinchTimer += Time.deltaTime;
             yield return null;
 
         }
+
+        animator.enabled = true;
+
         flinchTimer = 0f;
         canMove = true;
         isFlinching = false;
@@ -296,11 +312,19 @@ public class Enemy : MonoBehaviour {
     protected virtual void onDeath() {
         //StopCoroutine(coroutine);
         //animator.speed = 0f;
-        //rb.bodyType = RigidbodyType2D.Static;
-        //Destroy(this);
         //Destroy(gameObject);
         isDead = true;
-        gameObject.SetActive(false);
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isDead", false);
+        Destroy(animator);
+        sr.sprite = deathSprite;
+        Destroy(this);
+        //gameObject.SetActive(false);
+
+    }
+
+    public void revive() {
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

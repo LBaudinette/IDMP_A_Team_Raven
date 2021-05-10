@@ -456,8 +456,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 200
+  isDead: 0
   leftRaycastPoint: {fileID: 7145271007836998003}
   rightRaycastPoint: {fileID: 298355061448746942}
+  deathSprite: {fileID: 0}
 --- !u!95 &7538752571113199075
 Animator:
   serializedVersion: 3
