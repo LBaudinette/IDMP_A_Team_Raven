@@ -5,6 +5,7 @@ public class Sign: Interactable
 {
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
+    [TextArea(15, 20)]
     public string dialogue;
     public GameObject player;
     private PlayerControls playerControls;

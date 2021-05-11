@@ -77,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
     // control scheme using new input system
     private PlayerControls playerControls;
 
+    private float percentageOfAFullBolt;
+
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -391,7 +393,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void addBoltToInv()
     {
-        playerInventory.AddItem(bolt);
+        percentageOfAFullBolt += 0.2f;
+        if(percentageOfAFullBolt == 1.0f)
+        {
+            playerInventory.AddItem(bolt);
+            percentageOfAFullBolt = 0.0f;
+        }           
         addBoltFromInv.Raise();
     }
 }

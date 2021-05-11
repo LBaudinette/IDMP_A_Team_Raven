@@ -12,15 +12,21 @@ public class PlayerInventory : ScriptableObject
     [SerializeField] private int initialHealthPotion;
 
     // TODO DEBUG should decide how number of health potions is kept persistent between areas/ playthroughs
+
     public void OnEnable()
+    {
+        RefillInventory();
+    }
+
+    public void RefillInventory()
     {
         for (int i = 0; i < initialHealthPotion; i++)
         {
-            if (healthPotion.numberHeld < 10)
+            if (healthPotion.numberHeld < healthPotion.maximumItemCount)
             {
                 AddItem(healthPotion);
             }
-            if(bolt.numberHeld < 10)
+            if (bolt.numberHeld < bolt.maximumItemCount)
             {
                 AddItem(bolt);
             }
@@ -31,7 +37,10 @@ public class PlayerInventory : ScriptableObject
     {
         if (playerInventory.Contains(itemToAdd))
         {
-            itemToAdd.numberHeld += 1;
+            if (itemToAdd.numberHeld < itemToAdd.maximumItemCount)
+            {
+                itemToAdd.numberHeld += 1;
+            }
         }
         else
         {
@@ -40,4 +49,4 @@ public class PlayerInventory : ScriptableObject
         }
     }
 }
-              
+

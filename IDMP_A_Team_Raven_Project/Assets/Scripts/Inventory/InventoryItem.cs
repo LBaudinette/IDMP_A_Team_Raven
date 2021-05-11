@@ -9,6 +9,7 @@ public class InventoryItem : ScriptableObject
     public string itemDescription;
     public Sprite itemImage;
     public int numberHeld;
+    public int maximumItemCount;
     public bool unique;
     public UnityEvent thisEvent;
 

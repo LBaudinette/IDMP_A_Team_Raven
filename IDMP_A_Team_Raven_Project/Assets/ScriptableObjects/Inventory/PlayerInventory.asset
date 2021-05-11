@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b2bf941ff1fb1354fbf8b1c40808523b, type: 2}
   healthPotion: {fileID: 11400000, guid: b2bf941ff1fb1354fbf8b1c40808523b, type: 2}
   bolt: {fileID: 11400000, guid: 55859dbfc9525dd43a582b8c294f096a, type: 2}
-  initialHealthPotion: 10
+  initialHealthPotion: 3
