@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
     private Seeker seeker;
     private HitStop hitStopScript;
     private SpriteRenderer sr;
+    public BoxCollider2D hitBox;
 
     public Sprite deathSprite, leftFlinchSprite, rightFlinchSprite;
 
@@ -314,17 +315,32 @@ public class Enemy : MonoBehaviour {
         //animator.speed = 0f;
         //Destroy(gameObject);
         isDead = true;
+        hitBox.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
         animator.SetBool("isDead", false);
-        Destroy(animator);
+        animator.enabled = false; 
         sr.sprite = deathSprite;
-        Destroy(this);
-        //gameObject.SetActive(false);
-
+        this.enabled = false;
     }
 
-    public void revive() {
+    //Reenable hit boxes and reverse death animation
+    public void startRevive() {
+        hitBox.enabled = true;
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isReviving", true);
+        animator.enabled = true;
+        //sr.sprite = deathSprite;
+        this.enabled = true;
+    }
 
+    protected void endRevive() {
+        isDead = true;
+        hitBox.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isReviving", true);
+        animator.enabled = true;
+        //sr.sprite = deathSprite;
+        this.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -357,7 +373,7 @@ public class Enemy : MonoBehaviour {
 
     //Allow the enemy to move again when the player is no longer pushing against it
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !isDead)
             rb.bodyType = RigidbodyType2D.Dynamic;
     }
 

@@ -70,7 +70,7 @@ public class NecromancerScript : RangedEnemy
         else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
             canAttack = true;
         //Update the summon timer
-        if (summonTimer < summonDelay)
+        if ((summonTimer < summonDelay) && isSecondStage)
             summonTimer += Time.deltaTime;
         else {
             summonTimer = 0;
