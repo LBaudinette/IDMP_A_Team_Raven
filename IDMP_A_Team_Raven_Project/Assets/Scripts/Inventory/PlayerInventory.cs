@@ -20,17 +20,33 @@ public class PlayerInventory : ScriptableObject
 
     public void RefillInventory()
     {
-        for (int i = 0; i < initialHealthPotion; i++)
+        //        for (int i = 0; i < initialHealthPotion; i++)
+        //        {
+        //            if (healthPotion.numberHeld < healthPotion.maximumItemCount)
+        //            {
+        //                AddItem(healthPotion);
+        //            }
+
+        //        }
+
+        //        for (int i = 0; i < length; i++)
+        //        {
+        //if (bolt.numberHeld < bolt.maximumItemCount)
+        //            {
+        //                AddItem(bolt);
+        //            }
+        //        }
+        for (int i = healthPotion.numberHeld; i < healthPotion.maximumItemCount; i++)
         {
-            if (healthPotion.numberHeld < healthPotion.maximumItemCount)
-            {
-                AddItem(healthPotion);
-            }
-            if (bolt.numberHeld < bolt.maximumItemCount)
-            {
-                AddItem(bolt);
-            }
+            AddItem(healthPotion);
         }
+
+        for (int i = bolt.numberHeld; i < bolt.maximumItemCount; i++)
+        {
+
+            AddItem(bolt);
+        }
+
     }
 
     public void AddItem(InventoryItem itemToAdd)
