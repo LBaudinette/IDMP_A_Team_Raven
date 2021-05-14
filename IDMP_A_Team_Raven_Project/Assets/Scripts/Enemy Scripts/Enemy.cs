@@ -334,13 +334,9 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void endRevive() {
-        isDead = true;
-        hitBox.enabled = false;
-        rb.bodyType = RigidbodyType2D.Static;
-        animator.SetBool("isReviving", true);
-        animator.enabled = true;
-        //sr.sprite = deathSprite;
-        this.enabled = true;
+        isDead = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        animator.SetBool("isReviving", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

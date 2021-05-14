@@ -1303,6 +1303,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836703770}
   m_CullTransparentMesh: 0
+--- !u!1 &869214319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302142833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &869214326 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4545894050325807881, guid: ed16f9111d4456c48868132f97ff67bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302142833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1014342276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2086,6 +2098,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1201723356, guid: ed16f9111d4456c48868132f97ff67bb, type: 3}
+      propertyPath: hitBox
+      value: 
+      objectReference: {fileID: 869214326}
     - target: {fileID: 4545894050325807877, guid: ed16f9111d4456c48868132f97ff67bb,
         type: 3}
       propertyPath: m_Name
@@ -3391,6 +3407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Necromancer Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 8320919226418475389, guid: 621a59d83335898459e5e8d8bde3e4b3,
+        type: 3}
+      propertyPath: bossGhouls.Array.data[0]
+      value: 
+      objectReference: {fileID: 869214319}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_RootOrder
@@ -3399,12 +3420,12 @@ PrefabInstance:
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.08
+      value: 8.04
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.44
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8320919226418475390, guid: 621a59d83335898459e5e8d8bde3e4b3,
         type: 3}

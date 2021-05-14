@@ -261,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8320919226418475390
 Transform:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   rotationPoint: {fileID: 0}
   teleTriggerDistance: 4
-  health: 300
+  health: 50
   teleportDelay: 3
   teleportDistance: 10
   teleportCooldown: 4
@@ -380,9 +380,13 @@ MonoBehaviour:
   layerDetection:
     serializedVersion: 2
     m_Bits: 6144
-  summonDelay: 0
-  leftDeathSprite: {fileID: 0}
-  rightDeathSprite: {fileID: 0}
+  bossGhouls:
+  - {fileID: 0}
+  summonDelay: 5
+  leftDeathSprite: {fileID: -3786968953437599385, guid: 6356ee6ed2ea61f44be643dae0f07278,
+    type: 3}
+  rightDeathSprite: {fileID: -5684398187061487531, guid: 6356ee6ed2ea61f44be643dae0f07278,
+    type: 3}
 --- !u!61 &1061357568904774959
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class NecromancerScript : RangedEnemy
     private bool canAttack = true;
     private bool isSecondStage = false;
     private bool canSummon = false;
-    private GameObject[] bossGhouls;
+    public GameObject[] bossGhouls;
     private float summonTimer = 0f;
     public float summonDelay;
     public Sprite leftDeathSprite, rightDeathSprite;
@@ -24,7 +24,7 @@ public class NecromancerScript : RangedEnemy
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
-        bossGhouls = GameObject.FindGameObjectsWithTag("bossGhouls");
+        //bossGhouls = GameObject.FindGameObjectsWithTag("bossGhouls");
     }
 
     // Update is called once per frame
@@ -94,8 +94,10 @@ public class NecromancerScript : RangedEnemy
 
     public void TakeHit(float damage) {
         health -= damage;
-        if (health == health / 2)
+        if (health == health / 2) {
             isSecondStage = true;
+            Debug.Log("SECOND STAGE");
+        }
         else if (health <= 0)
             animator.SetBool("isDead", true);
     }
@@ -132,8 +134,11 @@ public class NecromancerScript : RangedEnemy
 
     void summonGhouls() {        
         foreach(GameObject ghoul in bossGhouls) {
+            Enemy ghoulScript = ghoul.GetComponent<Enemy>();
             if (!ghoul.activeSelf)
                 ghoul.SetActive(true);
+            else if (ghoulScript.isDead)
+                ghoul.GetComponent<Enemy>().startRevive();
 
         }
     }

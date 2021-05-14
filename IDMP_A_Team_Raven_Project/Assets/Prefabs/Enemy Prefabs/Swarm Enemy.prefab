@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85724f24cc2f9442b11994d9fd92eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitBox: {fileID: 4545894050325807881}
   deathSprite: {fileID: -7823649176903932375, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
     type: 3}
   leftFlinchSprite: {fileID: 2920292692803412516, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
