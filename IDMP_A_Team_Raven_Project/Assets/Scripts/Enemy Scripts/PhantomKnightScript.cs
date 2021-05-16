@@ -14,10 +14,6 @@ public class PhantomKnightScript : Enemy
     }
 
     //split into multiple lesser enemies
-    protected override void onDeath() {
-        Debug.Log("DEAD");
-        animator.SetBool("isDead", true);
-    }
 
     private void split() {
         gameObject.SetActive(false);
@@ -28,7 +24,8 @@ public class PhantomKnightScript : Enemy
             //Vector2 pushVector = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)) * 500f;
             //enemy.GetComponent<Rigidbody2D>().AddForce(pushVector);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        onDeath();
     }
 
 

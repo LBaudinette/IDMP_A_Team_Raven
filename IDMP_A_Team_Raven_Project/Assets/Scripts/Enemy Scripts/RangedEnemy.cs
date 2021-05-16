@@ -265,9 +265,10 @@ public class RangedEnemy : MonoBehaviour {
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {
         rb.AddForce(velocity * 5);
+        health -= damage;
         if (health <= 0)
             animator.SetBool("isDead", true);
-        health -= damage;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

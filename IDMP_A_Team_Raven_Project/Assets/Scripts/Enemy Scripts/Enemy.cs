@@ -298,7 +298,6 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeHit(Vector2 velocity, float damage) {
-        StartCoroutine(flinch());
         rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(velocity, ForceMode2D.Impulse);
@@ -308,10 +307,13 @@ public class Enemy : MonoBehaviour {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
         }
+        else {
+            StartCoroutine(flinch());
+        }
     }
 
     protected virtual void onDeath() {
-        //StopCoroutine(coroutine);
+        StopAllCoroutines();
         //animator.speed = 0f;
         //Destroy(gameObject);
         isDead = true;

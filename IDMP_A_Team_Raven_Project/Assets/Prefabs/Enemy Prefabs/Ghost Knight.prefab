@@ -448,6 +448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85724f24cc2f9442b11994d9fd92eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitBox: {fileID: 7538752571113199087}
+  deathSprite: {fileID: 0}
+  leftFlinchSprite: {fileID: 4105399482858951513, guid: 68037fd7bfde9cc499ce98770fc27ae3,
+    type: 3}
+  rightFlinchSprite: {fileID: 1322025974058434031, guid: 68037fd7bfde9cc499ce98770fc27ae3,
+    type: 3}
   attackDelay: 1
   nextWaypointDistance: 2
   health: 50
@@ -459,7 +465,6 @@ MonoBehaviour:
   isDead: 0
   leftRaycastPoint: {fileID: 7145271007836998003}
   rightRaycastPoint: {fileID: 298355061448746942}
-  deathSprite: {fileID: 0}
 --- !u!95 &7538752571113199075
 Animator:
   serializedVersion: 3

@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3240437041918447323
 Transform:
   m_ObjectHideFlags: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbfa84cda124854e9609553fc371f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitBox: {fileID: 813388709}
   deathSprite: {fileID: -3521428977750350940, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
   leftFlinchSprite: {fileID: 878627084446245239, guid: f8b49e104fba50f4c8f5ea4442cf3744,
