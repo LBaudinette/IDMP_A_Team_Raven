@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamagingTileScript : MonoBehaviour
 {
     GridAreaScript gridScript;
-    private CircleCollider2D hitbox;
+    private BoxCollider2D hitbox;
 
     private Coroutine coroutine;
     private float timer = 0;
@@ -22,7 +22,7 @@ public class DamagingTileScript : MonoBehaviour
     {
         originalColour = sr.color;
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
-        hitbox = GetComponentInChildren<CircleCollider2D>();
+        hitbox = GetComponentInChildren<BoxCollider2D>();
         hitbox.enabled = false;
         animator = GetComponent<Animator>();
     }
@@ -36,22 +36,23 @@ public class DamagingTileScript : MonoBehaviour
     public void activateTile() {
         //sr.color = new Color(1f, 0.5f, 0.5f, 0.4f);
         gameObject.SetActive(true);
-        coroutine = StartCoroutine(startActivation());
+        //coroutine = StartCoroutine(startActivation());
+        //animator.SetBool("isActivated", true);
+
     }
 
-    IEnumerator startActivation() {
+    //IEnumerator startActivation() {
 
-        //Start delay before it damages player
-        while(activationTimer < activationDelay) {
-            activationTimer += Time.deltaTime;
-            yield return null;
-        }
-        activationTimer = 0;
-        animator.SetBool("isDamaging", true);
-        //coroutine = StartCoroutine(deactivateTile());
-    }
+    //    //Start delay before it damages player
+    //    //while(activationTimer < activationDelay) {
+    //    //    activationTimer += Time.deltaTime;
+    //    //    yield return null;
+    //    //}
+    //    //activationTimer = 0;
+    //    //coroutine = StartCoroutine(deactivateTile());
+    //    return null;
+    //}
 
-    //TODO: replace timer with animation flag to deactivate tile
     void deactivateTile() {
         //while(timer < deactivationDelay) {
         //    timer += Time.deltaTime;
@@ -60,7 +61,7 @@ public class DamagingTileScript : MonoBehaviour
         //timer = 0;
         //hitbox.enabled = false;
         gameObject.SetActive(false);
-        animator.SetBool("isDamaging", false);
+        animator.SetBool("isActivated", false);
 
         //Send signal to script that the final tile has activated
         if (isFinalTile) {

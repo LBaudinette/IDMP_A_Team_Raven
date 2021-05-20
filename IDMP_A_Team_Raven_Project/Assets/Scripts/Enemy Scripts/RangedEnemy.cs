@@ -5,23 +5,24 @@ using UnityEngine;
 public class RangedEnemy : MonoBehaviour {
 
     private Vector2 playerPos;
-    protected float attackDelay = 2f;          //The delay between firing projectiles
-    protected float attackTimer = 0f;                //Keeps track of timer between shots
-    public GameObject fireball;         //Prefab of projectile
+    protected float attackDelay = 2f;               //The delay between firing projectiles
+    protected float attackTimer = 0f;               //Keeps track of timer between shots
+    public GameObject fireball;                     //Prefab of projectile
     public float projForce;
     public Transform firePoint;
     public Transform rotationPoint;
-    public float teleTriggerDistance = 1;          //How close the player must be to start teleporting
+    public float teleTriggerDistance = 1;           //How close the player must be to start teleporting
 
     public float health = 100f;
 
     protected float teleportTimer = 0;
-    protected float teleportCDTimer = 0;
-    public float teleportDelay = 3;     //How long it takes to teleport
+    protected float teleportCDTimer = 0;            //Keeps track of time between teleports
+    public float teleportDelay = 3;                 //How long it takes to teleport
     public float teleportDistance = 3f;
     public float teleportCooldown = 4f;
     protected bool isTeleporting = false;
     protected bool canTeleport = true;
+    protected bool isAttacking = false;
     public bool isDead = false;
 
     public Transform leftRaycastPoint, topLeftRaycastPoint, topRaycastPoint,
@@ -55,24 +56,7 @@ public class RangedEnemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        //Raycast debugging
-        Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
-        Ray2D topLeftRay = new Ray2D(topLeftRaycastPoint.position, new Vector2(-1, 1));
-        Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
-        Ray2D topRightRay = new Ray2D(topRightRaycastPoint.position, new Vector2(1, 1));
-        Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
-        Ray2D botRightRay = new Ray2D(bottomRightRaycastPoint.position, new Vector2(1, -1));
-        Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
-        Ray2D botLeftRay = new Ray2D(bottomLeftRaycastPoint.position, new Vector2(-1, -1));
-
-        Debug.DrawRay(leftRay.origin, leftRay.direction * teleTriggerDistance, Color.green);
-        Debug.DrawRay(topLeftRay.origin, topLeftRay.direction * teleTriggerDistance, Color.green);
-        Debug.DrawRay(topRay.origin, topRay.direction * teleportDistance, Color.green);
-        Debug.DrawRay(topRightRay.origin, topRightRay.direction * teleportDistance, Color.green);
-        Debug.DrawRay(rightRay.origin, rightRay.direction * teleportDistance, Color.green);
-        Debug.DrawRay(botRightRay.origin, botRightRay.direction * teleportDistance, Color.green);
-        Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
-        Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
+        
 
         //Update the player position every frame
         playerPos = GameObject.FindWithTag("Player").transform.position;
@@ -89,9 +73,9 @@ public class RangedEnemy : MonoBehaviour {
         //Check to see if the Enemy can fire a projectile
         if (attackTimer < attackDelay)
             attackTimer += Time.deltaTime;
-        else {
+        else if(!isTeleporting){
             animator.SetBool("isAttacking", true);
-            attackTimer = 0f;
+            isAttacking = true;
         }
 
         if (teleportCDTimer < teleportCooldown)
@@ -122,13 +106,19 @@ public class RangedEnemy : MonoBehaviour {
         proj.GetComponent<Rigidbody2D>().AddForce(firePoint.right * projForce, ForceMode2D.Impulse);
     }
 
+    void finishAttack() {
+        isAttacking = false;
+        animator.SetBool("isAttacking", false);
+        attackTimer = 0;
+    }
+
 
     protected IEnumerator startTeleport() {
 
         isTeleporting = true;
         canTeleport = false;
         animator.SetBool("isTeleporting", true);
-        //Debug.Log("Starting Teleport");
+        Debug.Log("Starting Teleport");
 
         //Start the teleport timer
         while (teleportTimer < teleportDelay) {
@@ -280,5 +270,23 @@ public class RangedEnemy : MonoBehaviour {
         }
     }
 
+    private void drawDebugRaycasts() {
+        Ray2D leftRay = new Ray2D(leftRaycastPoint.position, Vector2.left);
+        Ray2D topLeftRay = new Ray2D(topLeftRaycastPoint.position, new Vector2(-1, 1));
+        Ray2D topRay = new Ray2D(topRaycastPoint.position, Vector2.up);
+        Ray2D topRightRay = new Ray2D(topRightRaycastPoint.position, new Vector2(1, 1));
+        Ray2D rightRay = new Ray2D(rightRaycastPoint.position, Vector2.right);
+        Ray2D botRightRay = new Ray2D(bottomRightRaycastPoint.position, new Vector2(1, -1));
+        Ray2D botRay = new Ray2D(botRaycastPoint.position, Vector2.down);
+        Ray2D botLeftRay = new Ray2D(bottomLeftRaycastPoint.position, new Vector2(-1, -1));
 
+        Debug.DrawRay(leftRay.origin, leftRay.direction * teleTriggerDistance, Color.green);
+        Debug.DrawRay(topLeftRay.origin, topLeftRay.direction * teleTriggerDistance, Color.green);
+        Debug.DrawRay(topRay.origin, topRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(topRightRay.origin, topRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(rightRay.origin, rightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRightRay.origin, botRightRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
+        Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
+    }
 }
