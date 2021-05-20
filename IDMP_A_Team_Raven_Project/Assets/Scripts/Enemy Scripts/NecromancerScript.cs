@@ -8,8 +8,17 @@ public class NecromancerScript : RangedEnemy
     private GameObject playerObject;
     private bool canAttack = true;
 
+    [Header("Boss Health Variables")]
+    public SignalSender bossHealthSignal;
+    public GameObject bossHealthBar;
 
     //private Animator animator;
+
+    private void OnEnable()
+    {
+        bossHealthBar.SetActive(true);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,9 +86,13 @@ public class NecromancerScript : RangedEnemy
 
 
     public void TakeHit(float damage) {
-        if (health <= 0)
-            animator.SetBool("isDead", true);
         health -= damage;
+        bossHealthSignal.Raise();
+        if (health <= 0)
+        {
+            animator.SetBool("isDead", true);
+            bossHealthBar.SetActive(false);
+        }
     }
 
     //protected override void onDeath() {

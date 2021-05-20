@@ -265,7 +265,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9c9d9da02187a734e8ee30e3e7d415cd, type: 3}
   - {fileID: 21300000, guid: 2a7dd2d0172abc5429115548fdd10edf, type: 3}
   - {fileID: 21300000, guid: 550d1c017e99267448e1ce06800aaacf, type: 3}
-  - {fileID: 21300000, guid: ae1835911aff3a14381e564283ba9605, type: 3}
   - {fileID: 21300000, guid: dafc43a1178df824eb6344f2d0ee8dfb, type: 3}
   - {fileID: 5833425859398786297, guid: 1b58e2221cb157e418f72d33c0bc7c82, type: 3}
   - {fileID: 21300000, guid: e5fc2a9233b8a1441b93aab2bfa90d8d, type: 3}
@@ -399,7 +398,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d07b6873d763e8f45a1c03dc66bbf589, type: 3}
   - {fileID: -8358113870863188520, guid: 6bec3fc3bc5bfe14d8e4e927c9b6898a, type: 3}
   - {fileID: 21300000, guid: 7a7baed33b462c3458cb5b7571284e84, type: 3}
-  - {fileID: 21300000, guid: 7a61ace355369bf478cddb99e98ce6b9, type: 3}
   - {fileID: 4756412713558689333, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
   - {fileID: 1422322137236389813, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
   - {fileID: -8934428407909747656, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
@@ -2824,6 +2822,7 @@ SpriteAtlas:
   - {fileID: 9155680412716956147, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
   - {fileID: -7076879786298766738, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
   - {fileID: 1198002374904393516, guid: 181a1cd43c5185647b28e3282e69bbe7, type: 3}
+  - {fileID: 21300000, guid: 7a53da0555077bf4d8ad87429d632f90, type: 3}
   - {fileID: 1248200260599106479, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
   - {fileID: 4923043979058936698, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
   - {fileID: -3116766352357796022, guid: 8cb921566b816db40bdffddec10b2f28, type: 3}
@@ -3951,6 +3950,7 @@ SpriteAtlas:
   - {fileID: -6362017775621237697, guid: c03b49f6e39ba5245ae73c329b85177a, type: 3}
   - {fileID: 6034968671438366758, guid: c03b49f6e39ba5245ae73c329b85177a, type: 3}
   - {fileID: -25338761446623311, guid: c03b49f6e39ba5245ae73c329b85177a, type: 3}
+  - {fileID: 21300000, guid: aee26227e1437494fa25711f1f0362bc, type: 3}
   - {fileID: 21300000, guid: f202e177285047c44be9b289db93d46d, type: 3}
   - {fileID: -5675612423174277988, guid: 98696c872430bc444ba1cc2d9876842a, type: 3}
   - {fileID: 5042134812319927004, guid: 68037fd7bfde9cc499ce98770fc27ae3, type: 3}
@@ -4014,7 +4014,6 @@ SpriteAtlas:
   - {fileID: 955401290945038173, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: 765837873529322748, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: 1138573732633268284, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
-  - {fileID: 21300000, guid: 44e2026985a3bbc429e3448559626727, type: 3}
   - {fileID: 8769440877673374286, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
   - {fileID: 4067606937000826724, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
   - {fileID: 6240941871424930669, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
@@ -4443,7 +4442,6 @@ SpriteAtlas:
   - {fileID: -4483864363424901377, guid: 81508eba907fe634a8cc964eb18b2b32, type: 3}
   - {fileID: -5077389074728326815, guid: 81508eba907fe634a8cc964eb18b2b32, type: 3}
   - {fileID: -5279361740246392149, guid: 81508eba907fe634a8cc964eb18b2b32, type: 3}
-  - {fileID: 21300000, guid: e72262fabe48f544fb038038b8e44d93, type: 3}
   - {fileID: -1986772863260763996, guid: 808ad2ab12fa5a94f9cfa64e96122063, type: 3}
   - {fileID: 5760800594879907098, guid: 808ad2ab12fa5a94f9cfa64e96122063, type: 3}
   - {fileID: 7597474578557255370, guid: 808ad2ab12fa5a94f9cfa64e96122063, type: 3}
@@ -4715,6 +4713,7 @@ SpriteAtlas:
   - {fileID: 3155597993195623002, guid: 176d98bb6264c844cbb4a44e953c4d44, type: 3}
   - {fileID: -8351184293121408584, guid: 176d98bb6264c844cbb4a44e953c4d44, type: 3}
   - {fileID: 7094889917677452597, guid: 176d98bb6264c844cbb4a44e953c4d44, type: 3}
+  - {fileID: 21300000, guid: dc7ffcfbd7f0d7247ae4e7f5156d2bc9, type: 3}
   - {fileID: 21300000, guid: 7f269f5c5700ac142ab00638101407b5, type: 3}
   - {fileID: -1524750293913441440, guid: a9019cdcfa140ae4195b40fb452f21ce, type: 3}
   - {fileID: 4341389825491139646, guid: a9019cdcfa140ae4195b40fb452f21ce, type: 3}
@@ -4984,6 +4983,7 @@ SpriteAtlas:
   - {fileID: -7799451689618101359, guid: 1042fcfe275b7644c862ccdb9a77f11c, type: 3}
   - {fileID: -590573954344971612, guid: 1042fcfe275b7644c862ccdb9a77f11c, type: 3}
   - {fileID: -3218428445845416351, guid: 42c4b41f3860b464f9d32d8976a4d7fd, type: 3}
+  - {fileID: 21300000, guid: 9d2deb3f86989544fb9aeb9b81b32922, type: 3}
   - {fileID: 21300000, guid: 3512038f85027a34a9c25421ab5599a2, type: 3}
   m_PackedSpriteNamesToIndex:
   - fire-golemEdit_21
@@ -5205,7 +5205,6 @@ SpriteAtlas:
   - AdventurerCrossbow
   - mouse_pointer
   - arrow
-  - HP_0
   - healthPotionWithoutBackground
   - ConfirmBGCustom_0
   - HealthBarFill
@@ -5339,7 +5338,6 @@ SpriteAtlas:
   - UISliderMiddle 1
   - slot_0
   - torch_1
-  - HP_1
   - phantomknighCustomSpriteSheet_38
   - phantomknighCustomSpriteSheet_41
   - phantomknighCustomSpriteSheet_39
@@ -7764,6 +7762,7 @@ SpriteAtlas:
   - shade-projectileEdit_6
   - shade-projectileEdit_5
   - shade-projectileEdit_4
+  - BossHealthBar
   - arrowsdown_0
   - arrowsdown_1
   - arrowsdown_2
@@ -8891,6 +8890,7 @@ SpriteAtlas:
   - AdventurerCustomSpriteSheetHurtLeft_1
   - AdventurerCustomSpriteSheetHurtLeft_0
   - AdventurerCustomSpriteSheetHurtLeft_2
+  - BossHealthBarBackground
   - HealthBar
   - confirm_bg_0
   - phantomknighSpriteSheetAltColourt_38
@@ -8954,7 +8954,6 @@ SpriteAtlas:
   - HealthPotionByCarsonFord_0
   - HealthPotionByCarsonFord_10
   - HealthPotionByCarsonFord_11
-  - HP_2
   - outside_204
   - outside_260
   - outside_263
@@ -9383,7 +9382,6 @@ SpriteAtlas:
   - ShadeEdit_1
   - ShadeEdit_0
   - ShadeEdit_7
-  - HP_3
   - objects_71
   - objects_70
   - objects_73
@@ -9655,6 +9653,7 @@ SpriteAtlas:
   - cave_124
   - cave_125
   - cave_130
+  - ArrowUIWithBackground
   - ButtonSmallCustom
   - decorative_28
   - decorative_32
@@ -9924,6 +9923,7 @@ SpriteAtlas:
   - AdventurerCustomSpriteSheetAttackTwoUp_4
   - AdventurerCustomSpriteSheetAttackTwoUp_5
   - InputBoxCustom_0
+  - ArrowWithOutline 1
   - RedPotionEdit
   m_Tag: SpriteAtlas
   m_IsVariant: 0

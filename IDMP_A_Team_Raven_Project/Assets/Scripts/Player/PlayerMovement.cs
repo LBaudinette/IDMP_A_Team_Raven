@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     // control scheme using new input system
     private PlayerControls playerControls;
 
-    private float percentageOfAFullBolt;
+    public float percentageOfAFullBolt;
 
     private void Awake()
     {
