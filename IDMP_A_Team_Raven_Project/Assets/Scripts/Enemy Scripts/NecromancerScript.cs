@@ -24,7 +24,7 @@ public class NecromancerScript : RangedEnemy
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
-        //bossGhouls = GameObject.FindGameObjectsWithTag("bossGhouls");
+        ps = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame

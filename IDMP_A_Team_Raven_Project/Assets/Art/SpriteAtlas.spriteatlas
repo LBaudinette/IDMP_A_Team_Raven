@@ -4642,6 +4642,11 @@ SpriteAtlas:
   - {fileID: 7243865307109049850, guid: bfc191ecb493faf41ba067b51eba9055, type: 3}
   - {fileID: -8051639189642823648, guid: a88a7feccac61a6448a9c7f5df8a1b49, type: 3}
   - {fileID: 601665339427411124, guid: 8101cfade3a66d0449faad38d56decb2, type: 3}
+  - {fileID: -7699328018653931357, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
+  - {fileID: -6189289526238714443, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
+  - {fileID: -6285070063975550627, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
+  - {fileID: -186343322299716006, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
+  - {fileID: 3166776664542397520, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
   - {fileID: -7330414612363877729, guid: f6473fcde110ed742a769a5b4c692e5e, type: 3}
   - {fileID: 3870982094547968993, guid: a7641f0e9dede7041a1ede9f1be1678f, type: 3}
   - {fileID: 2241438617632255613, guid: a7641f0e9dede7041a1ede9f1be1678f, type: 3}
@@ -9390,6 +9395,11 @@ SpriteAtlas:
   - spr_WarpHammerAssemble_4_0
   - spr_WarpHammerAssemble_1_0
   - spr_WarpHammerAssemble_19_0
+  - Particles_1
+  - Particles_0
+  - Particles_3
+  - Particles_2
+  - Particles_4
   - spr_WarpHammerAssemble_6_0
   - other_props_10
   - other_props_11
