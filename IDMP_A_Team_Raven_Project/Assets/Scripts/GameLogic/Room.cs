@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 public class Room : MonoBehaviour
 {
@@ -13,30 +14,8 @@ public class Room : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            //Set all melee enemies active
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                //ChangeActivation(enemies[i], true);
-                //if (!enemies[i].GetComponent<Enemy>().isDead)
-                    enemies[i].SetActive(true);
-
-
-            }
-            //Set all ranged enemies active
-            for (int i = 0; i < rangedEnemies.Length; i++) {
-
-                //if (!rangedEnemies[i].GetComponent<RangedEnemy>().isDead)
-                    rangedEnemies[i].SetActive(true);
-                
-
-            }
-            //Set all boss enemies active
-            for (int i = 0; i < bosses.Length; i++) {
-                //if (!bosses[i].GetComponent<NecromancerScript>().isDead)
-                    bosses[i].SetActive(true);
-            }
-
-
+            enemies.Concat(rangedEnemies).Concat(bosses)
+                .ToList().ForEach(e => e.SetActive(true));
             virtualCamera.SetActive(true);
         }
         
@@ -49,28 +28,8 @@ public class Room : MonoBehaviour
 
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-
-            //Deactivate all melee enemies active
-            for (int i = 0; i < enemies.Length; i++) {
-                //ChangeActivation(enemies[i], true);
-                //if (!enemies[i].GetComponent<Enemy>().isDead)
-                    enemies[i].SetActive(false);
-
-
-            }
-            //Deactivate all ranged enemies active
-            for (int i = 0; i < rangedEnemies.Length; i++) {
-
-                //if (!rangedEnemies[i].GetComponent<RangedEnemy>().isDead)
-                    rangedEnemies[i].SetActive(false);
-
-
-            }
-            //Deactivate all boss enemies active
-            for (int i = 0; i < bosses.Length; i++) {
-                //if (!bosses[i].GetComponent<NecromancerScript>().isDead)
-                    bosses[i].SetActive(false);
-            }
+            enemies.Concat(rangedEnemies).Concat(bosses)
+                .ToList().ForEach(e => e.SetActive(false));
             virtualCamera.SetActive(false);
         }
     }
