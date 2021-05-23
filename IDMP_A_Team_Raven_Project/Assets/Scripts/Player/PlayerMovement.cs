@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     // player FSM
     public enum State
     {
+        Idle,
         Moving,
         Aiming,
         Attacking,
@@ -57,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     public float attack3ComboBefore;
 
     // movement-related vars
-    private Vector2 movementDir;
+    public Vector2 movementDir;
     private Vector2 atkMoveDir;
     private float moveMagnitude;
     public float moveSpeed;
@@ -116,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetFloat("MoveX", 0);
         playerAnimator.SetFloat("MoveY", -1);
         sr = GetComponent<SpriteRenderer>();
-        state = State.Moving;
+        state = State.Idle;
         attackTimeElapsed = 0f;
         vulnerable = true;
         ableToDash = true;
@@ -137,11 +138,12 @@ public class PlayerMovement : MonoBehaviour
         if (hit && hit.collider.tag == "StairsDownRight")
         {
             stairsVelOffset = -movementDir.x;
-        } else if (hit && hit.collider.tag == "StairsDownLeft")
+        }
+        else if (hit && hit.collider.tag == "StairsDownLeft")
         {
             stairsVelOffset = movementDir.x;
         }
-        else 
+        else
         {
             stairsVelOffset = 0f;
         }
@@ -162,7 +164,8 @@ public class PlayerMovement : MonoBehaviour
                     atkMoveDir = movementDir;
                     Attack();
                     inputAttack = false;
-                } else if (inputHeal)
+                }
+                else if (inputHeal)
                 {
                     if (playerInventory.playerInventory.Contains(healthpotion))
                     {
@@ -191,6 +194,8 @@ public class PlayerMovement : MonoBehaviour
             case State.Dashing:
                 // exits state upon completion of DashCoroutine()
                 break;
+            case State.Aiming:
+                break;
         }
 
         //reset input bools
@@ -201,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        
+
     }
 
     private void ProcessInputs()
@@ -256,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
                     attackCoroutine = StartCoroutine(AttackCoroutine(attack3ComboBefore, attack3AnimEnd, "Attacking3"));
                     attackState = AttackState.Three;
                 }
-                
+
                 break;
         }
     }
@@ -302,11 +307,23 @@ public class PlayerMovement : MonoBehaviour
                     playerAnimator.SetFloat("MoveY", atkMoveDir.y * (1 / Mathf.Abs(atkMoveDir.y)));
                 }
                 playerAnimator.SetBool("Moving", false);
-            } else
+            }
+            else
             {
-                playerAnimator.SetFloat("MoveX", movementDir.x);
-                playerAnimator.SetFloat("MoveY", movementDir.y);
-                playerAnimator.SetBool("Moving", true);
+                if (shootScript.IsAiming())
+                {
+                    playerAnimator.SetFloat("MoveX", movementDir.x);
+                    playerAnimator.SetFloat("MoveY", movementDir.y);
+                    playerAnimator.SetBool("Moving", true);
+                    playerAnimator.SetBool("Aiming", true);
+                }
+                else
+                {
+                    playerAnimator.SetFloat("MoveX", movementDir.x);
+                    playerAnimator.SetFloat("MoveY", movementDir.y);
+                    playerAnimator.SetBool("Moving", true);
+                    playerAnimator.SetBool("Aiming", false);
+                }
             }
         }
         else
@@ -360,7 +377,7 @@ public class PlayerMovement : MonoBehaviour
             attackTimeElapsed += Time.deltaTime;
             yield return null;
         }
-        
+
         attackState = AttackState.Idle;
         state = State.Moving;
     }
@@ -394,11 +411,11 @@ public class PlayerMovement : MonoBehaviour
     public void addBoltToInv()
     {
         percentageOfAFullBolt += 0.2f;
-        if(percentageOfAFullBolt == 1.0f)
+        if (percentageOfAFullBolt == 1.0f)
         {
             playerInventory.AddItem(bolt);
             percentageOfAFullBolt = 0.0f;
-        }           
+        }
         addBoltFromInv.Raise();
     }
 }

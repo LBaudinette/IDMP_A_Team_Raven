@@ -4001,7 +4001,32 @@ SpriteAtlas:
   - {fileID: -444667617287784096, guid: 68037fd7bfde9cc499ce98770fc27ae3, type: 3}
   - {fileID: -7066670275768271738, guid: 68037fd7bfde9cc499ce98770fc27ae3, type: 3}
   - {fileID: 5990998584500109960, guid: 68037fd7bfde9cc499ce98770fc27ae3, type: 3}
+  - {fileID: -3396175249282457874, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 8376608168561593801, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 3284913103322774562, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 7002499520521017156, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 5455917824450160802, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -2280050313094866484, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -1314139873763098564, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -8464597785384944718, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -3760754234059305212, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 6155227172620922741, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -9039811147661604093, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 190577723007347783, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 3890529029228963398, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -1787877215011914392, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 8450456426492846868, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 8860839041747793055, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -2712102610934308259, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -6594034213656519993, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 6506517731020975416, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 8511067536973111558, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 4567169068129718971, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -7953548851215377852, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: 8159757056860844070, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
+  - {fileID: -1169004383665779864, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
   - {fileID: 21300000, guid: 97e59f78a99a8f94e8fe0a093429b455, type: 3}
+  - {fileID: 21300000, guid: fa5cb0e8badbafa45839b221feb75d86, type: 3}
   - {fileID: -6617762159297337657, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: 100717411267037490, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: -6762045030531539185, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
@@ -8941,7 +8966,32 @@ SpriteAtlas:
   - phantomknighSpriteSheetAltColourt_13
   - phantomknighSpriteSheetAltColourt_10
   - phantomknighSpriteSheetAltColourt_11
+  - AdventurerCustomSpriteSheetNoArm_8
+  - AdventurerCustomSpriteSheetNoArm_9
+  - AdventurerCustomSpriteSheetNoArm_19
+  - AdventurerCustomSpriteSheetNoArm_18
+  - AdventurerCustomSpriteSheetNoArm_17
+  - AdventurerCustomSpriteSheetNoArm_16
+  - AdventurerCustomSpriteSheetNoArm_15
+  - AdventurerCustomSpriteSheetNoArm_14
+  - AdventurerCustomSpriteSheetNoArm_13
+  - AdventurerCustomSpriteSheetNoArm_12
+  - AdventurerCustomSpriteSheetNoArm_11
+  - AdventurerCustomSpriteSheetNoArm_10
+  - AdventurerCustomSpriteSheetNoArm_22
+  - AdventurerCustomSpriteSheetNoArm_23
+  - AdventurerCustomSpriteSheetNoArm_20
+  - AdventurerCustomSpriteSheetNoArm_21
+  - AdventurerCustomSpriteSheetNoArm_4
+  - AdventurerCustomSpriteSheetNoArm_5
+  - AdventurerCustomSpriteSheetNoArm_6
+  - AdventurerCustomSpriteSheetNoArm_7
+  - AdventurerCustomSpriteSheetNoArm_0
+  - AdventurerCustomSpriteSheetNoArm_1
+  - AdventurerCustomSpriteSheetNoArm_2
+  - AdventurerCustomSpriteSheetNoArm_3
   - CrossbowUI
+  - AdventurerCrossbowArmUpAndDown
   - HealthPotionByCarsonFord_9
   - HealthPotionByCarsonFord_8
   - HealthPotionByCarsonFord_7
