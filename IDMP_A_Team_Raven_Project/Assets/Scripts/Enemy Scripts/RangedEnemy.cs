@@ -91,7 +91,6 @@ public class RangedEnemy : MonoBehaviour {
         //Check if the player is within distance to teleport
         if (Vector2.Distance(transform.position, playerPos) < teleTriggerDistance
             && canTeleport) {
-            isTeleporting = true;
             canTeleport = false;
             coroutine = StartCoroutine(startTeleport());
 
@@ -122,7 +121,9 @@ public class RangedEnemy : MonoBehaviour {
 
     protected IEnumerator startTeleport() {
         ps.Play();
-        
+        isTeleporting = true;
+        canTeleport = false;
+
         animator.SetBool("isTeleporting", true);
         Debug.Log("Starting Teleport");
 

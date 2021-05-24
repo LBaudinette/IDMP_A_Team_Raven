@@ -112,8 +112,9 @@ public class NecromancerScript : RangedEnemy
         else if (health <= 0)
             animator.SetBool("isDead", true);
 			bossHealthBar.SetActive(false);
-        }
+        
     }
+    
 
     protected override void onDeath() {
         StopAllCoroutines();
@@ -156,4 +157,5 @@ public class NecromancerScript : RangedEnemy
         }
     }
 
+    
 }
