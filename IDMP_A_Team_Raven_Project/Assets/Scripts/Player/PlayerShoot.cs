@@ -154,7 +154,7 @@ public class PlayerShoot : MonoBehaviour
         float xAngle = 0;
         float yAngle = 0;
 
-        if (45 <= angle && angle <= 135)
+        if (45 < angle && angle <= 135)
         {
             firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
 
@@ -164,7 +164,7 @@ public class PlayerShoot : MonoBehaviour
             weaponSprite.sortingOrder = -1;
             yAngle = 1;
         }
-        if (-135 <= angle && angle <= -45)
+        if (-135 < angle && angle < -45)
         {
             firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
             weapon.transform.localPosition = new Vector3(-0.3f, 0.5f, 0f);
@@ -190,7 +190,7 @@ public class PlayerShoot : MonoBehaviour
             weaponSprite.sortingOrder = 1;
             xAngle = 1;
         }
-        if (-180 <= angle && angle <= -135 || 135 <= angle && angle <= 180)
+        if (-180 <= angle && angle <= -135 || 135 < angle && angle <= 180)
         {
             firePoint.localPosition = new Vector3(1.25f, -0.05f, 0f);
             weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
