@@ -56623,6 +56623,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5770682317587314622, guid: 359ae661d5aaa8b4693935b2edafa5cb,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770682317587314622, guid: 359ae661d5aaa8b4693935b2edafa5cb,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6302395972298766086, guid: 359ae661d5aaa8b4693935b2edafa5cb,
         type: 3}
       propertyPath: damageCD

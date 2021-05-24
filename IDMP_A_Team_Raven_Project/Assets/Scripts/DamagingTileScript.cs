@@ -15,6 +15,7 @@ public class DamagingTileScript : MonoBehaviour
     private bool isFinalTile = false;
     private Color originalColour;
     private Animator animator;
+    [SerializeField]private AudioSource audio;
 
     public SpriteRenderer sr;
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class DamagingTileScript : MonoBehaviour
         hitbox = GetComponentInChildren<BoxCollider2D>();
         hitbox.enabled = false;
         animator = GetComponent<Animator>();
+        audio = GetComponentInParent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,32 +36,12 @@ public class DamagingTileScript : MonoBehaviour
     }
 
     public void activateTile() {
-        //sr.color = new Color(1f, 0.5f, 0.5f, 0.4f);
         gameObject.SetActive(true);
-        //coroutine = StartCoroutine(startActivation());
-        //animator.SetBool("isActivated", true);
 
     }
 
-    //IEnumerator startActivation() {
-
-    //    //Start delay before it damages player
-    //    //while(activationTimer < activationDelay) {
-    //    //    activationTimer += Time.deltaTime;
-    //    //    yield return null;
-    //    //}
-    //    //activationTimer = 0;
-    //    //coroutine = StartCoroutine(deactivateTile());
-    //    return null;
-    //}
-
     void deactivateTile() {
-        //while(timer < deactivationDelay) {
-        //    timer += Time.deltaTime;
-        //    yield return null;
-        //}
-        //timer = 0;
-        //hitbox.enabled = false;
+
         gameObject.SetActive(false);
         animator.SetBool("isActivated", false);
 
@@ -74,6 +56,10 @@ public class DamagingTileScript : MonoBehaviour
 
     public void setFinalTile() {
         isFinalTile = true;
+    }
+
+    public void playAudio() {
+        audio.Play();
     }
 
 }

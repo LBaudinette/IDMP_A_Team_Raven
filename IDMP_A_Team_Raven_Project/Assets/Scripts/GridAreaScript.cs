@@ -114,13 +114,9 @@ public class GridAreaScript : MonoBehaviour {
     //Starting from the top, activate every second row
     IEnumerator alternateRowPattern() {
         for (int row = 0; row < rows; row += 2) {
+            //audio.Play();
             for (int col = 0; col < columns; col++) {
                 grid[row, col].GetComponent<DamagingTileScript>().activateTile();
-
-                //Debug.Log("Col?: " + (col == 0));
-                //Debug.Log("ROW?: " + (row == rows));
-
-                //Debug.Log("COL: " + col + " ROW: " + row);
 
                 //flag the final tile so that boss knows when the grid has finished casting
                 if (col == 0 && (row == rows - 1 || row == rows - 2)) {

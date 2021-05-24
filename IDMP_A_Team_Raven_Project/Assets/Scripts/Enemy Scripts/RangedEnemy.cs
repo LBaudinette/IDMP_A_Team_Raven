@@ -91,6 +91,7 @@ public class RangedEnemy : MonoBehaviour {
         //Check if the player is within distance to teleport
         if (Vector2.Distance(transform.position, playerPos) < teleTriggerDistance
             && canTeleport) {
+            isTeleporting = true;
             canTeleport = false;
             coroutine = StartCoroutine(startTeleport());
 
@@ -121,8 +122,7 @@ public class RangedEnemy : MonoBehaviour {
 
     protected IEnumerator startTeleport() {
         ps.Play();
-        isTeleporting = true;
-        canTeleport = false;
+        
         animator.SetBool("isTeleporting", true);
         Debug.Log("Starting Teleport");
 
@@ -204,8 +204,8 @@ public class RangedEnemy : MonoBehaviour {
 
         }
 
-        Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
-        Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
+        //Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
+        //Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
 
         Raycast longestRaycast;
 
@@ -218,7 +218,7 @@ public class RangedEnemy : MonoBehaviour {
             int randomIndex = Random.Range(0, emptyRaycasts.Count - 1);
 
             //Teleport to the open space
-            Debug.Log("TELEPORT INTO OPEN SPACE");
+            //Debug.Log("TELEPORT INTO OPEN SPACE");
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
         }
         //if there are no empty spaces, teleport next to a wall
