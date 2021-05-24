@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public bool inputHeal;
     private bool inputDash;
     private bool inputAttack;
+    private bool inputMove;
 
     // attack states
     private enum AttackState
@@ -151,6 +152,33 @@ public class PlayerMovement : MonoBehaviour
         // if user input a dash since last FixedUpdate, dash then reset input bool, else just walk
         switch (state)
         {
+            case State.Idle:
+                if (inputMove)
+                {
+                    state = State.Moving;
+                } else if (inputDash && ableToDash)
+                {
+                    Dash();
+                    state = State.Dashing;
+                    inputDash = false;
+                }
+                else if (inputAttack && !shootScript.IsAiming())
+                {
+                    state = State.Attacking;
+                    atkMoveDir = movementDir;
+                    Attack();
+                    inputAttack = false;
+                }
+                else if (inputHeal)
+                {
+                    if (playerInventory.playerInventory.Contains(healthpotion))
+                    {
+                        StartCoroutine(Heal());
+                        state = State.Healing;
+                        inputHeal = false;
+                    }
+                }
+                break;
             case State.Moving:
                 if (inputDash && ableToDash)
                 {
@@ -202,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
         inputHeal = false;
         inputAttack = false;
         inputDash = false;
+        inputMove = false;
     }
 
     private void LateUpdate()
@@ -213,9 +242,14 @@ public class PlayerMovement : MonoBehaviour
     {
         // get movement inputs
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
+        if (Mathf.Approximately(movementDir.x, 0f) && Mathf.Approximately(movementDir.y, 0f))
+        {
+            inputMove = true;
+            moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
+            movementDir.Normalize();
+        }
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
-        moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
-        movementDir.Normalize();
+        
 
         // check for dash input
         if (ableToDash && state == State.Moving)
