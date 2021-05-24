@@ -158,7 +158,7 @@ public class PlayerShoot : MonoBehaviour
         {
             firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
 
-            weapon.transform.localPosition = new Vector3(0.2f, 0.4f, 0f);
+            weapon.transform.localPosition = new Vector3(0.1f, 0.4f, 0f);
             weaponSprite.sprite = crossbowArmVertical;
             weaponSprite.flipY = false;
             weaponSprite.sortingOrder = -1;
