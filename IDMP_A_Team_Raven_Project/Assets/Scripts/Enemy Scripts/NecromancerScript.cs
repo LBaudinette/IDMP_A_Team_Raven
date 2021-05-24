@@ -16,8 +16,17 @@ public class NecromancerScript : RangedEnemy
 
     private Coroutine timerCoroutine;
 
+    [Header("Boss Health Variables")]
+    public SignalSender bossHealthSignal;
+    public GameObject bossHealthBar;
 
     //private Animator animator;
+
+    private void OnEnable()
+    {
+        bossHealthBar.SetActive(true);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,12 +103,16 @@ public class NecromancerScript : RangedEnemy
 
     public void TakeHit(float damage) {
         health -= damage;
+		bossHealthSignal.Raise();
+		
         if (health == health / 2) {
             isSecondStage = true;
             Debug.Log("SECOND STAGE");
         }
         else if (health <= 0)
             animator.SetBool("isDead", true);
+			bossHealthBar.SetActive(false);
+        }
     }
 
     protected override void onDeath() {

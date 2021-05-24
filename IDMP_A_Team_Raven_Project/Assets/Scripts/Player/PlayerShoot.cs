@@ -25,6 +25,11 @@ public class PlayerShoot : MonoBehaviour
     private bool shoot;
     private PlayerControls playerControls;
 
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Sprite crossbowArmVertical;
+    [SerializeField] private Sprite crossbowArmHorizontal;
+
     void Start()
     {
         weaponSprite.enabled = false;
@@ -34,7 +39,7 @@ public class PlayerShoot : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         processInputs();
         if (aiming)
         {
@@ -53,7 +58,8 @@ public class PlayerShoot : MonoBehaviour
         if (aiming)
         {
             playerControls.Player.Attack.started += _ => shoot = true;
-        } else
+        }
+        else
         {
             shoot = false;
         }
@@ -65,6 +71,7 @@ public class PlayerShoot : MonoBehaviour
         lr.enabled = true;
         weaponSprite.enabled = true;
         aiming = true;
+        playerAnimator.SetBool("Aiming", true);
     }
 
     private void OnAimStop()
@@ -73,6 +80,7 @@ public class PlayerShoot : MonoBehaviour
         weaponSprite.enabled = false;
         lr.enabled = false;
         aiming = false;
+        playerAnimator.SetBool("Aiming", false);
     }
 
     private void Aiming()
@@ -93,7 +101,39 @@ public class PlayerShoot : MonoBehaviour
                 lookDir = playerControls.Player.AimDirection.ReadValue<Vector2>();
             }
         }
-        
+
+        //if moving lock aiming angle in one of 4 directions
+        if (playerMovement.state == PlayerMovement.State.Moving)
+        {
+            float currentMovementX = playerMovement.movementDir.x;
+            float currentMovementY = playerMovement.movementDir.y;
+            if (Mathf.Abs(currentMovementX) > Mathf.Abs(currentMovementY))
+            {
+                currentMovementY = 0;
+            }
+            else
+            {
+                currentMovementX = 0;
+            }
+
+            if (currentMovementX > 0)
+            {
+                lookDir = new Vector2(1, 0);
+            }
+            if (currentMovementX < 0)
+            {
+                lookDir = new Vector2(-1, 0);
+            }
+            if (currentMovementY > 0)
+            {
+                lookDir = new Vector2(0, 1);
+            }
+            if (currentMovementY < 0)
+            {
+                lookDir = new Vector2(0, -1);
+            }
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, lookDir.normalized, Mathf.Infinity, LayerMask.GetMask("Collisions"));
 
         // get end of raycast, if cast didn't hit anything calc a point in the direction to be endpoint
@@ -101,23 +141,68 @@ public class PlayerShoot : MonoBehaviour
         if (hit.collider != null)
         {
             endPoint = hit.point;
-        } else
-        {
-            endPoint = (Vector2) firePoint.position + lookDir.normalized * defaultAimLineLength;
-        }
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        // rotate weapon to face mouse direction
-        weapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        // flip sprite if crossbow on other side of player
-        if (angle <= -90f || angle > 90)
-        {
-            weaponSprite.flipY = true;
         }
         else
         {
-            weaponSprite.flipY = false;
+            endPoint = (Vector2)firePoint.position + lookDir.normalized * defaultAimLineLength;
         }
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+
+        // rotate weapon to face mouse direction
+        weapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        float xAngle = 0;
+        float yAngle = 0;
+
+        if (45 <= angle && angle <= 135)
+        {
+            firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
+
+            weapon.transform.localPosition = new Vector3(0.2f, 0.4f, 0f);
+            weaponSprite.sprite = crossbowArmVertical;
+            weaponSprite.flipY = false;
+            weaponSprite.sortingOrder = -1;
+            yAngle = 1;
+        }
+        if (-135 <= angle && angle <= -45)
+        {
+            firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
+            weapon.transform.localPosition = new Vector3(-0.3f, 0.5f, 0f);
+            weaponSprite.sprite = crossbowArmVertical;
+            weaponSprite.flipY = false;
+            weaponSprite.sortingOrder = 1;
+            yAngle = -1;
+        }
+
+        if (-45 <= angle && angle <= 0 || 0 <= angle && angle <= 45)
+        {
+            firePoint.localPosition = new Vector3(1.25f, 0.05f, 0f);
+            if (playerMovement.state == PlayerMovement.State.Moving)
+            {
+                weapon.transform.localPosition = new Vector3(0.05f, 0.3f, 0f);
+            }
+            else
+            {
+                weapon.transform.localPosition = new Vector3(-0.25f, 0.3f, 0f);
+            }
+            weaponSprite.sprite = crossbowArmHorizontal;
+            weaponSprite.flipY = false;
+            weaponSprite.sortingOrder = 1;
+            xAngle = 1;
+        }
+        if (-180 <= angle && angle <= -135 || 135 <= angle && angle <= 180)
+        {
+            firePoint.localPosition = new Vector3(1.25f, -0.05f, 0f);
+            weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
+            weaponSprite.sprite = crossbowArmHorizontal;
+            weaponSprite.flipY = true;
+            weaponSprite.sortingOrder = 1;
+            xAngle = -1;
+        }
+
+        playerAnimator.SetFloat("AngleX", xAngle);
+        playerAnimator.SetFloat("AngleY", yAngle);
+
         DrawLine(endPoint);
     }
 
@@ -148,5 +233,6 @@ public class PlayerShoot : MonoBehaviour
     {
         playerControls = controls;
     }
+
 
 }
