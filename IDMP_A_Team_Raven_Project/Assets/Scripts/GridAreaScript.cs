@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridAreaScript : MonoBehaviour
-{
+public class GridAreaScript : MonoBehaviour {
     public float activationDelay;               //The delay between activating groups of tiles
     private int rows, columns;
-    private float tileSize, pixelsToUnits, gridPixelsX, gridPixelsY, 
+    private float tileSize, pixelsToUnits, gridPixelsX, gridPixelsY,
         activationTimer = 0;
     public bool isCasting = false;
     public GameObject damagingTile;
 
     private GameObject[,] grid;
+    private GameObject player;
+    [SerializeField] private GameObject boss;
 
     private Coroutine coroutine;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+
 
         pixelsToUnits = damagingTile.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
         tileSize = damagingTile.GetComponent<SpriteRenderer>().sprite.bounds.size.x * pixelsToUnits;
@@ -26,11 +26,12 @@ public class GridAreaScript : MonoBehaviour
         gridPixelsX = gameObject.GetComponent<BoxCollider2D>().bounds.size.x * pixelsToUnits;
         gridPixelsY = gameObject.GetComponent<BoxCollider2D>().bounds.size.y * pixelsToUnits;
 
-        columns = (int)( gridPixelsX/ tileSize);
+        columns = (int)(gridPixelsX / tileSize);
         rows = (int)(gridPixelsY / tileSize);
 
         grid = new GameObject[rows, columns];
 
+        player = GameObject.FindGameObjectWithTag("Player");
 
         //Debug.Log("TILE SIZE: " + tileSize);
         //Debug.Log("Columns: " + columns);
@@ -40,10 +41,9 @@ public class GridAreaScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         //var input = Input.inputString;
-        
+
         //switch (input) {
         ////    case "z":
         ////        coroutine = StartCoroutine(alternateRowPattern());
@@ -68,10 +68,10 @@ public class GridAreaScript : MonoBehaviour
 
     void generateGrid() {
 
-        for(int row = 0; row < rows; row++) {
-            for(int col = 0; col < columns; col++) {
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
                 //instantiate tile
-                GameObject currentTile = Instantiate(damagingTile,transform.parent);
+                GameObject currentTile = Instantiate(damagingTile, transform.parent);
                 float xPos = (float)(-(gridPixelsX * 0.5f) + (tileSize * col) + (tileSize * 0.5f)) / pixelsToUnits;
                 float yPos = (float)((gridPixelsY * 0.5f) - (tileSize * row) - (tileSize * 0.5f)) / pixelsToUnits;
 
@@ -85,11 +85,11 @@ public class GridAreaScript : MonoBehaviour
         }
     }
 
-   public void playRandomPattern() {
+    public void playRandomPattern() {
         //Generate number between 0 and the number of patterns 
-        int randomNumber = Random.Range(0,3);
+        int randomNumber = Random.Range(0, 5);
         isCasting = true;
-        
+
         switch (randomNumber) {
             case 0:
                 coroutine = StartCoroutine(alternateRowPattern());
@@ -101,36 +101,36 @@ public class GridAreaScript : MonoBehaviour
                 coroutine = StartCoroutine(alternateCheckerPattern());
                 break;
             case 3:
-                //coroutine = StartCoroutine(checkerFlash());
+                checkerFlash();
                 break;
+            case 4:
+                flashClosestCells(boss.transform.position);
+                break;
+
         }
 
     }
 
     //Starting from the top, activate every second row
     IEnumerator alternateRowPattern() {
-        for(int row = 0; row < rows; row += 2) {
-            for(int col = 0; col < columns; col++) {
+        for (int row = 0; row < rows; row += 2) {
+            //audio.Play();
+            for (int col = 0; col < columns; col++) {
                 grid[row, col].GetComponent<DamagingTileScript>().activateTile();
-
-                //Debug.Log("Col?: " + (col == 0));
-                //Debug.Log("ROW?: " + (row == rows));
-
-                //Debug.Log("COL: " + col + " ROW: " + row);
 
                 //flag the final tile so that boss knows when the grid has finished casting
                 if (col == 0 && (row == rows - 1 || row == rows - 2)) {
-                    
+
                     grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
 
                 }
             }
-            while(activationTimer < activationDelay) {
+            while (activationTimer < activationDelay) {
                 activationTimer += Time.deltaTime;
                 yield return null;
             }
             activationTimer = 0f;
-            
+
         }
     }
 
@@ -140,7 +140,7 @@ public class GridAreaScript : MonoBehaviour
                 grid[row, col].GetComponent<DamagingTileScript>().activateTile();
 
                 //flag the final tile so that boss knows when the grid has finished casting
-                if ((col == columns - 1 || col == columns - 2)  && row == 0)
+                if ((col == columns - 1 || col == columns - 2) && row == 0)
                     grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
 
             }
@@ -167,7 +167,7 @@ public class GridAreaScript : MonoBehaviour
 
                     grid[row, col].GetComponent<DamagingTileScript>().activateTile();
 
-                    
+
                 }
             }
             else {
@@ -178,7 +178,7 @@ public class GridAreaScript : MonoBehaviour
 
                     grid[row, col].GetComponent<DamagingTileScript>().activateTile();
 
-                    
+
                 }
             }
 
@@ -193,7 +193,7 @@ public class GridAreaScript : MonoBehaviour
     }
 
     //Flash multiple tiles at once though a checker pattern
-    IEnumerator checkerFlash() {
+    void checkerFlash() {
         //store all tiles to activate in "tiles"
         var tiles = new List<GameObject>();
 
@@ -213,17 +213,15 @@ public class GridAreaScript : MonoBehaviour
             }
         }
 
-        foreach(GameObject tile in tiles) 
+        foreach (GameObject tile in tiles)
             tile.GetComponent<DamagingTileScript>().activateTile();
 
         //Set any tile in the list as the "last tile" as they all disappear at the same time
         tiles[0].GetComponent<DamagingTileScript>().setFinalTile();
-
-        return null;
     }
 
     void crossFlash(Vector2 origin) {
-       //A vector storing the row(x) and column(y) in the grid array of the closest cell
+        //A vector storing the row(x) and column(y) in the grid array of the closest cell
         Vector2 closestCellPos = findClosestCell(origin);
 
 
@@ -260,8 +258,8 @@ public class GridAreaScript : MonoBehaviour
     //Flash all cells in a 3x3 area around the origin
     void flashClosestCells(Vector2 origin) {
         Vector2 closestCellPos = findClosestCell(origin);
-        for(int row = (int)closestCellPos.x - 1; row <= closestCellPos.x + 1; row++) {
-            for(int col = (int)closestCellPos.y - 1; col <= closestCellPos.y + 1; col++) {
+        for (int row = (int)closestCellPos.x - 1; row <= closestCellPos.x + 1; row++) {
+            for (int col = (int)closestCellPos.y - 1; col <= closestCellPos.y + 1; col++) {
                 try {
                     grid[row, col].GetComponent<DamagingTileScript>().activateTile();
                 }

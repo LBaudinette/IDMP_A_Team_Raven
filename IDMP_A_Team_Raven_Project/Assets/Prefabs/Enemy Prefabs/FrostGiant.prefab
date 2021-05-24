@@ -304,7 +304,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026486218, y: -0.24627447}
+  m_Offset: {x: 0.040640593, y: -0.24627447}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -315,7 +315,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2066674, y: 2.9438133}
+  m_Size: {x: 1.9983644, y: 2.9438133}
   m_EdgeRadius: 0
 --- !u!114 &4192657543923078187
 MonoBehaviour:
@@ -329,6 +329,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbfa84cda124854e9609553fc371f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitBox: {fileID: 949207774882454682}
+  deathSprite: {fileID: -8242209767979806499, guid: a7c1013a46ef2314dba7532809aacb3a,
+    type: 3}
+  leftFlinchSprite: {fileID: 5733972670532678423, guid: a7c1013a46ef2314dba7532809aacb3a,
+    type: 3}
+  rightFlinchSprite: {fileID: -7556988327397460630, guid: a7c1013a46ef2314dba7532809aacb3a,
+    type: 3}
   attackDelay: 2
   nextWaypointDistance: 2
   health: 100
@@ -336,7 +343,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  speed: 200
+  speed: 500
+  isDead: 0
   leftRaycastPoint: {fileID: 174245606399627386}
   rightRaycastPoint: {fileID: 5357468086805895526}
   areaAttack: {fileID: 3546864559526311943, guid: 6e249d7fd676d65459aa53ff3d49b177,

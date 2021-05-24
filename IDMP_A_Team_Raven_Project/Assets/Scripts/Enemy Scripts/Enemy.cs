@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour {
     protected Path path;
     private Seeker seeker;
     private HitStop hitStopScript;
+    private SpriteRenderer sr;
+    public BoxCollider2D hitBox;
+
+    public Sprite deathSprite, leftFlinchSprite, rightFlinchSprite;
 
     public float attackDelay = 0.5f;
     private float attackTimer = 0;
@@ -46,6 +50,8 @@ public class Enemy : MonoBehaviour {
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
 
+   
+
     protected enum facingDirection {
         left,
         right
@@ -60,6 +66,7 @@ public class Enemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
         hitStopScript = GetComponent<HitStop>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
 
@@ -136,11 +143,21 @@ public class Enemy : MonoBehaviour {
         canMove = false;
         isCooldown = true;
 
+        //Disable the animator so the sprite doesnt change by itself while flinching
+        animator.enabled = false;
+        if (directionFaced == (int)facingDirection.left)
+            sr.sprite = leftFlinchSprite;
+        else
+            sr.sprite = rightFlinchSprite;
+
         while (flinchTimer < flinchDuration) {
             flinchTimer += Time.deltaTime;
             yield return null;
 
         }
+
+        animator.enabled = true;
+
         flinchTimer = 0f;
         canMove = true;
         isFlinching = false;
@@ -281,7 +298,6 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeHit(Vector2 velocity, float damage) {
-        StartCoroutine(flinch());
         rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(velocity, ForceMode2D.Impulse);
@@ -291,16 +307,38 @@ public class Enemy : MonoBehaviour {
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
         }
+        else {
+            StartCoroutine(flinch());
+        }
     }
 
     protected virtual void onDeath() {
-        //StopCoroutine(coroutine);
+        StopAllCoroutines();
         //animator.speed = 0f;
-        //rb.bodyType = RigidbodyType2D.Static;
-        //Destroy(this);
         //Destroy(gameObject);
         isDead = true;
-        gameObject.SetActive(false);
+        hitBox.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isDead", false);
+        animator.enabled = false; 
+        sr.sprite = deathSprite;
+        this.enabled = false;
+    }
+
+    //Reenable hit boxes and reverse death animation
+    public void startRevive() {
+        hitBox.enabled = true;
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isReviving", true);
+        animator.enabled = true;
+        //sr.sprite = deathSprite;
+        this.enabled = true;
+    }
+
+    protected void endRevive() {
+        isDead = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        animator.SetBool("isReviving", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -333,7 +371,7 @@ public class Enemy : MonoBehaviour {
 
     //Allow the enemy to move again when the player is no longer pushing against it
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !isDead)
             rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
