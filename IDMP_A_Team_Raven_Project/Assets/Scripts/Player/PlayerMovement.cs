@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls playerControls;
 
     public float percentageOfAFullBolt;
+    public ParticleSystem healingParticles;
 
     private void Awake()
     {
@@ -178,6 +179,9 @@ public class PlayerMovement : MonoBehaviour
                         state = State.Healing;
                         inputHeal = false;
                     }
+                } else
+                {
+                    IdleMovement();
                 }
                 break;
             case State.Moving:
@@ -185,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     state = State.Idle;
                 }
-                else if (inputDash && ableToDash)
+                else if(inputDash && ableToDash)
                 {
                     Dash();
                     state = State.Dashing;
@@ -247,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // get movement inputs
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
-        if (Mathf.Approximately(movementDir.x, 0f) && Mathf.Approximately(movementDir.y, 0f))
+        if (movementDir.x != 0f || movementDir.y != 0f)
         {
             inputMove = true;
         }
@@ -308,6 +312,11 @@ public class PlayerMovement : MonoBehaviour
     {
         // Lerp current velocity to new velocity
         rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
+    }
+    private void IdleMovement()
+    {
+        // Lerp current velocity to new velocity
+        rb2d.velocity = Vector2.Lerp(rb2d.velocity, new Vector2(0f, stairsVelOffset + 0f) * moveMagnitude * moveSpeed, velocityLerp * Time.deltaTime);
     }
 
     private void HealingMovement()
@@ -423,6 +432,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Heal()
     {
         state = State.Healing;
+        healingParticles.Play();
         float elapsed = 0f;
         while (elapsed < healTime)
         {
@@ -434,6 +444,7 @@ public class PlayerMovement : MonoBehaviour
         state = State.Moving;
         healthpotion.Use();
         addPlayerHealthSignal.Raise();
+        healingParticles.Stop();
     }
 
     public PlayerControls getControls()
