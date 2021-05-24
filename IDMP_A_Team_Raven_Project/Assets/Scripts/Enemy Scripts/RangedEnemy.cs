@@ -20,11 +20,13 @@ public class RangedEnemy : MonoBehaviour {
     public float teleportDelay = 3;                 //How long it takes to teleport
     public float teleportDistance = 3f;
     public float teleportCooldown = 4f;
+    
     protected bool isTeleporting = false;
     protected bool canTeleport = true;
     protected bool isAttacking = false;
     public bool isDead = false;
 
+    //Raycast points used for teleporting
     public Transform leftRaycastPoint, topLeftRaycastPoint, topRaycastPoint,
         topRightRaycastPoint, rightRaycastPoint, bottomRightRaycastPoint,botRaycastPoint,
         bottomLeftRaycastPoint;
@@ -35,6 +37,7 @@ public class RangedEnemy : MonoBehaviour {
     protected Rigidbody2D rb;
     protected Coroutine coroutine;
     protected ParticleSystem ps;
+    protected AfterImageScript afterImageScript;
 
     //Struct that stores the ray and hit for a raycast
     private struct Raycast {
@@ -54,7 +57,7 @@ public class RangedEnemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
-        
+        afterImageScript = GetComponent<AfterImageScript>();
     }
 
     // Update is called once per frame
@@ -220,7 +223,9 @@ public class RangedEnemy : MonoBehaviour {
 
             //Teleport to the open space
             //Debug.Log("TELEPORT INTO OPEN SPACE");
+            Transform originalTransform = transform;
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
+            afterImageScript.createAfterImageTrail(originalTransform, transform, GetComponent<SpriteRenderer>().sprite);
         }
         //if there are no empty spaces, teleport next to a wall
         else {
@@ -243,6 +248,8 @@ public class RangedEnemy : MonoBehaviour {
         animator.SetBool("isTeleporting", false);
         teleportTimer = 0;
     }
+
+    
 
     protected virtual void onDeath() {
         StopCoroutine(coroutine);
