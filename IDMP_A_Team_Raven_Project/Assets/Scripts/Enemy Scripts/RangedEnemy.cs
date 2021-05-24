@@ -32,6 +32,8 @@ public class RangedEnemy : MonoBehaviour {
         bottomLeftRaycastPoint;
     public LayerMask layerDetection;
 
+    protected Vector2 originalPosition;             //Used to keep track of position before teleports
+
 
     protected Animator animator;
     protected Rigidbody2D rb;
@@ -58,6 +60,7 @@ public class RangedEnemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         ps = GetComponentInChildren<ParticleSystem>();
         afterImageScript = GetComponent<AfterImageScript>();
+        originalPosition = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -84,7 +87,7 @@ public class RangedEnemy : MonoBehaviour {
             isAttacking = true;
         }
 
-        if (teleportCDTimer < teleportCooldown)
+        if (teleportCDTimer < teleportCooldown && !isTeleporting)
             teleportCDTimer += Time.deltaTime;
         else {
             canTeleport = true;
@@ -93,7 +96,7 @@ public class RangedEnemy : MonoBehaviour {
 
         //Check if the player is within distance to teleport
         if (Vector2.Distance(transform.position, playerPos) < teleTriggerDistance
-            && canTeleport) {
+            && canTeleport && !isTeleporting) {
             canTeleport = false;
             coroutine = StartCoroutine(startTeleport());
 
@@ -126,7 +129,6 @@ public class RangedEnemy : MonoBehaviour {
         ps.Play();
         isTeleporting = true;
         canTeleport = false;
-
         animator.SetBool("isTeleporting", true);
         Debug.Log("Starting Teleport");
 
@@ -223,9 +225,11 @@ public class RangedEnemy : MonoBehaviour {
 
             //Teleport to the open space
             //Debug.Log("TELEPORT INTO OPEN SPACE");
-            Transform originalTransform = transform;
+            originalPosition = transform.position;
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
-            afterImageScript.createAfterImageTrail(originalTransform, transform, GetComponent<SpriteRenderer>().sprite);
+            Debug.Log("ORIGINAL POS: " + originalPosition);
+            Debug.Log("NEW POS: " + transform.position);
+            afterImageScript.createAfterImageTrail(originalPosition, transform.position, GetComponent<SpriteRenderer>().sprite);
         }
         //if there are no empty spaces, teleport next to a wall
         else {

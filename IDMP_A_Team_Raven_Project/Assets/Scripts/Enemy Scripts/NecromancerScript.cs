@@ -34,6 +34,7 @@ public class NecromancerScript : RangedEnemy
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
         ps = GetComponentInChildren<ParticleSystem>();
+        afterImageScript = GetComponent<AfterImageScript>();
     }
 
     // Update is called once per frame
@@ -66,18 +67,14 @@ public class NecromancerScript : RangedEnemy
         else if (direction > 0)
             animator.SetFloat("playerDirection", 1);
 
-        if (teleportCDTimer < teleportCooldown)
-            teleportCDTimer += Time.deltaTime;
-        else {
-            canTeleport = true;
-            teleportCDTimer = 0f;
-        }
+        
             
         //Update the attack timer
         if (attackTimer < attackDelay)
             attackTimer += Time.deltaTime;
         else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
             canAttack = true;
+
         //Update the summon timer
         if ((summonTimer < summonDelay) && isSecondStage)
             summonTimer += Time.deltaTime;
@@ -89,13 +86,22 @@ public class NecromancerScript : RangedEnemy
         if (canAttack) {
             attackTimer = 0f;
             animator.SetBool("isAttacking", true);
+            isAttacking = true;
             canAttack = false;
         }
 
+        if (teleportCDTimer < teleportCooldown && !isTeleporting)
+            teleportCDTimer += Time.deltaTime;
+        else if(!isAttacking) {
+            canTeleport = true;
+            teleportCDTimer = 0f;
+        }
 
         //Teleport when the player is too close
         if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
-            canTeleport) {
+            canTeleport && !isTeleporting) {
+            canTeleport = false;
+
             coroutine = StartCoroutine(startTeleport());
         }
     }
@@ -109,9 +115,12 @@ public class NecromancerScript : RangedEnemy
             isSecondStage = true;
             Debug.Log("SECOND STAGE");
         }
-        else if (health <= 0)
+        else if (health <= 0) {
+            Debug.Log("DEAD");
             animator.SetBool("isDead", true);
-			bossHealthBar.SetActive(false);
+            bossHealthBar.SetActive(false);
+        }
+            
         
     }
     
@@ -142,6 +151,7 @@ public class NecromancerScript : RangedEnemy
         if (isSecondStage )
             summonGhouls();
         animator.SetBool("isAttacking", false);
+        isAttacking = false;
 
     }
 

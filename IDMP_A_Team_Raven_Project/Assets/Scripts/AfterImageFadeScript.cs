@@ -11,12 +11,14 @@ public class AfterImageFadeScript : MonoBehaviour
     }
 
     private IEnumerator fadeImage(SpriteRenderer sr, float afterImageDelay) {
+        //Debug.Log("Start FADE");
         float alpha = 1f;
         float afterImageTimer = 0f;
         while (afterImageTimer < afterImageDelay) {
 
             alpha = Mathf.Lerp(1, 0, afterImageTimer / afterImageDelay);
-            sr.color = new Color(1f, 1f, 1f, alpha);
+            sr.color = new Color(0.5f, 0.5f, 1f, alpha);
+            afterImageTimer += Time.deltaTime;
             yield return null;
 
         }

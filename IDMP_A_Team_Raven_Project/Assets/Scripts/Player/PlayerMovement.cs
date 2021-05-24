@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerShoot shootScript;
     public GameObject PauseCanvas;
     private PauseManager pauseScript;
+    private AfterImageScript AFScript;
 
     // vars for tracking player inputs
     public bool inputHeal;
@@ -87,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         playerControls = new PlayerControls();
         shootScript.setControls(playerControls);
         pauseScript = PauseCanvas.GetComponent<PauseManager>();
+        AFScript = GetComponent<AfterImageScript>();
         pauseScript.setControls(playerControls);
     }
 
@@ -384,8 +386,12 @@ public class PlayerMovement : MonoBehaviour
         vulnerable = false;
         ableToDash = false;
         float elapsed = 0f;
+
         while (elapsed < dashTime)
         {
+            //if(elapsed % 0.01 == 0)
+             AFScript.createAfterImage(transform, sr.sprite);
+
             rb2d.velocity = new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * dashSpeed;
             elapsed += Time.deltaTime;
             yield return null;

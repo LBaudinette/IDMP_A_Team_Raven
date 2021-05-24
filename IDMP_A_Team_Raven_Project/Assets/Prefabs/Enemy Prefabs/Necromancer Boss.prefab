@@ -5087,13 +5087,14 @@ GameObject:
   - component: {fileID: 1061357568904774959}
   - component: {fileID: 9099382698315187875}
   - component: {fileID: 274460641}
+  - component: {fileID: 810679732}
   m_Layer: 9
   m_Name: Necromancer Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8320919226418475390
 Transform:
   m_ObjectHideFlags: 0
@@ -5198,10 +5199,10 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   rotationPoint: {fileID: 0}
   teleTriggerDistance: 4
-  health: 50
+  health: 10
   teleportDelay: 3
   teleportDistance: 10
-  teleportCooldown: 4
+  teleportCooldown: 2
   isDead: 0
   leftRaycastPoint: {fileID: 2603918223474079689}
   topLeftRaycastPoint: {fileID: 4130545282497061670}
@@ -5216,12 +5217,14 @@ MonoBehaviour:
     m_Bits: 6144
   bossGhouls:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   summonDelay: 5
   leftDeathSprite: {fileID: -3786968953437599385, guid: 6356ee6ed2ea61f44be643dae0f07278,
     type: 3}
   rightDeathSprite: {fileID: -5684398187061487531, guid: 6356ee6ed2ea61f44be643dae0f07278,
     type: 3}
-  bossHealthSignal: {fileID: 0}
+  bossHealthSignal: {fileID: 11400000, guid: 72a971cb77d8e5f4fb7890ecac801ae1, type: 2}
   bossHealthBar: {fileID: 0}
 --- !u!61 &1061357568904774959
 BoxCollider2D:
@@ -5283,6 +5286,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &810679732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320919226418475384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0f655a2e206374c92e241efd137d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9078840362314276788
 GameObject:
   m_ObjectHideFlags: 0
