@@ -156,7 +156,6 @@ public class PlayerMovement : MonoBehaviour
             case State.Idle:
                 if (inputMove)
                 {
-                    Debug.Log("input movement");
                     state = State.Moving;
                 } else if (inputDash && ableToDash)
                 {
@@ -239,7 +238,6 @@ public class PlayerMovement : MonoBehaviour
         inputHeal = false;
         inputAttack = false;
         inputDash = false;
-        inputMove = false;
     }
 
     private void LateUpdate()
@@ -250,9 +248,11 @@ public class PlayerMovement : MonoBehaviour
     private void ProcessInputs()
     {
         // get movement inputs
+        inputMove = false;
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
         if (movementDir.x != 0f || movementDir.y != 0f)
         {
+            Debug.Log("input movement");
             inputMove = true;
         }
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
