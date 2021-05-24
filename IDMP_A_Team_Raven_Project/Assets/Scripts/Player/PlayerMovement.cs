@@ -155,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
             case State.Idle:
                 if (inputMove)
                 {
+                    Debug.Log("input movement");
                     state = State.Moving;
                 } else if (inputDash && ableToDash)
                 {
@@ -180,7 +181,11 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
             case State.Moving:
-                if (inputDash && ableToDash)
+                if (!inputMove)
+                {
+                    state = State.Idle;
+                }
+                else if (inputDash && ableToDash)
                 {
                     Dash();
                     state = State.Dashing;
@@ -245,11 +250,10 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Approximately(movementDir.x, 0f) && Mathf.Approximately(movementDir.y, 0f))
         {
             inputMove = true;
-            moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
-            movementDir.Normalize();
         }
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
-        
+        moveMagnitude = Mathf.Clamp(movementDir.magnitude, 0.0f, 1.0f);
+        movementDir.Normalize();
 
         // check for dash input
         if (ableToDash && state == State.Moving)
