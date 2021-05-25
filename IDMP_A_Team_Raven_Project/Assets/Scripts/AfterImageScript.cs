@@ -5,7 +5,7 @@ using UnityEngine;
 public class AfterImageScript : MonoBehaviour
 {
     protected float afterImageDelay = 0.3f;         //The delay between creating new after images
-    //private float afterImageTimer = 0f;
+    [SerializeField] protected BoxCollider2D hitbox;
     private Coroutine coroutine;
 
     //creates an after image trail from origin to newPos
@@ -26,8 +26,9 @@ public class AfterImageScript : MonoBehaviour
         AfterImageFadeScript timerScript = afterImage.AddComponent<AfterImageFadeScript>();
         afterImageSR.sprite = sprite;
 
+
         //Change the after image sprite to have a blue hue
-        afterImageSR.color = new Color(0.5f, 0.5f, 1f, 1f);
+        afterImageSR.color = new Color(0f, 0.25f, 1f, 1f);
 
         afterImageSR.sortingLayerName = "Player";
 
@@ -42,7 +43,8 @@ public class AfterImageScript : MonoBehaviour
 
         float imageDelay = 0.1f;
         float imageDelayTimer = 0f;
-        
+        GetComponent<SpriteRenderer>().enabled = false;
+        hitbox.enabled = false;
         while(timer < catchUpDuration) {
             if(imageDelayTimer < imageDelay) {
                 imageDelayTimer += Time.deltaTime;
@@ -56,7 +58,7 @@ public class AfterImageScript : MonoBehaviour
                 afterImageSR.sprite = sprite;
 
                 //Change the after image sprite to have a blue hue
-                afterImageSR.color = new Color(0.5f, 0.5f, 1f, 1f);
+                afterImageSR.color = new Color(0.25f, 0.25f, 0.25f, 1f);
 
                 afterImageSR.sortingLayerName = "Player";
 
@@ -68,5 +70,8 @@ public class AfterImageScript : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+        
+        GetComponent<SpriteRenderer>().enabled = true;
+        hitbox.enabled = true;
     }
 }

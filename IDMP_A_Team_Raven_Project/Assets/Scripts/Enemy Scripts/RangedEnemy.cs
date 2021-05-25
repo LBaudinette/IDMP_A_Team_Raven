@@ -38,7 +38,8 @@ public class RangedEnemy : MonoBehaviour {
     protected Animator animator;
     protected Rigidbody2D rb;
     protected Coroutine coroutine;
-    protected ParticleSystem ps;
+    [SerializeField] protected ParticleSystem teleportPS;
+    [SerializeField] protected ParticleSystem hitPS;
     protected AfterImageScript afterImageScript;
 
     //Struct that stores the ray and hit for a raycast
@@ -58,7 +59,6 @@ public class RangedEnemy : MonoBehaviour {
         playerPos = GameObject.FindWithTag("Player").transform.position;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        ps = GetComponentInChildren<ParticleSystem>();
         afterImageScript = GetComponent<AfterImageScript>();
         originalPosition = gameObject.transform.position;
     }
@@ -126,7 +126,7 @@ public class RangedEnemy : MonoBehaviour {
 
 
     protected IEnumerator startTeleport() {
-        ps.Play();
+        teleportPS.Play();
         isTeleporting = true;
         canTeleport = false;
         animator.SetBool("isTeleporting", true);
@@ -140,7 +140,7 @@ public class RangedEnemy : MonoBehaviour {
             yield return null;
         }
 
-        ps.Stop();
+        teleportPS.Stop();
         teleport();
     }
 
@@ -265,6 +265,7 @@ public class RangedEnemy : MonoBehaviour {
     }
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {
+        hitPS.Play();
         rb.AddForce(velocity * 5);
         health -= damage;
         if (health <= 0)

@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Linq;
 
 public class Room : MonoBehaviour
 {
     public GameObject virtualCamera;
     //public GameObject pathfindingGrid;
-    public GameObject[] enemies;
-    public GameObject[] rangedEnemies;
-    public GameObject[] bosses;
+    public List<GameObject> enemies;
+    public List<GameObject> rangedEnemies;
+    public List<GameObject> bosses;
 
     //Enable relevant enemies and pathfinding grid
     public virtual void OnTriggerEnter2D(Collider2D other)

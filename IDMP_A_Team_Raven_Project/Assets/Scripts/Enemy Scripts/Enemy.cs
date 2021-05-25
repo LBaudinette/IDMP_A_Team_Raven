@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
     protected Animator animator;
     protected Rigidbody2D rb;
     protected GameObject player;
+    [SerializeField] protected ParticleSystem hitPS;
+
     private Transform leftPlayerTarget, rightPlayerTarget;
     protected Path path;
     private Seeker seeker;
@@ -299,7 +301,7 @@ public class Enemy : MonoBehaviour {
 
     public void TakeHit(Vector2 velocity, float damage) {
         rb.bodyType = RigidbodyType2D.Dynamic;
-
+        hitPS.Play();
         rb.AddForce(velocity, ForceMode2D.Impulse);
 
         health -= damage;

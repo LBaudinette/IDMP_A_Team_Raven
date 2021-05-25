@@ -17,7 +17,7 @@ public class AfterImageFadeScript : MonoBehaviour
         while (afterImageTimer < afterImageDelay) {
 
             alpha = Mathf.Lerp(1, 0, afterImageTimer / afterImageDelay);
-            sr.color = new Color(0.5f, 0.5f, 1f, alpha);
+            sr.color = new Color(0f, 0.25f, 1f, alpha);
             afterImageTimer += Time.deltaTime;
             yield return null;
 

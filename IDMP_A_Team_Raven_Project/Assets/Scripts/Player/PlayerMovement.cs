@@ -386,11 +386,17 @@ public class PlayerMovement : MonoBehaviour
         vulnerable = false;
         ableToDash = false;
         float elapsed = 0f;
+        float afterImageInterval = dashTime / 10f;
+        float afterImageTimer = 0f;
 
         while (elapsed < dashTime)
         {
-            //if(elapsed % 0.01 == 0)
-             AFScript.createAfterImage(transform, sr.sprite);
+            if (afterImageTimer < afterImageInterval)
+                afterImageTimer += Time.deltaTime;
+            else {
+                AFScript.createAfterImage(transform, sr.sprite);
+                afterImageTimer = 0;
+            }
 
             rb2d.velocity = new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * dashSpeed;
             elapsed += Time.deltaTime;

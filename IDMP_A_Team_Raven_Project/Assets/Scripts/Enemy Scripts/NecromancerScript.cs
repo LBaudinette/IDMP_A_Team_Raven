@@ -33,7 +33,6 @@ public class NecromancerScript : RangedEnemy
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
-        ps = GetComponentInChildren<ParticleSystem>();
         afterImageScript = GetComponent<AfterImageScript>();
     }
 
