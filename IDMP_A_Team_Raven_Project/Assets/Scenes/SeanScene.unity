@@ -129594,8 +129594,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambient: {fileID: 8300000, guid: ba859c6ba43ad90408fa5dafbf514716, type: 3}
   battle: {fileID: 8300000, guid: 69dcbd429ccf7cc44b002ae9cb4c010f, type: 3}
-  fadeTime: 0
+  fadeTime: 1
   volume: 0.65
+  activateFunc: 0
 --- !u!1 &1568265989
 GameObject:
   m_ObjectHideFlags: 3

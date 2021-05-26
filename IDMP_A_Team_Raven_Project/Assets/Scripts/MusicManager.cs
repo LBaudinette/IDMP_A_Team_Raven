@@ -11,13 +11,14 @@ public class MusicManager : MonoBehaviour
     public float fadeTime;
     public float volume;
 
-    private bool activateFunc;
+    public bool activateFunc;
     private AudioSource musicSource;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        activateFunc = false;
         musicSource = GetComponent<AudioSource>();
         musicSource.volume = volume;
         musicSource.loop = true;
@@ -28,7 +29,11 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (activateFunc)
+        {
+            fadeToBattle();
+            activateFunc = false;
+        }
     }
 
     public void fadeToBattle()
@@ -45,22 +50,24 @@ public class MusicManager : MonoBehaviour
     {
         float currentTime = 0;
         float startVolume = musicSource.volume;
+        float endVolume = 0f;
 
         while (currentTime < fadeTime)
         {
             currentTime += Time.deltaTime;
-            musicSource.volume = Mathf.Lerp(startVolume, 0f, currentTime / fadeTime);
+            musicSource.volume = Mathf.Lerp(startVolume, endVolume, currentTime / fadeTime);
             yield return null;
         }
 
-        musicSource.Stop();
+        //musicSource.Stop();
         musicSource.clip = targetAudio;
         musicSource.Play();
-        currentTime = 0;
+        
+        currentTime = 0f;
         while (currentTime < fadeTime)
         {
             currentTime += Time.deltaTime;
-            musicSource.volume = Mathf.Lerp(startVolume, volume, currentTime / fadeTime);
+            musicSource.volume = Mathf.Lerp(endVolume, volume, currentTime / fadeTime);
             yield return null;
         }
     }
