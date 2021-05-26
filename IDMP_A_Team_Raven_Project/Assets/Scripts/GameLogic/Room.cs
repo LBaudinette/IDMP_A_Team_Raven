@@ -12,12 +12,10 @@ public class Room : MonoBehaviour
     public MusicManager musicManager;
 
     private int enemyCount;
-    private Room roomScript;
 
     private void Start()
     {
         enemyCount = enemies.Count + rangedEnemies.Count + bosses.Count;
-        roomScript = this.transform.parent.GetComponentInParent<Room>();
     }
 
     public void enemyDied()

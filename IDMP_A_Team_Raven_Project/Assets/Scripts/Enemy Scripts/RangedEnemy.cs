@@ -43,6 +43,8 @@ public class RangedEnemy : MonoBehaviour {
     [SerializeField] protected ParticleSystem hitPS;
     protected AfterImageScript afterImageScript;
 
+    private Room roomScript;
+
     //Struct that stores the ray and hit for a raycast
     private struct Raycast {
 
@@ -63,6 +65,7 @@ public class RangedEnemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         afterImageScript = GetComponent<AfterImageScript>();
         originalPosition = gameObject.transform.position;
+        roomScript = this.transform.parent.GetComponentInParent<Room>();
     }
 
     // Update is called once per frame
@@ -261,6 +264,7 @@ public class RangedEnemy : MonoBehaviour {
         StopAllCoroutines();
         isDead = true;
         gameObject.SetActive(false);
+        roomScript.enemyDied();
         //GetComponent<BoxCollider2D>().enabled = false;
         //animator.speed = 0f;
         //Destroy(this);
