@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: FireGolem
   m_EditorClassIdentifier: 
   monsterName: Fire Golem
-  monsterDescription: '[In game combat tip here]
+  monsterDescription: '<i>Slow but purposeful. Quick and careful movement is the
+    key to defeating the Fire Golem.</i>
 
 
 
-    <i>It is believed that all
-    life was forged when fire, earth, iron and flesh were combined. A Necromancer
-    learned in this art can summon a Golem constructed entirely from living flame.
-    The Necromancer summons the Golem through accelerating particles of the air at
-    an ever increasing pace.</i>'
+    <i>It is believed that all life was
+    forged when fire, earth, iron and flesh were combined. A Necromancer learned
+    in this art can summon a Golem constructed entirely from living flame. The Necromancer
+    summons the Golem through accelerating particles of the air at an ever increasing
+    pace.</i>'
   monsterImage: {fileID: -8641531085341533600, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
   entryNumber: 4

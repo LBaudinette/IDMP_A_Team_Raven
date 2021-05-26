@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Necromancer
   m_EditorClassIdentifier: 
   monsterName: Necromancer
-  monsterDescription: '[In game combat tip here]
+  monsterDescription: '<i>Many slow-footed adventurers have been claimed by the Necromancer''s
+    magics. The power to instantly reanimate the dead without need for ritual has
+    beennoted by those lucky enough to escape his clutches.</i>
 
 
 
-    <i>"Whether the ruins are
-    tombs or a mere resting place for something dark and foul, one thing is true:
-    Someone or something lies asleep here. The Protectors also worship what lies
-    beneath, and among the Protectors are a special class of ritual masters that
-    carry out horrific and detestable ritual rites."</i>'
+    <i>"Whether
+    the ruins are tombs or a mere resting place for something dark and foul, one
+    thing is true: Someone or something lies asleep here. The Protectors also worship
+    what lies beneath, and among the Protectors are a special class of ritual masters
+    that carry out horrific and detestable ritual rites."</i>'
   monsterImage: {fileID: -4937299445989810211, guid: 6356ee6ed2ea61f44be643dae0f07278,
     type: 3}
   entryNumber: 6

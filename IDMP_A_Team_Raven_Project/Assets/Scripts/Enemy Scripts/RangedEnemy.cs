@@ -216,7 +216,7 @@ public class RangedEnemy : MonoBehaviour {
         //Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
 
         Raycast longestRaycast;
-
+        originalPosition = transform.position;
         //if no walls were hit, then teleport into an open space
         if (emptyRaycasts.Count != 0) {
             //assign the first element as the longest
@@ -229,8 +229,8 @@ public class RangedEnemy : MonoBehaviour {
             //Debug.Log("TELEPORT INTO OPEN SPACE");
             originalPosition = transform.position;
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
-            Debug.Log("ORIGINAL POS: " + originalPosition);
-            Debug.Log("NEW POS: " + transform.position);
+            //Debug.Log("ORIGINAL POS: " + originalPosition);
+            //Debug.Log("NEW POS: " + transform.position);
             afterImageScript.createAfterImageTrail(originalPosition, transform.position, GetComponent<SpriteRenderer>().sprite);
         }
         //if there are no empty spaces, teleport next to a wall
@@ -245,8 +245,9 @@ public class RangedEnemy : MonoBehaviour {
             //Debug.Log("TELEPORT NEAR WALL");
 
             //Teleport to the walls position
-            //transform.Translate(longestRaycast.ray.direction * teleportDistance);
-            rb.MovePosition((Vector2)transform.position + (longestRaycast.ray.direction * teleportDistance));
+            transform.Translate(longestRaycast.ray.direction * teleportDistance);
+            //rb.MovePosition((Vector2)transform.position + (longestRaycast.ray.direction * teleportDistance));
+            afterImageScript.createAfterImageTrail(originalPosition, transform.position, GetComponent<SpriteRenderer>().sprite);
 
         }
         isTeleporting = false;

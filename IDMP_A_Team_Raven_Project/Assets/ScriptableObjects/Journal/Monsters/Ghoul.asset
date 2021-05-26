@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Ghoul
   m_EditorClassIdentifier: 
   monsterName: Ghoul
-  monsterDescription: 'A weak creature. Poses little threat but can be dangerous
-    in groups.
+  monsterDescription: '<i>A weak creature. Poses little threat but can be dangerous
+    in groups.</i>
 
 
 
-    <i>"Nestled in the fetid broth of the sewers are rotten corpses,
-    pathetic beings who pitifully grasp at some last semblance of life while slithering
-    along in the malodorous slime."</i>'
+    <i>"Nestled in the fetid broth of the sewers are rotten
+    corpses, pathetic beings who pitifully grasp at some last semblance of life while
+    slithering along in the malodorous slime."</i>'
   monsterImage: {fileID: 9136247391582079064, guid: b57810e68fcc8d249ae1af7f3fa1ef88,
     type: 3}
   entryNumber: 1

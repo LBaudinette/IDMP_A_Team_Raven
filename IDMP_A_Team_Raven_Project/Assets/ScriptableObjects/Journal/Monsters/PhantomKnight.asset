@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: PhantomKnight
   m_EditorClassIdentifier: 
   monsterName: Phantom Knight
-  monsterDescription: '[In game combat tip here]
+  monsterDescription: '<i>Death is not the end for this anguished knight. The knight''s
+    soul splits into two weak apparitions upon defeat</i>
 
 
 
-    <i>"A spectral warrior of
-    sorts, tormented by bitter regret in a previous life and, as such, unable to
-    find peace. Warriors stand tall in the lower depths of dungeons, guarding riches,
-    treasure rooms and central chambers from trespassers and defilers."</i>'
+    <i>"A spectral warrior
+    of sorts, tormented by bitter regret in a previous life and, as such, unable
+    to find peace. Warriors stand tall in the lower depths of dungeons, guarding
+    riches, treasure rooms and central chambers from trespassers and defilers."</i>'
   monsterImage: {fileID: 5286322490418974263, guid: f36343f3c7d1b3741b6489e1301b79bd,
     type: 3}
   entryNumber: 5

@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: IceGolem
   m_EditorClassIdentifier: 
   monsterName: Ice Golem
-  monsterDescription: '[In game combat tip here]
+  monsterDescription: '<i>Fighting in the slowing area created by the Ice Golems
+    attack spells death for those who wish to defeat it.</i>
 
 
 
-    <i>Ice golems are large constructs
-    made of ice, given life with arcane magic. They are often used by clerics or
-    druids serving winter deities, and most often used in lands that never truly
-    melt -- the cost and difficulty involved in crafting them would go to waste if
-    the creature just turned to slush in the morning.</i>'
+    <i>Ice golems
+    are large constructs made of ice, given life with arcane magic. They are often
+    used by clerics or druids serving winter deities, and most often used in lands
+    that never truly melt -- the cost and difficulty involved in crafting them would
+    go to waste if the creature just turned to slush in the morning.</i>'
   monsterImage: {fileID: -7047541504600259409, guid: a7c1013a46ef2314dba7532809aacb3a,
     type: 3}
   entryNumber: 3

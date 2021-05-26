@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Shade
   m_EditorClassIdentifier: 
   monsterName: Shade
-  monsterDescription: 'A shadow creature. Tends to teleport around the and throw
-    shadow-like orbs around.
+  monsterDescription: '<i>A shadow creature. Tends to teleport around the and throw
+    shadow-like orbs around.</i>
 
 
 
