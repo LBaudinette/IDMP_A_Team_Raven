@@ -365,12 +365,15 @@ public class Enemy : MonoBehaviour {
             rb.bodyType = RigidbodyType2D.Static;
         } else if (collision.gameObject.CompareTag("Projectiles"))
         {
-            hitStopScript.freeze();
-            Arrow arrow = collision.gameObject.GetComponent<Arrow>();
-            Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
-            knockbackDir.Normalize();
-            TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
-            Destroy(collision.gameObject);
+            if (collision.gameObject.name == "Arrow(Clone)")
+            {
+                hitStopScript.freeze();
+                Arrow arrow = collision.gameObject.GetComponent<Arrow>();
+                Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
+                knockbackDir.Normalize();
+                TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
+                Destroy(collision.gameObject);
+            }
         }
     }
 

@@ -35,6 +35,7 @@ public class PlayerShoot : MonoBehaviour
         weaponSprite.enabled = false;
         lr.enabled = false;
         aiming = false;
+        shoot = false;
     }
 
     // Update is called once per frame
@@ -58,6 +59,7 @@ public class PlayerShoot : MonoBehaviour
         if (aiming)
         {
             playerControls.Player.Attack.started += _ => shoot = true;
+            if (shoot) Debug.Log("shot");
         }
         else
         {

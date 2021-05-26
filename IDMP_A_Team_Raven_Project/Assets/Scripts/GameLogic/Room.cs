@@ -9,12 +9,39 @@ public class Room : MonoBehaviour
     public List<GameObject> enemies;
     public List<GameObject> rangedEnemies;
     public List<GameObject> bosses;
+    public MusicManager musicManager;
 
     private int enemyCount;
+    private Room roomScript;
 
     private void Start()
     {
-        enemyCount = enemies.Length + rangedEnemies.Length + bosses.Length;
+        enemyCount = enemies.Count + rangedEnemies.Count + bosses.Count;
+        roomScript = this.transform.parent.GetComponentInParent<Room>();
+    }
+
+    public void enemyDied()
+    {
+        enemyCount--;
+        if (enemyCount <= 0)
+        {
+            onBattleEnd();
+        }
+    }
+
+    public void enemyRevived()
+    {
+        enemyCount++;
+    }
+
+    private void onBattleEnd()
+    {
+        musicManager.fadeToAmbient();
+    }
+
+    private void onBattleStart()
+    {
+        musicManager.fadeToBattle();
     }
 
     //Enable relevant enemies and pathfinding grid
@@ -25,6 +52,19 @@ public class Room : MonoBehaviour
             enemies.Concat(rangedEnemies).Concat(bosses)
                 .ToList().ForEach(e => e.SetActive(true));
             virtualCamera.SetActive(true);
+            if (enemyCount > 0)
+            {
+                if (!musicManager.isInBattle())
+                {
+                    onBattleStart();
+                }
+            } else
+            {
+                if (musicManager.isInBattle())
+                {
+                    onBattleEnd();
+                }
+            }
         }
         
     }
