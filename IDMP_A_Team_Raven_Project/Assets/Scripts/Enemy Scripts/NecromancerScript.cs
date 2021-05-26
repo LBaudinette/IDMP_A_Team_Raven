@@ -30,6 +30,7 @@ public class NecromancerScript : RangedEnemy
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
@@ -98,7 +99,7 @@ public class NecromancerScript : RangedEnemy
 
         //Teleport when the player is too close
         if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
-            canTeleport && !isTeleporting) {
+            canTeleport && !isTeleporting && !isAttacking) {
             canTeleport = false;
 
             coroutine = StartCoroutine(startTeleport());
@@ -110,7 +111,7 @@ public class NecromancerScript : RangedEnemy
         health -= damage;
 		bossHealthSignal.Raise();
 		
-        if (health == health / 2) {
+        if (health <= maxHealth / 2 && !isSecondStage) {
             isSecondStage = true;
             Debug.Log("SECOND STAGE");
         }

@@ -452,6 +452,14 @@ SpriteAtlas:
   - {fileID: 5286322490418974263, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
   - {fileID: -4793989323889303282, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
   - {fileID: -7554266590356571622, guid: f36343f3c7d1b3741b6489e1301b79bd, type: 3}
+  - {fileID: 3812227888310923433, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: 8029132499193179790, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: 4692028639120752771, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: -6861397213303388496, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: -7188578358776100322, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: 8964189797800772809, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: -4723889455277724967, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
+  - {fileID: -225186696898681789, guid: 9eb46534466a098408be790d6d2b4d5c, type: 3}
   - {fileID: 5647298101280714740, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
   - {fileID: 2051569051857174917, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
   - {fileID: -881493912342181359, guid: 22ae1a441cdb25b42865e552b1f8d006, type: 3}
@@ -5507,6 +5515,14 @@ SpriteAtlas:
   - phantomknighCustomSpriteSheet_0
   - phantomknighCustomSpriteSheet_9
   - phantomknighCustomSpriteSheet_8
+  - TorchSide_7
+  - TorchSide_6
+  - TorchSide_5
+  - TorchSide_4
+  - TorchSide_3
+  - TorchSide_2
+  - TorchSide_1
+  - TorchSide_0
   - mainlevbuild_2143
   - mainlevbuild_1756
   - mainlevbuild_1720

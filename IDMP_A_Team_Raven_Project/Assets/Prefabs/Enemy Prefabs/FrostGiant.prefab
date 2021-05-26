@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2040684851599446693}
   - component: {fileID: 8041627724144682741}
   m_Layer: 9
-  m_Name: Right Attack Container
+  m_Name: Right Attack Hitbox
   m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour {
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
+    protected float maxHealth;
     public float damage = 10f;
     public LayerMask playerLayer;
 
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        maxHealth = health;
         player = GameObject.FindWithTag("Player");
         leftPlayerTarget = player.transform.Find("Left Seek Point");
         rightPlayerTarget = player.transform.Find("Right Seek Point");
@@ -341,6 +343,7 @@ public class Enemy : MonoBehaviour {
         isDead = false;
         rb.bodyType = RigidbodyType2D.Dynamic;
         animator.SetBool("isReviving", false);
+        health = maxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

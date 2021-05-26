@@ -14,6 +14,7 @@ public class RangedEnemy : MonoBehaviour {
     public float teleTriggerDistance = 1;           //How close the player must be to start teleporting
 
     public float health = 100f;
+    protected float maxHealth;
 
     protected float teleportTimer = 0;
     protected float teleportCDTimer = 0;            //Keeps track of time between teleports
@@ -56,6 +57,7 @@ public class RangedEnemy : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        maxHealth = health;
         playerPos = GameObject.FindWithTag("Player").transform.position;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
