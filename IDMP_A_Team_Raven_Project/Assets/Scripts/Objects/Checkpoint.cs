@@ -18,8 +18,16 @@ public class Checkpoint : Interactable
     public SignalSender addPlayerHealthSignal;
     public SignalSender ReduceBoltCountSignal;
 
+    [SerializeField] private NecromancerScript necromancerScript;
+    private Vector3 startingPointVector;
+    private Vector3 CheckPointVector;
+    [SerializeField] private BoolValue hasCheckpointBeenHit;
+
+
     void Start()
     {
+        startingPointVector = new Vector3(11, 3, 0);
+        CheckPointVector = new Vector3(5, 115, 0);
         playerControls = player.GetComponent<PlayerMovement>().getControls();
         inputInteract = false;
     }
@@ -65,7 +73,7 @@ public class Checkpoint : Interactable
         playerHealth.runTimeValue = playerHealth.initialValue;
 
         // fill health potions and bolts
-        playerInventory.RefillInventory(); 
+        playerInventory.RefillInventory();
 
         // player health slider signal + health potion UI signal
         addPlayerHealthSignal.Raise();
@@ -73,4 +81,24 @@ public class Checkpoint : Interactable
         // bolts UI signal
         ReduceBoltCountSignal.Raise();
     }
+
+    public void CheckPointHandlePlayerDeath()
+    {
+        // teleport player to the before boss room or the starting point
+        if (hasCheckpointBeenHit.runTimeValue)
+        {
+            player.transform.position = CheckPointVector;
+        }
+        else
+        {
+            player.transform.position = startingPointVector;
+        }
+
+        //reset player health and inventory
+        CheckPointActions();
+
+        // reset Necromancer health
+        necromancerScript.health = 100;
+    }
+
 }

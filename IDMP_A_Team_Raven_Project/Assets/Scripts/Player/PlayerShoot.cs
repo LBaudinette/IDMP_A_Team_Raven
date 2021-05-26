@@ -32,6 +32,8 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
+        lr.startWidth = 0.05f;
+        lr.endWidth = 0.05f;
         weaponSprite.enabled = false;
         lr.enabled = false;
         aiming = false;
@@ -240,6 +242,4 @@ public class PlayerShoot : MonoBehaviour
     {
         playerControls = controls;
     }
-
-
 }
