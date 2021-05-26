@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: -8983630195716122}
-  damage: 10
+  damage: 20
   knockbackMult: 20
 --- !u!61 &9045146603705791668
 BoxCollider2D:

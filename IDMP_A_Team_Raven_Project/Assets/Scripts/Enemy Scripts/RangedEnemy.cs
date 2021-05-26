@@ -14,6 +14,7 @@ public class RangedEnemy : MonoBehaviour {
     public float teleTriggerDistance = 1;           //How close the player must be to start teleporting
 
     public float health = 100f;
+    protected float maxHealth;
 
     protected float teleportTimer = 0;
     protected float teleportCDTimer = 0;            //Keeps track of time between teleports
@@ -32,11 +33,14 @@ public class RangedEnemy : MonoBehaviour {
         bottomLeftRaycastPoint;
     public LayerMask layerDetection;
 
+    protected Vector2 originalPosition;             //Used to keep track of position before teleports
+
 
     protected Animator animator;
     protected Rigidbody2D rb;
     protected Coroutine coroutine;
-    protected ParticleSystem ps;
+    [SerializeField] protected ParticleSystem teleportPS;
+    [SerializeField] protected ParticleSystem hitPS;
     protected AfterImageScript afterImageScript;
 
     //Struct that stores the ray and hit for a raycast
@@ -53,11 +57,12 @@ public class RangedEnemy : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        maxHealth = health;
         playerPos = GameObject.FindWithTag("Player").transform.position;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        ps = GetComponentInChildren<ParticleSystem>();
         afterImageScript = GetComponent<AfterImageScript>();
+        originalPosition = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -84,7 +89,7 @@ public class RangedEnemy : MonoBehaviour {
             isAttacking = true;
         }
 
-        if (teleportCDTimer < teleportCooldown)
+        if (teleportCDTimer < teleportCooldown && !isTeleporting)
             teleportCDTimer += Time.deltaTime;
         else {
             canTeleport = true;
@@ -93,7 +98,7 @@ public class RangedEnemy : MonoBehaviour {
 
         //Check if the player is within distance to teleport
         if (Vector2.Distance(transform.position, playerPos) < teleTriggerDistance
-            && canTeleport) {
+            && canTeleport && !isTeleporting) {
             canTeleport = false;
             coroutine = StartCoroutine(startTeleport());
 
@@ -123,10 +128,9 @@ public class RangedEnemy : MonoBehaviour {
 
 
     protected IEnumerator startTeleport() {
-        ps.Play();
+        teleportPS.Play();
         isTeleporting = true;
         canTeleport = false;
-
         animator.SetBool("isTeleporting", true);
         Debug.Log("Starting Teleport");
 
@@ -138,7 +142,7 @@ public class RangedEnemy : MonoBehaviour {
             yield return null;
         }
 
-        ps.Stop();
+        teleportPS.Stop();
         teleport();
     }
 
@@ -223,9 +227,11 @@ public class RangedEnemy : MonoBehaviour {
 
             //Teleport to the open space
             //Debug.Log("TELEPORT INTO OPEN SPACE");
-            Transform originalTransform = transform;
+            originalPosition = transform.position;
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
-            afterImageScript.createAfterImageTrail(originalTransform, transform, GetComponent<SpriteRenderer>().sprite);
+            Debug.Log("ORIGINAL POS: " + originalPosition);
+            Debug.Log("NEW POS: " + transform.position);
+            afterImageScript.createAfterImageTrail(originalPosition, transform.position, GetComponent<SpriteRenderer>().sprite);
         }
         //if there are no empty spaces, teleport next to a wall
         else {
@@ -252,7 +258,7 @@ public class RangedEnemy : MonoBehaviour {
     
 
     protected virtual void onDeath() {
-        StopCoroutine(coroutine);
+        StopAllCoroutines();
         isDead = true;
         gameObject.SetActive(false);
         //GetComponent<BoxCollider2D>().enabled = false;
@@ -261,6 +267,7 @@ public class RangedEnemy : MonoBehaviour {
     }
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {
+        hitPS.Play();
         rb.AddForce(velocity * 5);
         health -= damage;
         if (health <= 0)
