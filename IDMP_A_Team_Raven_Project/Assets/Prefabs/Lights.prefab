@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -189,9 +189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -245,7 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114794686
 MonoBehaviour:
@@ -317,7 +317,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &115481773
 MonoBehaviour:
@@ -405,9 +405,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -477,9 +477,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -693,9 +693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -837,9 +837,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -909,9 +909,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -965,7 +965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 28
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &364657487
 MonoBehaviour:
@@ -1125,9 +1125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1197,9 +1197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1341,9 +1341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1485,9 +1485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1773,9 +1773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1845,9 +1845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -1917,9 +1917,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2133,9 +2133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2205,9 +2205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2277,9 +2277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2349,9 +2349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2363,78 +2363,6 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
-  m_ShapeLightParametricAngleOffset: 217
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &661800480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 661800481}
-  - component: {fileID: 661800482}
-  m_Layer: 11
-  m_Name: Blue Light (22)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &661800481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661800480}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.06, y: 87.8, z: 0.4169922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661800482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661800480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.907
-  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
-  m_Intensity: 2
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 1
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 1
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.5
   m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -2637,9 +2565,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2651,6 +2579,78 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &757409890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757409891}
+  - component: {fileID: 757409892}
+  m_Layer: 11
+  m_Name: Blue Light (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757409891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757409890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.93, y: 74.83, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757409892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757409890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
   m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -2709,9 +2709,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2853,9 +2853,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -2925,9 +2925,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3141,9 +3141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3357,9 +3357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3429,9 +3429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3485,7 +3485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 26
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1037591594
 MonoBehaviour:
@@ -3573,9 +3573,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3587,78 +3587,6 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
-  m_ShapeLightParametricAngleOffset: 217
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &1080432438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1080432439}
-  - component: {fileID: 1080432440}
-  m_Layer: 11
-  m_Name: Blue Light (23)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1080432439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080432438}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.05, y: 87.79, z: 0.4169922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1080432440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080432438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.907
-  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
-  m_Intensity: 2
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 1
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 1
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.5
   m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -3789,9 +3717,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3861,9 +3789,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -3933,9 +3861,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4005,9 +3933,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4221,9 +4149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4293,9 +4221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4365,9 +4293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4437,9 +4365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4509,9 +4437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4653,9 +4581,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4725,9 +4653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4797,9 +4725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -4941,9 +4869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5013,9 +4941,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5085,9 +5013,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5099,6 +5027,78 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1380817090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380817091}
+  - component: {fileID: 1380817092}
+  m_Layer: 11
+  m_Name: Blue Light (33)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380817091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380817090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.05, y: 79.81, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380817092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380817090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
   m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -5373,9 +5373,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5445,9 +5445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5616,6 +5616,150 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1747549584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747549585}
+  - component: {fileID: 1747549586}
+  m_Layer: 11
+  m_Name: Blue Light (32)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747549585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747549584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.05, y: 74.79, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747549586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747549584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1760360063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760360064}
+  - component: {fileID: 1760360065}
+  m_Layer: 11
+  m_Name: Blue Light (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760360064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760360063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.93, y: 79.81, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760360065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760360063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1772208664
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,9 +5805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5805,9 +5949,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5877,9 +6021,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -5949,9 +6093,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6021,9 +6165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6093,9 +6237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6165,9 +6309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6293,7 +6437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1926197920
 MonoBehaviour:
@@ -6302,6 +6446,78 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926197918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1934137046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934137047}
+  - component: {fileID: 1934137048}
+  m_Layer: 11
+  m_Name: Blue Light (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934137047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934137046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.04, y: 79.77, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934137048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934137046}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -6381,9 +6597,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6509,7 +6725,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5520216507021347113}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1991727087
 MonoBehaviour:
@@ -6597,9 +6813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6669,9 +6885,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6741,9 +6957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6813,9 +7029,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -6912,6 +7128,150 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2121896639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121896640}
+  - component: {fileID: 2121896641}
+  m_Layer: 11
+  m_Name: Blue Light (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2121896640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121896639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.04, y: 74.79, z: 0.4169922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5520216507021347113}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121896641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121896639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.907
+  m_Color: {r: 0.41037738, g: 0.7478205, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.5
+  m_PointLightOuterRadius: 5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2124168775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124168776}
+  - component: {fileID: 2124168777}
+  m_Layer: 11
+  m_Name: Candlelight (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124168776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124168775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -46.55, y: 98.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4199912505688388031}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124168777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124168775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
+  m_Intensity: 2.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0.808
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 4
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 217
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1266196748297442228
 GameObject:
   m_ObjectHideFlags: 0
@@ -6957,9 +7317,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7101,9 +7461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7245,9 +7605,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7461,9 +7821,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7533,9 +7893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7677,9 +8037,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7821,9 +8181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -7893,9 +8253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8037,9 +8397,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8109,9 +8469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8181,9 +8541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8253,9 +8613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8325,9 +8685,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8397,9 +8757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8541,9 +8901,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8647,9 +9007,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8719,9 +9079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8791,9 +9151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8863,9 +9223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -8935,9 +9295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -9007,9 +9367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -9079,9 +9439,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -9151,9 +9511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -9223,9 +9583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -9295,9 +9655,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11637,9 +11997,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11709,9 +12069,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11781,9 +12141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11853,9 +12213,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11925,9 +12285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -11997,9 +12357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12069,9 +12429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12141,9 +12501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12217,14 +12577,18 @@ Transform:
   - {fileID: 1558808118}
   - {fileID: 1443099361}
   - {fileID: 767691503}
-  - {fileID: 661800481}
-  - {fileID: 1080432439}
   - {fileID: 1926197919}
   - {fileID: 1991727086}
   - {fileID: 1037591593}
   - {fileID: 114794685}
   - {fileID: 364657486}
   - {fileID: 115481772}
+  - {fileID: 1934137047}
+  - {fileID: 2121896640}
+  - {fileID: 1747549585}
+  - {fileID: 1380817091}
+  - {fileID: 1760360064}
+  - {fileID: 757409891}
   m_Father: {fileID: 5520216505544477155}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12273,9 +12637,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12417,9 +12781,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12489,9 +12853,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12561,9 +12925,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12777,9 +13141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12849,9 +13213,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12921,9 +13285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -12993,9 +13357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -13065,9 +13429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -13137,9 +13501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -13281,9 +13645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.616
+  m_FalloffIntensity: 0.704
   m_Color: {r: 1, g: 0.44479144, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbdd2d14373aeb69c038f111eb89
   m_LightCookieSprite: {fileID: 0}
@@ -13354,6 +13718,7 @@ Transform:
   - {fileID: 3235671426186057499}
   - {fileID: 2950586601033603372}
   - {fileID: 4171496741690976887}
+  - {fileID: 2124168776}
   m_Father: {fileID: 5520216505544477155}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
