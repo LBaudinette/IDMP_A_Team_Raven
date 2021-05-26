@@ -10,6 +10,13 @@ public class Room : MonoBehaviour
     public List<GameObject> rangedEnemies;
     public List<GameObject> bosses;
 
+    private int enemyCount;
+
+    private void Start()
+    {
+        enemyCount = enemies.Length + rangedEnemies.Length + bosses.Length;
+    }
+
     //Enable relevant enemies and pathfinding grid
     public virtual void OnTriggerEnter2D(Collider2D other)
     {

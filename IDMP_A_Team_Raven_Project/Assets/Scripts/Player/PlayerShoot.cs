@@ -158,7 +158,7 @@ public class PlayerShoot : MonoBehaviour
         {
             firePoint.localPosition = new Vector3(1.375f, 0f, 0f);
 
-            weapon.transform.localPosition = new Vector3(0.2f, 0.4f, 0f);
+            weapon.transform.localPosition = new Vector3(0.1f, 0.4f, 0f);
             weaponSprite.sprite = crossbowArmVertical;
             weaponSprite.flipY = false;
             weaponSprite.sortingOrder = -1;
@@ -193,7 +193,14 @@ public class PlayerShoot : MonoBehaviour
         if (-180 <= angle && angle <= -135 || 135 < angle && angle <= 180)
         {
             firePoint.localPosition = new Vector3(1.25f, -0.05f, 0f);
-            weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
+            if (playerMovement.state == PlayerMovement.State.Moving)
+            {
+                weapon.transform.localPosition = new Vector3(0.05f, 0.3f, 0f);
+            }
+            else
+            {
+                weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
+            }
             weaponSprite.sprite = crossbowArmHorizontal;
             weaponSprite.flipY = true;
             weaponSprite.sortingOrder = 1;

@@ -4950,6 +4950,10 @@ SpriteAtlas:
   - {fileID: -1615456735555669528, guid: a9019cdcfa140ae4195b40fb452f21ce, type: 3}
   - {fileID: 7243865307109049850, guid: bfc191ecb493faf41ba067b51eba9055, type: 3}
   - {fileID: -8051639189642823648, guid: a88a7feccac61a6448a9c7f5df8a1b49, type: 3}
+  - {fileID: -8778711211851538331, guid: b81a0b9d4b08e4348af9940fc73cedd4, type: 3}
+  - {fileID: -8772364668887074290, guid: b81a0b9d4b08e4348af9940fc73cedd4, type: 3}
+  - {fileID: 4981916587735093875, guid: b81a0b9d4b08e4348af9940fc73cedd4, type: 3}
+  - {fileID: -8140220367589797139, guid: b81a0b9d4b08e4348af9940fc73cedd4, type: 3}
   - {fileID: 601665339427411124, guid: 8101cfade3a66d0449faad38d56decb2, type: 3}
   - {fileID: -7699328018653931357, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
   - {fileID: -6189289526238714443, guid: fd770abd48ebaee4eb4e18db9364e00b, type: 3}
@@ -5097,6 +5101,10 @@ SpriteAtlas:
   - {fileID: 4505457751151146781, guid: 4df7c49e6c4d66b43a1f683bcdd2a35b, type: 3}
   - {fileID: 21300000, guid: 54defebe3d3448f4f9c3c974df9aa30d, type: 3}
   - {fileID: 21300000, guid: 780e7ade22f547b41b0aeb0303bed07c, type: 3}
+  - {fileID: -3181814369626982082, guid: d67ff2eecb04c7e498b53e45b6c1f534, type: 3}
+  - {fileID: -8049388039383029831, guid: d67ff2eecb04c7e498b53e45b6c1f534, type: 3}
+  - {fileID: 8388402988834045789, guid: d67ff2eecb04c7e498b53e45b6c1f534, type: 3}
+  - {fileID: 4343366038320631907, guid: d67ff2eecb04c7e498b53e45b6c1f534, type: 3}
   - {fileID: -2437167374689068754, guid: 2ad175eef6ada6b4b802b43e428c6500, type: 3}
   - {fileID: 4286888820207707234, guid: 1042fcfe275b7644c862ccdb9a77f11c, type: 3}
   - {fileID: -5219879261261343226, guid: 1042fcfe275b7644c862ccdb9a77f11c, type: 3}
@@ -10013,6 +10021,10 @@ SpriteAtlas:
   - decorative_93
   - spr_WarpHammerAssemble_4_0
   - spr_WarpHammerAssemble_1_0
+  - CandleAnimated1_1
+  - CandleAnimated1_0
+  - CandleAnimated1_3
+  - CandleAnimated1_2
   - spr_WarpHammerAssemble_19_0
   - Particles_1
   - Particles_0
@@ -10160,6 +10172,10 @@ SpriteAtlas:
   - spr_WarpHammerAssemble_13_1
   - FakeWall
   - MainMenuBackground
+  - CandleAnimated2_2
+  - CandleAnimated2_3
+  - CandleAnimated2_0
+  - CandleAnimated2_1
   - spr_WarpHammerAssemble_21_0
   - AdventurerCustomSpriteSheetAttackTwoUp_0
   - AdventurerCustomSpriteSheetAttackTwoUp_1
