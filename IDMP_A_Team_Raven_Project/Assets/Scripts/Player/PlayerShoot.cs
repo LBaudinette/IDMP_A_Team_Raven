@@ -43,13 +43,16 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        processInputs();
-        if (aiming)
+        if (!playerMovement.isDead())
         {
-            Aiming();
-            if (shoot)
+            processInputs();
+            if (aiming)
             {
-                Shoot();
+                Aiming();
+                if (shoot)
+                {
+                    Shoot();
+                }
             }
         }
     }
@@ -61,7 +64,6 @@ public class PlayerShoot : MonoBehaviour
         if (aiming)
         {
             playerControls.Player.Attack.started += _ => shoot = true;
-            if (shoot) Debug.Log("shot");
         }
         else
         {
@@ -71,11 +73,14 @@ public class PlayerShoot : MonoBehaviour
 
     private void OnAimStart()
     {
-        // enable aiming func, line renderer and weapon sprite when RMB is pressed
-        lr.enabled = true;
-        weaponSprite.enabled = true;
-        aiming = true;
-        playerAnimator.SetBool("Aiming", true);
+        if (!playerMovement.isDead())
+        {
+            // enable aiming func, line renderer and weapon sprite when RMB is pressed
+            lr.enabled = true;
+            weaponSprite.enabled = true;
+            aiming = true;
+            playerAnimator.SetBool("Aiming", true);
+        }
     }
 
     private void OnAimStop()

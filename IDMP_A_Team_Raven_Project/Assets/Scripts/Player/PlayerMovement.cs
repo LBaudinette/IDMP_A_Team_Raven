@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float stairsVelOffset = 0f;
     private bool vulnerable;
+    private bool dead;
 
     // control scheme using new input system
     private PlayerControls playerControls;
@@ -125,12 +126,16 @@ public class PlayerMovement : MonoBehaviour
         attackTimeElapsed = 0f;
         vulnerable = true;
         ableToDash = true;
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs();
+        if (!dead)
+        {
+            ProcessInputs();
+        }
     }
 
     private void FixedUpdate()
@@ -482,10 +487,17 @@ public class PlayerMovement : MonoBehaviour
     public void onDeath()
     {
         playerAnimator.SetBool("IsDead", true);
+        dead = true;
     }
 
     public void onRevive()
     {
         playerAnimator.SetBool("IsDead", false);
+        dead = false;
+    }
+
+    public bool isDead()
+    {
+        return this.dead;
     }
 }
