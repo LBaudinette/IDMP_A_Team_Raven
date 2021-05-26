@@ -133128,26 +133128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1987685402173969592, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987685402173969592, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987685402173969592, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_AlphaBlendOnOverlap
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987685402173969592, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2501820542798104146, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_Mesh
@@ -133218,55 +133198,15 @@ PrefabInstance:
       propertyPath: PauseCanvas
       value: 
       objectReference: {fileID: 1589627424}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.73800373
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.6755941
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0029940605
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.4622029
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628942, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628943, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.2684126
-      objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628943, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.8385418
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628943, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.016140461
+      value: 1.0076892
       objectReference: {fileID: 0}
     - target: {fileID: 2501820542938628943, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.3807291
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501820542938628943, guid: 22d7b47dab12f5a438529731900e8b16,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      value: -0.29615533
       objectReference: {fileID: 0}
     - target: {fileID: 2531658333841840176, guid: 22d7b47dab12f5a438529731900e8b16,
         type: 3}
