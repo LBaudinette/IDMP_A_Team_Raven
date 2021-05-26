@@ -867,7 +867,7 @@ MonoBehaviour:
   attack3AnimEnd: 0.517
   attack3ComboBefore: 0.65
   movementDir: {x: 0, y: 0}
-  moveSpeed: 6
+  moveSpeed: 7
   velocityLerp: 50
   dashSpeed: 30
   dashCooldown: 0.25
@@ -987,21 +987,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.866
+  m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 1.1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000008371dbddeb69c0382d14373af111eb89
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
+  m_AlphaBlendOnOverlap: 1
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 8
+  m_PointLightOuterRadius: 7
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
