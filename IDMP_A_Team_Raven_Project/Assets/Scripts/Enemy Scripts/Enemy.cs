@@ -53,6 +53,7 @@ public class Enemy : MonoBehaviour {
     public Transform leftRaycastPoint;
     public Transform rightRaycastPoint;
 
+    private Room roomScript;
    
 
     protected enum facingDirection {
@@ -71,6 +72,7 @@ public class Enemy : MonoBehaviour {
         seeker = GetComponent<Seeker>();
         hitStopScript = GetComponent<HitStop>();
         sr = GetComponent<SpriteRenderer>();
+        roomScript = this.transform.parent.GetComponentInParent<Room>();
     }
 
 
@@ -326,6 +328,7 @@ public class Enemy : MonoBehaviour {
         animator.SetBool("isDead", false);
         animator.enabled = false; 
         sr.sprite = deathSprite;
+        roomScript.enemyDied();
         this.enabled = false;
     }
 
@@ -336,6 +339,7 @@ public class Enemy : MonoBehaviour {
         animator.SetBool("isReviving", true);
         animator.enabled = true;
         //sr.sprite = deathSprite;
+        roomScript.enemyRevived();
         this.enabled = true;
     }
 
