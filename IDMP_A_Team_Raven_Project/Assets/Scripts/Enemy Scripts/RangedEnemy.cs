@@ -258,7 +258,7 @@ public class RangedEnemy : MonoBehaviour {
     
 
     protected virtual void onDeath() {
-        StopCoroutine(coroutine);
+        StopAllCoroutines();
         isDead = true;
         gameObject.SetActive(false);
         //GetComponent<BoxCollider2D>().enabled = false;
