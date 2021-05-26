@@ -12,6 +12,7 @@ public class PlayerHealthManager : MonoBehaviour
     public SpriteRenderer blackScreen;
 
     public bool killPlayer = false;
+    private bool dying;
 
     //TODO - call in whatever script handles player being hit in combat
 
@@ -34,6 +35,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void onStart()
     {
+        dying = false;
         healthSlider.maxValue = playerHealth.initialValue;
         healthSlider.value = playerHealth.initialValue;
     }
@@ -57,13 +59,16 @@ public class PlayerHealthManager : MonoBehaviour
         {
             healthSlider.value = 0;
             playerHealth.runTimeValue = 0;
-            playerDeath();
+            if (!dying)
+            {
+                dying = true;
+                playerDeath();
+            }
         }
     }
 
     private void playerDeath()
     {
-        Debug.Log("dead");
         StartCoroutine(deathSequence());
     }
 
