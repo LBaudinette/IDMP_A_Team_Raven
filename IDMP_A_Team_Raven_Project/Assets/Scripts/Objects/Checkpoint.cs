@@ -54,6 +54,7 @@ public class Checkpoint : Interactable
                 dialogueBox.SetActive(true);
                 dialogueText.text = dialogue;
                 CheckPointActions();
+                hasCheckpointBeenHit.runTimeValue = true;
             }
             inputInteract = false;
         }
