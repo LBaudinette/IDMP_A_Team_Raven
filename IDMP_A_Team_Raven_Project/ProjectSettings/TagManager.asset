@@ -62,3 +62,6 @@ TagManager:
   - name: TallDecoration
     uniqueID: 2313884145
     locked: 0
+  - name: Black Screen
+    uniqueID: 2238951307
+    locked: 0

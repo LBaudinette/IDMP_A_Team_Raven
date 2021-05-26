@@ -254,7 +254,6 @@ public class PlayerMovement : MonoBehaviour
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
         if (movementDir.x != 0f || movementDir.y != 0f)
         {
-            Debug.Log("input movement");
             inputMove = true;
         }
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
@@ -478,5 +477,15 @@ public class PlayerMovement : MonoBehaviour
             percentageOfAFullBolt = 0.0f;
         }
         addBoltFromInv.Raise();
+    }
+
+    public void onDeath()
+    {
+        playerAnimator.SetBool("IsDead", true);
+    }
+
+    public void onRevive()
+    {
+        playerAnimator.SetBool("IsDead", false);
     }
 }
