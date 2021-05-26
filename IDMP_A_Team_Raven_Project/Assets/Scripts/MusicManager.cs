@@ -13,11 +13,13 @@ public class MusicManager : MonoBehaviour
 
     public bool activateFunc;
     private AudioSource musicSource;
+    private bool inBattle;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        inBattle = false;
         activateFunc = false;
         musicSource = GetComponent<AudioSource>();
         musicSource.volume = volume;
@@ -38,11 +40,13 @@ public class MusicManager : MonoBehaviour
 
     public void fadeToBattle()
     {
+        inBattle = true;
         StartCoroutine(fadeTo(battle));
     }
 
     public void fadeToAmbient()
     {
+        inBattle = false;
         StartCoroutine(fadeTo(ambient));
     }
 
@@ -70,5 +74,10 @@ public class MusicManager : MonoBehaviour
             musicSource.volume = Mathf.Lerp(endVolume, volume, currentTime / fadeTime);
             yield return null;
         }
+    }
+
+    public bool isInBattle()
+    {
+        return this.inBattle;
     }
 }

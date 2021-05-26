@@ -41,11 +41,14 @@ public class TakeHitScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Projectiles"))
         {
-            hitStopScript.freeze();
-            ProjectileScript hitbox = collision.GetComponent<ProjectileScript>();
-            Vector2 knockbackDir = hitbox.getVel();
-            knockbackDir.Normalize();
-            TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+            if (collision.name != "Arrow(Clone)")
+            {
+                hitStopScript.freeze();
+                ProjectileScript hitbox = collision.GetComponent<ProjectileScript>();
+                Vector2 knockbackDir = hitbox.getVel();
+                knockbackDir.Normalize();
+                TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
+            }
         }
         else if (collision.gameObject.CompareTag("BossHitbox"))
         {

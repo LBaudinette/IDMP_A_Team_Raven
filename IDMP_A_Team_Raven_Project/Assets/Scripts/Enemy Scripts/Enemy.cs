@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
     protected Animator animator;
     protected Rigidbody2D rb;
     protected GameObject player;
+    [SerializeField] protected ParticleSystem hitPS;
+
     private Transform leftPlayerTarget, rightPlayerTarget;
     protected Path path;
     private Seeker seeker;
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour {
 
     public float nextWaypointDistance = 2f;
     public float health = 100f;
+    protected float maxHealth;
     public float damage = 10f;
     public LayerMask playerLayer;
 
@@ -59,6 +62,7 @@ public class Enemy : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        maxHealth = health;
         player = GameObject.FindWithTag("Player");
         leftPlayerTarget = player.transform.Find("Left Seek Point");
         rightPlayerTarget = player.transform.Find("Right Seek Point");
@@ -299,7 +303,7 @@ public class Enemy : MonoBehaviour {
 
     public void TakeHit(Vector2 velocity, float damage) {
         rb.bodyType = RigidbodyType2D.Dynamic;
-
+        hitPS.Play();
         rb.AddForce(velocity, ForceMode2D.Impulse);
 
         health -= damage;
@@ -339,6 +343,7 @@ public class Enemy : MonoBehaviour {
         isDead = false;
         rb.bodyType = RigidbodyType2D.Dynamic;
         animator.SetBool("isReviving", false);
+        health = maxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -360,12 +365,15 @@ public class Enemy : MonoBehaviour {
             rb.bodyType = RigidbodyType2D.Static;
         } else if (collision.gameObject.CompareTag("Projectiles"))
         {
-            hitStopScript.freeze();
-            Arrow arrow = collision.gameObject.GetComponent<Arrow>();
-            Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
-            knockbackDir.Normalize();
-            TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
-            Destroy(collision.gameObject);
+            if (collision.gameObject.name == "Arrow(Clone)")
+            {
+                hitStopScript.freeze();
+                Arrow arrow = collision.gameObject.GetComponent<Arrow>();
+                Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
+                knockbackDir.Normalize();
+                TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
+                Destroy(collision.gameObject);
+            }
         }
     }
 
