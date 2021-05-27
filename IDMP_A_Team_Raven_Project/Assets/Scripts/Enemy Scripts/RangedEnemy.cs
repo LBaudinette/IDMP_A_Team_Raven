@@ -307,4 +307,19 @@ public class RangedEnemy : MonoBehaviour {
         Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
         Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectiles"))
+        {
+            if (collision.gameObject.name == "Arrow(Clone)")
+            {
+                Arrow arrow = collision.gameObject.GetComponent<Arrow>();
+                Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
+                knockbackDir.Normalize();
+                TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
+                Destroy(collision.gameObject);
+            }
+        }
+    }
 }

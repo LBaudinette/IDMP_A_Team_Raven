@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,7 @@ public class Room : MonoBehaviour
     public List<GameObject> rangedEnemies;
     public List<GameObject> bosses;
     public MusicManager musicManager;
+    public PixelPerfectCamera ppc;
 
     private int enemyCount;
 
@@ -50,6 +52,14 @@ public class Room : MonoBehaviour
             enemies.Concat(rangedEnemies).Concat(bosses)
                 .ToList().ForEach(e => e.SetActive(true));
             virtualCamera.SetActive(true);
+            if (this.name == "BossRoom")
+            {
+                ppc.refResolutionX = 480;
+                ppc.refResolutionY = 270;
+            } else {
+                ppc.refResolutionX = 320;
+                ppc.refResolutionY = 180;
+            }
             if (enemyCount > 0)
             {
                 if (!musicManager.isInBattle())
