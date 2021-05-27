@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 580767570109967239}
   - component: {fileID: 1259805935220213484}
   - component: {fileID: 6117675282433694802}
-  - component: {fileID: 800230115922374432}
   - component: {fileID: 8320569428322814186}
   - component: {fileID: 1928698192}
   - component: {fileID: -1904421632768793476}
@@ -456,22 +455,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &800230115922374432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6026857293838660687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb639a64b74d78488ed7db6787a2729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2d: {fileID: 6117675282433694802}
-  reducePlayerHealthSignal: {fileID: 11400000, guid: 040842636221b024b94d833336956256,
-    type: 2}
-  playerHealth: {fileID: 11400000, guid: 3a28fc588b73f5e438c7052fbfa5c499, type: 2}
 --- !u!95 &8320569428322814186
 Animator:
   serializedVersion: 3
