@@ -469,8 +469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 6117675282433694802}
-  reducePlayerHealthSignal: {fileID: 0}
-  playerHealth: {fileID: 0}
+  reducePlayerHealthSignal: {fileID: 11400000, guid: 040842636221b024b94d833336956256,
+    type: 2}
+  playerHealth: {fileID: 11400000, guid: 3a28fc588b73f5e438c7052fbfa5c499, type: 2}
 --- !u!95 &8320569428322814186
 Animator:
   serializedVersion: 3

@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour {
 
         //Debug.Log("Cooldown: " + isCooldown);
         //Debug.Log("Can Attack: " + canAttack);
+        updateTarget();
 
         checkAttackRange();
         if (canAttack && !isCooldown && !isFlinching)
@@ -111,7 +112,6 @@ public class Enemy : MonoBehaviour {
             Move();
 
 
-        updateTarget();
         //Debug.Log("Can Attack: " + canAttack);
         //Debug.Log("Is Cooldown: " + isCooldown);
 

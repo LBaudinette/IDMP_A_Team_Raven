@@ -266,10 +266,9 @@ public class GridAreaScript : MonoBehaviour {
                 catch {
 
                 }
-                if (row == closestCellPos.x + 1 && col == closestCellPos.y + 1)
-                    grid[row, col].GetComponent<DamagingTileScript>().setFinalTile();
             }
         }
+        grid[(int)closestCellPos.x, (int)closestCellPos.y].GetComponent<DamagingTileScript>().setFinalTile();
 
     }
 

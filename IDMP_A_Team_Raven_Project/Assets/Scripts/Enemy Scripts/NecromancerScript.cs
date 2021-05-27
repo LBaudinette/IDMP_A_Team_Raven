@@ -110,7 +110,8 @@ public class NecromancerScript : RangedEnemy
     public void TakeHit(float damage) {
         health -= damage;
 		bossHealthSignal.Raise();
-		
+        hitPS.Play();
+
         if (health <= maxHealth / 2 && !isSecondStage) {
             isSecondStage = true;
             Debug.Log("SECOND STAGE");
@@ -127,6 +128,7 @@ public class NecromancerScript : RangedEnemy
 
     protected override void onDeath() {
         StopAllCoroutines();
+        teleportPS.Stop();
         isDead = true;
         animator.SetBool("isDead", false);
         Destroy(animator);
