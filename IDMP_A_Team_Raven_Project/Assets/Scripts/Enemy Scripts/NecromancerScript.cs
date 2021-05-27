@@ -160,8 +160,10 @@ public class NecromancerScript : RangedEnemy
     void summonGhouls() {        
         foreach(GameObject ghoul in bossGhouls) {
             Enemy ghoulScript = ghoul.GetComponent<Enemy>();
-            if (!ghoul.activeSelf)
+            if (!ghoul.activeSelf) {
                 ghoul.SetActive(true);
+                transform.parent.parent.GetComponent<Room>().enemies.Add(ghoul);
+            }
             else if (ghoulScript.isDead)
                 ghoul.GetComponent<Enemy>().startRevive();
 
