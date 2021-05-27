@@ -27,6 +27,11 @@ public class NecromancerScript : RangedEnemy
         bossHealthBar.SetActive(true);
     }
 
+    private void OnDisable()
+    {
+        bossHealthBar.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,8 +62,6 @@ public class NecromancerScript : RangedEnemy
         Debug.DrawRay(botRightRay.origin, botRightRay.direction * teleportDistance, Color.green);
         Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
         Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
-
-
 
         //Update Direction
         float direction = playerObject.transform.position.x - transform.position.x;
@@ -121,10 +124,7 @@ public class NecromancerScript : RangedEnemy
             animator.SetBool("isDead", true);
             bossHealthBar.SetActive(false);
         }
-            
-        
     }
-    
 
     protected override void onDeath() {
         StopAllCoroutines();
@@ -157,7 +157,6 @@ public class NecromancerScript : RangedEnemy
 
     }
 
-
     void summonGhouls() {        
         foreach(GameObject ghoul in bossGhouls) {
             Enemy ghoulScript = ghoul.GetComponent<Enemy>();
@@ -168,6 +167,4 @@ public class NecromancerScript : RangedEnemy
 
         }
     }
-
-    
 }
