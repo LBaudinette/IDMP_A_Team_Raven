@@ -99,7 +99,7 @@ public class Checkpoint : Interactable
         CheckPointActions();
 
         // reset Necromancer health
-        necromancerScript.health = 100;
+        necromancerScript.resetHealth();
     }
 
 }

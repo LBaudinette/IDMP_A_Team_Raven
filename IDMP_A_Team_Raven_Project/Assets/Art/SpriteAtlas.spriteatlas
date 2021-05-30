@@ -4046,6 +4046,7 @@ SpriteAtlas:
   - {fileID: 8159757056860844070, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
   - {fileID: -1169004383665779864, guid: e8d7fce7ed8cf544e9cd753630f21904, type: 3}
   - {fileID: 7639419939715340510, guid: 0b09d238b302f4449810b7daeeb789c8, type: 3}
+  - {fileID: 21300000, guid: 110cce6810c687e41af79d7d834f7a62, type: 3}
   - {fileID: 21300000, guid: 97e59f78a99a8f94e8fe0a093429b455, type: 3}
   - {fileID: 1393318144641381236, guid: f4e27ea8b2d25c447b1ed2cb3e177c33, type: 3}
   - {fileID: 1473176839963215225, guid: f4e27ea8b2d25c447b1ed2cb3e177c33, type: 3}
@@ -4113,6 +4114,7 @@ SpriteAtlas:
   - {fileID: 765837873529322748, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: 1138573732633268284, guid: 868f7c19505f5aa4ab406f1e09d9750c, type: 3}
   - {fileID: 8332389548889070530, guid: 6832a04931ee9ec40821432dbb2029c6, type: 3}
+  - {fileID: 21300000, guid: f55890591c572794488b65c6284e6478, type: 3}
   - {fileID: 8769440877673374286, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
   - {fileID: 4067606937000826724, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
   - {fileID: 6240941871424930669, guid: 73a526890ad039c4bbc449deca1cbb72, type: 3}
@@ -9118,6 +9120,7 @@ SpriteAtlas:
   - AdventurerCustomSpriteSheetNoArm_2
   - AdventurerCustomSpriteSheetNoArm_3
   - spr_WarpHammerAssemble_10_0
+  - AcidPool
   - CrossbowUI
   - explosions_11
   - explosions_10
@@ -9185,6 +9188,7 @@ SpriteAtlas:
   - HealthPotionByCarsonFord_10
   - HealthPotionByCarsonFord_11
   - spr_WarpHammerAssemble_16_1
+  - IcePool
   - outside_204
   - outside_260
   - outside_263
