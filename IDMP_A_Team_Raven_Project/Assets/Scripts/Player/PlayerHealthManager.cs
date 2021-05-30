@@ -52,9 +52,9 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void DecreaseHealth()
     {
-        Debug.Log("should be taking dmg in health manager");
+        //Debug.Log("should be taking dmg in health manager");
         healthSlider.value = playerHealth.runTimeValue;
-        Debug.Log("health = " + playerHealth.runTimeValue);
+        //Debug.Log("health = " + playerHealth.runTimeValue);
         if (healthSlider.value <= 0)
         {
             healthSlider.value = 0;
