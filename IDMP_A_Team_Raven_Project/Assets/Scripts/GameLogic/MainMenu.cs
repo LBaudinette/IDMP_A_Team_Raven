@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-    //public AudioSource mapMusic;
-    //public MusicScript playMusic;
+
     public string gameSceneToLoad;
+    //private PlayerControls playerControls;
+    [SerializeField] private GameObject playButton;
 
     private void Start()
     {
-        //playMusic.MenuMusic();
+        EventSystem.current.SetSelectedGameObject(playButton);
     }
 
     public void NewGame()
