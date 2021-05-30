@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour {
         seeker = GetComponent<Seeker>();
         hitStopScript = GetComponent<HitStop>();
         sr = GetComponent<SpriteRenderer>();
-        roomScript = this.transform.parent.GetComponentInParent<Room>();
+        roomScript = transform.parent.GetComponentInParent<Room>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.playOnAwake = false;
 
@@ -185,7 +185,8 @@ public class Enemy : MonoBehaviour {
         path = null;
 
         //Stop the enemy from moving
-        rb.velocity = new Vector2(0, 0);
+        if(rb.bodyType != RigidbodyType2D.Static)
+            rb.velocity = new Vector2(0, 0);
 
         //Set the isAttacking boolean in the animator
         animator.SetBool("isAttacking", isAttacking);

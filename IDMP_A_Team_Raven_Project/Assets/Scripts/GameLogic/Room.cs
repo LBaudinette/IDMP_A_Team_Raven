@@ -12,6 +12,7 @@ public class Room : MonoBehaviour
     public List<GameObject> bosses;
     public MusicManager musicManager;
     public PixelPerfectCamera ppc;
+    public GameObject doorCollider;
 
     private int enemyCount;
 
@@ -49,6 +50,9 @@ public class Room : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            if (doorCollider != null)
+                doorCollider.SetActive(true);
+            
             enemies.Concat(rangedEnemies).Concat(bosses)
                 .ToList().ForEach(e => e.SetActive(true));
             virtualCamera.SetActive(true);

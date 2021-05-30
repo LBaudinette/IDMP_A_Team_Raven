@@ -17,14 +17,10 @@ public class PhantomKnightScript : Enemy
 
     private void split() {
         gameObject.SetActive(false);
-        for (int i = 0; i < numEnemySpawned; i++) {
-            GameObject enemy =
-                Instantiate(lesserEnemy, transform.position, transform.rotation);
-            //Debug.Log("ROOT: " + transform.root.name);
-            transform.parent.parent.GetComponent<Room>().enemies.Add(enemy);
-            //Push new enemies away from where phantom knight dies
-            //Vector2 pushVector = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)) * 500f;
-            //enemy.GetComponent<Rigidbody2D>().AddForce(pushVector);
+        for (int i = 0; i < numEnemySpawned; i++) {                
+            transform.parent.parent.GetComponent<Room>().enemies
+                .Add(Instantiate(lesserEnemy, transform.position, transform.rotation, transform.parent));
+
         }
         //Destroy(gameObject);
         onDeath();
