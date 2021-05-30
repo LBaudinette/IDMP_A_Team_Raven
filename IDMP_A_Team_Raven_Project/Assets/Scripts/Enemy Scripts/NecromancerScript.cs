@@ -41,6 +41,8 @@ public class NecromancerScript : RangedEnemy
         afterImageScript = GetComponent<AfterImageScript>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.volume = 0.5f;
+        hitStopScript = GetComponent<HitStop>();
+        rb = GetComponent<Rigidbody2D>();
 
     }
 
@@ -149,7 +151,9 @@ public class NecromancerScript : RangedEnemy
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Hitbox") {
+            hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            hitbox.addBoltOnHit();
             TakeHit(hitbox.getDamage());
         }
     }

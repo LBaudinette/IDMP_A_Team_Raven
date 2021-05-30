@@ -12,6 +12,7 @@ public class RangedEnemy : MonoBehaviour {
     public Transform firePoint;
     public Transform rotationPoint;
     public float teleTriggerDistance = 1;           //How close the player must be to start teleporting
+    protected HitStop hitStopScript;
 
     public float health = 100f;
     protected float maxHealth;
@@ -68,7 +69,9 @@ public class RangedEnemy : MonoBehaviour {
         afterImageScript = GetComponent<AfterImageScript>();
         originalPosition = gameObject.transform.position;
         roomScript = this.transform.parent.GetComponentInParent<Room>();
+        hitStopScript = GetComponent<HitStop>();
         audio = gameObject.AddComponent<AudioSource>();
+        audio.volume = 0.8f;
 
     }
 
@@ -291,7 +294,9 @@ public class RangedEnemy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Hitbox") {
+            hitStopScript.freeze();
             DealHitMelee hitbox = collision.GetComponent<DealHitMelee>();
+            hitbox.addBoltOnHit();
             Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
@@ -325,7 +330,7 @@ public class RangedEnemy : MonoBehaviour {
             if (collision.gameObject.name == "Arrow(Clone)")
             {
                 Arrow arrow = collision.gameObject.GetComponent<Arrow>();
-                Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
+                Vector2 knockbackDir = rb.position - (Vector2)collision.gameObject.transform.position;
                 knockbackDir.Normalize();
                 TakeHit(knockbackDir * arrow.getKnockback(), arrow.getDamage());
                 Destroy(collision.gameObject);
