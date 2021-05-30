@@ -79,6 +79,7 @@ public class Enemy : MonoBehaviour {
         audio = gameObject.AddComponent<AudioSource>();
         audio.playOnAwake = false;
 
+        audio.volume = 0.8f;
     }
 
 
