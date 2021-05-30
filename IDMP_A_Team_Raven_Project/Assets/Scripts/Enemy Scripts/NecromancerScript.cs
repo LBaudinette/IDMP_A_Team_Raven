@@ -175,4 +175,6 @@ public class NecromancerScript : RangedEnemy
 
         }
     }
+
+    public void resetHealth() => health = maxHealth;
 }
