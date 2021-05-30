@@ -875,7 +875,7 @@ MonoBehaviour:
   attackMoveSpeed: 2
   healMoveSpeedFactor: 0.25
   dashTime: 0.1
-  healTime: 2
+  healTime: 1.5
   percentageOfAFullBolt: 0
   healingParticles: {fileID: 2991926707802209566}
   rayOrigin: {fileID: 4847398304147516289}
