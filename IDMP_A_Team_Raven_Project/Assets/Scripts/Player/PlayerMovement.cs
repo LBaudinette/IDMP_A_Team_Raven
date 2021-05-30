@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerShoot shootScript;
     public GameObject PauseCanvas;
     private PauseManager pauseScript;
+    private AfterImageScript AFScript;
 
     // vars for tracking player inputs
     public bool inputHeal;
@@ -75,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float stairsVelOffset = 0f;
     private bool vulnerable;
+    private bool dead;
 
     // control scheme using new input system
     private PlayerControls playerControls;
@@ -87,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         playerControls = new PlayerControls();
         shootScript.setControls(playerControls);
         pauseScript = PauseCanvas.GetComponent<PauseManager>();
+        AFScript = GetComponent<AfterImageScript>();
         pauseScript.setControls(playerControls);
     }
 
@@ -123,12 +126,16 @@ public class PlayerMovement : MonoBehaviour
         attackTimeElapsed = 0f;
         vulnerable = true;
         ableToDash = true;
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs();
+        if (!dead)
+        {
+            ProcessInputs();
+        }
     }
 
     private void FixedUpdate()
@@ -252,7 +259,6 @@ public class PlayerMovement : MonoBehaviour
         movementDir = playerControls.Player.Move.ReadValue<Vector2>();
         if (movementDir.x != 0f || movementDir.y != 0f)
         {
-            Debug.Log("input movement");
             inputMove = true;
         }
         // clamp magnitude for analog directional inputs (i.e. stick) and normalize diagonal inputs
@@ -384,8 +390,18 @@ public class PlayerMovement : MonoBehaviour
         vulnerable = false;
         ableToDash = false;
         float elapsed = 0f;
+        float afterImageInterval = dashTime / 10f;
+        float afterImageTimer = 0f;
+
         while (elapsed < dashTime)
         {
+            if (afterImageTimer < afterImageInterval)
+                afterImageTimer += Time.deltaTime;
+            else {
+                AFScript.createAfterImage(transform, sr.sprite);
+                afterImageTimer = 0;
+            }
+
             rb2d.velocity = new Vector2(movementDir.x, stairsVelOffset + movementDir.y) * dashSpeed;
             elapsed += Time.deltaTime;
             yield return null;
@@ -466,5 +482,22 @@ public class PlayerMovement : MonoBehaviour
             percentageOfAFullBolt = 0.0f;
         }
         addBoltFromInv.Raise();
+    }
+
+    public void onDeath()
+    {
+        playerAnimator.SetBool("IsDead", true);
+        dead = true;
+    }
+
+    public void onRevive()
+    {
+        playerAnimator.SetBool("IsDead", false);
+        dead = false;
+    }
+
+    public bool isDead()
+    {
+        return this.dead;
     }
 }

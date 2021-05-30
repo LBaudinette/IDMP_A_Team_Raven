@@ -1,13 +1,48 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
+using System.Collections.Generic;
 using System.Linq;
 
 public class Room : MonoBehaviour
 {
     public GameObject virtualCamera;
     //public GameObject pathfindingGrid;
-    public GameObject[] enemies;
-    public GameObject[] rangedEnemies;
-    public GameObject[] bosses;
+    public List<GameObject> enemies;
+    public List<GameObject> rangedEnemies;
+    public List<GameObject> bosses;
+    public MusicManager musicManager;
+    public PixelPerfectCamera ppc;
+
+    private int enemyCount;
+
+    private void Start()
+    {
+        enemyCount = enemies.Count + rangedEnemies.Count + bosses.Count;
+    }
+
+    public void enemyDied()
+    {
+        enemyCount--;
+        if (enemyCount <= 0)
+        {
+            onBattleEnd();
+        }
+    }
+
+    public void enemyRevived()
+    {
+        enemyCount++;
+    }
+
+    private void onBattleEnd()
+    {
+        musicManager.fadeToAmbient();
+    }
+
+    private void onBattleStart()
+    {
+        musicManager.fadeToBattle();
+    }
 
     //Enable relevant enemies and pathfinding grid
     public virtual void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +52,27 @@ public class Room : MonoBehaviour
             enemies.Concat(rangedEnemies).Concat(bosses)
                 .ToList().ForEach(e => e.SetActive(true));
             virtualCamera.SetActive(true);
+            if (this.name == "BossRoom")
+            {
+                ppc.refResolutionX = 480;
+                ppc.refResolutionY = 270;
+            } else {
+                ppc.refResolutionX = 320;
+                ppc.refResolutionY = 180;
+            }
+            if (enemyCount > 0)
+            {
+                if (!musicManager.isInBattle())
+                {
+                    onBattleStart();
+                }
+            } else
+            {
+                if (musicManager.isInBattle())
+                {
+                    onBattleEnd();
+                }
+            }
         }
         
     }

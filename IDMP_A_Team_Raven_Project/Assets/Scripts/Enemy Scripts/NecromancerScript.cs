@@ -27,13 +27,19 @@ public class NecromancerScript : RangedEnemy
         bossHealthBar.SetActive(true);
     }
 
+    private void OnDisable()
+    {
+        bossHealthBar.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
         gridScript = GameObject.FindWithTag("GridArea").GetComponent<GridAreaScript>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
-        ps = GetComponentInChildren<ParticleSystem>();
+        afterImageScript = GetComponent<AfterImageScript>();
     }
 
     // Update is called once per frame
@@ -57,8 +63,6 @@ public class NecromancerScript : RangedEnemy
         Debug.DrawRay(botRay.origin, botRay.direction * teleportDistance, Color.green);
         Debug.DrawRay(botLeftRay.origin, botLeftRay.direction * teleportDistance, Color.green);
 
-
-
         //Update Direction
         float direction = playerObject.transform.position.x - transform.position.x;
         if (direction < 0)
@@ -66,18 +70,14 @@ public class NecromancerScript : RangedEnemy
         else if (direction > 0)
             animator.SetFloat("playerDirection", 1);
 
-        if (teleportCDTimer < teleportCooldown)
-            teleportCDTimer += Time.deltaTime;
-        else {
-            canTeleport = true;
-            teleportCDTimer = 0f;
-        }
+        
             
         //Update the attack timer
         if (attackTimer < attackDelay)
             attackTimer += Time.deltaTime;
         else if(attackTimer >= attackDelay && !gridScript.isCasting && !isTeleporting)
             canAttack = true;
+
         //Update the summon timer
         if ((summonTimer < summonDelay) && isSecondStage)
             summonTimer += Time.deltaTime;
@@ -89,13 +89,22 @@ public class NecromancerScript : RangedEnemy
         if (canAttack) {
             attackTimer = 0f;
             animator.SetBool("isAttacking", true);
+            isAttacking = true;
             canAttack = false;
         }
 
+        if (teleportCDTimer < teleportCooldown && !isTeleporting)
+            teleportCDTimer += Time.deltaTime;
+        else if(!isAttacking) {
+            canTeleport = true;
+            teleportCDTimer = 0f;
+        }
 
         //Teleport when the player is too close
         if (Vector2.Distance(playerObject.transform.position, transform.position) < teleTriggerDistance && 
-            canTeleport) {
+            canTeleport && !isTeleporting && !isAttacking) {
+            canTeleport = false;
+
             coroutine = StartCoroutine(startTeleport());
         }
     }
@@ -104,20 +113,22 @@ public class NecromancerScript : RangedEnemy
     public void TakeHit(float damage) {
         health -= damage;
 		bossHealthSignal.Raise();
-		
-        if (health == health / 2) {
+        hitPS.Play();
+
+        if (health <= maxHealth / 2 && !isSecondStage) {
             isSecondStage = true;
             Debug.Log("SECOND STAGE");
         }
-        else if (health <= 0)
+        else if (health <= 0) {
+            Debug.Log("DEAD");
             animator.SetBool("isDead", true);
-			bossHealthBar.SetActive(false);
-        
+            bossHealthBar.SetActive(false);
+        }
     }
-    
 
     protected override void onDeath() {
         StopAllCoroutines();
+        teleportPS.Stop();
         isDead = true;
         animator.SetBool("isDead", false);
         Destroy(animator);
@@ -142,20 +153,20 @@ public class NecromancerScript : RangedEnemy
         if (isSecondStage )
             summonGhouls();
         animator.SetBool("isAttacking", false);
+        isAttacking = false;
 
     }
-
 
     void summonGhouls() {        
         foreach(GameObject ghoul in bossGhouls) {
             Enemy ghoulScript = ghoul.GetComponent<Enemy>();
-            if (!ghoul.activeSelf)
+            if (!ghoul.activeSelf) {
                 ghoul.SetActive(true);
+                transform.parent.parent.GetComponent<Room>().enemies.Add(ghoul);
+            }
             else if (ghoulScript.isDead)
                 ghoul.GetComponent<Enemy>().startRevive();
 
         }
     }
-
-    
 }

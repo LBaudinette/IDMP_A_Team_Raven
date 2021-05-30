@@ -32,21 +32,27 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
+        lr.startWidth = 0.075f;
+        lr.endWidth = 0.075f;
         weaponSprite.enabled = false;
         lr.enabled = false;
         aiming = false;
+        shoot = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        processInputs();
-        if (aiming)
+        if (!playerMovement.isDead())
         {
-            Aiming();
-            if (shoot)
+            processInputs();
+            if (aiming)
             {
-                Shoot();
+                Aiming();
+                if (shoot)
+                {
+                    Shoot();
+                }
             }
         }
     }
@@ -67,11 +73,14 @@ public class PlayerShoot : MonoBehaviour
 
     private void OnAimStart()
     {
-        // enable aiming func, line renderer and weapon sprite when RMB is pressed
-        lr.enabled = true;
-        weaponSprite.enabled = true;
-        aiming = true;
-        playerAnimator.SetBool("Aiming", true);
+        if (!playerMovement.isDead())
+        {
+            // enable aiming func, line renderer and weapon sprite when RMB is pressed
+            lr.enabled = true;
+            weaponSprite.enabled = true;
+            aiming = true;
+            playerAnimator.SetBool("Aiming", true);
+        }
     }
 
     private void OnAimStop()
@@ -193,7 +202,14 @@ public class PlayerShoot : MonoBehaviour
         if (-180 <= angle && angle <= -135 || 135 < angle && angle <= 180)
         {
             firePoint.localPosition = new Vector3(1.25f, -0.05f, 0f);
-            weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
+            if (playerMovement.state == PlayerMovement.State.Moving)
+            {
+                weapon.transform.localPosition = new Vector3(0.05f, 0.3f, 0f);
+            }
+            else
+            {
+                weapon.transform.localPosition = new Vector3(0.25f, 0.3f, 0f);
+            }
             weaponSprite.sprite = crossbowArmHorizontal;
             weaponSprite.flipY = true;
             weaponSprite.sortingOrder = 1;
@@ -233,6 +249,4 @@ public class PlayerShoot : MonoBehaviour
     {
         playerControls = controls;
     }
-
-
 }
