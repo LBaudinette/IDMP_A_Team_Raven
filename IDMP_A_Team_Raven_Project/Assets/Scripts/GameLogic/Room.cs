@@ -88,6 +88,9 @@ public class Room : MonoBehaviour
 
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            if (doorCollider != null)
+                doorCollider.SetActive(false);
+
             enemies.Concat(rangedEnemies).Concat(bosses)
                 .ToList().ForEach(e => e.SetActive(false));
             virtualCamera.SetActive(false);
