@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd55549c9433ff449a5cd6727c64945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneToLoad: SeanScene
+  gameSceneToLoad: FinalScene
   playButton: {fileID: 1428598671}
 --- !u!114 &1015034067
 MonoBehaviour:

@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1f88c96108195a04fbc981ccd0d9c955
   - enabled: 1
-    path: Assets/Scenes/SeanScene.unity
-    guid: d8530551fbeba4b4680d3af3480a0e44
+    path: Assets/Scenes/FinalScene.unity
+    guid: 436fb3673ddf79a44a86282a91b32956
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 06bc9f6fad642694ea037eba1bc20678,
       type: 2}
