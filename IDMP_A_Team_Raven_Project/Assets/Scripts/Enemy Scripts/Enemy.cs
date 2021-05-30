@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
         roomScript = this.transform.parent.GetComponentInParent<Room>();
         audio = gameObject.AddComponent<AudioSource>();
+        audio.volume = 0.8f;
     }
 
 
