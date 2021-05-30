@@ -43,6 +43,7 @@ public class NecromancerScript : RangedEnemy
         audio.volume = 0.5f;
         hitStopScript = GetComponent<HitStop>();
         rb = GetComponent<Rigidbody2D>();
+        audio.playOnAwake = false;
 
     }
 
