@@ -11,7 +11,6 @@ public class PoisionAreaScript : SpecialArea
 
     private Coroutine coroutine;
     private CircleCollider2D col;
-    private bool canDamage = true;
     private float damageTimer = 0f;
     public float damageCD;
 
@@ -42,10 +41,4 @@ public class PoisionAreaScript : SpecialArea
     private void OnTriggerStay(Collider other) {
         col.enabled = false;
     }
-
-    //private void OnTriggerExit2D(Collider2D collision) {
-    //    if (collision.gameObject.tag == "Player") {
-    //        GameObject player = collision.gameObject;
-    //    }
-    //}
 }

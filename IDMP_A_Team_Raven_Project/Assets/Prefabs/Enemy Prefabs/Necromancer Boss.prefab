@@ -5218,6 +5218,12 @@ MonoBehaviour:
     m_Bits: 6144
   teleportPS: {fileID: 2967067015439681783}
   hitPS: {fileID: 2524911534737060690}
+  hurtSounds:
+  - {fileID: 8300000, guid: fb105aa8257290242a9a4c8ed63b34d7, type: 3}
+  - {fileID: 8300000, guid: 9ce20518244dc474ab7248e6aa99bc77, type: 3}
+  - {fileID: 8300000, guid: 6bb4f7d2986ce704ab8f37b2f61dd94d, type: 3}
+  - {fileID: 8300000, guid: e225395d25c4d364ea9369cb8c52fd13, type: 3}
+  - {fileID: 8300000, guid: 8dc0c3a5e559deb4181800b013428021, type: 3}
   bossGhouls:
   - {fileID: 0}
   - {fileID: 0}

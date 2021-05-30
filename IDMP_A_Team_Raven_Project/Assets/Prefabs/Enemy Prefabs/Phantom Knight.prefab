@@ -423,6 +423,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPS: {fileID: 2632344985127749003}
   hitBox: {fileID: 5790424656125689672}
+  hurtSounds:
+  - {fileID: 8300000, guid: 1b36609c4fe265d4a8db51cd72aa56f8, type: 3}
+  - {fileID: 8300000, guid: 7dd01b82b66c7f44191c9081fb6e9c0f, type: 3}
+  - {fileID: 8300000, guid: f717f16e36461674184ed2a39576f1e2, type: 3}
   deathSprite: {fileID: 0}
   leftFlinchSprite: {fileID: -9083640247455569905, guid: f36343f3c7d1b3741b6489e1301b79bd,
     type: 3}

@@ -8,8 +8,6 @@ public class DamagingTileScript : MonoBehaviour
     private BoxCollider2D hitbox;
 
     private Coroutine coroutine;
-    private float timer = 0;
-    private float activationTimer = 0;
     public float deactivationDelay = 0.3f;
     public float activationDelay = 2f;
     private bool isFinalTile = false;
@@ -54,12 +52,8 @@ public class DamagingTileScript : MonoBehaviour
         }
     }
 
-    public void setFinalTile() {
-        isFinalTile = true;
-    }
+    public void setFinalTile() => isFinalTile = true;
 
-    public void playAudio() {
-        audio.Play();
-    }
+    public void playAudio() => audio.Play();
 
 }

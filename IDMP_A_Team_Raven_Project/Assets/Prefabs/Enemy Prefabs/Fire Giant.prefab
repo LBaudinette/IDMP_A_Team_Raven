@@ -201,8 +201,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1828376255
-  m_SortingLayer: 0
+  m_SortingLayerID: 976688173
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8641531085341533600, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
@@ -256,6 +256,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPS: {fileID: 6355326334320710874}
   hitBox: {fileID: 813388709}
+  hurtSounds:
+  - {fileID: 8300000, guid: 0ffe4227491b1c34a991b7089054b7d0, type: 3}
+  - {fileID: 8300000, guid: d07d7f68f5dddd94f9e9860101904197, type: 3}
+  - {fileID: 8300000, guid: d415d7190b5773a40be2563904342937, type: 3}
   deathSprite: {fileID: -3521428977750350940, guid: f8b49e104fba50f4c8f5ea4442cf3744,
     type: 3}
   leftFlinchSprite: {fileID: 878627084446245239, guid: f8b49e104fba50f4c8f5ea4442cf3744,

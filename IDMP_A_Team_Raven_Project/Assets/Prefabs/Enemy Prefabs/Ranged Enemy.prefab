@@ -434,6 +434,10 @@ MonoBehaviour:
     m_Bits: 6144
   teleportPS: {fileID: 9002453293829426497}
   hitPS: {fileID: 2501575441001375281}
+  hurtSounds:
+  - {fileID: 8300000, guid: d8b644f521c43bb4db30df0e67086fdc, type: 3}
+  - {fileID: 8300000, guid: 9fb53fbc7a211834b81c2d20f7d9f89d, type: 3}
+  - {fileID: 8300000, guid: f27e3025bcc54f1469a0e5ec6cdd0a91, type: 3}
 --- !u!50 &6117675282433694802
 Rigidbody2D:
   serializedVersion: 4

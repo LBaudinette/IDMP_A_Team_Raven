@@ -42,6 +42,8 @@ public class RangedEnemy : MonoBehaviour {
     [SerializeField] protected ParticleSystem teleportPS;
     [SerializeField] protected ParticleSystem hitPS;
     protected AfterImageScript afterImageScript;
+    [SerializeField] protected AudioClip[] hurtSounds;
+    protected AudioSource audio;
 
     private Room roomScript;
 
@@ -66,6 +68,8 @@ public class RangedEnemy : MonoBehaviour {
         afterImageScript = GetComponent<AfterImageScript>();
         originalPosition = gameObject.transform.position;
         roomScript = this.transform.parent.GetComponentInParent<Room>();
+        audio = gameObject.AddComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -272,6 +276,12 @@ public class RangedEnemy : MonoBehaviour {
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {
         hitPS.Play();
+
+        //Play random hurt noise
+        int randomIndex = Random.Range(0, hurtSounds.Length);
+        audio.clip = hurtSounds[randomIndex];
+        audio.Play();
+
         rb.AddForce(velocity * 5);
         health -= damage;
         if (health <= 0)

@@ -15,11 +15,14 @@ public class Enemy : MonoBehaviour {
     private Seeker seeker;
     private HitStop hitStopScript;
     private SpriteRenderer sr;
-    public BoxCollider2D hitBox;
+    [SerializeField] private BoxCollider2D hitBox;
+    [SerializeField] protected AudioClip[] hurtSounds;
+    protected AudioSource audio;
+
 
     public Sprite deathSprite, leftFlinchSprite, rightFlinchSprite;
 
-    public float attackDelay = 0.5f;
+    [SerializeField]protected float attackDelay = 0.5f;
     private float attackTimer = 0;
     protected bool canAttack = false;       //flags whether the player is in range for an attack
     protected bool canMove = true;
@@ -33,11 +36,11 @@ public class Enemy : MonoBehaviour {
     public float nextWaypointDistance = 2f;
     public float health = 100f;
     protected float maxHealth;
-    public float damage = 10f;
+    [SerializeField]protected float damage = 10f;
     public LayerMask playerLayer;
 
     private int currentWaypoint = 0;
-    public float speed = 200f;
+    [SerializeField]protected float speed = 200f;
     protected int directionFaced = (int)facingDirection.left;
     protected bool isAttacking = false;
     protected bool isMoving = false;
@@ -54,7 +57,7 @@ public class Enemy : MonoBehaviour {
     public Transform rightRaycastPoint;
 
     private Room roomScript;
-   
+
 
     protected enum facingDirection {
         left,
@@ -73,6 +76,7 @@ public class Enemy : MonoBehaviour {
         hitStopScript = GetComponent<HitStop>();
         sr = GetComponent<SpriteRenderer>();
         roomScript = this.transform.parent.GetComponentInParent<Room>();
+        audio = gameObject.AddComponent<AudioSource>();
     }
 
 
@@ -101,8 +105,6 @@ public class Enemy : MonoBehaviour {
         else
             isEndOfPath = false;
 
-        //Debug.Log("Cooldown: " + isCooldown);
-        //Debug.Log("Can Attack: " + canAttack);
         updateTarget();
 
         checkAttackRange();
@@ -110,11 +112,6 @@ public class Enemy : MonoBehaviour {
             startMeleeAttack();
         else if (canMove)
             Move();
-
-
-        //Debug.Log("Can Attack: " + canAttack);
-        //Debug.Log("Is Cooldown: " + isCooldown);
-
     }
 
     protected void Move() {
@@ -123,13 +120,10 @@ public class Enemy : MonoBehaviour {
 
 
         if (direction.x != 0 && direction.y != 0) {
-            //Debug.Log(direction);
             Vector2 force = direction * speed * Time.fixedDeltaTime;
             isMoving = true;
-            //Debug.Log("Force: " + force);
             rb.AddForce(force);
-            //transform.Translate(force);
-            //Debug.Log("Direction: " + direction);
+
 
             updateAnimator(force);
         }
@@ -304,12 +298,23 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeHit(Vector2 velocity, float damage) {
+        //Set Rigidbody type in case player is touching enemy
         rb.bodyType = RigidbodyType2D.Dynamic;
+
+        //Play any effects
         hitPS.Play();
+
+        //Play random hurt noise
+        int randomIndex = Random.Range(0, hurtSounds.Length);
+        audio.clip = hurtSounds[randomIndex];
+        audio.Play();
+
+        //Knockback enemy
         rb.AddForce(velocity, ForceMode2D.Impulse);
 
         health -= damage;
         if (health <= 0) {
+            //Set Rigidbody to static so player cannot move a dead enemy
             rb.bodyType = RigidbodyType2D.Static;
             animator.SetBool("isDead", true);
         }
@@ -320,13 +325,11 @@ public class Enemy : MonoBehaviour {
 
     protected virtual void onDeath() {
         StopAllCoroutines();
-        //animator.speed = 0f;
-        //Destroy(gameObject);
         isDead = true;
         hitBox.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
         animator.SetBool("isDead", false);
-        animator.enabled = false; 
+        animator.enabled = false;
         sr.sprite = deathSprite;
         roomScript.enemyDied();
         this.enabled = false;
@@ -358,19 +361,17 @@ public class Enemy : MonoBehaviour {
             Vector2 knockbackDir = rb.position - (Vector2)hitbox.getParentPos().transform.position;
             knockbackDir.Normalize();
             TakeHit(knockbackDir * hitbox.getKnockback(), hitbox.getDamage());
-            
+
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player")
-        {
+        if (collision.gameObject.CompareTag("Player")) {
             //Stop the rigidbody from moving if the player is pushing against it
             rb.bodyType = RigidbodyType2D.Static;
-        } else if (collision.gameObject.CompareTag("Projectiles"))
-        {
-            if (collision.gameObject.name == "Arrow(Clone)")
-            {
+        }
+        else if (collision.gameObject.CompareTag("Projectiles")) {
+            if (collision.gameObject.name == "Arrow(Clone)") {
                 hitStopScript.freeze();
                 Arrow arrow = collision.gameObject.GetComponent<Arrow>();
                 Vector2 knockbackDir = rb.position - (Vector2)arrow.getParentPos().transform.position;
@@ -383,7 +384,7 @@ public class Enemy : MonoBehaviour {
 
     //Allow the enemy to move again when the player is no longer pushing against it
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player" && !isDead)
+        if (collision.gameObject.CompareTag("Player") && !isDead)
             rb.bodyType = RigidbodyType2D.Dynamic;
     }
 

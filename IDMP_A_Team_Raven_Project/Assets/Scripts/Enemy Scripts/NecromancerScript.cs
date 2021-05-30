@@ -8,7 +8,6 @@ public class NecromancerScript : RangedEnemy
     private GameObject playerObject;
     private bool canAttack = true;
     private bool isSecondStage = false;
-    private bool canSummon = false;
     public GameObject[] bossGhouls;
     private float summonTimer = 0f;
     public float summonDelay;
@@ -40,6 +39,9 @@ public class NecromancerScript : RangedEnemy
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
         afterImageScript = GetComponent<AfterImageScript>();
+        audio = gameObject.AddComponent<AudioSource>();
+        audio.volume = 0.5f;
+
     }
 
     // Update is called once per frame
@@ -83,7 +85,6 @@ public class NecromancerScript : RangedEnemy
             summonTimer += Time.deltaTime;
         else {
             summonTimer = 0;
-            canSummon = true;
         }
 
         if (canAttack) {
@@ -114,6 +115,11 @@ public class NecromancerScript : RangedEnemy
         health -= damage;
 		bossHealthSignal.Raise();
         hitPS.Play();
+
+        //Play random hurt noise
+        int randomIndex = Random.Range(0, hurtSounds.Length);
+        audio.clip = hurtSounds[randomIndex];
+        audio.Play();
 
         if (health <= maxHealth / 2 && !isSecondStage) {
             isSecondStage = true;
