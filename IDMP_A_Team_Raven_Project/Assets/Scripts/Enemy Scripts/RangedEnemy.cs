@@ -67,9 +67,10 @@ public class RangedEnemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         afterImageScript = GetComponent<AfterImageScript>();
         originalPosition = gameObject.transform.position;
+
         roomScript = this.transform.parent.GetComponentInParent<Room>();
         audio = gameObject.AddComponent<AudioSource>();
-
+        audio.playOnAwake = false;
     }
 
     // Update is called once per frame
@@ -267,11 +268,15 @@ public class RangedEnemy : MonoBehaviour {
     protected virtual void onDeath() {
         StopAllCoroutines();
         isDead = true;
-        gameObject.SetActive(false);
+        
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetBool("isDead", false);
+        animator.enabled = false;
         roomScript.enemyDied();
-        //GetComponent<BoxCollider2D>().enabled = false;
-        //animator.speed = 0f;
-        //Destroy(this);
+        this.enabled = false;
+        gameObject.SetActive(false);
+
+
     }
 
     protected virtual void TakeHit(Vector2 velocity, float damage) {

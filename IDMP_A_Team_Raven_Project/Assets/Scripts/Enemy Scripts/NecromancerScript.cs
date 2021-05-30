@@ -41,6 +41,7 @@ public class NecromancerScript : RangedEnemy
         afterImageScript = GetComponent<AfterImageScript>();
         audio = gameObject.AddComponent<AudioSource>();
         audio.volume = 0.5f;
+        audio.playOnAwake = false;
 
     }
 
