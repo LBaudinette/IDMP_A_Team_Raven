@@ -39,11 +39,11 @@ public class NecromancerScript : RangedEnemy
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindWithTag("Player");
         afterImageScript = GetComponent<AfterImageScript>();
-        audio = gameObject.AddComponent<AudioSource>();
-        audio.volume = 0.5f;
+        audioS = gameObject.AddComponent<AudioSource>();
+        audioS.volume = 0.5f;
         hitStopScript = GetComponent<HitStop>();
         rb = GetComponent<Rigidbody2D>();
-        audio.playOnAwake = false;
+        audioS.playOnAwake = false;
 
     }
 
@@ -121,8 +121,8 @@ public class NecromancerScript : RangedEnemy
 
         //Play random hurt noise
         int randomIndex = Random.Range(0, hurtSounds.Length);
-        audio.clip = hurtSounds[randomIndex];
-        audio.Play();
+        audioS.clip = hurtSounds[randomIndex];
+        audioS.Play();
 
         if (health <= maxHealth / 2 && !isSecondStage) {
             isSecondStage = true;

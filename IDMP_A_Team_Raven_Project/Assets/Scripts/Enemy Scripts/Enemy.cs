@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour {
     private SpriteRenderer sr;
     [SerializeField] private BoxCollider2D hitBox;
     [SerializeField] protected AudioClip[] hurtSounds;
-    protected AudioSource audio;
+    protected AudioSource audioS;
 
 
     public Sprite deathSprite, leftFlinchSprite, rightFlinchSprite;
@@ -76,19 +76,16 @@ public class Enemy : MonoBehaviour {
         hitStopScript = GetComponent<HitStop>();
         sr = GetComponent<SpriteRenderer>();
         roomScript = transform.parent.GetComponentInParent<Room>();
-        audio = gameObject.AddComponent<AudioSource>();
-        audio.playOnAwake = false;
+        audioS = gameObject.AddComponent<AudioSource>();
+        audioS.playOnAwake = false;
 
-        audio.volume = 0.8f;
+        audioS.volume = 0.8f;
     }
 
 
 
-    protected virtual void Update() {
+    protected virtual void Update() => updateTimers();
 
-        updateTimers();
-
-    }
 
     //Use Fixed Update due to physics being used
     void FixedUpdate() {
@@ -310,8 +307,8 @@ public class Enemy : MonoBehaviour {
 
         //Play random hurt noise
         int randomIndex = Random.Range(0, hurtSounds.Length);
-        audio.clip = hurtSounds[randomIndex];
-        audio.Play();
+        audioS.clip = hurtSounds[randomIndex];
+        audioS.Play();
 
         //Knockback enemy
         rb.AddForce(velocity, ForceMode2D.Impulse);

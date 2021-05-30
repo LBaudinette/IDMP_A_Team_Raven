@@ -13,7 +13,7 @@ public class DamagingTileScript : MonoBehaviour
     private bool isFinalTile = false;
     private Color originalColour;
     private Animator animator;
-    [SerializeField]private AudioSource audio;
+    [SerializeField]private AudioSource audioS;
 
     public SpriteRenderer sr;
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class DamagingTileScript : MonoBehaviour
         hitbox = GetComponentInChildren<BoxCollider2D>();
         hitbox.enabled = false;
         animator = GetComponent<Animator>();
-        audio = GetComponentInParent<AudioSource>();
+        audioS = GetComponentInParent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +54,6 @@ public class DamagingTileScript : MonoBehaviour
 
     public void setFinalTile() => isFinalTile = true;
 
-    public void playAudio() => audio.Play();
+    public void playAudio() => audioS.Play();
 
 }

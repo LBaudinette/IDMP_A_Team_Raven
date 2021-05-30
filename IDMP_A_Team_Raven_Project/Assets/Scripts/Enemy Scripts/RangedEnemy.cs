@@ -44,7 +44,7 @@ public class RangedEnemy : MonoBehaviour {
     [SerializeField] protected ParticleSystem hitPS;
     protected AfterImageScript afterImageScript;
     [SerializeField] protected AudioClip[] hurtSounds;
-    protected AudioSource audio;
+    protected AudioSource audioS;
 
     private Room roomScript;
 
@@ -71,9 +71,9 @@ public class RangedEnemy : MonoBehaviour {
 
         roomScript = this.transform.parent.GetComponentInParent<Room>();
         hitStopScript = GetComponent<HitStop>();
-        audio = gameObject.AddComponent<AudioSource>();
-        audio.playOnAwake = false;
-        audio.volume = 0.8f;
+        audioS = gameObject.AddComponent<AudioSource>();
+        audioS.playOnAwake = false;
+        audioS.volume = 0.8f;
 
     }
 
@@ -224,9 +224,6 @@ public class RangedEnemy : MonoBehaviour {
 
         }
 
-        //Debug.Log("NUMBER OF COLLISIONS: " + hitRaycasts.Count);
-        //Debug.Log("NUMBER OF EMPTY SPACES: " + emptyRaycasts.Count);
-
         Raycast longestRaycast;
 
         //if no walls were hit, then teleport into an open space
@@ -238,7 +235,6 @@ public class RangedEnemy : MonoBehaviour {
             int randomIndex = Random.Range(0, emptyRaycasts.Count - 1);
 
             //Teleport to the open space
-            //Debug.Log("TELEPORT INTO OPEN SPACE");
             originalPosition = transform.position;
             transform.Translate(emptyRaycasts[randomIndex].ray.direction * teleportDistance);
             Debug.Log("ORIGINAL POS: " + originalPosition);
@@ -253,11 +249,6 @@ public class RangedEnemy : MonoBehaviour {
                 if (raycast.raycastHit.distance > longestRaycast.raycastHit.distance)
                     longestRaycast = raycast;
             }
-
-            //Debug.Log("TELEPORT NEAR WALL");
-
-            //Teleport to the walls position
-            //transform.Translate(longestRaycast.ray.direction * teleportDistance);
             rb.MovePosition((Vector2)transform.position + (longestRaycast.ray.direction * teleportDistance));
 
         }
@@ -270,7 +261,6 @@ public class RangedEnemy : MonoBehaviour {
     
 
     protected virtual void onDeath() {
-        StopAllCoroutines();
         isDead = true;
         
         rb.bodyType = RigidbodyType2D.Static;
@@ -288,14 +278,17 @@ public class RangedEnemy : MonoBehaviour {
 
         //Play random hurt noise
         int randomIndex = Random.Range(0, hurtSounds.Length);
-        audio.clip = hurtSounds[randomIndex];
-        audio.Play();
+        audioS.clip = hurtSounds[randomIndex];
+        audioS.Play();
 
         rb.AddForce(velocity * 5);
         health -= damage;
-        if (health <= 0)
+        if (health <= 0) {
+            StopAllCoroutines();
             animator.SetBool("isDead", true);
-        
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
